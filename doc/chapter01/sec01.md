@@ -1,3 +1,35 @@
 # Mengen und Intervalle
 
-![hint: work in progress](../pics/work_in_progress.png)
+## Was ist eine Menge?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EUmLR3MM8Sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BT1_U1pGguA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## "Rechnen" mit Mengen
+
+### Vereinigung von Mengen
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rodKBh2Fpds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Durchschnitt von Mengen
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/747oVDmyBG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Rechenregeln für Mengen
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nC1aP8Z19K4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y1FHPfs8Ajg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sp3MvBWVUH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Differenz und Vereinigung
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QCvNOcWR2-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Wichtige Mengen
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GBdeyJy7iKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aCbxnjveEwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
