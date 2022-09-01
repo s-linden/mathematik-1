@@ -1,3 +1,5 @@
+# Rechenregeln
+
 ## Lernziele
 
 ```{admonition} Lernziele
@@ -14,16 +16,11 @@
 * Sie kennen die Definition des **Absolutbetrags** einer reellen Zahl und die **Dreiecksungleichung**.
 ```
 
-
-
-# Rechenregeln
-
-
 ## Einführung in WolframAlpha: Start und einfache Rechenoperationen
 
  <iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=90fbdcfc-4183-4e1e-a7cf-af0300baf212&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
- ## Summen und das Summenzeichen
+## Summen und das Summenzeichen
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JkakcL5u7uY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
