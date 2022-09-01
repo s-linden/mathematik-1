@@ -1,5 +1,17 @@
 # Wurzeln, Potenzen und Logarithmen
 
+## Lernziele
+
+```{admonition} Lernziele
+:class: tip
+* Sie wissen, was die **Wurzel** einer reellen Zahl ist.
+* Sie wissen, was die **Potenz** einer reellen Zahl ist.
+* Sie kennen die **Potenzgesetze** und können mit ihnen rechnen.
+* Sie wissen, was der **Logarithmus** einer reellen Zahl ist.
+* Sie kennen die **Logarithmengesetze** und können sie anwenden.
+```
+
+
 ## Wurzeln
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/q7FnS0gnArE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -47,3 +59,4 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ou5yHNraltI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EYbvhWEG6kE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
