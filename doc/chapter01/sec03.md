@@ -1,26 +1,15 @@
-# Wurzeln, Potenzen und Logarithmen
+# Potenzen, Wurzeln und Logarithmen
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: tip
-* Sie wissen, was die **Wurzel** einer reellen Zahl ist.
 * Sie wissen, was die **Potenz** einer reellen Zahl ist.
 * Sie kennen die **Potenzgesetze** und können mit ihnen rechnen.
+* Sie kennen die **Wurzel** einer reellen Zahl und die Rechengesetze für Wurzeln.
 * Sie wissen, was der **Logarithmus** einer reellen Zahl ist.
 * Sie kennen die **Logarithmengesetze** und können sie anwenden.
 ```
-
-
-## Wurzeln
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q7FnS0gnArE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8gPq0SX2pXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o6TowgCALpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wkeCSXbK93g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Potenzen
 
@@ -39,6 +28,17 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HQZDrEsQ_lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cuCYpxpF5AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## Wurzeln
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q7FnS0gnArE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8gPq0SX2pXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o6TowgCALpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wkeCSXbK93g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Logarithmen
 
