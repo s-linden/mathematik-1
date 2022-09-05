@@ -4,12 +4,15 @@
 
 ```{admonition} Lernziele
 :class: tip
-* Sie kennen Winkel im **Gradmaß** und im **Bogenmaß** und können diese ineinander umrechnen.
+* Sie kennen Winkel im **Winkelmaß** und im **Bogenmaß** und können diese ineinander umrechnen.
 * Sie kennen die Grundbegriffe **Gegenkathete**, **Ankathete** und **Hypotenuse** und können sie in einem rechtwinkligen Dreieck einzeichnen.
-* Sie kennen die **Additionstheoreme** für Sinus und Kosinus.
-* Außerdem wissen Sie, was der **trigonometrische Pythagoras** aussagt.
+* Sie kennen den **Satz des Pythagoras**.
+* Sie kennen sowohl den **Sinussatz** als auch den **Kosinussatz** und können beide zur Berechnung fehlender Größen (Seitenlängen oder Winkel) in einem Dreieck anwenden.
 ```
 
+## Winkelmaß und Bogenmaß
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G-5AJfNNfMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Satz des Pythagoras
 
