@@ -14,3 +14,11 @@ parts:
     - file: chapter01/sec04.md
     - file: chapter01/sec05.md
     - file: chapter01/sec06.md
+  - file: chapter02/sec00.md
+    sections:
+    - file: chapter02/sec01.md
+    - file: chapter02/sec02.md
+    - file: chapter02/sec03.md
+    - file: chapter02/sec04.md
+    - file: chapter02/sec05.md
+    - file: chapter02/sec06.md
