@@ -12,3 +12,7 @@
 * Sie können mit dem Vektorprodukt die Fläche des Parallelogramms berechnen, das durch die beiden Vektoren aufgespannt wird.
 * Sie wissen, was es bedeutet, wenn das Vektorprodukt zweier Vektoren der Nullvektor ist.
 ```
+
+## Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vhfwxWjHqeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

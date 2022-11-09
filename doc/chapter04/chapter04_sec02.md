@@ -9,3 +9,9 @@
 * Sie kennen den Begriff **Orthogonalität** und können mit dem Skalarprodukt überpüfen, ob zwei Vektoren orthogonal $\perp$ (= senkrecht zueinander) sind.
 * Sie kennen den Zusammenhang zwischen Skalarprodukt und Betrag/Länge eines Vektors: $|\mathbf{a}|=\sqrt{\mathbf{a}\cdot\mathbf{a}}$.
 ```
+
+## Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FKN2mcoD6bQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/swMhAjkoCm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
