@@ -22,7 +22,7 @@ parts:
     - file: chapter02/sec04.md
     - file: chapter02/sec05.md
     - file: chapter02/sec06.md
-- caption: Vektorrechnung
+- caption: Vektorrechnung 
   chapters:
   - file: chapter03/sec00.md
     sections:
@@ -32,3 +32,11 @@ parts:
     - file: chapter03/sec04.md
     - file: chapter03/sec05.md
     - file: chapter03/sec06.md
+  - file: chapter04/chapter04_sec00.md
+    sections:
+    - file: chapter04/chapter04_sec01.md
+    - file: chapter04/chapter04_sec02.md
+    - file: chapter04/chapter04_sec03.md
+    - file: chapter04/chapter04_sec04.md
+    - file: chapter04/chapter04_sec05.md
+    - file: chapter04/chapter04_sec06.md
