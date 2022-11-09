@@ -1,3 +1,4 @@
 # Funktionen
 
-![hint: work in progress](../pics/work_in_progress.png)
+Funktionen übersetzen den Zusammenhang zwischen Ursache und Wirkung in die
+mathematische Sprache. 
