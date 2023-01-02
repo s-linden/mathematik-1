@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -723,37 +724,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="differentialrechnung-teil-2">
 <h1>Differentialrechnung (Teil 2)<a class="headerlink" href="#differentialrechnung-teil-2" title="Permalink to this headline">#</a></h1>
+<p>JSXGraph:</p>
 <script type="text/javascript" charset="UTF-8"
- src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+ src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js">
+ </script>
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script type="text/javascript">
-var brd = JXG.JSXGraph.initBoard('jxgbox', {boundingbox:[-7,3,8,-3]});
-var axx = brd.create('axis',[[0,0],[1,0]]);
-var axy = brd.create('axis',[[0,0],[0,1]]);
-brd.suspendUpdate();
-brd.create('functiongraph', [function(t){ return Math.sin(t); },-10, 10],{strokeColor: "#cccccc"});
-var s = brd.create('slider', [[0.75,-1.5],[5.75,-1.5],[0,0,10]], {name:'S',snapWidth:1});
-var x0 = brd.create('glider', [0,0,axx], {name:'x_0'});
-brd.create('functiongraph', [
-	function(t) {
-		var val = 0, i, sv = s.Value()+1, a;
-		for(i = 0; i < sv; i++) {
-                  if (i%4==0) {
-                     a = Math.sin(x0.X());
-                  } else if (i%4==1) {
-                     a = Math.cos(x0.X());
-                  } else if (i%4==2) {
-                     a = -Math.sin(x0.X());
-                  } else if (i%4==3) {
-                     a = -Math.cos(x0.X());
-                  }
-   	          val = val + a*Math.pow(t-x0.X(), i) / JXG.Math.factorial(i);
-		}
-		return val;
-	},
--10, 10], {strokeColor: "#bb0000"});
-brd.unsuspendUpdate();
+JXG.Options.label.autoPosition = true;
+JXG.Options.text.fontSize = 16;
+JXG.Options.line.strokeWidth = 0.8;
+var board = JXG.JSXGraph.initBoard('jxgbox', { boundingbox: [-5, 5, 5, -5], axis: true, showClearTraces: true});
+var h = board.create('hyperbola', [[-Math.sqrt(2),0], [Math.sqrt(2),0], [2, Math.sqrt(3)]]);
+var l1 = board.create('line', [0, 1, 1], {dash: 1});
+var l2 = board.create('line', [0, -1, 1], {dash: 1});
 </script></section>
 
     <script type="text/x-thebe-config">
