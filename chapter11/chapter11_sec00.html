@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Was sind komplexe Zahlen? &#8212; Mathematik 1 Maschinenbau</title>
+    <title>Differentialrechnung (Teil 2) &#8212; Mathematik 1 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,12 +53,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rechnen mit komplexen Zahlen" href="chapter08_sec02.html" />
-    <link rel="prev" title="Komplexe Zahlen" href="chapter08_sec00.html" />
+    <link rel="prev" title="Ableitung der Umkehrfunktion" href="../chapter10/chapter10_sec06.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -438,44 +435,44 @@ const thebe_selector_output = ".output, .cell_output"
   Komplexe Zahlen
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="chapter08_sec00.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter08/chapter08_sec00.html">
    Komplexe Zahlen
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/chapter08_sec01.html">
      Was sind komplexe Zahlen?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter08_sec02.html">
+    <a class="reference internal" href="../chapter08/chapter08_sec02.html">
      Rechnen mit komplexen Zahlen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter08_sec03.html">
+    <a class="reference internal" href="../chapter08/chapter08_sec03.html">
      Betrag
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter08_sec04.html">
+    <a class="reference internal" href="../chapter08/chapter08_sec04.html">
      Komplexe Zahlen in Polarform
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter08_sec05.html">
+    <a class="reference internal" href="../chapter08/chapter08_sec05.html">
      Komplexe Zahlen in Exponentialform
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter08_sec06.html">
+    <a class="reference internal" href="../chapter08/chapter08_sec06.html">
      Potenzen und Wurzeln komplexer Zahlen
     </a>
    </li>
@@ -487,7 +484,7 @@ const thebe_selector_output = ".output, .cell_output"
   Funktionen
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter09/chapter09_sec00.html">
    Folgen, Grenzwerte und Stetigkeit
@@ -572,8 +569,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter11/chapter11_sec00.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Differentialrechnung (Teil 2)
   </a>
  </li>
@@ -663,7 +660,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/chapter08/chapter08_sec01.md"
+        <a href="../_sources/chapter11/chapter11_sec00.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -700,70 +697,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lernziele">
-   Lernziele
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#videos">
-   Videos
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Was sind komplexe Zahlen?</h1>
+                <h1>Differentialrechnung (Teil 2)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lernziele">
-   Lernziele
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#videos">
-   Videos
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -771,26 +721,40 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="was-sind-komplexe-zahlen">
-<h1>Was sind komplexe Zahlen?<a class="headerlink" href="#was-sind-komplexe-zahlen" title="Permalink to this headline">#</a></h1>
-<section id="lernziele">
-<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie wissen, was eine <strong>komplexe Zahl</strong> ist.</p></li>
-<li><p>Sie wissen, dass die <strong>imaginäre Einheit</strong> <span class="math notranslate nohighlight">\(i\)</span> durch <span class="math notranslate nohighlight">\(i^2=-1\)</span> definiert ist.</p></li>
-<li><p>Sie können eine komplexe Zahl in der <strong>Normalform (Koordinatenform)</strong> schreiben.</p></li>
-<li><p>Sie können eine komplexe Zahl in die <strong>Gaußschen Zahlenebene</strong> einzeichnen.</p></li>
-<li><p>Sie können den <strong>Realteil</strong> und den <strong>Imaginärteil</strong> einer komplexen Zahl bestimmen.</p></li>
-</ul>
-</div>
-</section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LxPUwlQ2wn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="differentialrechnung-teil-2">
+<h1>Differentialrechnung (Teil 2)<a class="headerlink" href="#differentialrechnung-teil-2" title="Permalink to this headline">#</a></h1>
+<script type="text/javascript" charset="UTF-8"
+ src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script type="text/javascript">
+var brd = JXG.JSXGraph.initBoard('jxgbox', {boundingbox:[-7,3,8,-3]});
+var axx = brd.create('axis',[[0,0],[1,0]]);
+var axy = brd.create('axis',[[0,0],[0,1]]);
+brd.suspendUpdate();
+brd.create('functiongraph', [function(t){ return Math.sin(t); },-10, 10],{strokeColor: "#cccccc"});
+var s = brd.create('slider', [[0.75,-1.5],[5.75,-1.5],[0,0,10]], {name:'S',snapWidth:1});
+var x0 = brd.create('glider', [0,0,axx], {name:'x_0'});
+brd.create('functiongraph', [
+	function(t) {
+		var val = 0, i, sv = s.Value()+1, a;
+		for(i = 0; i < sv; i++) {
+                  if (i%4==0) {
+                     a = Math.sin(x0.X());
+                  } else if (i%4==1) {
+                     a = Math.cos(x0.X());
+                  } else if (i%4==2) {
+                     a = -Math.sin(x0.X());
+                  } else if (i%4==3) {
+                     a = -Math.cos(x0.X());
+                  }
+   	          val = val + a*Math.pow(t-x0.X(), i) / JXG.Math.factorial(i);
+		}
+		return val;
+	},
+-10, 10], {strokeColor: "#bb0000"});
+brd.unsuspendUpdate();
+</script></section>
 
     <script type="text/x-thebe-config">
     {
@@ -805,7 +769,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapter08"
+            path: "./chapter11"
         },
         predefinedOutput: true
     }
@@ -819,19 +783,12 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="chapter08_sec00.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../chapter10/chapter10_sec06.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Komplexe Zahlen</p>
+            <p class="prev-next-title">Ableitung der Umkehrfunktion</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="chapter08_sec02.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rechnen mit komplexen Zahlen</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
