@@ -12,22 +12,20 @@
 * Sie können die Rechenregeln anwenden, um Klammerausdrücke oder Brüche zu vereinfachen oder zusammenzufassen, z.B. mit 
 	* Ausmultiplizieren,
 	* Ausklammern oder Faktorisieren,
-* Sie können Beispiele für **abgeschlossene**, **halboffene** und **offene Intervalle** auf dem Zahlenstrahl der reellen Zahlen angeben.
+	* Anwenden der binomischen Formeln.
 * Sie kennen die Definition des **Absolutbetrags** einer reellen Zahl und die **Dreiecksungleichung**.
 ```
 
+## Kommutativ-, Assoziativ- und Distributivgesetz
 
-## Summen und das Summenzeichen
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yYknxIg1W58?si=IF8Nnp8crE8iEqRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JkakcL5u7uY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uPt2NrDRJ5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Ausmultiplizieren und ausklammern
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kx-_et2Olr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bEeTAotb7hg?si=_RS-ZMC5Afv0Efye" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qfvj_3QQK4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/k72YK371Ln8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dJ4iOU3TK0w?si=NSYKRLzydgu2450m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Bruchrechnung
 
@@ -41,7 +39,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OvtfzZDd8BU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Betrag
+## Absolutbetrag oder kurz: Betrag 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0ZXVmU6oZ7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
