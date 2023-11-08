@@ -4,7 +4,7 @@
 
 ```{admonition} Lernziele 
 :class: tip
-* Sie wisen, was eine **Basis** ist.
+* Sie wissen, was eine **Basis** ist.
 * Sie können ein **Rechtssystem** von einem **Linkssystem** unterscheiden.
 ```
 
