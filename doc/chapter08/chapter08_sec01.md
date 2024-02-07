@@ -28,6 +28,7 @@ Bereich der reellen Zahlen hinausgehen.
 :class: important
 * Sie wissen, dass die **imaginäre Einheit** $\mathrm{i}$ durch
   $\mathrm{i}^2=-1$ definiert ist.
+* Sie wissen, was eine **imaginäre** Zahl ist.
 * Sie wissen, was eine **komplexe Zahl** ist.
 * Sie wissen, was die **Menge** $\pmb{\mathbb{C}}$ ist.
 * Sie können eine komplexe Zahl in der **Normalform** formulieren.
@@ -37,7 +38,7 @@ Bereich der reellen Zahlen hinausgehen.
 ```
 
 
-## Die imaginäre Einheit i
+## Die imaginäre Einheit i und die imaginäre Zahlen
 
 Innerhalb der Menge der reellen Zahlen $\mathbb{R}$ stößt man an Grenzen, wie
 beispielsweise bei der Lösung der quadratischen Gleichung 
@@ -89,14 +90,24 @@ Eigenschaft
 $$\mathrm{i}^2 = -1.$$
 ```
 
+Aus der imaginären Einheit $\mathrm{i}$ wird dann eine sogenannte **imaginäre
+Zahl** gebildet, indem die imaginäre Einheit $\mathrm{i}$ mit einem *reellen*
+Faktor $b$  multipliziert wird. Eine imaginäre Zahl ist also ein Vielfaches der
+imaginären Einheit. In Mengenschreibweise werden die imaginären Zahlen
+folgendermaßen notiert:
+
+$$\{b \cdot \mathrm{i} \, | \, b\in\mathbb{R} \text{ und } \mathrm{i}^2=-1\}.$$
+
+Für diese Menge gibt es kein besonderes Symbol wie beispielsweise für die
+reellen Zahlen $\mathbb{R}$.
+
 
 ## Komplexe Zahlen
 
-Nachdem wir im vorherigen Abschnitt bereits intuitiv mit der imaginären Einheit
-gerechnet und Terme wie beispielsweise $2\mathrm{i}$ gebildet haben, führen wir
-nun die **imaginären Zahlen** ein. Diese entstehen, wenn die imaginäre Einheit
-$\mathrm{i}$ mit einer reellen Zahl $b\in\mathbb{R}$ multipliziert wird. Damit
-ist eine komplett neue Zahlenart entstanden, die wir nun mit den reellen Zahlen
+Im vorherigen Abschnitt haben wir die imaginäre Einheit $\mathrm{i}$ und die
+imaginären Zahlen $b\cdot\mathrm{i}$ kennengelernt, bei denen die imaginäre
+Einheit $\mathrm{i}$ mit einem reellen Faktor $b$ multipliziert wird. Damit ist
+eine komplett neue Zahlenart entstanden, die wir nun mit den reellen Zahlen
 kombinieren wollen, um die komplexen Zahlen zu bilden.
 
 Eine komplexe Zahl $z$ ist definiert als die Summe einer reellen Zahl und
