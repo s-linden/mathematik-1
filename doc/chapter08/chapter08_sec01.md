@@ -38,7 +38,7 @@ Bereich der reellen Zahlen hinausgehen.
 ```
 
 
-## Die imaginäre Einheit i und die imaginäre Zahlen
+## Die imaginäre Einheit i und die imaginären Zahlen
 
 Innerhalb der Menge der reellen Zahlen $\mathbb{R}$ stößt man an Grenzen, wie
 beispielsweise bei der Lösung der quadratischen Gleichung 
