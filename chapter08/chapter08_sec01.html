@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter08/chapter08_sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rechnen mit komplexen Zahlen" href="chapter08_sec02.html" />
+    <link rel="next" title="8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen" href="chapter08_sec02.html" />
     <link rel="prev" title="Komplexe Zahlen" href="chapter08_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -236,8 +236,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">Komplexe Zahlen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">8.1 Was sind komplexe Zahlen?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">Rechnen mit komplexen Zahlen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">Betrag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Betrag, komplexe Konjugation und Division</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">Komplexe Zahlen in Polarform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Komplexe Zahlen in Exponentialform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec06.html">Potenzen und Wurzeln komplexer Zahlen</a></li>
@@ -444,7 +444,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-imaginare-einheit-i-und-die-imaginare-zahlen">Die imaginäre Einheit i und die imaginäre Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-imaginare-einheit-i-und-die-imaginaren-zahlen">Die imaginäre Einheit i und die imaginären Zahlen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-zahlen">Komplexe Zahlen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauszsche-zahlenebene">Gaußsche Zahlenebene</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
@@ -496,8 +496,8 @@ bestimmen.</p></li>
 </ul>
 </div>
 </section>
-<section id="die-imaginare-einheit-i-und-die-imaginare-zahlen">
-<h2>Die imaginäre Einheit i und die imaginäre Zahlen<a class="headerlink" href="#die-imaginare-einheit-i-und-die-imaginare-zahlen" title="Permalink to this headline">#</a></h2>
+<section id="die-imaginare-einheit-i-und-die-imaginaren-zahlen">
+<h2>Die imaginäre Einheit i und die imaginären Zahlen<a class="headerlink" href="#die-imaginare-einheit-i-und-die-imaginaren-zahlen" title="Permalink to this headline">#</a></h2>
 <p>Innerhalb der Menge der reellen Zahlen <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> stößt man an Grenzen, wie
 beispielsweise bei der Lösung der quadratischen Gleichung</p>
 <div class="math notranslate nohighlight">
@@ -671,6 +671,19 @@ Video “Komplexe Zahlen z=x+iy” von MathePeter<div class="sd-summary-down doc
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LxPUwlQ2wn0" 
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details><p>Im nächsten Video präsentiert Herr Prof. Hoever eine Einführung in die komplexen
+Zahlen. Das Video zeigt auch schon die ersten Grundrechenoperationen, die aber
+erst im nächsten Kapitel eingeführt werden.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen - Einführung” von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ql5wpNTHXOo?si=XcFWE1tdYWQnykmw" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 </details></section>
 <section id="zusammenfassung-und-ausblick">
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
@@ -726,7 +739,7 @@ Zahlen besser zu verstehen, die in den nächsten Kapiteln erläutert werden.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rechnen mit komplexen Zahlen</p>
+        <p class="prev-next-title">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -749,7 +762,7 @@ Zahlen besser zu verstehen, die in den nächsten Kapiteln erläutert werden.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-imaginare-einheit-i-und-die-imaginare-zahlen">Die imaginäre Einheit i und die imaginäre Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-imaginare-einheit-i-und-die-imaginaren-zahlen">Die imaginäre Einheit i und die imaginären Zahlen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-zahlen">Komplexe Zahlen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauszsche-zahlenebene">Gaußsche Zahlenebene</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>

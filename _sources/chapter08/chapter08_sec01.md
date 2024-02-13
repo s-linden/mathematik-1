@@ -38,7 +38,7 @@ Bereich der reellen Zahlen hinausgehen.
 ```
 
 
-## Die imaginäre Einheit i und die imaginäre Zahlen
+## Die imaginäre Einheit i und die imaginären Zahlen
 
 Innerhalb der Menge der reellen Zahlen $\mathbb{R}$ stößt man an Grenzen, wie
 beispielsweise bei der Lösung der quadratischen Gleichung 
@@ -263,6 +263,15 @@ Das folgende Video fasst die oben eingeführten Begriffe zusammen.
 ```{dropdown} Video "Komplexe Zahlen z=x+iy" von MathePeter
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LxPUwlQ2wn0" 
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+Im nächsten Video präsentiert Herr Prof. Hoever eine Einführung in die komplexen
+Zahlen. Das Video zeigt auch schon die ersten Grundrechenoperationen, die aber
+erst im nächsten Kapitel eingeführt werden.
+
+```{dropdown} Video "Komplexe Zahlen - Einführung" von Prof. Hoever
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ql5wpNTHXOo?si=XcFWE1tdYWQnykmw" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Zusammenfassung und Ausblick

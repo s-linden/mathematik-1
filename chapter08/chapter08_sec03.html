@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Betrag &#8212; Mathematik 1 Maschinenbau</title>
+    <title>8.3 Betrag, komplexe Konjugation und Division &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Komplexe Zahlen in Polarform" href="chapter08_sec04.html" />
-    <link rel="prev" title="Rechnen mit komplexen Zahlen" href="chapter08_sec02.html" />
+    <link rel="prev" title="8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen" href="chapter08_sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -236,8 +236,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">Komplexe Zahlen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">Rechnen mit komplexen Zahlen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Betrag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.3 Betrag, komplexe Konjugation und Division</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">Komplexe Zahlen in Polarform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Komplexe Zahlen in Exponentialform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec06.html">Potenzen und Wurzeln komplexer Zahlen</a></li>
@@ -433,7 +433,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Betrag</h1>
+    <h1>8.3 Betrag, komplexe Konjugation und Division</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -444,7 +444,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag-komplexer-zahlen">Betrag komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-konjugation">Komplexe Konjugation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division-komplexer-zahlen">Division komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -456,31 +460,220 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="betrag">
-<h1>Betrag<a class="headerlink" href="#betrag" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="betrag-komplexe-konjugation-und-division">
+<h1>8.3 Betrag, komplexe Konjugation und Division<a class="headerlink" href="#betrag-komplexe-konjugation-und-division" title="Permalink to this headline">#</a></h1>
+<p>In dem vorherigen Kapitel haben wir die Addition, Subtraktion und Multiplikation
+von komplexen Zahlen kennengelernt. In diesem Kapitel werden wir uns mit der
+letzten – noch fehlenden – Grundrechenart beschäftigen, nämlich der
+<strong>Division</strong>. Dazu führen wir zuerst den <strong>Betrag</strong> einer komplexen Zahl ein und
+beschäftigen uns mit der <strong>komplexen Konjugation</strong>.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="tip admonition">
+<div class="important admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie können den <strong>Betrag</strong> einer komplexen Zahl berechnen</p></li>
-</ul>
+<ul>
+<li><p>Sie können den <strong>Betrag</strong> einer komplexen Zahl berechnen:</p>
 <div class="math notranslate nohighlight">
-\[|z|=\sqrt{\text{Re}(z)^2 + \text{Im}(z)^2}\]</div>
-<p>und die folgenden Rechenregeln anwenden:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(|z_1 \cdot z_2| = |z_1| \cdot |z_2|\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|z| = |z^{*}| = |\bar{z}|\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|z| = \sqrt{z \cdot z^{*}}\)</span></p></li>
-<li><p>Sie kennen die <strong>Dreiecksungleichung</strong> für den Betrag komplexer Zahlen:</p></li>
-</ul>
+\[|z|=\sqrt{\text{Re}(z)^2 + \text{Im}(z)^2}.\]</div>
+</li>
+<li><p>Sie kennen die <strong>Dreiecksungleichung</strong> für den Betrag komplexer Zahlen:</p>
 <div class="math notranslate nohighlight">
 \[|z_1 + z_2| \leq |z_1| + |z_2|.\]</div>
+</li>
+<li><p>Sie können die <strong>konjugiert komplexe Zahl</strong> bilden, also eine <strong>komplexe
+Konjugation</strong> durchführen.</p></li>
+<li><p>Sie können die folgenden Rechenregeln für den Betrag anwenden:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(|z_1 \cdot z_2| = |z_1| \cdot |z_2|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|z| = |\bar{z}|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|z| = \sqrt{z \cdot \bar{z}}\)</span></p></li>
+</ul>
+</li>
+<li><p>Sie können zwei komplexe Zahlen in Normalform <strong>dividieren</strong>.</p></li>
+</ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M4KewnSNyC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+<section id="betrag-komplexer-zahlen">
+<h2>Betrag komplexer Zahlen<a class="headerlink" href="#betrag-komplexer-zahlen" title="Permalink to this headline">#</a></h2>
+<p>Im Gegensatz zu reellen Zahlen sind komplexe Zahlen nicht geordnet. Welche Zahl
+ist größer: <span class="math notranslate nohighlight">\(-1+3\mathrm{i}\)</span> oder <span class="math notranslate nohighlight">\(2-0.5\mathrm{i}\)</span>? Auf der Zahlengerade lassen
+sich die reellen Zahlen ordnen. <span class="math notranslate nohighlight">\(3\)</span> ist größer als <span class="math notranslate nohighlight">\(2.7\)</span> und liegt daher weiter
+rechts auf der Zahlengeraden. Die geometrische Interpretation der komplexen
+Zahlen als Punkte in der Gaußschen Zahlenebene zeigt aber, dass dieses Ordnen in
+der Gaußschen Zahlenebene nicht funktioniert. Die Zahl <span class="math notranslate nohighlight">\(2-0.5\mathrm{i}\)</span> liegt
+zwar weiter rechts als <span class="math notranslate nohighlight">\(-1+3\mathrm{i}\)</span>. Gleichzeitig liegt aber
+<span class="math notranslate nohighlight">\(-1+3\mathrm{i}\)</span> höher als <span class="math notranslate nohighlight">\(2-0.5\mathrm{i}\)</span>. Als Ersatz für eine Ordnung der
+komplexen Zahlen dient daher der sogenannte <strong>Betrag</strong> einer komplexen Zahl. Der
+Betrag einer komplexen Zahl ist ihr Abstand zum Koordinatenursprung, also zur
+Null <span class="math notranslate nohighlight">\(0+0\mathrm{i}\)</span>.</p>
+<p>Verwenden wir den Satz des Pythagoras, können wir den Betrag einer komplexen
+Zahl aus ihrem Realteil und Imaginärteil ausrechnen.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … der Betrag einer komplexen Zahl?</p>
+<p>Der Betrag einer komplexen Zahl <span class="math notranslate nohighlight">\(z = a + \mathrm{i}\)</span> mit Realteil <span class="math notranslate nohighlight">\(a\)</span> und
+Imaginärteil <span class="math notranslate nohighlight">\(b\)</span> ist</p>
+<div class="math notranslate nohighlight">
+\[|z| = \sqrt{a^2 + b^2}.\]</div>
+</div>
+<p>Für den Betrag zweier komplexer Zahlen gilt die sogenannte
+<strong>Dreiecksungleichung</strong>:</p>
+<div class="math notranslate nohighlight">
+\[|z_1 + z_2| \leq |z_1| + |z_2|.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen - Betrag” von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/09WI_DCFmI0?si=bJrb_PYPcQ3t9cQY" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="komplexe-konjugation">
+<h2>Komplexe Konjugation<a class="headerlink" href="#komplexe-konjugation" title="Permalink to this headline">#</a></h2>
+<p>Als nächstes betrachen wir den Prozess der komplexen Konjugation. Soll zu einer
+komplexen Zahl die sogenannte <strong>konjugiert komplexe Zahl</strong> berechnet werden,
+dann ist damit gemeint, dass das Vorzeichen des Imaginärteils getauscht wird.
+Anhand eines Beispiels betrachten wir nun die geometrische Interpretation der
+konjugiert komplexen Zahl in der Gaußschen Zahlenebene.</p>
+<p><strong>Beispiel:</strong> Wir betrachten die komplexe Zahl <span class="math notranslate nohighlight">\(z = 3 + 2\mathrm{i}\)</span>. Tauschen
+wir nun das Vorzeichen des Imaginärteils, ergibt sich daraus die konjugiert
+komplexe Zahl</p>
+<div class="math notranslate nohighlight">
+\[\bar{z} = 3 \textcolor{red}{-} 2\mathrm{i}.\]</div>
+<p>Dabei wird die konjugiert komplexe Zahl durch einen Strich gekennzeichnet. Als
+nächstes zeichnen wir <span class="math notranslate nohighlight">\(z\)</span> und <span class="math notranslate nohighlight">\(\bar{z}\)</span> in der Gaußschen Zahlenebene ein.</p>
+<p><a class="image43 reference internal" href="../_images/konjugiert_komplexe_zahl_light43.svg"><img alt="Komplexe Zahl und ihre konjugiert komplexe Zahl in der Gaußschen Zahlenebene" class="image43" src="../_images/konjugiert_komplexe_zahl_light43.svg" width="100%" /></a>
+<a class="image169 reference internal" href="../_images/konjugiert_komplexe_zahl_light169.svg"><img alt="Komplexe Zahl und ihre konjugiert komplexe Zahl in der Gaußschen Zahlenebene" class="image169" src="../_images/konjugiert_komplexe_zahl_light169.svg" width="100%" /></a></p>
+<p>Wir können den Prozess des »Vorzeichentauschens«, die sogenannte <strong>komplexe
+Konjugation</strong> geometrisch als eine Spiegelung an der Realteil-Achse
+interpretieren.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die konjugiert komplexe Zahl?</p>
+<p>Ist <span class="math notranslate nohighlight">\(z = a + b\mathrm{i}\)</span> eine komplexe Zahl, dann wird</p>
+<div class="math notranslate nohighlight">
+\[\bar{z} = a - b\mathrm{i}\]</div>
+<p>ihre konjugiert komplexe Zahl genannt. Sie entsteht durch das Tauschen des
+Vorzeichens des Imaginärteils.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen - Konjugiert komplexe Zahl” von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-XZcW-xa35I?si=CB-vYzuUPo-TWTCS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="division-komplexer-zahlen">
+<h2>Division komplexer Zahlen<a class="headerlink" href="#division-komplexer-zahlen" title="Permalink to this headline">#</a></h2>
+<p>Die Division zweier komplexer Zahlen erfordert einen Trick. Um den Trick zu
+erklären, starten wir mit einem Beispiel. Die beiden komplexen Zahlen
+<span class="math notranslate nohighlight">\(z_1 = 1-3\mathrm{i}\)</span> und <span class="math notranslate nohighlight">\(z_2 = 1+2\mathrm{i}\)</span> sollen dividiert werden, also</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{1-3\mathrm{i}}{1+2\mathrm{i}}\]</div>
+<p>berechnet werden. Wir nehmen den Nenner <span class="math notranslate nohighlight">\(1+2\mathrm{i}\)</span> und tauschen das
+Vorzeichen des Imaginärteils aus. Aus Plus machen wir Minus und aus Minus machen
+wir Plus und erhalten die folgende konjugiert komplexe Zahl:</p>
+<div class="math notranslate nohighlight">
+\[1+2\mathrm{i} \; \longrightarrow \; 1 \textcolor{red}{-}2\mathrm{i}.\]</div>
+<p>Als nächstes erweitern wir den Bruch mit dieser neuen Zahl, rechnen also</p>
+<div class="math notranslate nohighlight">
+\[\frac{1-3\mathrm{i}}{1+2\mathrm{i}} \cdot \frac{1
+\textcolor{red}{-}2\mathrm{i}}{1 \textcolor{red}{-}2\mathrm{i}}\]</div>
+<p>aus. Beim Ausmultiplizieren des Nenners können wir die <a class="reference external" href="https://de.wikipedia.org/wiki/Binomische_Formeln">3. binomische
+Formel</a> <span class="math notranslate nohighlight">\((a+b)\cdot (a-b) =
+a^2 -b^2\)</span> ausnutzen:</p>
+<div class="math notranslate nohighlight">
+\[\frac{(1-3\mathrm{i})}{(1+2\mathrm{i})} \cdot \frac{(1
+\textcolor{red}{-}2\mathrm{i})}{(1 \textcolor{red}{-}2\mathrm{i})} =
+\frac{1-2\mathrm{i}-3\mathrm{i}+6\mathrm{i}^2}{1^2 - 4\mathrm{i}^2}
+.\]</div>
+<p>Da ja <span class="math notranslate nohighlight">\(\mathrm{i}^2 = -1\)</span> gilt, vereinfachen sich die Terme zu</p>
+<div class="math notranslate nohighlight">
+\[\frac{1-2\mathrm{i}-3\mathrm{i}+6\mathrm{i}^2}{1^2 - 4\mathrm{i}^2}
+= \frac{-5 -5\mathrm{i}}{5}.\]</div>
+<p>Daher gilt also insgesamt</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{1-3\mathrm{i}}{1+2\mathrm{i}} = \frac{-5
+-5\mathrm{i}}{5} = -1 -\mathrm{i}.\]</div>
+<p>Um zwei komplexe Zahlen in Normalform zu dividieren, gehen wir also in drei Schritten vor:</p>
+<ol class="arabic simple">
+<li><p>Bei der komplexen Zahl im Nenner wird das Vorzeichen des Imaginärteils
+getauscht, also die konjugiert komplexe Zahl des Nenners gebildet.</p></li>
+<li><p>Danach wird der Bruch mit der kongugiert komplexen Zahl erweitert.</p></li>
+<li><p>Zuletzt werden alle Terme durch Ausmultiplizieren vereinfacht. Dabei werden
+die 3. binomische Formel und <span class="math notranslate nohighlight">\(\mathrm{i}^2=-1\)</span> ausgenutzt, bis das Ergebnis
+in Normalform dasteht.</p></li>
+</ol>
+<p>Der Vollständigkeit halber notieren wir noch die mathematische Formel zur
+Berechnung eines Quotienten von komplexen Zahlen im Allgemeinen. Wenn $z_1 = a_1</p>
+<ul class="simple">
+<li><p>b_1 \cdot \mathrm{i}<span class="math notranslate nohighlight">\( und \)</span>z_2 = a_2 + b_2 \cdot \mathrm{i}$ komplexe Zahlen
+sind, dann ist ihr Quotient</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{a_1 + b_1 \cdot \mathrm{i}}{a_2 + b_2 \cdot
+\mathrm{i}} = \frac{a_1a_2 + b_1 b_2}{a_2^2 + b_2^2} + \frac{a_2 b_1 - a_1
+b_2}{a_2^2 + b_2^2} \mathrm{i}.\]</div>
+<p>Es ist wenig sinnvoll, diese Formel auswendig zu lernen. Eine bessere Strategie
+ist, sich zu merken, dass mit der konjugiert komplexen Zahl erweitert wird. Auch
+die Division zweier komplexer Zahlen kann geometrisch in der Gaußschen
+Zahlenebene interpretiert werden. Probieren Sie dazu das folgende Applet aus.</p>
+<div class="seealso toggle admonition">
+<p class="admonition-title">Interaktiv: Division komplexer Zahlen von “Hart und Trocken”</p>
+<p>Starten Sie das</p>
+<p><a class="reference external" href="https://www.hartundtrocken.de/my-product/interaktiv-division-komplexer-zahlen/">Applet “Division komplexer
+Zahlen”</a></p>
+<p>von “Hart und Trocken”. Dort können Sie zwei komplexe Zahlen in der Gaußschen
+Zahlenebene wählen, indem Sie die beiden blauen Punkte bewegen. Der Quotient dieser
+beiden komplexen Zahlen wird orange dargestellt.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen - Kehrwert einer komplexen Zahl” von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rxq-4o1eFNA?si=yUlycavP-smHAGAP" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen | Division” von Lernkompass<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J8btoGTJW-k?si=c057mP3tROAx6hHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Permalink to this headline">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Mengen grafisch darstellen” von MathePeter<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M4KewnSNyC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, wie komplexe Zahlen dividiert werden. Dazu
+wurden die Begriffe Betrag und komplexe Konjugation eingeführt. Tatsächlich ist
+es bei der Multiplikation und der Division häufig geschickter, von der
+Darstellung einer komplexen Zahl in Normalform zu der sogenannten Polarform oder
+Exponentialform überzugehen. Letzteres wird uns auch das Potenzieren und
+Wurzelziehen ermöglichen. Daher behandeln wir im nächsten Kapitel zunächst die
+Polarform der komplexen Zahlen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -520,7 +713,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Rechnen mit komplexen Zahlen</p>
+        <p class="prev-next-title">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</p>
       </div>
     </a>
     <a class="right-next"
@@ -551,7 +744,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag-komplexer-zahlen">Betrag komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-konjugation">Komplexe Konjugation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division-komplexer-zahlen">Division komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
