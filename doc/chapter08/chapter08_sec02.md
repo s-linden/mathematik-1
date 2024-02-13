@@ -67,6 +67,10 @@ Zahlenebene wählen, indem Sie die beiden blauen Punkte bewegen. Die Summe diese
 beiden komplexen Zahlen wird orange dargestellt.
 ```
 
+```{dropdown} Video "Komplexe Zahlen - Gaußsche Zahlenebene Addition" von Prof. Hoever
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i6-cZfAquxQ?si=9uskfEIUMUBTwfm9" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
 ## Subtraktion komplexer Zahlen
 
@@ -140,10 +144,9 @@ Zahlenebene wählen, indem Sie die beiden blauen Punkte bewegen. Das Produkt die
 beiden komplexen Zahlen wird orange dargestellt.
 ```
 
-Das folgende Video zeigt die Grundrechenarten für komplexe Zahlen.
-
-```{dropdown} Video "Komplexe Zahlen: Grundrechenarten" von MathePeter
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zB2VwWzpYx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```{dropdown} Video "Komplexe Zahlen - Gaußsche Zahlenebene Multiplikation" von Prof. Hoever
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EdCqr-TDJgE?si=KomK36ZQY_ARAPLe" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 
