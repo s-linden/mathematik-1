@@ -32,3 +32,29 @@ div.minisolution{
     content: none;
   }
   
+
+
+/* Start by hiding the tablet/laptop image */
+.image43 {
+    display: none;
+}
+
+/* For devices with a width of at least 768px, hide the smartphone image and show the tablet/laptop image */
+@media (min-width: 768px) {
+    .image43 {
+        display: none; /* Hide smartphone image */
+    }
+    .image169 {
+        display: block; /* Show tablet/laptop image */
+    }
+}
+
+/* For devices smaller than 768px (typically smartphones), show the smartphone image */
+@media (max-width: 767px) {
+    .image43 {
+        display: block; /* Show smartphone image */
+    }
+    .image169 {
+        display: none; /* Hide tablet/laptop image */
+    }
+}
