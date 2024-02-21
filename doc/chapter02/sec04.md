@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele Exponential- und Logarithmusfunktion
-:class: tip
+:class: goals
 * Sie kennen die wichtigsten Eigenschaften der **Exponentialfunktion** und können sie zeichnen.
 * Sie kennen die wichtigsten Eigenschaften der **Logarithmusfunktion** und können sie zeichnen.
 ```

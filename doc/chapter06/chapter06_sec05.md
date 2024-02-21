@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können eine Matrix mit einem Skalar multiplizieren. 
 * Sie können die Rechenregeln für die Addition von Matrizen und für die Multiplikation »Skalar mit Matrix« anwenden, also insbesondere
     * Kommutativgesetz,

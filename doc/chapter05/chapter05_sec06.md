@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können den Winkel zwischen zwei Geraden berechnen.
 * Sie können den Winkel zwischen einer Gerade und einer Ebene berechnen.
 * Sie können den Winkel zwischen zwei Ebenen berechnen.

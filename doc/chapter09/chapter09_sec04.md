@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was ein **Funktionsgrenzwert** ist. Dazu wird eine Folge von Zahlen $(x_n)$ genommen, die gegen den Grenzwert $x_0$ konvergiert, und dann in die Funktion $f$ eingesetzt. Wenn dann die dadurch entstehende Folge $f(x_n)$ konvergent ist, nennt man diesen Grenzwert $F$ Funktionsgrenzwert von der Funktion $f$ an der Stelle $x_0$. Wir schreiben entweder
 \begin{equation*}
 \lim_{x\rightarrow x_0} f(x) = F \quad \text{ oder } \quad f(x)\rightarrow F \text{ für } x \rightarrow x_0. 

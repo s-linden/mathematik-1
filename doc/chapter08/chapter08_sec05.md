@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können komplexe Zahlen in ihre **Exponentialform** umrechnen.
 * Sie können komplexe Zahlen in Exponentialform miteinander multiplizieren und dividieren.
 ```

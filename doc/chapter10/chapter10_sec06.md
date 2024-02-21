@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die Umkehrfunktion ableiten, also 
 
 $$\left(f^{-1}(y)\right)' = \frac{1}{f'(x)},$$

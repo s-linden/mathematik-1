@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können eine Ebenengleichung aufstellen, wenn ein Punkt und zwei Richtungsvektoren/Spannvektoren in der Ebene gegeben sind (**Parameterdarstellung**).
 * Sie können eine Ebenengleichung aufstellen, wenn drei Punkte gegeben sind.
 * Sie können eine Ebenengleichung aufstellen, wenn ein Punkt und ein Normalenvektor gegeben sind (**Normalendarstellung**). 

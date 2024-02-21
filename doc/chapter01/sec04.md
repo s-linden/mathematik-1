@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: goals
 * Sie können **lineare Gleichungen** lösen und das Ergebnis überprüfen.
 * Sie können **quadratische Gleichungen** lösen und das Ergebnis überprüfen.
 * Sie können **Bruchgleichungen** lösen und das Ergebnis überprüfen.

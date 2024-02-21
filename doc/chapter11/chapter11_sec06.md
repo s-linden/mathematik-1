@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was ein **Wendepunkt** ist.
 * Sie kennen die Bedingungen, unter denen eine Funktion einen Wendepunkt hat.
 * Sie wissen, was ein **Sattelpunkt/Terassenpunkt** ist.

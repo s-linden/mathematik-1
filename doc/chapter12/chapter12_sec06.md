@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die **Substitutionsregel** anwenden:
 
 $$\int f(u(x)) \cdot u'(x)\; dx = \int f(u) \; du.$$

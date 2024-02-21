@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 Sie kennen die folgenden Rechenregeln für das Rechnen mit Grenzwerten von Zahlenfolgen und können Sie anwenden:
 * Addition: 
 

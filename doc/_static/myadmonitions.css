@@ -1,38 +1,36 @@
-:root {
-    --first-color: rgba(232,244,234,1);
-    --second-color: rgba(232,244,234,0.1);
-  }
-
-div.miniexercise {
-	border-color: var(--first-color);
-	background-color: var(--second-color);
+/* anything related to the light theme */
+html[data-theme="light"] {
+    --my-color-goals: #ffc107;
+    --my-color-goals-bg: #FFF8E6;
 }
 
-div.miniexercise p.admonition-title {
-	background-color: var(--first-color);
+/* anything related to the dark theme */
+html[data-theme="dark"] {
+    --my-color-goals: #ffc107;
+    --my-color-goals-bg: #584306;
 }
 
-div.miniexercise p.admonition-title::before {
-    content: "\f303";
-}
+div.admonition.goals {
+    border-color: var(--my-color-goals); 
+  }
+  div.admonition.goals > .admonition-title {
+    background-color: var(--my-color-goals-bg); 
+  }
+  div.admonition.goals > .admonition-title:after {
+    color: var(--my-color-goals);
+    content: "\f046"; /* fa-solid fa-tv */
+  }
 
-/* Lösung */
-div.minisolution{
-    border-color: var(--first-color);
-    background-color: none;
+  div.admonition.miniexercise {
+    border-color: var(--pst-color-success); 
   }
-  
-  div.minisolution p.admonition-title {
-    background-color: transparent;
-    text-decoration: none;
+  div.admonition.miniexercise > .admonition-title {
+    background-color: var(--pst-color-success-bg); 
   }
-  
-  /* Remove content box */
-  div.minisolution p.admonition-title::before {
-    content: none;
+  div.admonition.miniexercise > .admonition-title:after {
+    color: var(--pst-color-success);
+    content: var(--pst-icon-admonition-todo);
   }
-  
-
 
 /* Start by hiding the tablet/laptop image */
 .image43 {

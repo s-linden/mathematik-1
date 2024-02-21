@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele Polynome
-:class: tip
+:class: goals
 * Sie wissen, was ein **Polynom** ist.
 * Sie wissen, was die **Steigung** und der **Achsenabschnitt** einer **linearen Funktion** ist.  
 * Sie können eine lineare Funktion als **Gerade** in ein Koordinatensystem zeichnen.

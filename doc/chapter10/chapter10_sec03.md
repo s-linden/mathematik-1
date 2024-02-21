@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die **Faktorregel** anwenden, d.h. 
 
 $$(C\cdot f(x))' = C\cdot f'(x).$$

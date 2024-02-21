@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was die **Sekante** einer Funktion ist. Die Steigung der Sekante wird **Differenzenquotient** genannt.
 * Sie wissen, was die **Ableitung** einer Funktion ist. Existiert die Ableitung an einer Stelle, so wird die Funktion **differenzierbar** an dieser Stelle genannt. 
 * Sie wissen, was die **Tangente** einer Funktion ist. Die Steigung der Tangente wird **Differentialquotient** genannt.

@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was ein **lokales Minimum (Tiefpunkt)** und ein **lokales Maximum (Hochpunkt)** sind.
 * Sie kennen die Bedingungen für ein Minimum, wenn die Funktion differenzierbar ist.
 * Sie kennen die Bedingungen für ein Maximum, wenn die Funktion differenzierbar ist.

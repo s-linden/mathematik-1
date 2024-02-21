@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: goals
 * Sie wissen, was ein **Term** ist. 
 * Sie kennen die wichtigsten Rechenregeln für die reellen Zahlen:
 	* Kommutativgesetz (Vertauschungsgesetz),

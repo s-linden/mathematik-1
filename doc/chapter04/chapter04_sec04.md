@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, wie das **Vektorprodukt** zweier Vektoren **geometrisch** definiert ist: Das Vektorprodukt der beiden Vektoren $\mathbf{a}$ und $\mathbf{b}$ ist der Vektor $\mathbf{c}$ für den gilt:
     * Die Länge von $\mathbf{c}$ ist die Fläche des Parallelogramms, das durch $\mathbf{a}$ und $\mathbf{b}$ gebildet wird.
     * Die Richtung von $\mathbf{c}$ ist senkrecht zu $\mathbf{a}$ und senkrecht zu $\mathbf{b}$.

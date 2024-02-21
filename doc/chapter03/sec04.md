@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können Vektoren in Koordinatendarstellung addieren und subtrahieren.
 * Sie können einen Vektor in Koordinatendarstellung mit einem Skalar
   multiplizieren.

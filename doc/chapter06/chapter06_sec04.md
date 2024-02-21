@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 Sie können Matrizen addieren und subtrahieren, also Summe und Differenz zweier Matrizen bilden.
 ```
 

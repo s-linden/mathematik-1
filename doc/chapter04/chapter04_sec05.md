@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können das Vektorprodukt von Vektoren in Koordinatendarstellung ausrechnen.
 * Sie kennen folgende Rechenregel für das Vektorprodukt:
     * Antikommutativgesetz: $\mathbf{a}\times\mathbf{b} = \textcolor{red}{-}\left(\mathbf{b}\times\mathbf{a}\right)$ 

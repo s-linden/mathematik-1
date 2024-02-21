@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die **Kettenregel** anwenden, d.h. 
 
 $$\left(f(g(x))\right)' = f'\left(g(x)\right) \cdot g'(x).$$

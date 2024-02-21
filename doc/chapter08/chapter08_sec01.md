@@ -25,7 +25,7 @@ Bereich der reellen Zahlen hinausgehen.
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: important
+:class: goals
 * Sie wissen, dass die **imaginäre Einheit** $\mathrm{i}$ durch
   $\mathrm{i}^2=-1$ definiert ist.
 * Sie wissen, was eine **imaginäre** Zahl ist.

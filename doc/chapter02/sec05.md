@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele trigonometrische Funktionen
-:class: tip
+:class: goals
 * Sie wissen, wie die trigonometrischen Funktionen **Sinus**, **Kosinus** und **Tangens** im rechtwinkligen Dreieck definiert sind und können sie am Einheitskreis ablesen.
 * Sie kennen die wichtigsten Eigenschaften der trigonometrischen Funktionen wie Definitions- und Wertebereich, Periodizität und Symmetrie. Außerdem wissen Sie, wo die Nullstellen und relative Maxima und Minima von Sinus und Kosinus liegen.
 ```

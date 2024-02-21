@@ -10,7 +10,7 @@ beschäftigen uns mit der **komplexen Konjugation**.
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: important
+:class: goals
 * Sie können den **Betrag** einer komplexen Zahl berechnen: 
 
    $$|z|=\sqrt{\text{Re}(z)^2 + \text{Im}(z)^2}.$$

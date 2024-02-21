@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was eine **Matrix** ist.
 * Sie kennen den Unterschied zwischen einem **Zeilenvektor** und einem **Spaltenvektor**. 
 * Sie können die Teile einer Matrix benennen, d.h. Sie wissen, was die folgenden Begriffe bedeuten: 

@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele  Mengen
-:class: tip
+:class: goals
 * Sie wissen, was der mathematische Begriff **Menge** bedeutet.
 * Sie kennen besondere Mengen wie beispielsweise
     * Teilmenge,

@@ -10,7 +10,7 @@ Rechenoperationen in der Gaußschen Zahlenebene eingehen.
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: important
+:class: goals
 * Sie können zwei komplexe Zahlen in der Normalform **addieren**.
 * Sie können die Addition zweier komplexer Zahlen geometrisch in der Gaußschen
   Zahlenebene interpretieren.

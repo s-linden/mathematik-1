@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können zwei Matrizen miteinander multiplizieren.
 * Sie wissen, dass es passieren kann, dass zwei Matrizen, die beide keine Nullmatrizen sind, im Produkt trotzdem die Nullmatrix ergeben.
 * Sie wissen, dass die Matrixmultiplikation *nicht kommutativ* ist, also normalerweise $\mathbf{A}\cdot\mathbf{B} \textcolor{red}{\neq} \mathbf{B}\cdot\mathbf{A}$.

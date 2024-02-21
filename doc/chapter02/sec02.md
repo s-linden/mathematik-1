@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele Eigenschaften von Funktionen
-:class: tip
+:class: goals
 Sie kennen die wichtigsten Eigenschaften von mathematischen Funktionen wie beispielsweise
 * Nullstellen,
 * Symmetrie (gerade oder ungerade),

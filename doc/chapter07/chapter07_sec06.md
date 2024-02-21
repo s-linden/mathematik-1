@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die **Eigenwerte** und **Eigenvektoren** einer $3\times 3$-Matrix berechnen.
 ```
 
