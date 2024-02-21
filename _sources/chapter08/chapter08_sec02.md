@@ -123,9 +123,11 @@ z_2 &= a_2 + b_2 \mathrm{i}.\\
 
 Dann ist das Produkt dieser beiden komplexen Zahlen die folgende Zahl:
 
-$$z_1 \cdot z_2 = (a_1 + b_1\mathrm{i}) \cdot (a_2 + b_2\mathrm{i}) = (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) \cdot\mathrm{i}.$$
+$$z_1 \cdot z_2 = (a_1 + b_1\mathrm{i}) \cdot (a_2 + b_2\mathrm{i}) = (a_1 a_2 -
+b_1 b_2) + (a_1 b_2 + b_1 a_2) \cdot\mathrm{i}.$$
 
-Tatsächlich ist es aufwendiger, sich die Formel einzuprägen, als einfach auszumultiplizieren.
+Tatsächlich ist es aufwendiger, sich die Formel einzuprägen, als einfach
+auszumultiplizieren.
 
 Auch bei der Multiplikation zweier komplexer Zahlen kann das Produkt geometrisch
 in der Gaußschen Zahlenebene interpretiert werden. Wird das Produkt $z_1 \cdot
