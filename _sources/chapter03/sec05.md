@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können den Betrag eines Vektors in Koordinatendarstellung ausrechnen.
 * Sie können den Einheitsvektor in Richtung eines Vektors (in
   Koordinatendarstellung) bestimmen (=normieren).

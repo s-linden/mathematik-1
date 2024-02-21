@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die Regel von Bernoulli-de l'Hospital anwenden, um Grenzwerte auszurechnen.
 * Sie wissen, dass sich die Sinusfunktion für kleine Werte $x$ wie $x$ selbst verhält, also $\lim_{x\rightarrow 0} \frac{\sin(x)}{x} = 1.$
 * Sie können das asymptotische Verhalten von Exponential- und Potenzfunktionen abschätzen. Für große $x$ wächst die Exponentialfunktion schneller als jede Potenzfunktion und damit auch schneller als jedes Polynom.

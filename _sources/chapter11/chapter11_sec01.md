@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, dass eine nichtlineare Funktion **linearisiert** werden kann. Damit ist gemeint, dass die nichtlineare Funktion $y=f(x)$ näherungsweise durch die lineare Funktion
 
 $$y = f'(x_0)\cdot (x-x_0) + y_0$$

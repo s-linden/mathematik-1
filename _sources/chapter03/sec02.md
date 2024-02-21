@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können Vektoren geometrisch addieren und subtrahieren.
 * Sie können einen Vektor geometrisch mit einem Skalar multiplizieren.
 * Sie können das Distributivgesetz der skalaren Multiplikation für Vektoren

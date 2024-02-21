@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können Potenzen von komplexen Zahlen in der Exponentialform ausrechnen.
 * Sie kennen den **Satz von Moivre**: Für jede komplexe Zahl $z$ und für jede natürliche Zahl $n$ gilt die Moivresche Formel 
 

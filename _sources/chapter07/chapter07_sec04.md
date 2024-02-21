@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können eine inverse Matrix dazu benutzen, ein lineares Gleichungssystem zu lösen.
 * Sie können den **Gauß-Algorithmus** zur Lösung von linearen Gleichungssystemen anwenden.
 ```

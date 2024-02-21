@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: goals
 * Sie können eine **Polynomdivision** durchführen.
 ```
 

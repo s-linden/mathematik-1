@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie kennen spezielle Matrizen, d.h. 
     * die **quadratische Matrix**,
     * die **Diagonalmatrix**,

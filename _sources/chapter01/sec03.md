@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: goals
 * Sie wissen, was die **Potenz** einer reellen Zahl ist.
 * Sie kennen die **Potenzgesetze** und können mit ihnen rechnen.
 * Sie kennen die **Wurzel** einer reellen Zahl und die Rechengesetze für Wurzeln.

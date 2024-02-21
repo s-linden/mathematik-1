@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was ein **Vektor** ist.
 * Sie können seinen **Betrag** bzw. seine **Länge** und seine **Richtung**
   ablesen. 

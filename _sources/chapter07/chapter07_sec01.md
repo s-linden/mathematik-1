@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die **Determinante** einer $2\times 2$-Matrix berechnen.
 * Sie können die Determinante einer $3\times 3$-Matrix mit der **Regel von Sarrus** berechnen.
 ```

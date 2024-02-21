@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können eine Geradengleichung aufstellen, wenn *ein Punkt und ein Richtungsvektor* gegeben sind: **Punkt-Richtungsform**.
 * Sie können eine Geradengleichung aufstellen, wenn *zwei Punkte* gegeben sind: **Zwei-Punkte-Form**.
 ```

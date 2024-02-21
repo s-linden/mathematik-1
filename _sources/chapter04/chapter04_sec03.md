@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können das Skalarprodukt von Vektoren in Koordinaten ausrechnen.
 * Sie können die senkrechte Projektion eines Vektors in Richtung eines anderen Vektors berechnen.
 ```

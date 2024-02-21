@@ -4,7 +4,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, wann es erlaubt ist, die **inverse Matrix** einer quadratischen Matrix zu berechnen.
 * Sie können, falls es erlaubt ist, die Inverse einer Matrix berechnen. 
 * Sie kennen die Rechenregeln für inverse Matrizen und können sie anwenden.

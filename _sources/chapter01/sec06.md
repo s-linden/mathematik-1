@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: goals
 * Sie kennen Winkel im **Winkelmaß** und im **Bogenmaß** und können diese ineinander umrechnen.
 * Sie kennen die Grundbegriffe **Gegenkathete**, **Ankathete** und **Hypotenuse** und können sie in einem rechtwinkligen Dreieck einzeichnen.
 * Sie kennen den **Satz des Pythagoras**.

@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können den Abstand zwischen zwei Punkten berechnen.
 * Sie können den Abstand eines Punktes zu einer Geraden berechnen.
 * Sie können den Abstand eines Punktes zu einer Ebene berechnen.

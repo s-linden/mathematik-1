@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele Funktionen
-:class: tip
+:class: goals
 * Sie wissen, wie in der Mathematik eine **Funktion** definiert wird und kennen typische Darstellungsformen von Funktionen.
 * Sie können die **Definitionsmenge** und **Wertemenge/Zielmenge** einer Funktion bestimmen.
 * Sie wissen, was eine **Umkehrfunktion** ist und können prüfen, ob eine gegebene Funktion umkehrbar ist und ggf. die Umkehrfunktion ausrechnen.

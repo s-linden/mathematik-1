@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was eine **transponierte Matrix** ist und können zu einer gegebenen Matrix die transponierte Matrix berechnen.
 * Sie kennen die Rechenregeln für die Transponierte einer Matrix.
 ```

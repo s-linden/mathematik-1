@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können den Schnitt zweier Geraden bestimmen.
 * Sie können den Schnitt einer Gerade mit einer Ebene bestimmen.
 * Sie können den Schnitt zweier Ebenen bestimmen.

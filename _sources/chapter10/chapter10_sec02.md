@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können eine konstante Funktion ableiten, d.h. 
 
 $$f(x)=C \Rightarrow f'(x)=0.$$

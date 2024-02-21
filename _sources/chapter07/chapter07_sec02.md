@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die Determinante einer beliebigen quadratischen Matrix berechnen, indem Sie entweder
     * die Determinante nach einer günstigen Zeile oder Spalte entwickeln (**Laplacescher Entwicklungssatz für Determinanten**) oder
     * indem Sie die Matrix in eine Diagonalmatrix oder eine untere/obere Dreiecksmatrix transformieren und dann die Determinante berechnen.

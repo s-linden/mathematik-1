@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>8.1 Was sind komplexe Zahlen? &#8212; Mathematik 1 Maschinenbau</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -35,18 +35,18 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen" href="chapter08_sec02.html" />
     <link rel="prev" title="Komplexe Zahlen" href="chapter08_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -79,7 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -114,11 +122,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -133,9 +144,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -145,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/maths_background_small.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/maths_background_small.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/maths_background_small.png" class="logo__image only-light" alt="Mathematik 1 Maschinenbau - Home"/>
+    <script>document.write(`<img src="../_static/maths_background_small.png" class="logo__image only-dark" alt="Mathematik 1 Maschinenbau - Home"/>`);</script>
   
   
 </a></div>
@@ -403,20 +416,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -457,10 +472,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="was-sind-komplexe-zahlen">
-<h1>8.1 Was sind komplexe Zahlen?<a class="headerlink" href="#was-sind-komplexe-zahlen" title="Permalink to this headline">#</a></h1>
+<h1>8.1 Was sind komplexe Zahlen?<a class="headerlink" href="#was-sind-komplexe-zahlen" title="Permalink to this heading">#</a></h1>
 <p>Mit zunehmender Komplexität unseres Alltags wächst auch die Komplexität der
 Zahlen, die wir benötigen, um ihn zu beschreiben. Bereits im Kindergarten lernen
 wir, mit Zahlen bis zehn umzugehen, um beispielsweise unser Alter oder die
@@ -480,8 +495,8 @@ werden sichtbar, wenn wir versuchen, die quadratische Gleichung <span class="mat
 lösen. Für solche Fälle benötigen wir die <em>komplexen Zahlen</em>, die über den
 Bereich der reellen Zahlen hinausgehen.</p>
 <section id="lernziele">
-<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="important admonition">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
+<div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie wissen, dass die <strong>imaginäre Einheit</strong> <span class="math notranslate nohighlight">\(\mathrm{i}\)</span> durch
@@ -497,7 +512,7 @@ bestimmen.</p></li>
 </div>
 </section>
 <section id="die-imaginare-einheit-i-und-die-imaginaren-zahlen">
-<h2>Die imaginäre Einheit i und die imaginären Zahlen<a class="headerlink" href="#die-imaginare-einheit-i-und-die-imaginaren-zahlen" title="Permalink to this headline">#</a></h2>
+<h2>Die imaginäre Einheit i und die imaginären Zahlen<a class="headerlink" href="#die-imaginare-einheit-i-und-die-imaginaren-zahlen" title="Permalink to this heading">#</a></h2>
 <p>Innerhalb der Menge der reellen Zahlen <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> stößt man an Grenzen, wie
 beispielsweise bei der Lösung der quadratischen Gleichung</p>
 <div class="math notranslate nohighlight">
@@ -549,7 +564,7 @@ folgendermaßen notiert:</p>
 reellen Zahlen <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 </section>
 <section id="komplexe-zahlen">
-<h2>Komplexe Zahlen<a class="headerlink" href="#komplexe-zahlen" title="Permalink to this headline">#</a></h2>
+<h2>Komplexe Zahlen<a class="headerlink" href="#komplexe-zahlen" title="Permalink to this heading">#</a></h2>
 <p>Im vorherigen Abschnitt haben wir die imaginäre Einheit <span class="math notranslate nohighlight">\(\mathrm{i}\)</span> und die
 imaginären Zahlen <span class="math notranslate nohighlight">\(b\cdot\mathrm{i}\)</span> kennengelernt, bei denen die imaginäre
 Einheit <span class="math notranslate nohighlight">\(\mathrm{i}\)</span> mit einem reellen Faktor <span class="math notranslate nohighlight">\(b\)</span> multipliziert wird. Damit ist
@@ -590,7 +605,7 @@ der komplexen Zahlen wird mit <span class="math notranslate nohighlight">\(\math
 </div>
 </section>
 <section id="gauszsche-zahlenebene">
-<h2>Gaußsche Zahlenebene<a class="headerlink" href="#gauszsche-zahlenebene" title="Permalink to this headline">#</a></h2>
+<h2>Gaußsche Zahlenebene<a class="headerlink" href="#gauszsche-zahlenebene" title="Permalink to this heading">#</a></h2>
 <p>In der Schule werden üblicherweise die natürlichen Zahlen als Zahlenstrahl
 dargestellt. Das soll den Schülerinnen und Schülern helfen zu verstehen, dass
 die natürlichen Zahlen eine Ordnung haben, also beispielsweise <span class="math notranslate nohighlight">\(3 &lt; 7\)</span> gilt.
@@ -686,7 +701,7 @@ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-s
 </div>
 </details></section>
 <section id="zusammenfassung-und-ausblick">
-<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
 <p>In diesem Kapitel haben Sie gelernt, was eine komplexe Zahl ist und wie eine
 komplexe Zahl als Punkt in der Gaußschen Zahlenebene interpretiert wird. Diese
 geometrische Interpretation wird uns helfen, die Rechenregeln der komplexen
@@ -719,11 +734,10 @@ Zahlen besser zu verstehen, die in den nächsten Kapiteln erläutert werden.</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter08_sec00.html"
@@ -743,10 +757,7 @@ Zahlen besser zu verstehen, die in den nächsten Kapiteln erläutert werden.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -754,6 +765,7 @@ Zahlen besser zu verstehen, die in den nächsten Kapiteln erläutert werden.</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -787,6 +799,7 @@ By Simone Gramsch
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -812,8 +825,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

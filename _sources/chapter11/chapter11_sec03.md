@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Die erste Ableitung einer Funktion beschreibt den Neigungswinkel an dem Punkt $(x_0, f(x_0))$, also $f'(x_0) = \tan (\alpha)$. 
 * Wenn zwei Funktionen sich in dem Punkt $(x_0,y_0)$ treffen, dann sind sie senkrecht zueinander, wenn $f'(x_0)\cdot g'(x_0)=-1$. Und sie berühren sich nur, wenn $f'(x_0) = g'(x_0)$.
 ```

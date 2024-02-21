@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was eine **Zahlenfolge** ist und was ein **Folgenglied** ist.
 * Sie können Zahlenfolgen definieren
 

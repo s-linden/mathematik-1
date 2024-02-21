@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können eine komplexe Zahl in **Polarkoordinaten** darstellen.
 * Sie können das **Argument** einer komplexen Zahl ausrechnen und wissen, dass es dabei zwei Konventionen gibt.
 * Sie können komplexe Zahlen in Polarkoordinaten multiplizieren und dividieren.

@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können die **Eigenwerte** und **Eigenvektoren** einer $2\times 2$-Matrix berechnen.
 ```
 

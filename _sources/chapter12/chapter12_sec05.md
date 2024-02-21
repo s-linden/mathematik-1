@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie kennen die Faktorregel, also 
 
 $$\int C f(x)\;dx = C \int f(x)\; dx.$$

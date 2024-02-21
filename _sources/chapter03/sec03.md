@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie können einen Vektor in ein zwei- oder dreidimensionales Koordinatensystem
   einzeichnen.
 * Sie können einen Punkt von einem Vektor unterscheiden.

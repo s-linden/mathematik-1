@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was eine **Basis** ist.
 * Sie können ein **Rechtssystem** von einem **Linkssystem** unterscheiden.
 ```

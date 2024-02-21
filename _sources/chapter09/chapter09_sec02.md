@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was der **Grenzwert** einer Folge ist. Manchmal wird der Grenzwert auch als **Limes** bezeichnet. Das kommt aus dem Lateinischen, erinnert aber auch an den englischen Begriff Limit. 
 * Sie wissen, dass eine Zahlenfolge **konvergent** genannt wird, wenn sie einen Grenzwert hat. Außerdem kennen Sie die beiden üblichen Schreibweisen für Grenzwerte: 
 \begin{equation*}

@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was eine **Stammfunktion** bzw. ein **unbestimmtes Integral** ist. Insbesondere kennen Sie den Unterschied zwischen einer Stammfunktion und einem bestimmten Integral.
 * Sie kennen die Stammfunktionen der wichtigsten Funktionen auswendig.
 ```

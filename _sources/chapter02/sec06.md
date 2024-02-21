@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele Beziehungen zwischen trigonometrischen Funktionen
-:class: tip
+:class: goals
 * Sie kennen den Zusammenhang zwischen Sinus und Kosinus:
 
 $$\cos(x)=\sin\left(x+\frac{\pi}{2}\right) \quad \text{ und } \sin(x)=\cos\left(x -\frac{\pi}{2}\right)$$

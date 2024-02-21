@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele 
-:class: tip
+:class: goals
 * Sie wissen, was eine **Linearkombination** von Vektoren ist.
 * Sie wissen, was **linear unabhängige** Vektoren sind.
 * Sie können auch berechnen, ob gegebene Vektoren linear unabhängig sind.
