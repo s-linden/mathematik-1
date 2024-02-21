@@ -141,7 +141,7 @@ durch das Symbol $\mathbb{C}$ bezeichnet.
 Zusammengefasst werden also komplexe Zahlen folgendermaßen definiert.
 
 ```{admonition} Was ist ... eine komplexe Zahl?
-:class: notes
+:class: note
 Eine komplexe Zahl ist eine zusammengesetzte Zahl aus einer reellen Zahl und
 einer imaginären Zahl
 
