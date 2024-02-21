@@ -148,7 +148,8 @@ Daher gilt also insgesamt
 $$\frac{z_1}{z_2} = \frac{1-3\mathrm{i}}{1+2\mathrm{i}} = \frac{-5
 -5\mathrm{i}}{5} = -1 -\mathrm{i}.$$
 
-Um zwei komplexe Zahlen in Normalform zu dividieren, gehen wir also in drei Schritten vor:
+Um zwei komplexe Zahlen in Normalform zu dividieren, gehen wir also in drei
+Schritten vor:
 
 1. Bei der komplexen Zahl im Nenner wird das Vorzeichen des Imaginärteils
    getauscht, also die konjugiert komplexe Zahl des Nenners gebildet.
@@ -191,10 +192,6 @@ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-s
 ```{dropdown} Video "Komplexe Zahlen | Division" von Lernkompass
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J8btoGTJW-k?si=c057mP3tROAx6hHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
-
-
-
 
 
 ## Weiteres Lernmaterial
