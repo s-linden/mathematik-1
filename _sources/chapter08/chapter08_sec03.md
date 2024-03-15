@@ -159,8 +159,8 @@ Schritten vor:
    in Normalform dasteht.  
 
 Der Vollständigkeit halber notieren wir noch die mathematische Formel zur
-Berechnung eines Quotienten von komplexen Zahlen im Allgemeinen. Wenn $z_1 = a_1
-+ b_1 \cdot \mathrm{i}$ und $z_2 = a_2 + b_2 \cdot \mathrm{i}$ komplexe Zahlen
+Berechnung eines Quotienten von komplexen Zahlen im Allgemeinen. Wenn $z_1 = 
+a_1 + b_1 \cdot \mathrm{i}$ und $z_2 = a_2 + b_2 \cdot \mathrm{i}$ komplexe Zahlen
 sind, dann ist ihr Quotient
 
 $$\frac{z_1}{z_2} = \frac{a_1 + b_1 \cdot \mathrm{i}}{a_2 + b_2 \cdot

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Komplexe Zahlen in Polarform &#8212; Mathematik 1 Maschinenbau</title>
+    <title>8.4 Komplexe Zahlen in Polarform &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -251,7 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Betrag, komplexe Konjugation und Division</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Komplexe Zahlen in Polarform</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4 Komplexe Zahlen in Polarform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Komplexe Zahlen in Exponentialform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec06.html">Potenzen und Wurzeln komplexer Zahlen</a></li>
 </ul>
@@ -448,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Komplexe Zahlen in Polarform</h1>
+    <h1>8.4 Komplexe Zahlen in Polarform</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -459,7 +459,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarform">Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-normalform-und-polarform">Umrechnung Normalform und Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-polarform">Multiplikation und Division in Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -472,31 +475,182 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="komplexe-zahlen-in-polarform">
-<h1>Komplexe Zahlen in Polarform<a class="headerlink" href="#komplexe-zahlen-in-polarform" title="Permalink to this heading">#</a></h1>
+<h1>8.4 Komplexe Zahlen in Polarform<a class="headerlink" href="#komplexe-zahlen-in-polarform" title="Permalink to this heading">#</a></h1>
+<p>Im letzen Kapitel haben wir die Multiplikation und Division zweier komplexer
+Zahlen in der Normalform kennengelernt. Gerade bei »Punktrechnungen« ist jedoch
+die sogenannte Polarform einfacher. In diesem Kapitel werden daher lernen, eine
+komplexe Zahl in Normalform in die Polarform umzurechnen (und umgekehrt). Dabei
+lernen wir auch verschiedene Konventionen kennen. Zuletzt beschäftigen wir uns
+mit der Multiplikation und Division in Polarform und ihren geometrischen
+Interpretationen in der Gaußschen Zahlenebene.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können eine komplexe Zahl in <strong>Polarkoordinaten</strong> darstellen.</p></li>
-<li><p>Sie können das <strong>Argument</strong> einer komplexen Zahl ausrechnen und wissen, dass es dabei zwei Konventionen gibt.</p></li>
-<li><p>Sie können komplexe Zahlen in Polarkoordinaten multiplizieren und dividieren.</p></li>
-<li><p>Sie kennen die <strong>Eulersche Formel</strong></p></li>
+<li><p>Sie können eine komplexe Zahl in der <strong>Polarform</strong> darstellen.</p></li>
+<li><p>Sie können das <strong>Argument</strong> einer komplexen Zahl ausrechnen.</p></li>
+<li><p>Sie können eine komplexe Zahl aus der Normalform in die Polarform umrechnen.</p></li>
+<li><p>Sie können eine komplexe Zahl aus der Polarform in die Normalform umrechnen.</p></li>
+<li><p>Sie können komplexe Zahlen in Polarform <strong>multiplizieren</strong> und
+<strong>dividieren</strong>.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[e^{i \, \varphi} = \cos\left( \varphi \right) + i \,\sin\left(\varphi \right).\]</div>
-<ul class="simple">
-<li><p>Sie kennen die <strong>Eulersche Identität</strong></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[e^{i \pi}=-1.\]</div>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TSeC_2D8xNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TGJHnQY9cjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KzhWHGoAuK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="polarform">
+<h2>Polarform<a class="headerlink" href="#polarform" title="Permalink to this heading">#</a></h2>
+<p>Die Gaußsche Zahlenebene entspricht einem kartesischen Koordinatensystem, bei
+dem jeder Punkt in der Ebene durch seine beiden Koordinaten <span class="math notranslate nohighlight">\((x,y)\)</span> beschrieben
+wird. Dabei ist <span class="math notranslate nohighlight">\(x\)</span> der Realteil der komplexen Zahl, also <span class="math notranslate nohighlight">\(x = \text{Re}(z)\)</span>,
+und <span class="math notranslate nohighlight">\(y\)</span> der Imaginärteil, also <span class="math notranslate nohighlight">\(y=\text{Im}(z)\)</span>.</p>
+<p>Eine Alternative zum kartesischen Koordinatensystem ist das
+Polarkoordinatensystem. Im Polarkoordinatensystem werden Punkte in einer Ebene
+durch</p>
+<ul class="simple">
+<li><p>Abstand Punkt zum Ursprung und</p></li>
+<li><p>Winkel im Verhältnis zur klassischen x-Achse</p></li>
+</ul>
+<p>beschrieben. Zum Beispiel bedeutet die Angabe <span class="math notranslate nohighlight">\((2, 30^{\circ})\)</span> im
+Polarkoordinatensystem, dass dieser Punkt einen Abstand von 2 zum Ursprung hat.
+Er liegt sozusagen auf einem Kreis um den Ursprung mit Radius <span class="math notranslate nohighlight">\(r = 2\)</span>. Zeichnet
+man jetzt die Verbindungslinie vom Punkt zum Ursprung ein, bildet sie einen
+Winkel von <span class="math notranslate nohighlight">\(\varphi = 30^{\circ}\)</span> zur klassischen x-Achse. Diesen Winkel nennt
+man auch Polarwinkel oder Azimuth.</p>
+<p><a class="image43 reference internal" href="../_images/polarform_light43.svg"><img alt="Mehrere komplexe Zahlen in Polarform" class="image43" src="../_images/polarform_light43.svg" width="100%" /></a>
+<a class="image169 reference internal" href="../_images/polarform_light169.svg"><img alt="Mehrere komplexe Zahlen in Polarform" class="image169" src="../_images/polarform_light169.svg" width="100%" /></a></p>
+<p>Komplexe Zahlen in der Gaußschen Zahlenebene können ebenfalls in
+Polarkoordinaten dargestellt werden. Zu der komplexen Zahl <span class="math notranslate nohighlight">\(z = \sqrt{3} +
+\mathrm{i}\)</span> gehören die kartesischen Koordinaten <span class="math notranslate nohighlight">\((\sqrt{3},1)\)</span>. In
+Polarkoordinaten entspricht das gerade dem obigen Beispiel <span class="math notranslate nohighlight">\((2, 30^{\circ})\)</span>. Um
+deutlich zu machen, dass es sich um eine komplexe Zahl handelt, werden
+allerdings nicht die Polarkoordinaten selbst benutzt, sondern die sogenannte
+Polarform:</p>
+<div class="math notranslate nohighlight">
+\[z = 2\cos(30^{\circ}) + 2\sin(30^{\circ})\mathrm{i}.\]</div>
+<p>Ein Vorteil dieser Schreibweise ist, dass der Betrag der komplexen Zahl sofort
+abgelesen werden kann, weil er dem Radius entspricht:</p>
+<div class="math notranslate nohighlight">
+\[|z| = 2.\]</div>
+<p>Wir werden noch sehen, dass der Winkel entscheidend für die Multiplikation,
+Division und vor allem auch für das Potenzieren von komplexen Zahlen ist. Um
+diese Bedeutung hervorzuheben, wird der Winkel als <strong>Argument</strong> der komplexen
+Zahl bezeichnet. Zusammengefasst erhalten wir folgende Definition der Polarform
+einer komplexen Zahl.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Polarform?</p>
+<p>Die Polarform ist eine alternative Schreibweise einer komplexen Zahl <span class="math notranslate nohighlight">\(z\)</span>. In
+Polarform wird eine komplexe Zahl geschrieben als</p>
+<div class="math notranslate nohighlight">
+\[z = r \, \cos(\varphi) + r \, \sin(\varphi)\, \mathrm{i}.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(r\)</span> der Betrag der komplexen Zahl (also <span class="math notranslate nohighlight">\(r = |z|\)</span>) und <span class="math notranslate nohighlight">\(\varphi\)</span> ihr
+Argument.</p>
+</div>
+</section>
+<section id="umrechnung-normalform-und-polarform">
+<h2>Umrechnung Normalform und Polarform<a class="headerlink" href="#umrechnung-normalform-und-polarform" title="Permalink to this heading">#</a></h2>
+<p>Die Umrechnung von der Polarform in die Normalform ist einfach. Tatsächlich
+müssen wir ja nur die Kosinus- und Sinuswerte konkret ausrechnen und jeweils mit
+dem Betrag multiplizieren. Die komplexe Zahl <span class="math notranslate nohighlight">\(z = 2 \cos(30^{\circ}) + 2
+\sin(\varphi) \mathrm{i}\)</span> hat den Realteil</p>
+<div class="math notranslate nohighlight">
+\[\text{Re}(z) = 2 \cos(30^{\circ}) = 2 \cdot \frac{\sqrt{3}}{2} 
+= \sqrt{3}\]</div>
+<p>und den Imaginärteil</p>
+<div class="math notranslate nohighlight">
+\[\text{Im}(z) = 2 \sin(30^{\circ}) = 2 \cdot \frac{1}{2} = 1.\]</div>
+<p>Daher ist <span class="math notranslate nohighlight">\(z = 2 \cos(30^{\circ}) + 2\sin(\varphi) \mathrm{i}\)</span> in der Normalform
+die Zahl</p>
+<div class="math notranslate nohighlight">
+\[z = \sqrt{3} + \mathrm{i}.\]</div>
+<p>Die umgekehrte Richtung ist etwas schwieriger, lässt sich aber auch mit
+bekannten Formeln aus der Trigonometrie lösen. Dazu zeichnen wir ein
+rechtwinkliges Dreieck ein.</p>
+<p><a class="image43 reference internal" href="../_images/normal2polarform_light43.svg"><img alt="Rechtwinkliges Dreieck zur Berechnung der Poloarform" class="image43" src="../_images/normal2polarform_light43.svg" width="100%" /></a>
+<a class="image169 reference internal" href="../_images/normal2polarform_light169.svg"><img alt="Rechtwinkliges Dreieck zur Berechnung der Poloarform" class="image169" src="../_images/normal2polarform_light169.svg" width="100%" /></a></p>
+<p>Der Betrag der komplexen Zahl <span class="math notranslate nohighlight">\(z = \sqrt{3} + \mathrm{i}\)</span> ergibt sich aus dem
+Satz des Pythagoras:</p>
+<div class="math notranslate nohighlight">
+\[\textcolor[RGB]{230,0,0}{|z|} = \sqrt{(\sqrt{3})^2 + 1^2} = \sqrt{3 + 1} = 
+\textcolor[RGB]{230,0,0}{2}.\]</div>
+<p>Den Winkel bzw. das Argument <span class="math notranslate nohighlight">\(\varphi\)</span> der komplexen Zahl können wir nun über
+den Kosinus bestimmen. Der Kosinus ist Ankathete geteilt durch Hypotenuse, also</p>
+<div class="math notranslate nohighlight">
+\[\cos(\varphi) = \frac{\textcolor[RGB]{0,90,148}{\sqrt{3}}}{\textcolor[RGB]{230,0,0}{2}}.\]</div>
+<p>Nun wenden wir auf beiden Seiten dieser Gleichung die Umkehrfunktion
+Arkuskosinus an:</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \arccos(\cos(\varphi)) = \arccos\left( \frac{\sqrt{3}}{2} \right) 
+= 30^{\circ}.\]</div>
+<p>Für das obige Beispiel hat das gut geklappt. Ein kleines Problem tritt auf, wenn
+der Imaginärteil der komplexen Zahl negativ ist. Der Wertebereich der
+Arkuskosinus-Funktion ist nämlich <span class="math notranslate nohighlight">\([0, \pi]\)</span> im Bogenmaß oder <span class="math notranslate nohighlight">\([0, 180^{\circ}]\)</span>
+im Gradmaß. Somit werden nur positive Imaginärteile abgedeckt. Wenn der
+Imaginärteil der komplexen Zahl negativ ist und beispielsweise das Argument der
+komplexen Zahl <span class="math notranslate nohighlight">\(z = \sqrt{3} - \mathrm{i}\)</span> gesucht wird, wird der Winkel im
+Uhrzeigersinn angegeben werden und ist somit negativ.</p>
+<p>Insgesamt lautet die Formeln zur Berechnung des Betrages <span class="math notranslate nohighlight">\(|z|\)</span> für eine
+beliebige komplexe Zahl <span class="math notranslate nohighlight">\(z = a + b\mathrm{i}\)</span> wie folgt:</p>
+<div class="math notranslate nohighlight">
+\[|z| = \sqrt{a^2 + b^2}.\]</div>
+<p>Das Argument <span class="math notranslate nohighlight">\(\varphi\)</span> im wird für eine beliebige komplexe Zahl
+<span class="math notranslate nohighlight">\(z = a + b\mathrm{i}\)</span> folgendermaßen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \varphi = \arg(z) =
+\begin{cases}
+\arccos\left(\frac{a}{|z|}\right), \quad &amp; \text{falls } b\geq 0, \\
+- \arccos\left(\frac{a}{|z|}\right), \quad &amp; \text{falls } b &lt; 0.
+\end{cases}
+\end{split}\]</div>
+<p>Natürlich hätten wir auch Sinus oder Tangens nutzen können, um das Argument der
+komplexen Zahl zu berechnen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Darstellung komplexer Zahlen” von MathePeter<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSeC_2D8xNs" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Polarform”von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzhWHGoAuK8" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="multiplikation-und-division-in-polarform">
+<h2>Multiplikation und Division in Polarform<a class="headerlink" href="#multiplikation-und-division-in-polarform" title="Permalink to this heading">#</a></h2>
+<p>Als nächstes betrachten wir die Multiplikation und Division zweier komplexer Zahlen in
+Polarform. Hat die erste Zahl <span class="math notranslate nohighlight">\(z_1\)</span> den Betrag <span class="math notranslate nohighlight">\(r\)</span> und das Argument <span class="math notranslate nohighlight">\(\alpha\)</span> und
+die zweite Zahl <span class="math notranslate nohighlight">\(z_2\)</span> den Betrag <span class="math notranslate nohighlight">\(s\)</span> und das Argument <span class="math notranslate nohighlight">\(\beta\)</span>, dann ist das
+Produkt der beiden komplexen Zahlen</p>
+<div class="math notranslate nohighlight">
+\[z_1 \cdot z_2 = r\cdot s \cdot \left(\cos(\alpha+\beta) + 
+\sin(\alpha+\beta)\cdot \mathrm{i} \right).\]</div>
+<p>Die beiden Beträge werden multipliziert und die beiden Argumente werden addiert.</p>
+<p>Für die Division erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{r}{s} \left(\cos(\alpha-\beta) + 
+\sin(\alpha - \beta)\cdot\mathrm{i} \right).\]</div>
+<p>Die beiden Beträge werden dividiert und die beiden Argumente subtrahiert.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, wie eine komplexe Zahl in Polarform
+formuliert wird und wie die Umrechnung in die Normalform funktioniert. Wird die
+Polarform verwendet, so sind Multiplikation und Division recht einfach
+durchzuführen. Auch in der dritten Darstellungsform für komplexe Zahlen, der
+sogenannten Exponentialform, sind diese beiden Rechenoperationen einfach.
+Darüber hinaus wird aber auch das Potenzieren und Wurzelziehen erleichtert, so
+dass wir im nächsten Kapitel die Exponentialform studieren werden.</p>
 </section>
 </section>
 
@@ -565,7 +719,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarform">Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-normalform-und-polarform">Umrechnung Normalform und Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-polarform">Multiplikation und Division in Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
