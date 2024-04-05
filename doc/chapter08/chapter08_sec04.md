@@ -25,7 +25,7 @@ Zahlenebene.
 ```
 
 
-## TRigonometrische Form
+## Trigonometrische Form
 
 Die Gaußsche Zahlenebene entspricht einem kartesischen Koordinatensystem, bei
 dem jeder Punkt in der Ebene durch seine beiden Koordinaten $(x,y)$ beschrieben
