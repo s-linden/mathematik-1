@@ -206,7 +206,7 @@ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-s
 In diesem Kapitel haben Sie gelernt, wie komplexe Zahlen dividiert werden. Dazu
 wurden die Begriffe Betrag und komplexe Konjugation eingeführt. Tatsächlich ist
 es bei der Multiplikation und der Division häufig geschickter, von der
-Darstellung einer komplexen Zahl in Normalform zu der sogenannten Polarform oder
-Exponentialform überzugehen. Letzteres wird uns auch das Potenzieren und
-Wurzelziehen ermöglichen. Daher behandeln wir im nächsten Kapitel zunächst die
-Polarform der komplexen Zahlen.
+Darstellung einer komplexen Zahl in Normalform zu der sogenannten
+trigonometrischen Form oder Exponentialform überzugehen. Letzteres wird uns auch
+das Potenzieren und Wurzelziehen ermöglichen. Daher behandeln wir im nächsten
+Kapitel zunächst die trigonometrische Form der komplexen Zahlen.
