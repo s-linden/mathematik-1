@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Komplexe Zahlen in Exponentialform &#8212; Mathematik 1 Maschinenbau</title>
+    <title>8.5 Komplexe Zahlen in Exponentialform &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -63,11 +63,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter08/chapter08_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Potenzen und Wurzeln komplexer Zahlen" href="chapter08_sec06.html" />
-    <link rel="prev" title="8.4 Komplexe Zahlen in Polarform" href="chapter08_sec04.html" />
+    <link rel="prev" title="8.4 Komplexe Zahlen in trigonometrischer Form" href="chapter08_sec04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -249,8 +251,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Betrag, komplexe Konjugation und Division</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Komplexe Zahlen in Polarform</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Komplexe Zahlen in Exponentialform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Komplexe Zahlen in trigonometrischer Form</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.5 Komplexe Zahlen in Exponentialform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec06.html">Potenzen und Wurzeln komplexer Zahlen</a></li>
 </ul>
 </li>
@@ -446,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Komplexe Zahlen in Exponentialform</h1>
+    <h1>8.5 Komplexe Zahlen in Exponentialform</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -457,7 +459,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-eulersche-formel-fuhrt-zur-exponentialform">Die eulersche Formel führt zur Exponentialform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-der-exponentialform">Multiplikation und Division in der Exponentialform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrische-funktionen-und-die-komplexe-exponentialfunktion">Trigonometrische Funktionen und die komplexe Exponentialfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -470,22 +476,150 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="komplexe-zahlen-in-exponentialform">
-<h1>Komplexe Zahlen in Exponentialform<a class="headerlink" href="#komplexe-zahlen-in-exponentialform" title="Permalink to this heading">#</a></h1>
+<h1>8.5 Komplexe Zahlen in Exponentialform<a class="headerlink" href="#komplexe-zahlen-in-exponentialform" title="Permalink to this heading">#</a></h1>
+<p>Im vorherigen Kapitel haben wir die trigonomtrische Form der komplexen Zahlen
+kennengelernt. Ihr Vorteil ist, dass Multiplikation und Division in dieser Form
+leicht berechnet und geometrisch interpretiert werden können. Auch die
+Exponentialform basiert auf der Darstellung einer komplexen Zahl in
+Polarkoordinaten, wie wir in diesem Kapitel lernen werden. Der Vorteil der
+Exponentialform ist, dass die Berechnung von Potenzen oder Wurzeln in dieser
+Darstellung leicht gelingt.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie können komplexe Zahlen in ihre <strong>Exponentialform</strong> umrechnen.</p></li>
-<li><p>Sie können komplexe Zahlen in Exponentialform miteinander multiplizieren und dividieren.</p></li>
+<ul>
+<li><p>Sie kennen die <strong>eulersche Formel</strong></p>
+<div class="math notranslate nohighlight">
+\[e^{\varphi \mathrm{i}} = \cos(\varphi) + \sin(\varphi)\,\mathrm{i}\]</div>
+<p>auswendig.</p>
+</li>
+<li><p>Sie können eine komplexe Zahl in der <strong>Exponentialform</strong> darstellen.</p></li>
+<li><p>Sie können eine komplexe Zahl von der trigonometrischen Form in die
+Exponentialform umrechnen und umgekehrt.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
+<section id="die-eulersche-formel-fuhrt-zur-exponentialform">
+<h2>Die eulersche Formel führt zur Exponentialform<a class="headerlink" href="#die-eulersche-formel-fuhrt-zur-exponentialform" title="Permalink to this heading">#</a></h2>
+<p>Im vorherigen Kapitel haben wir die Darstellung komplexer Zahlen in
+trigonometrischer Form kennengelernt. Jede komplexe Zahl <span class="math notranslate nohighlight">\(z\)</span> kann durch ihren
+Betrag <span class="math notranslate nohighlight">\(r\)</span> und ihr Argument <span class="math notranslate nohighlight">\(\varphi\)</span> beschrieben werden:</p>
+<div class="math notranslate nohighlight">
+\[z = r \, \big( \cos(\varphi) + \sin(\varphi) \, \mathrm{i}\big).\]</div>
+<p>Der Mathematiker <a class="reference external" href="https://de.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>
+hat herausgefunden, dass für alle Argumente <span class="math notranslate nohighlight">\(\varphi\)</span> die sogenannte <strong>eulersche
+Formel</strong></p>
+<div class="math notranslate nohighlight">
+\[e^{\varphi \mathrm{i}} = \cos(\varphi) + \sin(\varphi)\,\mathrm{i}\]</div>
+<p>gilt. Mit der eulerschen Formel folgt sofort, dass eine komplexe Zahl in
+trigonometrischer Form als</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z &amp;= r \, \left( \cos(\varphi) + \sin(\varphi) \, \mathrm{i}\right) \\
+  &amp;= r \, e^{\varphi  \mathrm{i}} \\
+\end{align*}\]</div>
+<p>geschrieben werden kann. Diese Darstellung mit der komplexen Exponentialfunktion
+wird <strong>Exponentialform</strong> genannt.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Exponentialform?</p>
+<p>Die Exponentialform ist eine alternative Schreibweise einer komplexen Zahl
+<span class="math notranslate nohighlight">\(z\)</span>. In Exponentialform wird eine komplexe Zahl geschrieben als</p>
+<div class="math notranslate nohighlight">
+\[z = r \, e^{\varphi  \mathrm{i}}.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(r\)</span> der Betrag der komplexen Zahl (also <span class="math notranslate nohighlight">\(r = |z|\)</span>) und <span class="math notranslate nohighlight">\(\varphi\)</span> ihr
+Argument.</p>
+</div>
+</section>
+<section id="multiplikation-und-division-in-der-exponentialform">
+<h2>Multiplikation und Division in der Exponentialform<a class="headerlink" href="#multiplikation-und-division-in-der-exponentialform" title="Permalink to this heading">#</a></h2>
+<p>Liegen zwei komplexe Zahlen in der Exponentialform vor, so können für die
+Multiplikation und Division die Potenzgesetze genutzt werden. Lautet die erste
+komplexe Zahl</p>
+<div class="math notranslate nohighlight">
+\[z_1 = r_1 \, e^{\varphi_1 \mathrm{i}}\]</div>
+<p>und die zweite komplexe Zahl</p>
+<div class="math notranslate nohighlight">
+\[z_2 = r_2 \, e^{\varphi_2 \mathrm{i}},\]</div>
+<p>dann werden für ihr Produkt die Beträge multipliziert und die Argumente addiert:</p>
+<div class="math notranslate nohighlight">
+\[z_1 \cdot z_2 = r_1 \, r_2 \; e^{(\varphi_1 + \varphi_2) \, \mathrm{i}}.\]</div>
+<p>Für die Division gilt dann</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{r_1}{r_2} \; e^{(\varphi_1 - \varphi_2) \, \mathrm{i}}.\]</div>
+<p>Die Potenzgesetze werden wir auch für das Potenzieren einer komplexen Zahl
+ausnutzen, wie wir im nächsten Kapitel lernen werden. Zunächst halten wir noch
+einen häufig benutzten Zusammenhang zwischen der komplexen Exponentialfunktion
+und den trigonometrischen Funktionen fest.</p>
+</section>
+<section id="trigonometrische-funktionen-und-die-komplexe-exponentialfunktion">
+<h2>Trigonometrische Funktionen und die komplexe Exponentialfunktion<a class="headerlink" href="#trigonometrische-funktionen-und-die-komplexe-exponentialfunktion" title="Permalink to this heading">#</a></h2>
+<p>Mit einem kleinen Rechentrick können wir aus den beiden komplexen Zahlen
+<span class="math notranslate nohighlight">\(e^{\varphi \, \mathrm{i}}\)</span> und <span class="math notranslate nohighlight">\(e^{- \varphi \, \mathrm{i}}\)</span> den Kosinus
+erzeugen. Wir addieren die beiden und wechseln in die trigonomterische Form:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{\varphi \, \mathrm{i}} + e^{-\varphi \, \mathrm{i}} 
+= \cos(\varphi) + \sin(\varphi) \, \mathrm{i} + \cos(-\varphi) + \sin(-\varphi) \, \mathrm{i} \]</div>
+<p>Da die Kosinus-Funktion gerade ist, gilt aber</p>
+<div class="math notranslate nohighlight">
+\[\cos(-\varphi) = \cos(\varphi).\]</div>
+<p>Und da die Sinus-Funktion ungerade ist, gilt</p>
+<div class="math notranslate nohighlight">
+\[\sin(-\varphi) = - \sin(\varphi).\]</div>
+<p>Daher wird aus der Summe insgesamt</p>
+<div class="math notranslate nohighlight">
+\[e^{\varphi \, \mathrm{i}} + e^{-\varphi \, \mathrm{i}}  = 2\cdot\cos(\varphi).\]</div>
+<p>Das können wir noch auf beiden Seiten durch 2 teilen und erhalten</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2} \big( e^{\varphi \, \mathrm{i}} + e^{-\varphi \, \mathrm{i}} \big) =\cos(\varphi).\]</div>
+<p>Ein ähnliche Rechnung können wir für</p>
+<div class="math notranslate nohighlight">
+\[e^{\varphi \, \mathrm{i}} - e^{-\varphi \, \mathrm{i}} = 2 \, \mathrm{i} \, \sin(\varphi)\]</div>
+<p>durchführen. Insgesamt erhalten wir die beiden folgenden Darstellungen der
+Kosinus- und Sinus-Funktion.</p>
+<div class="note admonition">
+<p class="admonition-title">Wie können Kosinus/Sinus durch komplexe Exponentialfunktionen dargestellt werden?</p>
+<p>Der Kosinus und der Sinus lässt sich folgendermaßen durch komplexe Exponentialfunktionen darstellen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\cos(\varphi) &amp;= \frac{1}{2} \big( e^{\varphi \, \mathrm{i}} + e^{-\varphi \, \mathrm{i}} \big), \\
+\sin(\varphi) &amp;= \frac{1}{2\mathrm{i}} \big( e^{\varphi \, \mathrm{i}} - e^{-\varphi \, \mathrm{i}} \big). 
+\end{align*}\]</div>
+</div>
+</section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Eulersche Formel” von MathePeter<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TGJHnQY9cjA" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CwxhwTRv65Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Exponentialform” von Daniel Jung<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CwxhwTRv65Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir eine weitere Darstellungsform für komplexe Zahlen
+kennengelernt. In dieser Darstellung lassen sich Multiplikation und Division
+leicht durchführen, so leicht wie auch in der trigonometrischen Form. Der große
+Vorteil der Exponentialform wird erst beim Potenzieren ersichtlich werden, was
+wir im nächsten Kapitel behandeln werden.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -524,7 +658,7 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">8.4 Komplexe Zahlen in Polarform</p>
+        <p class="prev-next-title">8.4 Komplexe Zahlen in trigonometrischer Form</p>
       </div>
     </a>
     <a class="right-next"
@@ -553,7 +687,11 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-eulersche-formel-fuhrt-zur-exponentialform">Die eulersche Formel führt zur Exponentialform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-der-exponentialform">Multiplikation und Division in der Exponentialform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrische-funktionen-und-die-komplexe-exponentialfunktion">Trigonometrische Funktionen und die komplexe Exponentialfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

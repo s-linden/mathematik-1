@@ -1,28 +1,31 @@
-# 8.4 Komplexe Zahlen in Polarform
+# 8.4 Komplexe Zahlen in trigonometrischer Form
 
 Im letzen Kapitel haben wir die Multiplikation und Division zweier komplexer
 Zahlen in der Normalform kennengelernt. Gerade bei »Punktrechnungen« ist jedoch
-die sogenannte Polarform einfacher. In diesem Kapitel werden daher lernen, eine
-komplexe Zahl in Normalform in die Polarform umzurechnen (und umgekehrt). Dabei
-lernen wir auch verschiedene Konventionen kennen. Zuletzt beschäftigen wir uns
-mit der Multiplikation und Division in Polarform und ihren geometrischen
-Interpretationen in der Gaußschen Zahlenebene.
+die sogenannte trigonometrische Form einfacher. In diesem Kapitel werden daher
+lernen, eine komplexe Zahl in Normalform in die trigonometrische Form
+umzurechnen (und umgekehrt). Dabei lernen wir auch verschiedene Konventionen
+kennen. Zuletzt beschäftigen wir uns mit der Multiplikation und Division in
+trigonometrischer Form und ihren geometrischen Interpretationen in der Gaußschen
+Zahlenebene.
 
 
 ## Lernziele
 
 ```{admonition} Lernziele 
 :class: goals
-* Sie können eine komplexe Zahl in der **Polarform** darstellen.
+* Sie können eine komplexe Zahl in der **trigonometrische Form** darstellen.
 * Sie können das **Argument** einer komplexen Zahl ausrechnen.
-* Sie können eine komplexe Zahl aus der Normalform in die Polarform umrechnen.
-* Sie können eine komplexe Zahl aus der Polarform in die Normalform umrechnen.
-* Sie können komplexe Zahlen in Polarform **multiplizieren** und
+* Sie können eine komplexe Zahl aus der Normalform in die trigonometrische Form
+  umrechnen.
+* Sie können eine komplexe Zahl aus der trigonometrischen Form in die Normalform
+  umrechnen.
+* Sie können komplexe Zahlen in trigonometrischer Form **multiplizieren** und
   **dividieren**.
 ```
 
 
-## Polarform
+## Trigonometrische Form
 
 Die Gaußsche Zahlenebene entspricht einem kartesischen Koordinatensystem, bei
 dem jeder Punkt in der Ebene durch seine beiden Koordinaten $(x,y)$ beschrieben
@@ -44,11 +47,11 @@ Winkel von $\varphi = 30^{\circ}$ zur klassischen x-Achse. Diesen Winkel nennt
 man auch Polarwinkel oder Azimuth. 
 
 <img src="pics/polarform_light43.svg" 
-alt="Mehrere komplexe Zahlen in Polarform" 
+alt="Mehrere komplexe Zahlen in trigonometrischer Form" 
 class="image43"
 width=100%>
 <img src="pics/polarform_light169.svg" 
-alt="Mehrere komplexe Zahlen in Polarform" 
+alt="Mehrere komplexe Zahlen in trigonometrischer Form" 
 class="image169"
 width=100%>
 
@@ -58,7 +61,8 @@ Polarkoordinaten dargestellt werden. Zu der komplexen Zahl $z = \sqrt{3} +
 Polarkoordinaten entspricht das gerade dem obigen Beispiel $(2, 30^{\circ})$. Um
 deutlich zu machen, dass es sich um eine komplexe Zahl handelt, werden
 allerdings nicht die Polarkoordinaten selbst benutzt, sondern die sogenannte
-Polarform:
+Polarform. Es gibt zwei Varianten der Polarform. Zunächst betrachten wir die
+**trigonometrische Form**:
 
 $$z = 2\cos(30^{\circ}) + 2\sin(30^{\circ})\mathrm{i}.$$
 
@@ -70,13 +74,13 @@ $$|z| = 2.$$
 Wir werden noch sehen, dass der Winkel entscheidend für die Multiplikation,
 Division und vor allem auch für das Potenzieren von komplexen Zahlen ist. Um
 diese Bedeutung hervorzuheben, wird der Winkel als **Argument** der komplexen
-Zahl bezeichnet. Zusammengefasst erhalten wir folgende Definition der Polarform
-einer komplexen Zahl.
+Zahl bezeichnet. Zusammengefasst erhalten wir folgende Definition der
+trigonometrischen Form einer komplexen Zahl.
 
-```{admonition} Was ist ... die Polarform?
+```{admonition} Was ist ... die trigonometrische Form?
 :class: note
-Die Polarform ist eine alternative Schreibweise einer komplexen Zahl $z$. In
-Polarform wird eine komplexe Zahl geschrieben als
+Die trigonometrische Form ist eine alternative Schreibweise einer komplexen Zahl
+$z$. In trigonometrischer Form wird eine komplexe Zahl geschrieben als
 
 $$z = r \, \cos(\varphi) + r \, \sin(\varphi)\, \mathrm{i}.$$
 
@@ -85,12 +89,12 @@ Argument.
 ```
 
 
-## Umrechnung Normalform und Polarform
+## Umrechnung Normalform und trigonometrische Form
 
-Die Umrechnung von der Polarform in die Normalform ist einfach. Tatsächlich
-müssen wir ja nur die Kosinus- und Sinuswerte konkret ausrechnen und jeweils mit
-dem Betrag multiplizieren. Die komplexe Zahl $z = 2 \cos(30^{\circ}) + 2
-\sin(\varphi) \mathrm{i}$ hat den Realteil
+Die Umrechnung von der trigonometrischen Form in die Normalform ist einfach.
+Tatsächlich müssen wir ja nur die Kosinus- und Sinuswerte konkret ausrechnen und
+jeweils mit dem Betrag multiplizieren. Die komplexe Zahl $z = 2 \cos(30^{\circ})
++ 2 \sin(\varphi) \mathrm{i}$ hat den Realteil
 
 $$\text{Re}(z) = 2 \cos(30^{\circ}) = 2 \cdot \frac{\sqrt{3}}{2} 
 = \sqrt{3}$$
@@ -166,19 +170,19 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video "Polarform"von Mathematrick
+```{dropdown} Video "Polarform" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KzhWHGoAuK8" 
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 
-## Multiplikation und Division in Polarform
+## Multiplikation und Division in trigonometrischer Form
 
-Als nächstes betrachten wir die Multiplikation und Division zweier komplexer Zahlen in
-Polarform. Hat die erste Zahl $z_1$ den Betrag $r$ und das Argument $\alpha$ und
-die zweite Zahl $z_2$ den Betrag $s$ und das Argument $\beta$, dann ist das
-Produkt der beiden komplexen Zahlen
+Als nächstes betrachten wir die Multiplikation und Division zweier komplexer
+Zahlen in trigonometrischer Form. Hat die erste Zahl $z_1$ den Betrag $r$ und
+das Argument $\alpha$ und die zweite Zahl $z_2$ den Betrag $s$ und das Argument
+$\beta$, dann ist das Produkt der beiden komplexen Zahlen
 
 $$z_1 \cdot z_2 = r\cdot s \cdot \left(\cos(\alpha+\beta) + 
 \sin(\alpha+\beta)\cdot \mathrm{i} \right).$$
@@ -195,10 +199,10 @@ Die beiden Beträge werden dividiert und die beiden Argumente subtrahiert.
 
 ## Zusammenfassung und Ausblick
 
-In diesem Kapitel haben Sie gelernt, wie eine komplexe Zahl in Polarform
-formuliert wird und wie die Umrechnung in die Normalform funktioniert. Wird die
-Polarform verwendet, so sind Multiplikation und Division recht einfach
-durchzuführen. Auch in der dritten Darstellungsform für komplexe Zahlen, der
-sogenannten Exponentialform, sind diese beiden Rechenoperationen einfach.
+In diesem Kapitel haben Sie gelernt, wie eine komplexe Zahl in trigonometrischer
+Form formuliert wird und wie die Umrechnung in die Normalform funktioniert. Wird
+die trigonometrische Form verwendet, so sind Multiplikation und Division recht
+einfach durchzuführen. Auch in der dritten Darstellungsform für komplexe Zahlen,
+der sogenannten Exponentialform, sind diese beiden Rechenoperationen einfach.
 Darüber hinaus wird aber auch das Potenzieren und Wurzelziehen erleichtert, so
 dass wir im nächsten Kapitel die Exponentialform studieren werden.

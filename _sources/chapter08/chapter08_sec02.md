@@ -158,5 +158,6 @@ In diesem Kapitel haben Sie gelernt, wie komplexe Zahlen addiert, subtrahiert
 und multipliziert werden. Bei der geometrischen Interpretation der
 Multiplikation haben wir gesehen, dass das Produkt mit der Summe der beiden
 Winkel zusammenhängt. Das wird uns später zu den beiden alternativen
-Darstellungsformen Polarform und Exponentialform führen. Zunächst erarbeiten wir
-uns im nächsten Kapitel die Division zweier komplexer Zahlen und den Betrag.
+Darstellungsformen trigonometrische Form und Exponentialform führen. Zunächst
+erarbeiten wir uns im nächsten Kapitel die Division zweier komplexer Zahlen und
+den Betrag.

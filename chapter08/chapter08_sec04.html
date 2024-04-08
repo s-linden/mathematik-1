@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>8.4 Komplexe Zahlen in Polarform &#8212; Mathematik 1 Maschinenbau</title>
+    <title>8.4 Komplexe Zahlen in trigonometrischer Form &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter08/chapter08_sec04';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Komplexe Zahlen in Exponentialform" href="chapter08_sec05.html" />
+    <link rel="next" title="8.5 Komplexe Zahlen in Exponentialform" href="chapter08_sec05.html" />
     <link rel="prev" title="8.3 Betrag, komplexe Konjugation und Division" href="chapter08_sec03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -251,8 +251,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Betrag, komplexe Konjugation und Division</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4 Komplexe Zahlen in Polarform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Komplexe Zahlen in Exponentialform</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4 Komplexe Zahlen in trigonometrischer Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">8.5 Komplexe Zahlen in Exponentialform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec06.html">Potenzen und Wurzeln komplexer Zahlen</a></li>
 </ul>
 </li>
@@ -448,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>8.4 Komplexe Zahlen in Polarform</h1>
+    <h1>8.4 Komplexe Zahlen in trigonometrischer Form</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -459,9 +459,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarform">Polarform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-normalform-und-polarform">Umrechnung Normalform und Polarform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-polarform">Multiplikation und Division in Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrische-form">Trigonometrische Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-normalform-und-trigonometrische-form">Umrechnung Normalform und trigonometrische Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-trigonometrischer-form">Multiplikation und Division in trigonometrischer Form</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
@@ -474,31 +474,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="komplexe-zahlen-in-polarform">
-<h1>8.4 Komplexe Zahlen in Polarform<a class="headerlink" href="#komplexe-zahlen-in-polarform" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="komplexe-zahlen-in-trigonometrischer-form">
+<h1>8.4 Komplexe Zahlen in trigonometrischer Form<a class="headerlink" href="#komplexe-zahlen-in-trigonometrischer-form" title="Permalink to this heading">#</a></h1>
 <p>Im letzen Kapitel haben wir die Multiplikation und Division zweier komplexer
 Zahlen in der Normalform kennengelernt. Gerade bei »Punktrechnungen« ist jedoch
-die sogenannte Polarform einfacher. In diesem Kapitel werden daher lernen, eine
-komplexe Zahl in Normalform in die Polarform umzurechnen (und umgekehrt). Dabei
-lernen wir auch verschiedene Konventionen kennen. Zuletzt beschäftigen wir uns
-mit der Multiplikation und Division in Polarform und ihren geometrischen
-Interpretationen in der Gaußschen Zahlenebene.</p>
+die sogenannte trigonometrische Form einfacher. In diesem Kapitel werden daher
+lernen, eine komplexe Zahl in Normalform in die trigonometrische Form
+umzurechnen (und umgekehrt). Dabei lernen wir auch verschiedene Konventionen
+kennen. Zuletzt beschäftigen wir uns mit der Multiplikation und Division in
+trigonometrischer Form und ihren geometrischen Interpretationen in der Gaußschen
+Zahlenebene.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können eine komplexe Zahl in der <strong>Polarform</strong> darstellen.</p></li>
+<li><p>Sie können eine komplexe Zahl in der <strong>trigonometrische Form</strong> darstellen.</p></li>
 <li><p>Sie können das <strong>Argument</strong> einer komplexen Zahl ausrechnen.</p></li>
-<li><p>Sie können eine komplexe Zahl aus der Normalform in die Polarform umrechnen.</p></li>
-<li><p>Sie können eine komplexe Zahl aus der Polarform in die Normalform umrechnen.</p></li>
-<li><p>Sie können komplexe Zahlen in Polarform <strong>multiplizieren</strong> und
+<li><p>Sie können eine komplexe Zahl aus der Normalform in die trigonometrische Form
+umrechnen.</p></li>
+<li><p>Sie können eine komplexe Zahl aus der trigonometrischen Form in die Normalform
+umrechnen.</p></li>
+<li><p>Sie können komplexe Zahlen in trigonometrischer Form <strong>multiplizieren</strong> und
 <strong>dividieren</strong>.</p></li>
 </ul>
 </div>
 </section>
-<section id="polarform">
-<h2>Polarform<a class="headerlink" href="#polarform" title="Permalink to this heading">#</a></h2>
+<section id="trigonometrische-form">
+<h2>Trigonometrische Form<a class="headerlink" href="#trigonometrische-form" title="Permalink to this heading">#</a></h2>
 <p>Die Gaußsche Zahlenebene entspricht einem kartesischen Koordinatensystem, bei
 dem jeder Punkt in der Ebene durch seine beiden Koordinaten <span class="math notranslate nohighlight">\((x,y)\)</span> beschrieben
 wird. Dabei ist <span class="math notranslate nohighlight">\(x\)</span> der Realteil der komplexen Zahl, also <span class="math notranslate nohighlight">\(x = \text{Re}(z)\)</span>,
@@ -516,15 +519,16 @@ Er liegt sozusagen auf einem Kreis um den Ursprung mit Radius <span class="math 
 man jetzt die Verbindungslinie vom Punkt zum Ursprung ein, bildet sie einen
 Winkel von <span class="math notranslate nohighlight">\(\varphi = 30^{\circ}\)</span> zur klassischen x-Achse. Diesen Winkel nennt
 man auch Polarwinkel oder Azimuth.</p>
-<p><a class="image43 reference internal" href="../_images/polarform_light43.svg"><img alt="Mehrere komplexe Zahlen in Polarform" class="image43" src="../_images/polarform_light43.svg" width="100%" /></a>
-<a class="image169 reference internal" href="../_images/polarform_light169.svg"><img alt="Mehrere komplexe Zahlen in Polarform" class="image169" src="../_images/polarform_light169.svg" width="100%" /></a></p>
+<p><a class="image43 reference internal" href="../_images/polarform_light43.svg"><img alt="Mehrere komplexe Zahlen in trigonometrischer Form" class="image43" src="../_images/polarform_light43.svg" width="100%" /></a>
+<a class="image169 reference internal" href="../_images/polarform_light169.svg"><img alt="Mehrere komplexe Zahlen in trigonometrischer Form" class="image169" src="../_images/polarform_light169.svg" width="100%" /></a></p>
 <p>Komplexe Zahlen in der Gaußschen Zahlenebene können ebenfalls in
 Polarkoordinaten dargestellt werden. Zu der komplexen Zahl <span class="math notranslate nohighlight">\(z = \sqrt{3} +
 \mathrm{i}\)</span> gehören die kartesischen Koordinaten <span class="math notranslate nohighlight">\((\sqrt{3},1)\)</span>. In
 Polarkoordinaten entspricht das gerade dem obigen Beispiel <span class="math notranslate nohighlight">\((2, 30^{\circ})\)</span>. Um
 deutlich zu machen, dass es sich um eine komplexe Zahl handelt, werden
 allerdings nicht die Polarkoordinaten selbst benutzt, sondern die sogenannte
-Polarform:</p>
+Polarform. Es gibt zwei Varianten der Polarform. Zunächst betrachten wir die
+<strong>trigonometrische Form</strong>:</p>
 <div class="math notranslate nohighlight">
 \[z = 2\cos(30^{\circ}) + 2\sin(30^{\circ})\mathrm{i}.\]</div>
 <p>Ein Vorteil dieser Schreibweise ist, dass der Betrag der komplexen Zahl sofort
@@ -534,24 +538,26 @@ abgelesen werden kann, weil er dem Radius entspricht:</p>
 <p>Wir werden noch sehen, dass der Winkel entscheidend für die Multiplikation,
 Division und vor allem auch für das Potenzieren von komplexen Zahlen ist. Um
 diese Bedeutung hervorzuheben, wird der Winkel als <strong>Argument</strong> der komplexen
-Zahl bezeichnet. Zusammengefasst erhalten wir folgende Definition der Polarform
-einer komplexen Zahl.</p>
+Zahl bezeichnet. Zusammengefasst erhalten wir folgende Definition der
+trigonometrischen Form einer komplexen Zahl.</p>
 <div class="note admonition">
-<p class="admonition-title">Was ist … die Polarform?</p>
-<p>Die Polarform ist eine alternative Schreibweise einer komplexen Zahl <span class="math notranslate nohighlight">\(z\)</span>. In
-Polarform wird eine komplexe Zahl geschrieben als</p>
+<p class="admonition-title">Was ist … die trigonometrische Form?</p>
+<p>Die trigonometrische Form ist eine alternative Schreibweise einer komplexen Zahl
+<span class="math notranslate nohighlight">\(z\)</span>. In trigonometrischer Form wird eine komplexe Zahl geschrieben als</p>
 <div class="math notranslate nohighlight">
 \[z = r \, \cos(\varphi) + r \, \sin(\varphi)\, \mathrm{i}.\]</div>
 <p>Dabei ist <span class="math notranslate nohighlight">\(r\)</span> der Betrag der komplexen Zahl (also <span class="math notranslate nohighlight">\(r = |z|\)</span>) und <span class="math notranslate nohighlight">\(\varphi\)</span> ihr
 Argument.</p>
 </div>
 </section>
-<section id="umrechnung-normalform-und-polarform">
-<h2>Umrechnung Normalform und Polarform<a class="headerlink" href="#umrechnung-normalform-und-polarform" title="Permalink to this heading">#</a></h2>
-<p>Die Umrechnung von der Polarform in die Normalform ist einfach. Tatsächlich
-müssen wir ja nur die Kosinus- und Sinuswerte konkret ausrechnen und jeweils mit
-dem Betrag multiplizieren. Die komplexe Zahl <span class="math notranslate nohighlight">\(z = 2 \cos(30^{\circ}) + 2
-\sin(\varphi) \mathrm{i}\)</span> hat den Realteil</p>
+<section id="umrechnung-normalform-und-trigonometrische-form">
+<h2>Umrechnung Normalform und trigonometrische Form<a class="headerlink" href="#umrechnung-normalform-und-trigonometrische-form" title="Permalink to this heading">#</a></h2>
+<p>Die Umrechnung von der trigonometrischen Form in die Normalform ist einfach.
+Tatsächlich müssen wir ja nur die Kosinus- und Sinuswerte konkret ausrechnen und
+jeweils mit dem Betrag multiplizieren. Die komplexe Zahl $z = 2 \cos(30^{\circ})</p>
+<ul class="simple">
+<li><p>2 \sin(\varphi) \mathrm{i}$ hat den Realteil</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\text{Re}(z) = 2 \cos(30^{\circ}) = 2 \cdot \frac{\sqrt{3}}{2} 
 = \sqrt{3}\]</div>
@@ -616,7 +622,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video “Polarform”von Mathematrick<div class="sd-summary-down docutils">
+Video “Polarform” von Mathematrick<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -626,12 +632,12 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="multiplikation-und-division-in-polarform">
-<h2>Multiplikation und Division in Polarform<a class="headerlink" href="#multiplikation-und-division-in-polarform" title="Permalink to this heading">#</a></h2>
-<p>Als nächstes betrachten wir die Multiplikation und Division zweier komplexer Zahlen in
-Polarform. Hat die erste Zahl <span class="math notranslate nohighlight">\(z_1\)</span> den Betrag <span class="math notranslate nohighlight">\(r\)</span> und das Argument <span class="math notranslate nohighlight">\(\alpha\)</span> und
-die zweite Zahl <span class="math notranslate nohighlight">\(z_2\)</span> den Betrag <span class="math notranslate nohighlight">\(s\)</span> und das Argument <span class="math notranslate nohighlight">\(\beta\)</span>, dann ist das
-Produkt der beiden komplexen Zahlen</p>
+<section id="multiplikation-und-division-in-trigonometrischer-form">
+<h2>Multiplikation und Division in trigonometrischer Form<a class="headerlink" href="#multiplikation-und-division-in-trigonometrischer-form" title="Permalink to this heading">#</a></h2>
+<p>Als nächstes betrachten wir die Multiplikation und Division zweier komplexer
+Zahlen in trigonometrischer Form. Hat die erste Zahl <span class="math notranslate nohighlight">\(z_1\)</span> den Betrag <span class="math notranslate nohighlight">\(r\)</span> und
+das Argument <span class="math notranslate nohighlight">\(\alpha\)</span> und die zweite Zahl <span class="math notranslate nohighlight">\(z_2\)</span> den Betrag <span class="math notranslate nohighlight">\(s\)</span> und das Argument
+<span class="math notranslate nohighlight">\(\beta\)</span>, dann ist das Produkt der beiden komplexen Zahlen</p>
 <div class="math notranslate nohighlight">
 \[z_1 \cdot z_2 = r\cdot s \cdot \left(\cos(\alpha+\beta) + 
 \sin(\alpha+\beta)\cdot \mathrm{i} \right).\]</div>
@@ -644,11 +650,11 @@ Produkt der beiden komplexen Zahlen</p>
 </section>
 <section id="zusammenfassung-und-ausblick">
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
-<p>In diesem Kapitel haben Sie gelernt, wie eine komplexe Zahl in Polarform
-formuliert wird und wie die Umrechnung in die Normalform funktioniert. Wird die
-Polarform verwendet, so sind Multiplikation und Division recht einfach
-durchzuführen. Auch in der dritten Darstellungsform für komplexe Zahlen, der
-sogenannten Exponentialform, sind diese beiden Rechenoperationen einfach.
+<p>In diesem Kapitel haben Sie gelernt, wie eine komplexe Zahl in trigonometrischer
+Form formuliert wird und wie die Umrechnung in die Normalform funktioniert. Wird
+die trigonometrische Form verwendet, so sind Multiplikation und Division recht
+einfach durchzuführen. Auch in der dritten Darstellungsform für komplexe Zahlen,
+der sogenannten Exponentialform, sind diese beiden Rechenoperationen einfach.
 Darüber hinaus wird aber auch das Potenzieren und Wurzelziehen erleichtert, so
 dass wir im nächsten Kapitel die Exponentialform studieren werden.</p>
 </section>
@@ -698,7 +704,7 @@ dass wir im nächsten Kapitel die Exponentialform studieren werden.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Komplexe Zahlen in Exponentialform</p>
+        <p class="prev-next-title">8.5 Komplexe Zahlen in Exponentialform</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -719,9 +725,9 @@ dass wir im nächsten Kapitel die Exponentialform studieren werden.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarform">Polarform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-normalform-und-polarform">Umrechnung Normalform und Polarform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-polarform">Multiplikation und Division in Polarform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrische-form">Trigonometrische Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-normalform-und-trigonometrische-form">Umrechnung Normalform und trigonometrische Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplikation-und-division-in-trigonometrischer-form">Multiplikation und Division in trigonometrischer Form</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>

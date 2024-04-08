@@ -129,8 +129,8 @@ $$z = a + b\mathrm{i}.$$
 
 Dabei sind $a$ und $b$ reelle Zahlen, d.h. $a, b \in \mathbb{R}$. Diese
 Darstellung ist als **Normalform** der komplexen Zahlen bekannt. In späteren
-Abschnitten werden weitere Darstellungsformen wie die Polarform und die
-Exponentialform eingeführt. 
+Abschnitten werden weitere Darstellungsformen wie die trigonometrische Form und
+die Exponentialform eingeführt. 
 
 Jetzt brauchen wir nur noch ein Symbol für die komplexen Zahlen. Für die
 natürlichen Zahlen wird das Symbol $\mathbb{N}$ verwendet, für die ganzen Zahlen
