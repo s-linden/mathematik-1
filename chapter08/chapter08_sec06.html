@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Potenzen und Wurzeln komplexer Zahlen &#8212; Mathematik 1 Maschinenbau</title>
+    <title>8.6 Potenzen und Wurzeln komplexer Zahlen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Folgen, Grenzwerte und Stetigkeit" href="../chapter09/chapter09_sec00.html" />
-    <link rel="prev" title="Komplexe Zahlen in Exponentialform" href="chapter08_sec05.html" />
+    <link rel="prev" title="8.5 Komplexe Zahlen in Exponentialform" href="chapter08_sec05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -247,13 +247,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Komplexe Zahlen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">Komplexe Zahlen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">8. Komplexe Zahlen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Betrag, komplexe Konjugation und Division</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Komplexe Zahlen in Polarform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Komplexe Zahlen in Exponentialform</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Potenzen und Wurzeln komplexer Zahlen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Komplexe Zahlen in trigonometrischer Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">8.5 Komplexe Zahlen in Exponentialform</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.6 Potenzen und Wurzeln komplexer Zahlen</a></li>
 </ul>
 </li>
 </ul>
@@ -448,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Potenzen und Wurzeln komplexer Zahlen</h1>
+    <h1>8.6 Potenzen und Wurzeln komplexer Zahlen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -459,7 +459,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzen-von-komplexen-zahlen">Potenzen von komplexen Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wurzelziehen-von-komplexen-zahlen">Wurzelziehen von komplexen Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -472,26 +474,242 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="potenzen-und-wurzeln-komplexer-zahlen">
-<h1>Potenzen und Wurzeln komplexer Zahlen<a class="headerlink" href="#potenzen-und-wurzeln-komplexer-zahlen" title="Permalink to this heading">#</a></h1>
+<h1>8.6 Potenzen und Wurzeln komplexer Zahlen<a class="headerlink" href="#potenzen-und-wurzeln-komplexer-zahlen" title="Permalink to this heading">#</a></h1>
+<p>Auf die komplexen Zahlen stießen wir, indem wir versuchten, die Gleichung <span class="math notranslate nohighlight">\(z^2 =
+-1\)</span> zu lösen. In diesem Kapitel beschäftigen wir uns nun mit dem Potenzieren und
+Wurzelziehen für komplexe Zahlen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können Potenzen von komplexen Zahlen in der Exponentialform ausrechnen.</p></li>
-<li><p>Sie kennen den <strong>Satz von Moivre</strong>: Für jede komplexe Zahl <span class="math notranslate nohighlight">\(z\)</span> und für jede natürliche Zahl <span class="math notranslate nohighlight">\(n\)</span> gilt die Moivresche Formel</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\big(\cos(z)+ i \sin(z)\big)^{\textcolor{red}{n}} = \cos(\textcolor{red}{n}z) + i \sin(\textcolor{red}{n}z).\]</div>
-<ul class="simple">
-<li><p>Sie können komplexe Wurzeln bestimmen.</p></li>
+<li><p>Sie können eine komplexe Zahl potenzieren.</p></li>
+<li><p>Sie können aus einer komplexen Zahl die Wurzel ziehen.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G_FRNyHpzrk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BKdqTn2iO4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+<section id="potenzen-von-komplexen-zahlen">
+<h2>Potenzen von komplexen Zahlen<a class="headerlink" href="#potenzen-von-komplexen-zahlen" title="Permalink to this heading">#</a></h2>
+<p>Die Potenz einer komplexen Zahl ist – genau wie bei den reellen Zahlen – eine
+Abkürzung für das wiederholte Multiplizieren einer Zahl mit sich selbst.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z^2 &amp;= z\cdot z \\
+z^3 &amp;= z \cdot z \cdot z \\
+z^4 &amp;= z \cdot z \cdot z \cdot z \\
+z^5 &amp;= z \cdot z \cdot z \cdot z \cdot z\\
+\vdots 
+\end{align*}\]</div>
+<p>Die Zahl <span class="math notranslate nohighlight">\(z\)</span> heißt Basis und die Anzahl, wie oft die Basis mit sich selbst
+multipliziert wird, heißt Exponent oder Hochzahl. Es gibt auch negative Potenzen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z^{-2} &amp;= \frac{1}{z\cdot z} \\
+z^{-3} &amp;= \frac{1}{z \cdot z \cdot z} \\
+z^{-4} &amp;= \frac{1}{z \cdot z \cdot z \cdot z} \\
+z^{-5} &amp;= \frac{1}{z \cdot z \cdot z \cdot z \cdot z}\\
+\vdots 
+\end{align*}\]</div>
+<p>Wenn nun konkret eine Potenz einer komplexen Zahl ausgerechnet werden soll, ist
+die Exponentialform am besten geeignet, wie das folgende Beispiel zeigt. Wir
+möchten von der komplexen Zahl <span class="math notranslate nohighlight">\(z = 3e^{\frac{\pi}{4}\mathrm{i}}\)</span> die Potenzen
+bis 4 bilden.</p>
+<p>Für die 2. Potenz erhalten wir zufälligerweise eine rein imaginäre Zahl, wie die
+folgende Rechnung zeigt:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z^2 
+&amp;= \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right) \cdot \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right)\\
+&amp;= 3^2 \cdot e^{\left(\frac{\pi}{4}+\frac{\pi}{4}\right)\mathrm{i}} \\
+&amp;= 9 \, e^{\frac{\pi}{2} \mathrm{i}} \\
+&amp;= 9\mathrm{i}.
+\end{align*}\]</div>
+<p>Für die 3. Potenz erhalten wir</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z^3 
+&amp;= \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right) \cdot \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right)\cdot \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right)\\
+&amp;= 3^3 \cdot e^{\left(\frac{\pi}{4}+\frac{\pi}{4}+\frac{\pi}{4}\right)\mathrm{i}} \\
+&amp;= 27 \, e^{\frac{3}{4}\pi \mathrm{i}} \\
+&amp;\approx -19.0919 + 19.0919 \, \mathrm{i}.
+\end{align*}\]</div>
+<p>Und die 4. Potenz ist zufälligerweise rein reell:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z^4 
+&amp;= \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right) \cdot \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right) \cdot \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right) \cdot \left( 3e^{\frac{\pi}{4}\mathrm{i}} \right)\\
+&amp;= 3^4 \cdot e^{\left(\frac{\pi}{4}+\frac{\pi}{4}+\frac{\pi}{4}+\frac{\pi}{4}\right)\mathrm{i}} \\
+&amp;= 81 \cdot e^{\pi \mathrm{i}} \\
+&amp;= 81 \cdot (-1) \\
+&amp;= -81.
+\end{align*}\]</div>
+<p>Zusammengefasst gilt für das Potenzieren von komplexen Zahlen die folgende
+Rechenregel.</p>
+<div class="note admonition">
+<p class="admonition-title">Wie wird eine komplexe Zahl potenziert?</p>
+<p>Für jeden ganzzahligen Exponenten <span class="math notranslate nohighlight">\(n\)</span> wird die n-te Potenz einer komplexen Zahl
+<span class="math notranslate nohighlight">\(z = r e^{\varphi\,\mathrm{i}}\)</span> berechnet, indem der Betrag <span class="math notranslate nohighlight">\(r\)</span> mit <span class="math notranslate nohighlight">\(n\)</span> potenziert
+wird und das Argument <span class="math notranslate nohighlight">\(\varphi\)</span> mit <span class="math notranslate nohighlight">\(n\)</span> multipliziert wird:</p>
+<div class="math notranslate nohighlight">
+\[z^n = \big(r e^{\varphi\,\mathrm{i}}\big)^n = r^n e^{n\, \varphi \, \mathrm{i}}.\]</div>
+</div>
+<p>Wie geht man vor, wenn die komplexe Zahl in Normalform oder trigonometrischer
+Form vorliegt? In Normalform können die Klammern einfach ausmultipliziert
+werden. Bei höhereren Potenzen ist es nur etwas schwierig, den Überblick über
+die einzelnen Terme zu behalten. Für die trigonometrische Form gibt es den <a class="reference external" href="https://de.wikipedia.org/wiki/Moivrescher_Satz">Satz
+von de Moivre</a>, auf die wir hier
+aber nicht weiter eingehen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen potenzieren” von MathePeter<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G_FRNyHpzrk" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Potenzieren von komplexen Zahlen” von Hart und Trocken<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F2EjFIlOQLs?si=Fa1xw6X6pCYKpITg" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><div class="seealso admonition">
+<p class="admonition-title">interaktives Applet “Potenzen von komplexen Zahlen” von Hart und Trocken </p>
+<p><a class="reference external" href="https://www.hartundtrocken.de/my-product/interaktiv-potenzen-komplexer-zahlen/">https://www.hartundtrocken.de/my-product/interaktiv-potenzen-komplexer-zahlen/</a></p>
+</div>
+</section>
+<section id="wurzelziehen-von-komplexen-zahlen">
+<h2>Wurzelziehen von komplexen Zahlen<a class="headerlink" href="#wurzelziehen-von-komplexen-zahlen" title="Permalink to this heading">#</a></h2>
+<p>Von den Potenzen ist der Schritt zu den Wurzeln recht kurz. Sie treten auf, wenn
+wir beispielsweise die quadratische Gleichung</p>
+<div class="math notranslate nohighlight">
+\[z^2 = 3 + 4\, \mathrm{i}\]</div>
+<p>lösen wollen. Bei reellen quadratischen Gleichungen kann es keine, eine oder
+zwei Lösungen geben. Eine komplexe quadratische Gleichung hat immer zwei
+Lösungen. Zuerst wandeln wir die komplexe Zahl von der Normalform in die
+Exponentialform um:</p>
+<div class="math notranslate nohighlight">
+\[z^2 = 3 + 4\mathrm{i} = 5 \, e^{53.130^{\circ}\mathrm{i}}.\]</div>
+<p>Bei der Berechnung der 2. Potenz müssen wir den Betrag quadrieren und das
+Argument mit 2 multiplizieren, um auf <span class="math notranslate nohighlight">\(5 \, e^{53.13^{\circ}\mathrm{i}}\)</span> zu
+kommen. Diesen Prozess kehren wir jetzt um. Wir ziehen aus dem Betrag 5 die
+Wurzel und teilen das Argument <span class="math notranslate nohighlight">\(53.13^{\circ}\)</span> durch 2:</p>
+<div class="math notranslate nohighlight">
+\[z_1 = \sqrt{5} \, e^{\frac{53.13^{\circ}}{2}\mathrm{i}}.\]</div>
+<p>Zur Kontrolle berechnen wir <span class="math notranslate nohighlight">\(z_1^2\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z_1^2 &amp;= \sqrt{5} \, e^{\frac{53.13^{\circ}}{2}\mathrm{i}} \cdot \sqrt{5} \, e^{\frac{53.13^{\circ}}{2}\mathrm{i}}\\
+&amp;= \sqrt{5}\cdot\sqrt{5}\, e^{\left( \frac{53.13^{\circ}}{2} +  \frac{53.13^{\circ}}{2} \right) \mathrm{i}} \\
+&amp;= 5 e^{53.13^{\circ}\mathrm{i}}.
+\end{align*}\]</div>
+<p>Und die zweite Lösung? Wenn wir auf das Argument der ersten Lösung <span class="math notranslate nohighlight">\(\varphi_1 =
+\frac{53.13^{\circ}}{2} = 26.565^{\circ}\)</span> den Winkel <span class="math notranslate nohighlight">\(180^{\circ}\)</span> addieren,
+erhalten wir die zweite Lösung. Testen wir, ob das stimmt.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+z_2^2 &amp;= \sqrt{5} \, e^{206.565^{\circ}\mathrm{i}} \cdot \sqrt{5} \,  e^{206.565^{\circ}\mathrm{i}}\\
+&amp;= \sqrt{5}\cdot\sqrt{5}\, e^{\left( 206.565^{\circ} +  206.565^{\circ} \right) \mathrm{i}} \\
+&amp;= 5 e^{413.13^{\circ}\mathrm{i}}.
+\end{align*}\]</div>
+<p>Zunächst sieht es nicht so aus, als ob <span class="math notranslate nohighlight">\(z_2 = 5 \, e^{53.130^{\circ}\mathrm{i}}\)</span>
+gelte. Aber das Argument <span class="math notranslate nohighlight">\(413.13^{\circ}\)</span> ist ja größer als <span class="math notranslate nohighlight">\(360^{\circ}\)</span>.
+Ziehen wir die <span class="math notranslate nohighlight">\(360^{\circ}\)</span> ab, um ein Argument zwischen <span class="math notranslate nohighlight">\(0^{\circ}\)</span> und
+<span class="math notranslate nohighlight">\(360^{\circ}\)</span> zu erhalten, landen wir wieder bei</p>
+<div class="math notranslate nohighlight">
+\[z_2^{2} =  5 e^{53.13^{\circ}\mathrm{i}} = 3 + 4\mathrm{i}.\]</div>
+<p>Also ist auch <span class="math notranslate nohighlight">\(z_2\)</span> eine Lösung der quadratischen Gleichung.</p>
+<p>Dieses Vorgehen zur Berechnung der Wurzeln behalten wir bei. Wenn die fünfte
+Wurzel gezogen werden soll, ziehen wir zuerst die 5.-te Wurzel aus dem Betrag
+und teilen das Argument durch 5. Die anderen vier Wurzeln berechnen wir dann,
+indem wir <span class="math notranslate nohighlight">\(360^{\circ}\)</span> durch 5 teilen und jetzt viermal hintereinander auf das
+Argument der ersten berechneten Wurzel <span class="math notranslate nohighlight">\(72^{\circ}\)</span> addieren.</p>
+<p>Die n-ten Wurzeln einer komplexen Zahl <span class="math notranslate nohighlight">\(r\, e^{\varphi \, \mathrm{i}}\)</span> lassen
+sich folgendermaßen berechnen. Die erste n-te Wurzel erhalten wir, indem wir die
+n-te Wurzel des Betrages <span class="math notranslate nohighlight">\(r\)</span> berechnen und das Argument <span class="math notranslate nohighlight">\(\varphi\)</span> durch <span class="math notranslate nohighlight">\(n\)</span>
+teilen:</p>
+<div class="math notranslate nohighlight">
+\[z_1 = \sqrt[n]{r} e^{\frac{\varphi}{n}\, \mathrm{i}}.\]</div>
+<p>Für die weiteren n-ten Wurzeln wird <span class="math notranslate nohighlight">\(\Delta\varphi = \frac{360^{\circ}}{n}\)</span> zu
+dem Argument der ersten Lösung <span class="math notranslate nohighlight">\(\frac{\varphi}{n}\)</span> addiert. Das Argument der 2.
+Lösung ist also</p>
+<div class="math notranslate nohighlight">
+\[\varphi_2 =  \frac{\varphi}{n} + \Delta\varphi\]</div>
+<p>Wenn nach der 2. Wurzel gefragt ist, haben wir <span class="math notranslate nohighlight">\(\Delta\varphi = 180^{\circ}\)</span>
+addiert und sind wir hier fertig. Wenn jedoch die 3. Wurzel berechnet werden
+sollte, war <span class="math notranslate nohighlight">\(\Delta\varphi = 120^{\circ}\)</span> und wir müssen noch die 3. Wurzel
+berechnen. Dazu addieren wir noch einmal <span class="math notranslate nohighlight">\(\Delta\varphi\)</span>. Das Argument der
+dritten Lösung ist also</p>
+<div class="math notranslate nohighlight">
+\[\varphi_3 =  \frac{\varphi}{n} + 2\cdot \Delta\varphi.\]</div>
+<p>Sollte nach der 4. Wurzel gefragt worden sein, müssen wir <span class="math notranslate nohighlight">\(\Delta\varphi =
+90^{\circ}\)</span> addieren und erneut weitermachen:</p>
+<div class="math notranslate nohighlight">
+\[\varphi_4 =  \frac{\varphi}{n} + 3\cdot \Delta\varphi.\]</div>
+<p>Und dieses Schema setzt sich so fort. Übrigens, falls der Winkel nicht im
+Gradmaß, sondern im Bogenmaß angegeben ist, wird <span class="math notranslate nohighlight">\(\Delta\varphi =
+\frac{2\pi}{n}\)</span> addiert.</p>
+<div class="note admonition">
+<p class="admonition-title">Wie werden die n-ten Wurzeln einer komplexen Zahl berechnet?</p>
+<p>Die n-ten Wurzeln einer komplexen Zahl <span class="math notranslate nohighlight">\(z = r\, e^{\varphi\, \mathrm{i}}\)</span> lauten</p>
+<div class="math notranslate nohighlight">
+\[z_k = \sqrt[n]{r} \, e^{\left(\frac{\varphi}{n}+(k-1)\cdot\Delta\varphi\right)\mathrm{i}}\]</div>
+<p>mit <span class="math notranslate nohighlight">\(\Delta\varphi=\frac{360^{\circ}}{n} = \frac{2\pi}{n}\)</span> und <span class="math notranslate nohighlight">\(k = 1, \ldots,
+n\)</span>.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Wurzeln von komplexen Zahlen: Einführung” von Hart und Trocken<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="546" height="307" src="https://www.youtube.com/embed/fZ1poJc_s7I" 
+title="Wurzeln von komplexen Zahlen: Eine Einführung" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Wurzeln von komplexen Zahlen: Berechnung und Darstellung” von Hart und Trocken<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="546" height="307" src="https://www.youtube.com/embed/aUZn57OsIeU" 
+title="Wurzeln von komplexen Zahlen: Berechnung und Darstellung" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Komplexe Zahlen radizieren” von MathePeter<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BKdqTn2iO4s" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><div class="seealso admonition">
+<p class="admonition-title">interaktives Applet “Wurzeln von komplexen Zahlen” von Hart und Trocken </p>
+<p><a class="reference external" href="https://www.hartundtrocken.de/my-product/interaktiv-wurzeln-komplexer-zahlen/">https://www.hartundtrocken.de/my-product/interaktiv-wurzeln-komplexer-zahlen/</a></p>
+</div>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>Mit dem Potenzieren und dem Wurzelziehen ist unser Ausflug in die komplexen
+Zahlen hier erst einmal beendet. Im nächsten Kapitel steigen wir mit dem Thema
+»Funktionen« in die eindimensionale Analysis ein.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -530,7 +748,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Komplexe Zahlen in Exponentialform</p>
+        <p class="prev-next-title">8.5 Komplexe Zahlen in Exponentialform</p>
       </div>
     </a>
     <a class="right-next"
@@ -559,7 +777,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzen-von-komplexen-zahlen">Potenzen von komplexen Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wurzelziehen-von-komplexen-zahlen">Wurzelziehen von komplexen Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
