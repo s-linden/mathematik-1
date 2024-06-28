@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Was sind Vektoren? &#8212; Mathematik 1 Maschinenbau</title>
+    <title>3.1 Koordinaten und Koordinatensysteme &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -63,10 +63,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter03/sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rechenoperationen ohne Koordinaten" href="sec02.html" />
+    <link rel="next" title="Vektoren und Rechenoperationen ohne Koordinaten" href="sec02.html" />
     <link rel="prev" title="Vektorrechnung (Teil 1)" href="sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -195,8 +197,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vektoren und ihre Anwendungen</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">Vektorrechnung (Teil 1)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Was sind Vektoren?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">Rechenoperationen ohne Koordinaten</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1 Koordinaten und Koordinatensysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">Vektoren und Rechenoperationen ohne Koordinaten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Koordinatendarstellung von Vektoren</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Rechenoperationen in Koordinatendarstellung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Betrag und Abstand zweier Punkte</a></li>
@@ -446,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Was sind Vektoren?</h1>
+    <h1>3.1 Koordinaten und Koordinatensysteme</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -457,7 +459,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tupel-und-koordinaten">Tupel und Koordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartesische-koordinatensysteme">Kartesische Koordinatensysteme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarkoordinatensystem">Polarkoordinatensystem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -469,27 +474,188 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="was-sind-vektoren">
-<h1>Was sind Vektoren?<a class="headerlink" href="#was-sind-vektoren" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="koordinaten-und-koordinatensysteme">
+<h1>3.1 Koordinaten und Koordinatensysteme<a class="headerlink" href="#koordinaten-und-koordinatensysteme" title="Permalink to this heading">#</a></h1>
+<p>In den Ingenieurwissenschaften ist es essentiell, die Position von Objekten und
+die auf sie wirkenden Kräfte präzise zu beschreiben. Dieses Kapitel widmet sich
+dem mathematischen Konzept, Positionen im Raum zu definieren. Dazu wird zuerst
+der Fachbegriff Tupel eingeführt. Tupel, die auf ein Koordinatensystem bezogen
+werden, heißen Koordinaten. Sie ermöglichen es uns, Positionen genau
+festzulegen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was ein <strong>Vektor</strong> ist.</p></li>
-<li><p>Sie können seinen <strong>Betrag</strong> bzw. seine <strong>Länge</strong> und seine <strong>Richtung</strong>
+<li><p>Sie können mit eigenen Worten erklären, was ein <strong>n-Tupel</strong> ist.</p></li>
+<li><p>Sie wissen, was <strong>Koordinaten</strong> sind.</p></li>
+<li><p>Sie können erklären, was ein <strong>Koordinatensystem</strong> ist.</p></li>
+<li><p>Sie kennen das zweidimensionale und dreidimensionale <strong>kartesische
+Koordinatensystem</strong>.</p></li>
+<li><p>Sie können bei dreidimensionalen kartesischen Koordinatensystemen ein
+<strong>Rechtssystem</strong> von einem <strong>Linkssystem</strong> unterscheiden.</p></li>
+<li><p>Sie können Punkte in ein <strong>Polarkoordinatensystem</strong> einzeichnen und daraus
 ablesen.</p></li>
-<li><p>Sie wissen, wann zwei Vektoren <strong>gleich</strong> und wann zwei Vektoren <strong>parallel</strong>
-bzw. <strong>antiparallel</strong> sind.</p></li>
-<li><p>Sie kennen auch besondere Vektoren wie <strong>Nullvektor</strong>, <strong>Einheitsvektor</strong> bzw.
-<strong>normierter Vektor</strong> und <strong>Gegenvektor</strong>.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uh14yOb_0VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R4nJTT60zU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="tupel-und-koordinaten">
+<h2>Tupel und Koordinaten<a class="headerlink" href="#tupel-und-koordinaten" title="Permalink to this heading">#</a></h2>
+<p>Um eine Position anzugeben, verwenden wir Koordinaten in einem Bezugssystem. Ein
+einfaches Beispiel hierfür ist ein Schachbrett, auf dem die Position der Felder
+durch Buchstaben (A bis H) und Zahlen (1 bis 8) gekennzeichnet wird. Die Angabe
+„Turm auf D3“ beschreibt die genaue Position der Schachfigur.</p>
+<figure class="align-default" id="schachbrett">
+<a class="reference internal image-reference" href="../_images/Schachbrett-Koordinaten-1024x1024.png"><img alt="../_images/Schachbrett-Koordinaten-1024x1024.png" src="../_images/Schachbrett-Koordinaten-1024x1024.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Quelle: <a class="reference external" href="https://schachliebe.de/schach-aufstellung/">https://schachliebe.de/schach-aufstellung/</a></span><a class="headerlink" href="#schachbrett" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Um die Schachfigur korrekt zu platzieren, benötigen wir zwei Angaben: „D“ steht
+für die vierte Linie von links und „3“ für die dritte Reihe von unten. Diese
+beiden Angaben nennt man <strong>Koordinaten</strong>.</p>
+<p>Für die Angabe der Position eines Gebäudes, beispielsweise des Hörsaals 8/209,
+benötigen wir drei Koordinaten.</p>
+<figure class="align-default" id="map-frankfurt-uas">
+<a class="reference internal image-reference" href="../_images/map_frankfurt_uas.png"><img alt="../_images/map_frankfurt_uas.png" src="../_images/map_frankfurt_uas.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Gebäude 8 der Frankfurt UAS</span><a class="headerlink" href="#map-frankfurt-uas" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Das Gebäude 8 der Frankfurt UAS befindet sich auf dem Längengrad 8.691847, dem
+Breitengrad 50.130161 (beides in Dezimalgrad angegeben) und bei ca. 112 m über
+Normalhöhennull. Wenn wir die Reihenfolge Längengrad, Breitengrad und Höhe
+vereinbaren, können wir die Position als <strong>Tripel</strong> notieren:</p>
+<div class="math notranslate nohighlight">
+\[(8.691847044378648, 50.13016149806154, 112).\]</div>
+<p>Der Begriff Tripel zeigt, dass die Reihenfolge der Zahlen festgelegt und nicht
+austauschbar ist. Allgemein bezeichnet man eine geordnete Liste von Zahlen (oder
+anderen mathematischen Objekten) als <strong>Tupel</strong>. Ein Tupel kann beliebig viele
+Elemente enthalten, wobei die Anzahl der Elemente dem Begriff vorangestellt
+wird: Ein Paar <span class="math notranslate nohighlight">\((2 | -3)\)</span> ist ein 2-Tupel, ein Tripel <span class="math notranslate nohighlight">\((8.6, 50.1, 112)\)</span> ist ein
+3-Tupel, und ein Quadrupel <span class="math notranslate nohighlight">\((-0.1\,|\,\pi\,|\,3\,| -8)\)</span> ist ein Beispiel für ein
+4-Tupel.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … ein n-Tupel?</p>
+<p>Ein n-Tupel ist eine Liste von <span class="math notranslate nohighlight">\(n\)</span> mathematischen Objekten (meistens Zahlen),
+bei der die Reihenfolge festgelegt ist. Sie werden mit runden Klammern notiert
+und durch senkrechte Striche oder Kommas getrennt. Ein 2-Tupel wird Paar
+genannt, ein 3-Tupel Tripel.</p>
+</div>
+<p>n-Tupel haben vielfältige Anwendungen. Beispielsweise könnte eine Firma ein
+Zeiterfassungssystem einführen, bei dem jede Woche die Anzahl der Arbeitsstunden
+notiert wird. Ein 7-Tupel <span class="math notranslate nohighlight">\((8, 8, 6, 0, 10, 8, 0)\)</span> könnte bedeuten, dass eine
+Person am Montag, Dienstag und Samstag jeweils 8 Stunden gearbeitet hat, am
+Mittwoch 6 Stunden, am Freitag 10 Stunden, und am Donnerstag sowie Sonntag
+arbeitsfrei hatte.</p>
+<p>Wird ein Tupel zur Beschreibung der Position eines Objektes verwendet, nennt man
+die Elemente des Tupels <strong>Koordinaten</strong>. In diesem Kontext ist es wichtig, genau
+zu wissen, auf welches Element sich jede Zahl bezieht. Dies führt uns zum
+Begriff des Koordinatensystems, der im folgenden Abschnitt näher erläutert wird.
+Zuerst halten wir jedoch noch die Definition von Koordinaten fest.</p>
+<div class="note admonition">
+<p class="admonition-title">Was sind … Koordinaten?</p>
+<p>Zur Beschreibung der Position eines Objektes werden Tupel verwendet. Die
+Elemente eines solchen Tupels werden Koordinaten genannt.</p>
+</div>
+<p>Den Begriff Koordinatensystem haben wir intuitiv verwendet. Was genau ein
+Koordinatensystem ist, wird im folgenden Abschnitt näher erläutert.</p>
+</section>
+<section id="kartesische-koordinatensysteme">
+<h2>Kartesische Koordinatensysteme<a class="headerlink" href="#kartesische-koordinatensysteme" title="Permalink to this heading">#</a></h2>
+<p>Ein Koordinatensystem ist ein mathematisches Konzept, das verwendet wird, um die
+Position von Objekten im Raum eindeutig zu bestimmen. Zur Festlegung eines
+Koordinatensystems benötigen wir einen festen Bezugspunkt, den sogenannten
+<strong>Ursprung</strong>. Der Ursprung wird häufig mit dem Symbol <span class="math notranslate nohighlight">\(O\)</span> (für englisch
+»Origin«) abgekürzt.</p>
+<p>Durch den Ursprung verlaufen die <strong>Koordinatenachsen</strong>, spezielle Geraden, die
+die Richtungen im Raum definieren. Wenn zwei Koordinatenachsen senkrecht
+zueinander stehen, spricht man von einem <strong>kartesischen Koordinatensystem</strong>.</p>
+<p>Das einfachste kartesische Koordinatensystem ist die Zahlengerade im
+eindimensionalen Raum. In der zweidimensionalen Ebene werden die Achsen
+üblicherweise mit <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> bezeichnet. Alternativ können sie auch als
+<span class="math notranslate nohighlight">\(x_1\)</span>-Achse und <span class="math notranslate nohighlight">\(x_2\)</span>-Achse benannt werden.</p>
+<figure class="align-default" id="kartesisches-koordinatensystem-1d2d">
+<a class="reference internal image-reference" href="../_images/Koordinaten-1d2d.svg"><img alt="../_images/Koordinaten-1d2d.svg" src="../_images/Koordinaten-1d2d.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Eindimensionales kartesisches Koordinantensystem (oben) und zweidimensionales
+Koordinatensystem (unten), Quelle: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Koordinaten-1d2d.svg">Wikimedia
+Commons</a> von
+Ag2gaeh, Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span><a class="headerlink" href="#kartesisches-koordinatensystem-1d2d" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Zur Beschreibung von Positionen im dreidimensionalen Raum benötigen wir ein
+3-Tupel und ein Koordinatensystem mit drei Koordinatenachsen, oft bezeichnet als
+<span class="math notranslate nohighlight">\(x\)</span>-Achse, <span class="math notranslate nohighlight">\(y\)</span>-Achse und <span class="math notranslate nohighlight">\(z\)</span>-Achse. Alternativ können sie auch als <span class="math notranslate nohighlight">\(x_1\)</span>–Achse,
+<span class="math notranslate nohighlight">\(x_2\)</span>-Achse und <span class="math notranslate nohighlight">\(x_3\)</span>-Achse bezeichnet werden.</p>
+<figure class="align-default" id="rectangular-coordinates">
+<a class="reference internal image-reference" href="../_images/Rectangular_coordinates.svg"><img alt="../_images/Rectangular_coordinates.svg" src="../_images/Rectangular_coordinates.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Dreidimensionales kartesisches Koordinatensystem, Quelle: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Rectangular_coordinates.svg">Wikimedia
+Commons</a>
+von Cronholm144, Lizenz: gemeinfrei</span><a class="headerlink" href="#rectangular-coordinates" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Es gibt zwei Möglichkeiten, die Orientierung der Koordinatenachsen in einem
+dreidimensionalen kartesischen Koordinatensystem zu wählen:</p>
+<ol class="arabic simple">
+<li><p>Rechtssystem</p></li>
+<li><p>Linkssystem</p></li>
+</ol>
+<p>Im <strong>Rechtssystem</strong> wird die Orientierung der Achsen durch die rechte Hand
+definiert: Der Daumen zeigt entlang der ersten Achse, der Zeigefinger entlang
+der zweiten Achse und der Mittelfinger entlang der dritten Achse. Durch das
+Abspreizen dieser drei Finger lässt sich ein rechtshändiges Koordinatensystem
+nachbilden.</p>
+<p>Im <strong>Linkssystem</strong> wird die Orientierung der Achsen durch die linke Hand
+definiert: Der Daumen zeigt entlang der ersten Achse, der Zeigefinger entlang
+der zweiten Achse und der Mittelfinger entlang der dritten Achse. Diese Methode
+erzeugt ein linkshändiges Koordinatensystem.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … ein kartesisches Koordinatensystem?</p>
+<p>Bei einem kartesischen Koordinatensystem stehen jeweils zwei Koordinatenachsen
+zueinander senkrecht und schneiden sich im Ursprung <span class="math notranslate nohighlight">\(O\)</span>.</p>
+</div>
+<p>Das kartesische Koordinatensystem ist eines der grundlegendsten und am
+häufigsten verwendeten Werkzeuge in der Mathematik und den
+Ingenieurwissenschaften. Es ermöglicht eine präzise und einfache Darstellung von
+Punkten und Bewegungen im Raum.</p>
+</section>
+<section id="polarkoordinatensystem">
+<h2>Polarkoordinatensystem<a class="headerlink" href="#polarkoordinatensystem" title="Permalink to this heading">#</a></h2>
+<p>In den Ingenieurwissenschaften und der Physik wird häufig das
+Polarkoordinatensystem verwendet, insbesondere wenn es um kreisförmige Phänomene
+geht. Dieses Koordinatensystem ist besonders nützlich, wenn die Position eines
+Punktes durch einen Abstand und einen Winkel relativ zu einem festen Punkt
+beschrieben werden kann.</p>
+<p>Zunächst wird ein Ursprung festgelegt, der üblicherweise als <strong>Pol</strong> bezeichnet
+wird. Vom Pol ausgehend wird ein Strahl in eine Richtung fesgelegt, die dann als
+<strong>Polarachse</strong> bezeichnet wird. Die Position eines Punktes wird in
+Polarkoordinaten dann durch ein Paar <span class="math notranslate nohighlight">\((r, \varphi)\)</span> beschrieben, wobei</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r\)</span> der Abstand des Punktes zum Pol/Ursprung und</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi\)</span> der Winkel relativ zur Polarachse ist.</p></li>
+</ul>
+<figure class="align-default" id="polar-coordinates">
+<a class="reference internal image-reference" href="../_images/polarform_light431.svg"><img alt="../_images/polarform_light431.svg" src="../_images/polarform_light431.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Polarkoordinatensystem, Quelle: eigene Darstellung, Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA
+4.0</a></span><a class="headerlink" href="#polar-coordinates" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Alternativ kann der Winkel relativ zur Polarachse auch im Bogenmaß angegeben
+werden.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir die Grundlagen von Koordinatensystemen behandelt.
+Wir haben den Begriff des Tupels eingeführt und gezeigt, wie Koordinaten und
+Koordinatensysteme verwendet werden, um Positionen zu beschreiben. Dabei haben
+wir uns insbesondere das kartesische und das Polarkoordinatensystem angesehen.</p>
+<p>Im nächsten Kapitel erweitern wir das Thema, indem wir lernen, wie Tupel durch
+Rechenoperationen zu Vektoren werden. Der Vektorbegriff ist zentral für die
+Beschreibung von Kräften und Bewegungen im Raum und bildet die Grundlage für das
+Verständnis von Vektorräumen.</p>
 </section>
 </section>
 
@@ -537,7 +703,7 @@ bzw. <strong>antiparallel</strong> sind.</p></li>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rechenoperationen ohne Koordinaten</p>
+        <p class="prev-next-title">Vektoren und Rechenoperationen ohne Koordinaten</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -558,7 +724,10 @@ bzw. <strong>antiparallel</strong> sind.</p></li>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tupel-und-koordinaten">Tupel und Koordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartesische-koordinatensysteme">Kartesische Koordinatensysteme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarkoordinatensystem">Polarkoordinatensystem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
