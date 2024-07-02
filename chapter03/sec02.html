@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Vektoren und Rechenoperationen ohne Koordinaten &#8212; Mathematik 1 Maschinenbau</title>
+    <title>3.2 Vektoren und Vektorräume &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -63,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter03/sec02';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -196,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">Vektorrechnung (Teil 1)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">3.1 Koordinaten und Koordinatensysteme</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Vektoren und Rechenoperationen ohne Koordinaten</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2 Vektoren und Vektorräume</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Koordinatendarstellung von Vektoren</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Rechenoperationen in Koordinatendarstellung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Betrag und Abstand zweier Punkte</a></li>
@@ -446,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Vektoren und Rechenoperationen ohne Koordinaten</h1>
+    <h1>3.2 Vektoren und Vektorräume</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -457,9 +459,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele-vektoren">Lernziele Vektoren</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele-rechenoperationen">Lernziele Rechenoperationen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechnen-mit-n-tupeln">Rechnen mit n-Tupeln</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#der-reelle-standardvektorraum">Der reelle Standardvektorraum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorraum">Vektorraum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -471,48 +474,226 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="vektoren-und-rechenoperationen-ohne-koordinaten">
-<h1>Vektoren und Rechenoperationen ohne Koordinaten<a class="headerlink" href="#vektoren-und-rechenoperationen-ohne-koordinaten" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="vektoren-und-vektorraume">
+<h1>3.2 Vektoren und Vektorräume<a class="headerlink" href="#vektoren-und-vektorraume" title="Permalink to this heading">#</a></h1>
+<p>Im letzten Kapitel haben wir n-Tupel kennengelernt. Je nachdem für welche
+Anwendung sie eingesetzt werden, ist es sinnvoll, damit rechnen zu können.
+n-Tupels zusammen mit bestimmten Rechenoperationen führen zu dem Begriff des
+Vektorraumes, den wir in diesem Kapitel behandeln werden.</p>
 <section id="lernziele-vektoren">
 <h2>Lernziele Vektoren<a class="headerlink" href="#lernziele-vektoren" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was ein <strong>Vektor</strong> ist.</p></li>
-<li><p>Sie können seinen <strong>Betrag</strong> bzw. seine <strong>Länge</strong> und seine <strong>Richtung</strong>
-ablesen.</p></li>
-<li><p>Sie wissen, wann zwei Vektoren <strong>gleich</strong> und wann zwei Vektoren <strong>parallel</strong>
-bzw. <strong>antiparallel</strong> sind.</p></li>
-<li><p>Sie kennen auch besondere Vektoren wie <strong>Nullvektor</strong>, <strong>Einheitsvektor</strong> bzw.
-<strong>normierter Vektor</strong> und <strong>Gegenvektor</strong>.</p></li>
+<li><p>Sie wissen, wie der <strong>reelle Standardvektorraum</strong> definiert ist, d.h. Sie können die</p>
+<ul>
+<li><p><strong>Vektoraddition</strong> und</p></li>
+<li><p><strong>Skalarmultiplikation</strong>
+für n-Tupels anwenden.</p></li>
+</ul>
+</li>
+<li><p>Sie wissen, dass ein Element eines Vektorraumes <strong>Vektor</strong> genannt wird.</p></li>
+<li><p>Sie wissen, wie ein allgemeiner, reeller <strong>Vektorraum</strong> definiert ist. Insbesondere können Sie die vier Eigenschaften der Vektoraddition und die vier Eigenschaften der Skalarmultiplikation nachprüfen.</p></li>
+<li><p><strong>Eigenschaften der Vektoraddition</strong>:</p>
+<ul>
+<li><p>Assoziativgesetz: <span class="math notranslate nohighlight">\(u\oplus(v\oplus w) = (u\oplus v)\oplus w\)</span></p></li>
+<li><p>Existenz eines neutralen Elements <span class="math notranslate nohighlight">\(0\in V\)</span> mit <span class="math notranslate nohighlight">\(v\oplus 0 = 0\oplus v = v\)</span></p></li>
+<li><p>Existenz eines zu <span class="math notranslate nohighlight">\(v\in V\)</span> inversen Elements <span class="math notranslate nohighlight">\(-v\in V\)</span> mit <span class="math notranslate nohighlight">\(v\oplus (-v)= (-v)\oplus v = 0\)</span></p></li>
+<li><p>Kommutativgesetz: <span class="math notranslate nohighlight">\(v\oplus u = u \oplus v\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>Eigenschaften der Skalarmultiplikation</strong>:</p>
+<ul>
+<li><p>Vektorielles Distributivgesetz: <span class="math notranslate nohighlight">\(s\odot(u\oplus v) = (s\odot u) \oplus (s\odot v)\)</span></p></li>
+<li><p>Skalares Distributivgesetz: <span class="math notranslate nohighlight">\((s+t)\odot v = (s\odot v) \oplus (t\odot v)\)</span></p></li>
+<li><p>Assoziativgesetz für Skalare: <span class="math notranslate nohighlight">\((s\cdot t)\odot v = s\odot (t \odot v)\)</span></p></li>
+<li><p>Existenz eines neutralen Elements: <span class="math notranslate nohighlight">\(1\odot v = v\)</span></p></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uh14yOb_0VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R4nJTT60zU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="rechnen-mit-n-tupeln">
+<h2>Rechnen mit n-Tupeln<a class="headerlink" href="#rechnen-mit-n-tupeln" title="Permalink to this heading">#</a></h2>
+<p>Im vorherigen Kapitel haben wir die n-Tupel kennengelernt, eine Liste von <span class="math notranslate nohighlight">\(n\)</span>
+mathematischen Objekten, bei denen die Reihenfolge festgelegt ist. Eine
+Anwendung von n-Tupeln in der Praxis könnte die Erfassung der Arbeitsstunden pro
+Woche sein. Das erste Element des Tupels steht für die Arbeitsstunden am Montag,
+das zweite für den Dienstag, das dritte für den Mittwoch, das vierte für den
+Donnerstag und der letzte Eintrag erfasst die Arbeitsstunden am Freitag.
+Beispielsweise könnte die Erfassung der Arbeitsstunden für die erste Woche im
+Januar <span class="math notranslate nohighlight">\((8, 8, 6, 8, 10)\)</span> sein. Wir bezeichnen dieses 5-Tupel mit <span class="math notranslate nohighlight">\(w_1\)</span> für
+erste Woche, also</p>
+<div class="math notranslate nohighlight">
+\[w_1 = (8, 8, 6, 8, 10).\]</div>
+<p>In der zweiten, dritten und vierten Woche des Januars könnte eine Person
+folgende Arbeitsstunden geleistet haben:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+w_2 &amp;= (7, 7, 10, 8, 8) \\
+w_3 &amp;= (8, 8, 8, 8, 8) \\
+w_4 &amp;= (7, 9, 8, 7, 9) \\
+\end{align*}\]</div>
+<p>Sollen nun die Arbeitsstunden im Januar ausgewertet werden, können wir
+beispielsweise fragen, wie viele Stunden insgesamt in den beiden ersten Wochen
+gearbeitet wurden. Dazu müssen wir jeden Eintrag (Wochentag) von <span class="math notranslate nohighlight">\(w_1\)</span> mit jedem
+Eintrag (Wochentag) von <span class="math notranslate nohighlight">\(w_2\)</span> addieren:</p>
+<div class="math notranslate nohighlight">
+\[w_1 \oplus w_2 = (8, 8, 6, 8, 10) \oplus (7, 7, 10, 8, 8) = (15, 15, 16, 16, 18).\]</div>
+<p>Um deutlich zu machen, dass die »Addition« der beiden 5-Tupel etwas Neues ist,
+haben wir das Symbol <span class="math notranslate nohighlight">\(\oplus\)</span> verwendet. Addieren wir die ersten vier Wochen im
+Januar komponentenweise (also Wochentag für Wochentag), dann erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\text{Januar} = w_1 \oplus w_2 \oplus w_3 \oplus w_4 = (30, 32, 32, 31, 35).\]</div>
+<p>Im Januar hat diese Person mehr Stunden am Freitag gearbeitet als an den anderen
+Tagen. Offensichtlich arbeitet diese Personen jede Woche unterschiedlich. Wenn
+wir nun analysieren wollen, wie eine durchschnittliche Woche im Januar aussieht,
+können wir jede Komponente durch 4 teilen (bzw. mit <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>
+multiplizieren.</p>
+<div class="math notranslate nohighlight">
+\[\text{Durchschnitt Januar} = \frac{1}{4} \odot (30, 32, 32, 31, 35) = (7.5, 8, 8,
+7.75, 8.75).\]</div>
+<p>Das Rechnen mit n-Tupeln wollen wir nun formalisieren.</p>
 </section>
-<section id="lernziele-rechenoperationen">
-<h2>Lernziele Rechenoperationen<a class="headerlink" href="#lernziele-rechenoperationen" title="Permalink to this heading">#</a></h2>
-<div class="goals admonition">
-<p class="admonition-title">Lernziele</p>
+<section id="der-reelle-standardvektorraum">
+<h2>Der reelle Standardvektorraum<a class="headerlink" href="#der-reelle-standardvektorraum" title="Permalink to this heading">#</a></h2>
+<p>Zunächst formalisieren wir die Schreibweise der Menge aller n-Tupel, indem wir
+das kartesische Produkt einführen. Ist <span class="math notranslate nohighlight">\(n\)</span> eine natürliche Zahl und <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>
+die Menge der reellen Zahlen, dann ist das n-fache kartesische Produkt</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{R}^{n} = \{(x_1, x_2, \ldots, x_n) \;|\; x_1, x_2, \dots,x_n \in
+\mathbb{R}\}\]</div>
+<p>die Menge aller n-Tupel <span class="math notranslate nohighlight">\((x_1, x_2, \ldots, x_n)\)</span> mit reellen Zahlen als
+Komponenten. Für diese Tupel definieren wir eine komponentenweise <strong>Vektoraddition</strong>
+<span class="math notranslate nohighlight">\(\oplus: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n\)</span> durch</p>
+<div class="math notranslate nohighlight">
+\[(x_1, x_2, \ldots, x_n) \oplus (y_1, y_2, \ldots, y_n) = (x_1 + y_1, x_2 + y_2,
+\ldots, x_n+y_n).\]</div>
+<p>Weiterhin definieren wir eine komponentenweise Multiplikation mit einem Skalar
+<span class="math notranslate nohighlight">\(\odot:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n\)</span> durch</p>
+<div class="math notranslate nohighlight">
+\[s\odot (x_1, x_2, \ldots, x_n) = (s\cdot x_1, s\cdot x_2, \ldots, s\cdot
+x_n),\]</div>
+<p>die <strong>Skalarmultiplikation</strong> genannt wird. Den Begriff <strong>Skalar</strong> haben wir hier
+genommen, um zu verdeutlichen, dass <span class="math notranslate nohighlight">\(s\)</span> nicht ein n-Tupel ist, sondern (in
+diesem Fall) eine reelle Zahl. Mit den beiden Rechenoperationen »Vektoraddition«
+und »Skalarmultiplikation« wird das reelle kartesische Produkt <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> zu
+einem reellen <strong>Vektorraum</strong>, der auch <strong>reeller Standardvektorraum</strong> genannt
+wird. Die n-Tupel mit Rechenoperationen werden daher auch <strong>Vektoren</strong> genannt.
+Was genau ein Vektorraum ist, behandeln wir im nächsten Abschnitt. Zunächst
+halten wir noch eine alternative Schreibweise fest.</p>
+<p>Die Vektoren des reellen Standardvektorraumes werden häufig als sogenannte
+<strong>Spaltenvektoren</strong> notiert. Das erleichtert die Übersicht bei der
+Vektoraddition und der Skalarmultiplikation, da dann zeilenweise addiert und
+mulitpliziert werden kann. Die Vektoraddition in Form von Spaltenvektoren wird
+dann folgendermaßen notiert:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}x_1 \\x_2\\ \vdots \\ x_n\end{pmatrix} + \begin{pmatrix}y_1
+\\y_2\\ \vdots \\ y_n\end{pmatrix} = \begin{pmatrix}x_1 + y_1 \\x_2 + y_2\\
+\vdots \\ x_n + y_n\end{pmatrix}.\end{split}\]</div>
+<p>Insbesondere wird meist das Symbol <span class="math notranslate nohighlight">\(\oplus\)</span> vereinfacht als <span class="math notranslate nohighlight">\(+\)</span> geschreiben, da
+eine »normale« Addition nicht gemeint sein kann. Die Skalarmultiplikation wird
+folgendermaßen geschrieben:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}s\cdot \begin{pmatrix}x_1 \\x_2\\ \vdots \\ x_n\end{pmatrix} 
+= \begin{pmatrix}s\cdot x_1 \\ s\cdot x_2 \\ \vdots \\ s\cdot x_n \end{pmatrix}.\end{split}\]</div>
+<p>Auch hier wird in der Regel anstatt des Symbols <span class="math notranslate nohighlight">\(\odot\)</span> nur das normale
+Multiplikationszeichen <span class="math notranslate nohighlight">\(\cdot\)</span> verwendet, da jeweils aus dem Zusammenhang klar
+ist, ob die normale Multiplikation zwischen reellen Zahlen oder die
+Skalarmultiplikation gemeint ist.</p>
+</section>
+<section id="vektorraum">
+<h2>Vektorraum<a class="headerlink" href="#vektorraum" title="Permalink to this heading">#</a></h2>
+<p>Noch haben wir nicht die Frage beantwortet, was ein Vektorraum eigentlich ist.
+Ein Vektorraum ist eine mathematische Struktur, die über einem Körper definiert
+ist. Da wir hier nicht den Begriff Körper erläutern wollen, beschränken wir uns
+auf das prominente Beispiel der reellen Zahlen als Körper. Details zu Körpern
+können beispielsweise in dem <a class="reference external" href="https://de.wikipedia.org/wiki/K%C3%B6rper_(Algebra)">Wikipedia-Artikel → Körper
+(Algebra)</a> nachgelesen werden.</p>
+<p>Zu dem Körper (also hier den reellen Zahlen) kommt noch eine weitere Menge, die
+wir mit <span class="math notranslate nohighlight">\(V\)</span> abkürzen. In unserem obigen Beispiel war als <span class="math notranslate nohighlight">\(V\)</span> die Menge der
+n-Tupel gewählt worden. Ein anderes Beispiel könnte aber auch die Menge <span class="math notranslate nohighlight">\(V\)</span> die
+Funktionen <span class="math notranslate nohighlight">\(\{1, x, x^2, \ldots, x^n\}\)</span> sein.</p>
+<p>Als dritte und vierte Zutat für einen Vektorraum kommen noch zwei Verknüpfungen
+(Rechenoperationen) dazu:</p>
 <ul class="simple">
-<li><p>Sie können Vektoren geometrisch addieren und subtrahieren.</p></li>
-<li><p>Sie können einen Vektor geometrisch mit einem Skalar multiplizieren.</p></li>
-<li><p>Sie können das Distributivgesetz der skalaren Multiplikation für Vektoren
-anwenden.</p></li>
+<li><p>Vektoraddition <span class="math notranslate nohighlight">\(\oplus: V \times V \to V\)</span> und</p></li>
+<li><p>Skalarmultiplikation <span class="math notranslate nohighlight">\(\odot: \mathbb{R} \times V \to V\)</span>.</p></li>
 </ul>
+<p>Der Körper (hier <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>), die Menge <span class="math notranslate nohighlight">\(V\)</span> und die beiden Verknüpfungen
+<span class="math notranslate nohighlight">\(\oplus\)</span> und <span class="math notranslate nohighlight">\(\odot\)</span> bilden einen Vektorraum, wenn für alle <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> und
+<span class="math notranslate nohighlight">\(s,t \in \mathbb{R}\)</span> die folgende Eigenschaften gelten:</p>
+<p>Vektoraddition:</p>
+<ol class="arabic simple">
+<li><p>Assoziativgesetz: <span class="math notranslate nohighlight">\(u\oplus(v\oplus w) = (u\oplus v)\oplus w\)</span></p></li>
+<li><p>Existenz eines neutralen Elements <span class="math notranslate nohighlight">\(0\in V\)</span> mit <span class="math notranslate nohighlight">\(v\oplus 0 = 0\oplus v = v\)</span></p></li>
+<li><p>Existenz eines zu <span class="math notranslate nohighlight">\(v\in V\)</span> inversen Elements <span class="math notranslate nohighlight">\(-v\in V\)</span> mit <span class="math notranslate nohighlight">\(v\oplus (-v)=
+(-v)\oplus v = 0\)</span></p></li>
+<li><p>Kommutativgesetz: <span class="math notranslate nohighlight">\(v\oplus u = u \oplus v\)</span></p></li>
+</ol>
+<p>Skalarmultiplikation:</p>
+<ol class="arabic simple">
+<li><p>Vektorielles Distributivgesetz: <span class="math notranslate nohighlight">\(s\odot(u\oplus v) = (s\odot u) \oplus
+(s\odot v)\)</span></p></li>
+<li><p>Skalares Distributivgesetz: <span class="math notranslate nohighlight">\((s+t)\odot v = (s\odot v) \oplus (t\odot v)\)</span></p></li>
+<li><p>Assoziativgesetz für Skalare: <span class="math notranslate nohighlight">\((s\cdot t)\odot v = s\odot (t \odot v)\)</span></p></li>
+<li><p>Existenz eines neutralen Elements: <span class="math notranslate nohighlight">\(1\odot v = v\)</span></p></li>
+</ol>
+<p>In der Physik wird der Raum unserer Anschauung oft als <strong>euklidischer Raum</strong>
+bezeichnet. Es gibt verschiedene Interpretationen dieses Begriffes. Eine davon
+ist, den euklidischen Raum als reellen Standardvektorraum zu interpretieren. In
+den folgenden Videos wird daher nicht zwischen beiden Begriffen unterschieden.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “n-dimensionaler euklidischer Raum” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uh14yOb_0VY" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-</section>
-<section id="id1">
-<h2>Videos<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IN_21Zd8tcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dz3ccb5cqxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9oQzrH0x434" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lm5wKriDsD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tKoLyc_4udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kBZX5gWbcNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Addition von Vektoren” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IN_21Zd8tcE" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Skalarmultiplikation” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dz3ccb5cqxQ" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Subtraktion von Vektoren” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9oQzrH0x434" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>Der mathematische Begriff Vektorraum ist zunächst recht abstrakt. In dieser
+Vorlesung beschränken wir uns auf daher auf reelle Vektorräume. Im nächsten
+Kapitel werden wir den reellen Standardvektorraum benutzen, um geometrische
+Objekte zu beschreiben.</p>
 </section>
 </section>
 
@@ -581,9 +762,10 @@ anwenden.</p></li>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele-vektoren">Lernziele Vektoren</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele-rechenoperationen">Lernziele Rechenoperationen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechnen-mit-n-tupeln">Rechnen mit n-Tupeln</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#der-reelle-standardvektorraum">Der reelle Standardvektorraum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektorraum">Vektorraum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
