@@ -175,26 +175,26 @@ den folgenden Videos wird daher nicht zwischen beiden Begriffen unterschieden.
 
 ```{dropdown} Video "n-dimensionaler euklidischer Raum" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uh14yOb_0VY" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video "Addition von Vektoren" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IN_21Zd8tcE" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video "Skalarmultiplikation" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dz3ccb5cqxQ" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video "Subtraktion von Vektoren" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9oQzrH0x434" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 
