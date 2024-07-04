@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Koordinatendarstellung von Vektoren &#8212; Mathematik 1 Maschinenbau</title>
+    <title>3.3 Vektoren in der Geometrie &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -63,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter03/sec03';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -197,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">Vektorrechnung (Teil 1)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">3.1 Koordinaten und Koordinatensysteme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">3.2 Vektoren und Vektorräume</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Koordinatendarstellung von Vektoren</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3 Vektoren in der Geometrie</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Rechenoperationen in Koordinatendarstellung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Betrag und Abstand zweier Punkte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Linearkombination und lineare Unabhängigkeit</a></li>
@@ -446,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Koordinatendarstellung von Vektoren</h1>
+    <h1>3.3 Vektoren in der Geometrie</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -457,7 +459,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektoren-als-verschiebung-interpretieren">Vektoren als Verschiebung interpretieren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verschiebungen-addieren">Verschiebungen addieren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verschiebungen-vervielfachen">Verschiebungen vervielfachen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -469,28 +474,170 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="koordinatendarstellung-von-vektoren">
-<h1>Koordinatendarstellung von Vektoren<a class="headerlink" href="#koordinatendarstellung-von-vektoren" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="vektoren-in-der-geometrie">
+<h1>3.3 Vektoren in der Geometrie<a class="headerlink" href="#vektoren-in-der-geometrie" title="Permalink to this heading">#</a></h1>
+<p>n-Tupel können in der Geometrie genutzt werden, um die Position von Punkten in
+einem Koordinatensystem zu beschreiben. Mit Hilfe von Vektoren können in der
+Geometrie Bewegungen dargestellt werden. n-Tupel zusammen mit Vektoren sind
+daher ein mächtiges Werkzeug, um geometrische Probleme zu beschreiben und zu
+lösen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können einen Vektor in ein zwei- oder dreidimensionales Koordinatensystem
-einzeichnen.</p></li>
-<li><p>Sie können einen Punkt von einem Vektor unterscheiden.</p></li>
-<li><p>Sie wissen, was ein <strong>Verbindungsvektor</strong> zwischen zwei Punkten und ein
-<strong>Ortsvektor</strong> ist.</p></li>
+<li><p>Sie können die Vektoren des reellen Standardvektorraumes als Bewegungen bzw.
+Verschiebungen in der Geometrie interpretieren.</p></li>
+<li><p>Sie können die Vektoraddition geometrisch als Hintereinanderausführung von
+Verschiebungen verstehen und anwenden.</p></li>
+<li><p>Sie können die Skalarmultiplikation als Streckung oder Stauchung einer
+Verschiebung interpretieren. Multiplikation mit einem negativen Skalar führt
+zu einer Umorientierung.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lm5wKriDsD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tKoLyc_4udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kBZX5gWbcNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R4nJTT60zU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uMwzh9Y61cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="vektoren-als-verschiebung-interpretieren">
+<h2>Vektoren als Verschiebung interpretieren<a class="headerlink" href="#vektoren-als-verschiebung-interpretieren" title="Permalink to this heading">#</a></h2>
+<p>Wir betrachten zunächst den reellen Vektorraum <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> und stellen ihn
+geometrisch als Ebene mit einem kartesischen Koordinatensystem dar. Zunächst
+wählen wir einen Punkt aus, der durch ein Zahlentupel beschrieben wird, z.B.
+<span class="math notranslate nohighlight">\(A(2,1)\)</span>.</p>
+<figure class="align-default" id="haus-vom-nikolaus">
+<a class="reference internal image-reference" href="../_images/haus_vom_nikolaus.png"><img alt="../_images/haus_vom_nikolaus.png" src="../_images/haus_vom_nikolaus.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Haus vom Nikolaus; Quelle: eigene Darstellung;
+Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span><a class="headerlink" href="#haus-vom-nikolaus" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Um die Strecke von <span class="math notranslate nohighlight">\(A\)</span> nach <span class="math notranslate nohighlight">\(B\)</span> zu beschreiben, bewegen wir uns 3 Einheiten nach
+rechts (<span class="math notranslate nohighlight">\(x_1\)</span>-Richtung) und 0 Einheiten nach oben/unten (<span class="math notranslate nohighlight">\(x_2\)</span>-Richtung) und
+landen beim Punkt <span class="math notranslate nohighlight">\(B\)</span>. Diese Bewegung kann als 2-Tupel notiert werden. Im
+Gegensatz zu Punkten können wir Verschiebungen jedoch als Vektoren des reellen
+Standardvektorraums interpretieren. Wir notieren für die Bewegung von <span class="math notranslate nohighlight">\(A\)</span> nach
+<span class="math notranslate nohighlight">\(B\)</span> den Spaltenvektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 3 \\ 0 \end{pmatrix}\end{split}\]</div>
+<p>und kürzen ihn mit dem Symbol <span class="math notranslate nohighlight">\(\vec{v}_1\)</span> ab, also</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_1 = \begin{pmatrix} 3 \\ 0 \end{pmatrix}.\end{split}\]</div>
+<p>Der kleine Pfeil über dem <span class="math notranslate nohighlight">\(v\)</span> zeigt an, dass der Vektor <span class="math notranslate nohighlight">\(\vec{v}\)</span> geometrisch
+als Verschiebung interpretiert wird, ähnlich wie der Pfeil in der Skizze vom
+Punkt <span class="math notranslate nohighlight">\(A\)</span> zum Punkt <span class="math notranslate nohighlight">\(B\)</span>. Manchmal werden alle Vektoren eines allgemeinen
+Vektorraumes mit einem Pfeil gekennzeichnet, auch ohne eine geometrische
+Interpretation. Häufiger wird jedoch der Fettdruck <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> benutzt, um zu
+verdeutlichen, dass es sich um einen Vektor handelt.</p>
+<p>Wir setzen unseren Weg fort. Von <span class="math notranslate nohighlight">\(B\)</span> zu <span class="math notranslate nohighlight">\(E\)</span> müssen wir 3 Einheiten nach links
+bzw. -3 Einheiten nach rechts (in <span class="math notranslate nohighlight">\(x_1\)</span>-Richtung) und 3 Einheiten nach oben (in
+<span class="math notranslate nohighlight">\(x_2\)</span>-Richtung) gehen. Dies notieren wir als die zweite Bewegung:</p>
+<p>Wir laufen weiter den Weg ab. Von <span class="math notranslate nohighlight">\(B\)</span> zu <span class="math notranslate nohighlight">\(E\)</span> müssen wir 3 Einheiten nach links
+bzw. -3 Einheiten nach rechts (in <span class="math notranslate nohighlight">\(x_1\)</span>-Richtung) und 3 Einheiten nach oben (in
+<span class="math notranslate nohighlight">\(x_2\)</span>-Richtung), notieren also als zweite Verschiebung den Vektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_2 = \begin{pmatrix} -3 \\ 3 \end{pmatrix}.\end{split}\]</div>
+<p>Um vom Punkt <span class="math notranslate nohighlight">\(E\)</span> zum Punkt <span class="math notranslate nohighlight">\(C\)</span> zu gelangen, bewegen wir uns wieder 3 Einheiten
+nach rechts und 0 Einheiten nach oben. Diese Verschiebung entspricht erneut dem
+Vektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_3 = \begin{pmatrix} 3 \\ 0 \end{pmatrix} = \vec{v}_1.\end{split}\]</div>
+<p>Zusammengefasst: Wenn wir Vektoren des reellen Standardvektorraums geometrisch
+als Verschiebung interpretieren, kann diese Verschiebung an einem beliebigen
+Punkt starten. Der Vektor <span class="math notranslate nohighlight">\(\vec{v}_1 = \begin{pmatrix} 3 \ 0 \end{pmatrix}\)</span>
+verschiebt sowohl den Punkt <span class="math notranslate nohighlight">\(A\)</span> auf <span class="math notranslate nohighlight">\(B\)</span> als auch den Punkt <span class="math notranslate nohighlight">\(E\)</span> auf <span class="math notranslate nohighlight">\(C\)</span>. Soll der
+Vektor <span class="math notranslate nohighlight">\(\vec{v}_1 = \begin{pmatrix} 3 \ 0 \end{pmatrix}\)</span> in einem
+Koordinatensystem dargestellt werden, müssten unendlich viele Pfeile
+eingezeichnet werden, um alle möglichen Startpunkte abzudecken.</p>
+</section>
+<section id="verschiebungen-addieren">
+<h2>Verschiebungen addieren<a class="headerlink" href="#verschiebungen-addieren" title="Permalink to this heading">#</a></h2>
+<p>In den obigen Betrachtungen haben wir die geometrische Verschiebung von Punkten,
+also das Bewegen im Raum, schon als Vektor des reellen Standardvektorraumes
+bezeichnet. Das bedeutet, dass neben den n-Tupeln zwei wichtige
+Rechenoperationen hinzukommen: die Vektoraddition und die Skalarmultiplikation,
+die die Vektorraum-Eigenschaften erfüllen.</p>
+<p>Warum sind diese Bewegungen bzw. Verschiebungen nun Vektoren und nicht nur
+Tupel? Es ist geometrisch sinnvoll, zwei Verschiebungen hintereinander
+auszuführen und die resultierende Verschiebung als eine einzige
+Gesamtverschiebung zu beschreiben. Wenn man in unserem Beispiel 3 Einheiten nach
+rechts und 0 Einheiten nach oben geht und dann -3 Einheiten nach rechts und 3
+Einheiten nach oben, so ist man insgesamt 0 Einheiten nach rechts und 3
+Einheiten nach oben gelaufen. Bewegungen bzw. geometrische Verschiebungen dürfen
+addiert werden, so wie die Vektoraddition im reellen Standardvektorraum
+definiert ist:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_1 \oplus \vec{v}_2 = \begin{pmatrix} 3 \\ 0 \end{pmatrix} +
+\begin{pmatrix} -3 \\ 3 \end{pmatrix} = \begin{pmatrix} 0 \\ 3 \end{pmatrix}.\end{split}\]</div>
+<p>Betrachten wir das Gesamtergebnis einer Verschiebung, gibt es keinen Unterschied
+zwischen</p>
+<div class="math notranslate nohighlight">
+\[\vec{v}_1 \oplus (\vec{v}_2 \oplus \vec{v}_3)\]</div>
+<p>und</p>
+<div class="math notranslate nohighlight">
+\[(\vec{v}_1 \oplus \vec{v}_2) \oplus \vec{v}_3.\]</div>
+<p>Es gibt auch ein neutrales Element</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix},\end{split}\]</div>
+<p>dass geometrisch sinnvoll interpretiert werden kann. <span class="math notranslate nohighlight">\(\vec{0}\)</span> bedeutet, dass
+weder in <span class="math notranslate nohighlight">\(x_1\)</span>-Richtung noch in <span class="math notranslate nohighlight">\(x_2\)</span>-Richtung eine Verschiebung erfolgt. Wir
+bleiben dort stehen, wo wir sind.</p>
+<p>Die Existenz des inversen Elements bedeutet, dass wir eine Verschiebung
+rückgängig machen können. Gehen wir <span class="math notranslate nohighlight">\(a\)</span> Einheiten nach rechts und <span class="math notranslate nohighlight">\(b\)</span> Einheiten
+nach oben, so bedeutet <span class="math notranslate nohighlight">\(-a\)</span> Einheiten nach rechts, dass wir <span class="math notranslate nohighlight">\(a\)</span> Einheiten nach
+links gehen. <span class="math notranslate nohighlight">\(-b\)</span> Einheiten nach oben bedeutet, dass wir <span class="math notranslate nohighlight">\(b\)</span> Einheiten nach
+unten gehen. Werden nun diese beiden Bewegungen oder Verschiebungen
+hintereinander ausgeführt, haben wir uns gar nicht bewegt.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} a \\ b \end{pmatrix} \Rightarrow \vec{v} \oplus
+(-\vec{v}) =\begin{pmatrix} a \\ b \end{pmatrix} + \begin{pmatrix} -a \\ -b
+\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} = \vec{0}.\end{split}\]</div>
+</section>
+<section id="verschiebungen-vervielfachen">
+<h2>Verschiebungen vervielfachen<a class="headerlink" href="#verschiebungen-vervielfachen" title="Permalink to this heading">#</a></h2>
+<p>Auch die Skalarmultiplikation im reellen Vektorraum lässt sich geometrisch für
+Verschiebungen sinnvoll interpretieren. Nehmen wir an, wir haben eine
+Verschiebung</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}.\end{split}\]</div>
+<p>Das bedeutet, wir verschieben einen gegebenen Punkt um 2 Einheiten in
+<span class="math notranslate nohighlight">\(x_1\)</span>-Richtung und 1 Einheit in <span class="math notranslate nohighlight">\(x_2\)</span>-Richtung. Gemäß der Skalarmultiplikation
+des reellen Vektorraumes gilt:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}3 \cdot \begin{pmatrix} 2 \\ 1 \end{pmatrix} = \begin{pmatrix} 3\cdot 2 \\
+3\cdot 1 \end{pmatrix} = \begin{pmatrix} 6 \\ 3 \end{pmatrix}.\end{split}\]</div>
+<p>Damit wird ein Punkt um 6 Einheiten in <span class="math notranslate nohighlight">\(x_1\)</span>-Richtung und 3 Einheiten in
+<span class="math notranslate nohighlight">\(x_2\)</span>-Richtung verschoben. Das entspricht unserem Verständnis, drei
+Verschiebungen in die gleiche Richtung hintereinander auszuführen.</p>
+<figure class="align-default" id="skalarmultiplikation-verschiebung">
+<a class="reference internal image-reference" href="../_images/skalarmultiplikation_verschiebung.png"><img alt="../_images/skalarmultiplikation_verschiebung.png" src="../_images/skalarmultiplikation_verschiebung.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Skalarmultiplikation als Verschiebung geometrisch interpretiert; Quelle: eigene Darstellung;
+Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span><a class="headerlink" href="#skalarmultiplikation-verschiebung" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Der Skalar muss jedoch nicht immer eine ganze Zahl wie in diesem Beispiel sein.
+Alle reellen Zahlen sind möglich. Allgemein können wir daher die
+Skalarmultiplikation als eine Streckung oder Stauchung der Verschiebung
+interpretieren. Wird eine Verschiebung mit einer negativen Zahl multipliziert,
+kehrt sich die Richtung bzw. die Orientierung der Verschiebung um. Zum Beispiel,
+wenn wir den Vektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}=\begin{pmatrix} 2 \\ 1 \end{pmatrix}\end{split}\]</div>
+<p>mit -1 multiplizieren, erhalten wir:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-1\cdot \begin{pmatrix} 2 \\ 1 \end{pmatrix}= \begin{pmatrix} -2 \\ 11
+\end{pmatrix}.\end{split}\]</div>
+<p>​	
+Diese Multiplikation führt zu einer Verschiebung in die entgegengesetzte
+Richtung, nämlich 2 Einheiten nach links und 1 Einheit nach unten.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>Der reelle Standardvektorraum mit n-Tupeln, Vektoraddition und
+Skalarmultiplikation ist ein äußerst geeignetes Werkzeug, um Bewegungen bzw.
+Verschiebungen in der Geometrie zu beschreiben.</p>
+<p>Im nächsten Kapitel werden wir uns mit affinen Punkträumen beschäftigen. Affine
+Punkträume erweitern unser Verständnis, indem sie es uns ermöglichen, die
+Konzepte von Punkten (Orten) und Verschiebungen (Bewegungen) zu verbinden. Dies
+wird uns helfen, komplexere geometrische Probleme zu lösen.</p>
 </section>
 </section>
 
@@ -559,7 +706,10 @@ einzeichnen.</p></li>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektoren-als-verschiebung-interpretieren">Vektoren als Verschiebung interpretieren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verschiebungen-addieren">Verschiebungen addieren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verschiebungen-vervielfachen">Verschiebungen vervielfachen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
