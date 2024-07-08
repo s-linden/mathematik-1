@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Betrag und Abstand zweier Punkte &#8212; Mathematik 1 Maschinenbau</title>
+    <title>3.5 Betrag Vektor und Abstand Punkte &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -63,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter03/sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -199,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">3.2 Vektoren und Vektorräume</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">3.3 Vektoren in der Geometrie</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">3.4 Affine Punkträume</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Betrag und Abstand zweier Punkte</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5 Betrag Vektor und Abstand Punkte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Linearkombination und lineare Unabhängigkeit</a></li>
 </ul>
 </li>
@@ -446,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Betrag und Abstand zweier Punkte</h1>
+    <h1>3.5 Betrag Vektor und Abstand Punkte</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -457,7 +459,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag-eines-vektors">Betrag eines Vektors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#einheitsvektor-bzw-vektoren-normieren">Einheitsvektor bzw. Vektoren normieren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstand-zweier-punkte">Abstand zweier Punkte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelpunkt-einer-strecke-berechnen">Mittelpunkt einer Strecke berechnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -469,23 +475,182 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="betrag-und-abstand-zweier-punkte">
-<h1>Betrag und Abstand zweier Punkte<a class="headerlink" href="#betrag-und-abstand-zweier-punkte" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="betrag-vektor-und-abstand-punkte">
+<h1>3.5 Betrag Vektor und Abstand Punkte<a class="headerlink" href="#betrag-vektor-und-abstand-punkte" title="Permalink to this heading">#</a></h1>
+<p>Nachdem wir im letzten Kapitel den affinen Punkt kennengelernt haben, führen wir
+nun noch den Betrag von Vektoren ein. Streng genommen, wird so aus dem
+Vektorraum ein normierter Raum.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können den Betrag eines Vektors in Koordinatendarstellung ausrechnen.</p></li>
-<li><p>Sie können den Einheitsvektor in Richtung eines Vektors (in
-Koordinatendarstellung) bestimmen (=normieren).</p></li>
+<li><p>Sie wissen, was der <strong>Betrag</strong> eines Vektors ist und können ihn ausrechnen.</p></li>
+<li><p>Sie können den <strong>Einheitsvektor</strong> in Richtung eines Vektors bestimmen
+(=<strong>normieren</strong>).</p></li>
+<li><p>Sie können den <strong>Abstand zweier Punkte</strong> berechnen.</p></li>
+<li><p>Sie können den <strong>Mittelpunkt zweier Punkte</strong> berechnen.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zFKvZpzzO7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eXSMrAB-miM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="betrag-eines-vektors">
+<h2>Betrag eines Vektors<a class="headerlink" href="#betrag-eines-vektors" title="Permalink to this heading">#</a></h2>
+<p>Der Betrag eines Vektors ist geometrisch interpretiert die Länge des Pfeils,
+also der Verschiebung. Wird das kartesische Koordinatensystem genutzt, können
+wir eine Formel zu Berechnung des Betrages angeben. Ist <span class="math notranslate nohighlight">\(\vec{v}\in
+\mathbb{R}^n\)</span> ein Vektor, so wird sein Betrag mit dem Symbol</p>
+<div class="math notranslate nohighlight">
+\[|\vec{v}| \; \text{ oder } \; ||\vec{v}||\]</div>
+<p>abgekürzt. Um nun den Betrag eines Vektors des reellen Standardvektors berechnen
+zu können, fertigen wir zunächst eine Skizze an. Als Beispiel nehmen wir einen
+Vektor <span class="math notranslate nohighlight">\(v\in\mathbb{R}^2\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} 6 \\ 2.5 \end{pmatrix}.\end{split}\]</div>
+<p>Es gibt unendlich viele Pfeile, die geometrisch diesen Vektor im kartesischen
+Koordinatensystem repräsentieren. In der Skizze haben wir die Verschiebung
+eingezeichnet, die beim Punkt <span class="math notranslate nohighlight">\((1.5, 2)\)</span> startet.</p>
+<figure class="align-default" id="betrag-vektor">
+<a class="reference internal image-reference" href="../_images/betrag_vektor.png"><img alt="../_images/betrag_vektor.png" src="../_images/betrag_vektor.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Beispiel eines Vektors im <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>; Quelle: eigene Darstellung; Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA
+4.0</a></span><a class="headerlink" href="#betrag-vektor" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ergänzen wir jetzt zwei Strecken wie in der Skizze ersichtlich, so ergibt sich
+ein rechtwinkliges Dreieck. Die Länge der Katheten entspricht den Elementen des
+Vektors. Daher können wir mit dem Satz des Pythagoras direkt die Länge bzw. den
+Betrag <span class="math notranslate nohighlight">\(|\vec{v}|\)</span> des Vektors berechnen:</p>
+<div class="math notranslate nohighlight">
+\[|\vec{v}| = \sqrt{6^2 + 2.5^2} = \sqrt{42.25} = 6.5.\]</div>
+<p>Dieses Vorgehen können wir verallgemeinern. Allgemein kann der Betrag
+<span class="math notranslate nohighlight">\(|\vec{v}|\)</span> eines Vektors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_2 \end{pmatrix}\end{split}\]</div>
+<p>des reellen Standardvektorraumes <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> folgendermaßen berechnet werden:</p>
+<div class="math notranslate nohighlight">
+\[|\vec{v}| = \sqrt{v_1^2 + v_2^2 + \ldots + v_n^2}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Betrag / euklidische Norm” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zFKvZpzzO7M" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+</details></section>
+<section id="einheitsvektor-bzw-vektoren-normieren">
+<h2>Einheitsvektor bzw. Vektoren normieren<a class="headerlink" href="#einheitsvektor-bzw-vektoren-normieren" title="Permalink to this heading">#</a></h2>
+<p>Ein Vektor, der die Länge bzw. den Betrag Eins hat, für den also <span class="math notranslate nohighlight">\(|\vec{v}|=1\)</span>
+gilt, wird <strong>Einheitsvektor</strong> genannt. Beispielsweise ist der Vektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} 0.1 \\ 0.5 \\ 0.7 \\ 0.5 \end{pmatrix}\end{split}\]</div>
+<p>ein Einheitsvektor, denn es gilt</p>
+<div class="math notranslate nohighlight">
+\[|\vec{v}| = \sqrt{0.1^2 + 0.5^2 + 0.7^2 + 0.5^2} = \sqrt{1/100 + 25/100 +
+49/100 + 25/100} = 1.\]</div>
+<p>Sehr häufig ist ein Vektor kein Einheitsvektor. In den Ingenieurwissenschaften
+wird jedoch oft gefordert, Richtungen durch Einheitsvektoren zu beschreiben. Es
+gibt die Möglichkeit, aus jedem Vektor (wenn es nicht gerade der Nullvektor
+ist), einen Einheitsvektor zu machen. Diesen Vorgang nennt man <strong>Normierung</strong>.
+Ein Vektor wird normiert, indem jede Komponente durch den Betrag des Vektors
+geteilt wird. In unserem obigen Beispiel galt</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} 6 \\ 2.5 \end{pmatrix} \Rightarrow |\vec{v}| =
+6.5.\end{split}\]</div>
+<p>Teilen wir die beiden Komponenten jeweils durch <span class="math notranslate nohighlight">\(6.5=\frac{13}{2}\)</span>, erhalten wir
+den normierten Vektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{e}_v = \begin{pmatrix} \frac{12}{13} \\ \frac{5}{13} \end{pmatrix}.\end{split}\]</div>
+<p>Einheitsvektoren, die durch Normierung aus einem Vektor <span class="math notranslate nohighlight">\(\vec{v}\)</span> entstanden
+sind, werden üblicherweise als <span class="math notranslate nohighlight">\(\vec{e}_{v}\)</span> notiert. Wir rechnen noch nach, ob
+der Vektor <span class="math notranslate nohighlight">\(\vec{e}_v\)</span> tatsächlich ein Einheitsvektor ist:</p>
+<div class="math notranslate nohighlight">
+\[|\vec{e}_v| = \sqrt{\left(\frac{12}{13}\right)^2 + \left(\frac{5}{13}\right)^2}
+= \sqrt{\frac{144}{169}+\frac{25}{169}} = \sqrt{\frac{169}{169}} = 1.\]</div>
+<p>Allgemein lautet die Formel zur Normierung eines Vektors <span class="math notranslate nohighlight">\(\vec{v}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\vec{e}_v = \frac{1}{|\vec{v}|} \vec{v}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Vektor normieren (Normalenvektor Einheitsvektor)” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/03fcWnj6f4g?si=Lmb0X22BRUU3zjL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="abstand-zweier-punkte">
+<h2>Abstand zweier Punkte<a class="headerlink" href="#abstand-zweier-punkte" title="Permalink to this heading">#</a></h2>
+<p>Bisher haben wir nur Vektoren betrachtet bzw. ihre geometrische Interpretation
+als Verschiebung. Als nächstes greifen wir wieder auf das Konzept des affinen
+Punktraumes <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> zurück und nutzen es, um den Abstand zweier Punkte im
+<span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> zu berechnen.</p>
+<p>Die beiden Punkte nennen wir <span class="math notranslate nohighlight">\(P\)</span> und <span class="math notranslate nohighlight">\(Q\)</span> und ihre Koordinaten werden
+entsprechend als <span class="math notranslate nohighlight">\(P(P_1, P_2, \ldots, P_n)\)</span> und <span class="math notranslate nohighlight">\(Q(Q_1, Q_2, \ldots, Q_n)\)</span>
+bezeichnet. Weil der reelle Standardvektorraum <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> ein affiner
+Punktraum ist, muss ein Vektor <span class="math notranslate nohighlight">\(\vec{v}\)</span> existieren, der <span class="math notranslate nohighlight">\(P\)</span> und <span class="math notranslate nohighlight">\(Q\)</span> verbindet,
+also</p>
+<div class="math notranslate nohighlight">
+\[P + \vec{v} = Q.\]</div>
+<p>Im vorherigen Kapitel haben wir schon gelernt, dass dieser Vektor aus den
+komponentenweisen Differenzen der Punktkoordinaten besteht:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v} = \begin{pmatrix} Q_1 - P_1 \\ Q_2 - P_2 \\ \vdots \\ Q_n - P_n
+\end{pmatrix}.\end{split}\]</div>
+<p>Von diesem Vektor brauchen wir also nur noch den Betrag berechnen, um den
+Abstand <span class="math notranslate nohighlight">\(d(P,Q)\)</span> zwischen dem Punkt <span class="math notranslate nohighlight">\(P\)</span> und dem Punkt <span class="math notranslate nohighlight">\(Q\)</span> zu erhalten:</p>
+<div class="math notranslate nohighlight">
+\[d(P,Q) = \sqrt{(Q_1 - P_1)^2 + (Q_2 - P_2)^2 + \ldots + (Q_n - P_n)^2}.\]</div>
+<p>Das »d« steht dabei für das Wort <strong>Distanz</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Abstand zweier Punkte” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eXSMrAB-miM" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+</details></section>
+<section id="mittelpunkt-einer-strecke-berechnen">
+<h2>Mittelpunkt einer Strecke berechnen<a class="headerlink" href="#mittelpunkt-einer-strecke-berechnen" title="Permalink to this heading">#</a></h2>
+<p>Sind zwei Punkte <span class="math notranslate nohighlight">\(P\)</span> und <span class="math notranslate nohighlight">\(Q\)</span> gegeben, können wir die Richtung zwischen den
+beiden Punkten als</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overrightarrow{PQ} = \begin{pmatrix} Q_1 - P_1 \\ Q_2 - P_2 \\ \vdots \\ Q_n - P_n
+\end{pmatrix}\end{split}\]</div>
+<p>angeben. Ist nun die Position den Punktes <span class="math notranslate nohighlight">\(M\)</span> als Mittelpunkt zwischen <span class="math notranslate nohighlight">\(P\)</span> und
+<span class="math notranslate nohighlight">\(Q\)</span> gefragt, so müssen wir den Punkt <span class="math notranslate nohighlight">\(P\)</span> um die Hälfte von <span class="math notranslate nohighlight">\(\overrightarrow{PQ}\)</span>
+verschieben. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[M = P + \frac{1}{2}\vec{PQ}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Vektorrechnung Mittelpunkt berechnen” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/63yukPX43tI?si=YBWaylBuFar8LU1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir den Betrag/Länge eines Vektors kennengelernt. Zum
+einen wird der Betrag benötigt, um bei technischen Problemen die Größe eines
+Vektors zu bestimmen (z.B. Größe/Stärke der Kraft), zum anderen werden Vektoren
+häufig normiert, um nur die Richtung anzugeben. Mit Hilfe des Betrages können
+wir darüber hinaus den Abstand oder den Mittelpunkt zweier Punkte berechnen.</p>
 </section>
 </section>
 
@@ -554,7 +719,11 @@ Koordinatendarstellung) bestimmen (=normieren).</p></li>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag-eines-vektors">Betrag eines Vektors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#einheitsvektor-bzw-vektoren-normieren">Einheitsvektor bzw. Vektoren normieren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstand-zweier-punkte">Abstand zweier Punkte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mittelpunkt-einer-strecke-berechnen">Mittelpunkt einer Strecke berechnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
