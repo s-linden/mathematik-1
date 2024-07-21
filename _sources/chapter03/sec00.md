@@ -1,6 +1,3 @@
-# 3. Vektorrechnung (Teil 1)
+# Vektorrechnung (Teil 1)
 
-Themen:
-
-```{tableofcontents}
-```
+Kräfteberechnungen werden meist mit Hilfe der Vektorrechnung gelöst.
