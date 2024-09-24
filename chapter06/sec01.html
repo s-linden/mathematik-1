@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos: Was ist eine Matrix? &#8212; Mathematik 1 Maschinenbau</title>
+    <title>6.1 Was ist eine Matrix? &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -58,11 +58,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Videos Transponierte Matrix" href="sec02.html" />
-    <link rel="prev" title="Videos Matrizen" href="sec00.html" />
+    <link rel="prev" title="6. Matrizenrechnung" href="sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -231,10 +233,10 @@
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrixrechnung</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrizen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">Videos Matrizen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos: Was ist eine Matrix?</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">6. Matrizenrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1 Was ist eine Matrix?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Transponierte Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Spezielle Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Addition</a></li>
@@ -455,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos: Was ist eine Matrix?</h1>
+    <h1>6.1 Was ist eine Matrix?</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -466,7 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix">Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bestandteile-einer-matrix">Bestandteile einer Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratische-matrizen">Quadratische Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -478,34 +483,223 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-was-ist-eine-matrix">
-<h1>Videos: Was ist eine Matrix?<a class="headerlink" href="#videos-was-ist-eine-matrix" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="was-ist-eine-matrix">
+<h1>6.1 Was ist eine Matrix?<a class="headerlink" href="#was-ist-eine-matrix" title="Link to this heading">#</a></h1>
+<p>In diesem Kapitel werden wir zunächst den Begriff <strong>Matrix</strong> und die
+verschiedenen Bestandteile einer Matrix kennenlernen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie wissen, was eine <strong>Matrix</strong> ist.</p></li>
-<li><p>Sie kennen den Unterschied zwischen einem <strong>Zeilenvektor</strong> und einem <strong>Spaltenvektor</strong>.</p></li>
-<li><p>Sie können die Teile einer Matrix benennen, d.h. Sie wissen, was die folgenden Begriffe bedeuten:</p>
+<li><p>Sie kennen den Unterschied zwischen einem <strong>Zeilenvektor</strong> und einem
+<strong>Spaltenvektor</strong>.</p></li>
+<li><p>Sie können die Teile einer Matrix benennen, d.h. Sie wissen, was die folgenden
+Begriffe bedeuten:</p>
 <ul>
-<li><p><strong>Matrixelement</strong>,</p></li>
+<li><p><strong>Element</strong>,</p></li>
 <li><p><strong>Zeilenindex</strong>,</p></li>
-<li><p><strong>Spaltenindex</strong>,</p></li>
-<li><p><strong>Hauptdiagonale</strong> und</p></li>
-<li><p><strong>Gegendiagonale</strong>.</p></li>
+<li><p><strong>Spaltenindex</strong> und</p></li>
+<li><p><strong>Hauptdiagonale</strong>.</p></li>
 </ul>
 </li>
-<li><p>Sie wissen, was die <strong>Dimension</strong> einer Matrix ist und wann zwei Matrizen <strong>gleich</strong> sind.</p></li>
+<li><p>Sie wissen, was die <strong>Dimension</strong> einer Matrix ist und wann zwei Matrizen
+<strong>gleich</strong> sind.</p></li>
+<li><p>Sie können beurteilen, ob eine Matrix <strong>quadratisch</strong> ist.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/voCDFoBxvC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="matrix">
+<h2>Matrix<a class="headerlink" href="#matrix" title="Link to this heading">#</a></h2>
+<p>Im Alltag werden häufig Tabellen benutzt, um Daten zu erfassen. Beispielsweise
+könnte man eine Tabelle nutzen, um die Einnahmen und Ausgaben eines jeden Monats
+zu protokollieren. In den Zeilen stehen die Kategorien wie beispielsweise BAFöG,
+Miete, Abo für das Fitnessstudio oder die Gesamtausgaben für Essen in dem
+jeweiligen Monat. Spaltenweise werden nun die Gesamtsumme an Ausgaben oder
+Einnahmen für diese Kategorie augfeführt. Positive Zahlen stehen für die
+Einnahmen, negative Zahlen für Ausgaben.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Januar</p></th>
+<th class="head"><p>Februar</p></th>
+<th class="head"><p>März</p></th>
+<th class="head"><p>April</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BAFöG</p></td>
+<td><p>956.00 €</p></td>
+<td><p>956.00 €</p></td>
+<td><p>956.00 €</p></td>
+<td><p>956.00 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Miete</p></td>
+<td><p>-530.00 €</p></td>
+<td><p>-530.00 €</p></td>
+<td><p>-530.00 €</p></td>
+<td><p>-530.00 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Fitnessstudio €</p></td>
+<td><p>-24.99 €</p></td>
+<td><p>-24.99 €</p></td>
+<td><p>-24.99 €</p></td>
+<td><p>-24.99 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Essen</p></td>
+<td><p>-108.74 €</p></td>
+<td><p>-90.56 €</p></td>
+<td><p>-110.50 €</p></td>
+<td><p>-95.80 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Netflix</p></td>
+<td><p>-12.99 €</p></td>
+<td><p>-12.99 €</p></td>
+<td><p>-17.99 €</p></td>
+<td><p>-17.99 €</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<p>In der Mathematik schreibt man solche Tabellen etwas kürzer, indem die
+Beschriftungen der Zeilen und Spalten sowie Einheiten weggelassen werden. Die
+Zahlen werden stattdessen rechteckig angeordnet und mit runden Klammern
+umrandet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+956 &amp; 956 &amp; 956 &amp; 956 \\
+-530 &amp; -530 &amp; -530 &amp; -530 \\
+-24.99 &amp; -24.99 &amp; -24.99 &amp; -24.99 \\
+-108.74 &amp; -90.56 &amp; -110.50 &amp; -95.80 \\
+-12.99 &amp; -12.99 &amp; -17.99 &amp; -17.99 \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Im englischsprachigen Raum werden auch eckige Klammern verwendet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+956 &amp; 956 &amp; 956 &amp; 956 \\
+-530 &amp; -530 &amp; -530 &amp; -530 \\
+-24.99 &amp; -24.99 &amp; -24.99 &amp; -24.99 \\
+-108.74 &amp; -90.56 &amp; -110.50 &amp; -95.80 \\
+-12.99 &amp; -12.99 &amp; -17.99 &amp; -17.99 \\
+\end{bmatrix}\end{split}\]</div>
+<p>In diesem Vorlesungsskript wird die Notation mit runden Klammern verwendet.
+Damit kommen wir zum Fachbegriff Matrix. Eine solche rechteckige Anordnung von
+Zahlen nennen wir <strong>Matrix</strong>. Die Mehrzahl des Wortes Matrix lautet
+<strong>Matrizen</strong>. Der Plural ist unregelmäßig.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine Matrix?</p>
+<p>Ein rechteckig angeordnetes Zahlenschema wird in der Mathematik Matrix genannt.</p>
+</div>
+</section>
+<section id="bestandteile-einer-matrix">
+<h2>Bestandteile einer Matrix<a class="headerlink" href="#bestandteile-einer-matrix" title="Link to this heading">#</a></h2>
+<p>Wir werden später noch sehen, dass Matrizen eine sehr kompakte Art und Weise
+sind, Informationen zu kodieren. Mit Matrizen kann aber auch gerechnet werden.
+Beispielsweise könne man nun in jeder Zeile der Matrix den Mittelwert bilden, um
+die durchschnittlichen Eingaben und Ausgaben über das Jahr hinweg analysieren zu
+können. Bevor wir jedoch zum Rechnen mit Matrizen kommen, lernen wir zunächst
+die Fachbegriffe für die einzelnen Bestandteile einer Matrix kennen.</p>
+<p>Ein wichtiges Merkmal einer Matrix ist die Anzahl ihrer Zeilen und die Anzahl
+ihrer Spalten. In unserem obigen Beispiel hatten wir fünf Zeilen und vier
+Spalten. Die Einträge in der Matrix sind reelle Zahlen. Wir schreiben daher</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+956 &amp; 956 &amp; 956 &amp; 956 \\
+-530 &amp; -530 &amp; -530 &amp; -530 \\
+-24.99 &amp; -24.99 &amp; -24.99 &amp; -24.99 \\
+-108.74 &amp; -90.56 &amp; -110.50 &amp; -95.80 \\
+-12.99 &amp; -12.99 &amp; -17.99 &amp; -17.99 \\
+\end{pmatrix} \in \mathbb{R}^{5\times 4}\end{split}\]</div>
+<p>und sagen, dass diese Matrix eine <span class="math notranslate nohighlight">\(5\times 4\)</span>-Matrix ist (sprich: 5 Kreuz 4).
+Die kombinierte Angabe der Anzahl Zeilen und Anzahl Spalten nennen wir
+<strong>Dimension</strong> der Matrix oder <strong>Format</strong> der Matrix. Bei der Angabe der
+Dimension kommt immer die Anzahl der Zeilen zuerst.</p>
+<p>Um über einzelne Zahlen in der Matrix reden zu können, können wir ihre Position
+in der Matrix angeben. Beispielsweise steht in 5. Zeile und in der 2. Spalte die
+Zahl -12.99. Anstatt Position wird in der Mathematik der Fachbegriff <strong>Index</strong>
+verwendet und der Eintrag an dieser Stelle heißt <strong>Element</strong>. Wir schreiben das
+Element mit Zeilenindex 5 und Spaltenindex 2 als</p>
+<div class="math notranslate nohighlight">
+\[a_{5 2} = -12.99.\]</div>
+<p>Der Zeilenindex und der Spaltenindex werden klein an den Variablennamen
+geschrieben, der üblicherweise mit einem kleinen Buchstaben bezeichnet wird. Die
+Angabe</p>
+<div class="math notranslate nohighlight">
+\[a_{5 3}\]</div>
+<p>bedeutet also, dass das Element der Matrix in der 5. Zeile und 3. Spalte gemeint
+ist und wir lesen ab, dass</p>
+<div class="math notranslate nohighlight">
+\[a_{5 3}=-17.99.\]</div>
+<p>Das Netflix-Abo ist also teurer geworden. Vergleichen wir zwei Matrizen, dann
+sind die beiden Matrizen <strong>gleich</strong>, wenn jedes Element <span class="math notranslate nohighlight">\(a_{ij}\)</span> der ersten
+Matrix <span class="math notranslate nohighlight">\(A\)</span> mit jedem Element <span class="math notranslate nohighlight">\(b_{ij}\)</span> der zweiten Matrix <span class="math notranslate nohighlight">\(B\)</span> übereinstimmt.</p>
+<p>Üblicherweise werden Matrizen mit einem großen Buchstaben bezeichnet, so dass
+beispielsweise eine <span class="math notranslate nohighlight">\(3\times 2\)</span>-Matrix die folgende allgemeine Struktur hat:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22} \\
+a_{31} &amp; a_{32} \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Schneiden wir aus der Matrix eine ganze Zeile aus, z.B. die 4. Zeile, erhalten
+wir einen Vektor</p>
+<div class="math notranslate nohighlight">
+\[\vec{z}_{4} = (-108.74 \; -90.56 \; -110.50 \; -95.80),\]</div>
+<p>der auch als <strong>Zeilenvektor</strong> bezeichnet wird. Ein <strong>Spaltenvektor</strong> ist eine
+ganze Spalte der Matrix, z.B. die erste Spalte</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{s}_{1} = \begin{pmatrix}
+956 \\
+-530 \\
+-24.99 \\
+-108.74 \\
+-12.99 \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Die letzte Bezeichnung eines Bestandteils einer Matrix, die wir hier an dieser
+Stelle einführen, ist der Begriff der Hauptdiagonalen. Die <strong>Hauptdiagonale</strong>
+einer Matrix sind die Elemente, bei der Zeilenindex und Spaltenindex
+übereinstimmen. In dem obigen Beispiel sind das die Elemente <span class="math notranslate nohighlight">\(a_{11}\)</span>, <span class="math notranslate nohighlight">\(a_{22}\)</span>,
+<span class="math notranslate nohighlight">\(a_{33}\)</span> und <span class="math notranslate nohighlight">\(a_{44}\)</span>, also die Zahlen 956, -530, -24.99 und -95.8.</p>
+<p>Die folgende Grafik fasst die Bezeichnungen der Bestandteile einer Matrix
+übersichtlich zusammen.</p>
+<figure class="align-default" id="matrix-bezeichnungen">
+<a class="reference internal image-reference" href="../_images/matrix_bezeichnungen.svg"><img alt="../_images/matrix_bezeichnungen.svg" src="../_images/matrix_bezeichnungen.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Bezeichnungen einer Matrix, Quelle:
+Ralf Pfeifer <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=50327598">Wikimedia Commons</a>,
+Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span><a class="headerlink" href="#matrix-bezeichnungen" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quadratische-matrizen">
+<h2>Quadratische Matrizen<a class="headerlink" href="#quadratische-matrizen" title="Link to this heading">#</a></h2>
+<p>Wir werden noch einige spezielle Matrizen kennenlernen. Eine spezielle Art von
+Matrix ist die <strong>quadratische Matrix</strong>. Bei einer quadratischen Matrix ist die
+Anzahl der Zeilen <span class="math notranslate nohighlight">\(m\)</span> gleich der Anzahl der Spalten <span class="math notranslate nohighlight">\(n\)</span>, also <span class="math notranslate nohighlight">\(m = n\)</span>.
+Beispielsweise ist die <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}
+1 &amp; -1 \\
+0.5 &amp; 17 \\
+\end{pmatrix} \in \mathbb{R}^{2\times 2}\end{split}\]</div>
+<p>eine quadratische Matrix.</p>
+<p>In dem folgenden Video werden der Begriff Matrix, die Bestandteile einer Matrix
+und quadratische Matrizen erläutert.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Matrix” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/voCDFoBxvC8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir Fachbegriffe eingeführt, um eine Matrix zu
+beschreiben. Mit der quadratischen Matrix haben wir einen ersten speziellen Typ
+einer Matrix kennegelernt. In den nächsten Kapiteln werden wir weitere spezielle
+Matrizen betrachten, bevor wir zu den Rechenoperationen für Matrizen kommen.</p>
 </section>
 </section>
 
@@ -545,7 +739,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Matrizen</p>
+        <p class="prev-next-title">6. Matrizenrechnung</p>
       </div>
     </a>
     <a class="right-next"
@@ -574,7 +768,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix">Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bestandteile-einer-matrix">Bestandteile einer Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratische-matrizen">Quadratische Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
