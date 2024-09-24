@@ -48,7 +48,7 @@ parts:
     - file: chapter05/sec04.md
     - file: chapter05/sec05.md
     - file: chapter05/sec06.md
-- caption: Matrixrechnung
+- caption: Matrizen
   chapters:
   - file: chapter06/sec00.md
     sections:
