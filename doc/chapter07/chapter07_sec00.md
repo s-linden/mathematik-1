@@ -1,1 +1,0 @@
-# Determinanten und lineare Gleichungssysteme
