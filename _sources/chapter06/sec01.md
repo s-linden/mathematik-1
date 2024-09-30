@@ -121,10 +121,11 @@ Das Netflix-Abo ist also teurer geworden. Vergleichen wir zwei Matrizen, dann
 sind die beiden Matrizen **gleich**, wenn jedes Element $a_{ij}$ der ersten
 Matrix $A$ mit jedem Element $b_{ij}$ der zweiten Matrix $B$ übereinstimmt.
 
-Üblicherweise werden Matrizen mit einem großen Buchstaben bezeichnet, so dass
-beispielsweise eine $3\times 2$-Matrix die folgende allgemeine Struktur hat:
+Üblicherweise werden Matrizen mit einem großen fettgedrucktem Buchstaben
+bezeichnet, so dass beispielsweise eine $3\times 2$-Matrix die folgende
+allgemeine Struktur hat:
 
-$$A = \begin{pmatrix}
+$$\mathbf{A} = \begin{pmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22} \\
 a_{31} & a_{32} \\
@@ -172,7 +173,7 @@ Matrix ist die **quadratische Matrix**. Bei einer quadratischen Matrix ist die
 Anzahl der Zeilen $m$ gleich der Anzahl der Spalten $n$, also $m = n$.
 Beispielsweise ist die $2\times 2$-Matrix
 
-$$A = \begin{pmatrix}
+$$\mathbf{A} = \begin{pmatrix}
 1 & -1 \\
 0.5 & 17 \\
 \end{pmatrix} \in \mathbb{R}^{2\times 2}$$
