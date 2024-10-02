@@ -65,7 +65,7 @@ Hauptdiagonalen liegen, Null. Also ist $\mathbf{A}$ eine Diagonalmatrix.
 ## Einheitsmatrix
 
 Eine besondere Diagonalmatrix ist die sogenannte **Einheitsmatrix**. Eine
-Einheitsmatrix ist zunÄchst einmal eine Diagonalmatrix. Damit ist zie also
+Einheitsmatrix ist zunächst einmal eine Diagonalmatrix. Damit ist zie also
 quadratisch und alle Elemente außerhalb der Hauptdiagonalen sind Null. Damit
 eine Diagonalmatrix zu einer Einheitsmatrix wird, müssen zusätzlich alle
 Elemente auf der Hauptdiagonalen gleich der Zahl Eins sein. Oft wird sie mit
