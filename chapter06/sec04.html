@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Multiplikation mit einem Skalar &#8212; Mathematik 1 Maschinenbau</title>
+    <title>6.4 Skalarmultiplikation &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/sec04';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -237,7 +239,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">6.1 Was ist eine Matrix?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">6.2 Besondere Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">6.3 Addition von Matrizen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Multiplikation mit einem Skalar</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.4 Skalarmultiplikation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Multiplikation Matrix mit Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Spezielle Matrizen</a></li>
 </ul>
@@ -455,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Multiplikation mit einem Skalar</h1>
+    <h1>6.4 Skalarmultiplikation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -466,7 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalar-mal-matrix">Skalar mal Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechengesetze-fur-die-addition-und-skalarmultiplikation-von-matrizen">Rechengesetze für die Addition und Skalarmultiplikation von Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differenz-von-matrizen">Differenz von Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -478,30 +483,237 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-multiplikation-mit-einem-skalar">
-<h1>Videos Multiplikation mit einem Skalar<a class="headerlink" href="#videos-multiplikation-mit-einem-skalar" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="skalarmultiplikation">
+<h1>6.4 Skalarmultiplikation<a class="headerlink" href="#skalarmultiplikation" title="Link to this heading">#</a></h1>
+<p>Anstatt eine Matrix mehrfach zu sich selbst zu addieren, können wir dies durch
+die Multiplikation mit einem Skalar vereinfachen. In diesem Kapitel betrachten
+wir daher die Skalarmultiplikation und die dazugehörigen Rechenregeln.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie können eine Matrix mit einem Skalar multiplizieren.</p></li>
-<li><p>Sie können die Rechenregeln für die Addition von Matrizen und für die Multiplikation »Skalar mit Matrix« anwenden, also insbesondere</p>
 <ul>
-<li><p>Kommutativgesetz,</p></li>
-<li><p>Assoziativgesetz und</p></li>
-<li><p>Distributivgesetz bzgl. der Skalarmultiplikation.</p></li>
+<li><p>Sie sind in der Lage, eine Matrix mit einem Skalar multiplizieren, also eine
+<strong>Skalarmultiplikation</strong> durchführen.</p></li>
+<li><p>Sie können die <strong>Differenz zweier Matrizen</strong> berechnen, also Matrizen subtrahieren.</p></li>
+<li><p>Sie beherrschen die Rechenregeln für die Addition von Matrizen und für die
+Skalarmultiplikation, insbesondere</p>
+<ul>
+<li><p>das <strong>Kommutativgesetz</strong>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}\mathbf{A}+\mathbf{B} = \mathbf{B}+\mathbf{A}\end{equation*}\]</div>
+</li>
+<li><p>das <strong>Assoziativgesetz</strong>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}(\mathbf{A}+\mathbf{B})+\mathbf{C} = \mathbf{A} +
+      (\mathbf{B}+\mathbf{C}),\end{equation*}\]</div>
+</li>
+<li><p>und das <strong>Distributivgesetz</strong> für die Skalarmultiplikation:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (s+t)\cdot\mathbf{A} &amp;= s\cdot\mathbf{A}+t\cdot\mathbf{A}\\
+    s\cdot(\mathbf{A}+\mathbf{B}) &amp;= s\cdot\mathbf{A} + s\cdot\mathbf{B}\\
+    \end{align*}\]</div>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1fIxfjWammQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="skalar-mal-matrix">
+<h2>Skalar mal Matrix<a class="headerlink" href="#skalar-mal-matrix" title="Link to this heading">#</a></h2>
+<p>Wir greifen erneut das Beispiel auf, bei dem Fußballspieler sich gegenseitig
+Pässe zuspielen und die Pässe mitprotokolliert werden, damit die
+Spielerleistungen statistisch ausgewertet werden können.  Diesmal betrachten wir
+jedoch die Pässe während des Trainings. Im Training werden die Spieler in
+Vierergruppen aufgeteilt, und jeder Spieler soll jedem anderen fünfmal den Ball
+zuspielen. Die aufgezeichneten Pässe sind in der folgenden Matrix kodiert:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} = \begin{pmatrix}
+0 &amp; 5 &amp; 5 &amp; 5 \\
+5 &amp; 0 &amp; 5 &amp; 5 \\
+5 &amp; 4 &amp; 0 &amp; 5 \\
+5 &amp; 5 &amp; 5 &amp; 0 \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Zur Erinnerung: Eine 5 in der ersten Zeile und in der zweiten Spalte (also
+<span class="math notranslate nohighlight">\(a_{12} = 5\)</span>) bedeutet, dass der 1. Spieler dem 2. Spieler fünfmal den Ball
+zugespielt hat. Es fällt jedoch auf, dass die Übung nicht korrekt ausgeführt
+wurde, da der 3. Spieler den 2. Spieler nur viermal angespielt hat (<span class="math notranslate nohighlight">\(a_{32}=4\)</span>),
+während der 2. Spieler den 3. Spieler wie gefordert fünfmal angespielt hat
+(<span class="math notranslate nohighlight">\(a_{23}=5\)</span>).</p>
+<p>Nun soll diese Übung zwei weitere Male korrekt wiederholt werden. Diesmal
+verläuft die Übung fehlerfrei, und die neue Matrix zeigt die korrekten Pässe des
+zweiten und dritten Durchgangs:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{B} = \begin{pmatrix}
+0 &amp; 5 &amp; 5 &amp; 5 \\
+5 &amp; 0 &amp; 5 &amp; 5 \\
+5 &amp; 5 &amp; 0 &amp; 5 \\
+5 &amp; 5 &amp; 5 &amp; 0 \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Nach Abschluss der drei Übungen sollen alle Pässe insgesamt summiert werden. Wir
+könnten jedes Element einzeln addieren, indem wir die Anzahl der Pässe für jede
+Übung zusammenzählen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} + \mathbf{B} + \mathbf{B} =
+\begin{pmatrix}
+0+0+0 &amp; 5+5+5 &amp; 5+5+5 &amp; 5+5+5 \\
+5+5+5 &amp; 0+5+5 &amp; 5+5+5 &amp; 5+5+5 \\
+5+5+5 &amp; 4+5+5 &amp; 0+5+5 &amp; 5+5+5 \\
+5+5+5 &amp; 5+5+5 &amp; 5+5+5 &amp; 0+5+5 \\
+\end{pmatrix}\end{split}\]</div>
+<p>Da die zweite und dritte Übung identisch abliefen, können wir die Pässe der
+zweiten und dritten Übung auch direkt verdoppeln:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{B} + \mathbf{B} = 2\cdot\mathbf{B} =
+\begin{pmatrix}
+2\cdot 0 &amp; 2\cdot 5 &amp; 2\cdot 5 &amp; 2\cdot 5 \\
+2\cdot 5 &amp; 2\cdot 0 &amp; 2\cdot 5 &amp; 2\cdot 5 \\
+2\cdot 5 &amp; 2\cdot 5 &amp; 2\cdot 0 &amp; 2\cdot 5 \\
+2\cdot 5 &amp; 2\cdot 5 &amp; 2\cdot 5 &amp; 2\cdot 0 \\
+\end{pmatrix}=
+\begin{pmatrix}
+0 &amp; 10 &amp; 10 &amp; 10 \\
+10 &amp; 0 &amp; 10 &amp; 10 \\
+10 &amp; 10 &amp; 0 &amp; 10 \\
+10 &amp; 10 &amp; 10 &amp; 0 \\
+\end{pmatrix}\end{split}\]</div>
+<p>Allgemein wird bei einer Skalarmultiplikation eine Matrix mit einer reellen Zahl
+(Skalar) multipliziert, indem jedes Element der Matrix mit dem Skalar
+multipliziert wird.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Skalarmultiplikation?</p>
+<p>Bei der Skalarmultiplikation wird ein Skalar mit einer Matrix multipliziert,
+indem jedes Element der Matrix mit diesem Skalar multipliziert wird.</p>
 </div>
+<p>Ein weiteres Beispiel für eine Skalarmultiplikation ist die folgende Rechnung,
+bei der jedes Element der Matrix mit dem Bruch <span class="math notranslate nohighlight">\(1/2\)</span> multipliziert wird:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{2}\cdot\begin{pmatrix} 2 &amp; 7 \\ -10 &amp; \frac{3}{5} \end{pmatrix} =
+\begin{pmatrix} 1 &amp; 3.5 \\ -5 &amp; \frac{3}{10} \end{pmatrix}.\end{split}\]</div>
+<p>Das folgende Video veranschaulicht ein weiteres Beispiel zur Skalarmultiplikation.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Skalarmultiplikation” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1fIxfjWammQ"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="rechengesetze-fur-die-addition-und-skalarmultiplikation-von-matrizen">
+<h2>Rechengesetze für die Addition und Skalarmultiplikation von Matrizen<a class="headerlink" href="#rechengesetze-fur-die-addition-und-skalarmultiplikation-von-matrizen" title="Link to this heading">#</a></h2>
+<p>Bei der Berechnung der Summe der Pässe aus den drei Übungen haben wir intuitiv
+genutzt, dass die zweite und dritte Übung identisch abgelaufen sind, und uns
+daher zunächst mit der Berechnung von zwei gleichen Matrizen befasst. Für die
+vollständige Summe fehlt jedoch noch die Addition der Pässe aus der ersten
+Übung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2\cdot\mathbf{B} + \mathbf{A} =
+\begin{pmatrix}
+0 &amp; 10 &amp; 10 &amp; 10 \\
+10 &amp; 0 &amp; 10 &amp; 10 \\
+10 &amp; 10 &amp; 0 &amp; 10 \\
+10 &amp; 10 &amp; 10 &amp; 0 \\
+\end{pmatrix} +
+\begin{pmatrix}
+0 &amp; 5 &amp; 5 &amp; 5 \\
+5 &amp; 0 &amp; 5 &amp; 5 \\
+5 &amp; 4 &amp; 0 &amp; 5 \\
+5 &amp; 5 &amp; 5 &amp; 0 \\
+\end{pmatrix} =
+\begin{pmatrix}
+0 &amp; 15 &amp; 15 &amp; 15 \\
+15 &amp; 0 &amp; 15 &amp; 15 \\
+15 &amp; 14 &amp; 0 &amp; 15 \\
+15 &amp; 15 &amp; 15 &amp; 0 \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Ist diese Vorgehensweise überhaupt erlaubt? Gilt also</p>
+<div class="math notranslate nohighlight">
+\[2\cdot\mathbf{B} + \mathbf{A} \overset{?}{=} \mathbf{A} + \mathbf{B} + \mathbf{B} \,?\]</div>
+<p>Ja, denn sowohl die Addition als auch die Skalarmultiplikation werden
+<em>elementweise</em> mit reellen Zahlen durchgeführt. Für reelle Zahlen gelten das
+Kommutativgesetz, das besagt, dass die Reihenfolge der Summanden keine Rolle
+spielt, sowie das Assoziativgesetz, das sicherstellt, dass die Reihenfolge der
+Gruppierungen bei der Addition ebenfalls irrelevant ist.</p>
+<p>Da die Vektoraddition elementweise ausgeführt wird, überträgt sich das
+Kommutativgesetz der reellen Zahlen auf Matrizen. Das bedeutet, dass die
+Addition zweier Matrizen unabhängig von der Reihenfolge der Matrizen ist, wie
+die folgende allgemeine Rechnung zeigt:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} + \mathbf{B} =
+\begin{pmatrix}
+a_{11} + b_{11} &amp; a_{12} + b_{12} &amp; \ldots &amp; a_{1n} + b_{1n} \\
+a_{21} + b_{21} &amp; a_{22} + b_{22} &amp; \ldots &amp; a_{2n} + b_{2n} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+a_{m1} + b_{m2} &amp; a_{m2} + b_{m2} &amp; \ldots &amp; a_{mn} + b_{mn}
+\end{pmatrix} +
+\begin{pmatrix}
+b_{11} + a_{11} &amp; b_{12} + a_{12} &amp; \ldots &amp; b_{1n} + a_{1n} \\
+b_{21} + a_{21} &amp; b_{22} + a_{22} &amp; \ldots &amp; b_{2n} + a_{2n} \\
+\vdots &amp; \vdots &amp;        &amp; \vdots \\
+b_{m1} + a_{m1} &amp; b_{m2} + a_{m2} &amp; \ldots &amp; b_{mn} + a_{mn}
+\end{pmatrix} =
+\mathbf{B} + \mathbf{A}.\end{split}\]</div>
+<p>Auf dieselbe Weise kann auch das Assoziativgesetz angewendet werden: Es spielt
+keine Rolle, ob man zuerst zwei Matrizen addiert und dann die dritte dazu nimmt
+oder ob man zuerst eine Summe bildet und anschließend die verbleibenden Matrizen
+addiert. Dies erlaubt es uns, die Berechnung zu vereinfachen, indem wir z. B.
+direkt die Addition durch eine Skalarmultiplikation ersetzen. Anstatt
+<span class="math notranslate nohighlight">\((\mathbf{A} + \mathbf{B}) + \mathbf{B}\)</span> zu berechnen ist es erlaubt <span class="math notranslate nohighlight">\(\mathbf{A} +
+(\mathbf{B} + \mathbf{B}) = \mathbf{A} + 2\mathbf{B}\)</span> zu verwenden.</p>
+<p>Ebenso überträgt sich das Distributivgesetz von reellen Zahlen auf die Addition von Matrizen und die Skalarmultiplikation. Dabei gibt es zwei Möglichkeiten:</p>
+<ol class="arabic">
+<li><p>Ein Skalar wird mit der Summe zweier Matrizen multipliziert. Das entspricht
+der Verteilung des Skalars auf beide Matrizen, sodass jede Matrix einzeln mit
+dem Skalar multipliziert wird, also</p>
+<div class="math notranslate nohighlight">
+\[s\cdot\left(\mathbf{A} + \mathbf{B} \right) = s\cdot\mathbf{A} +
+   s\cdot\mathbf{B}.\]</div>
+</li>
+<li><p>Zwei Skalare werden addiert und die resultierende Summe wird mit einer Matrix
+multipliziert. Dies entspricht der Multiplikation der Matrix mit jedem Skalar
+einzeln und der anschließenden Addition der Ergebnisse, also</p>
+<div class="math notranslate nohighlight">
+\[(s + t) \cdot \mathbf{A} = s\cdot\mathbf{A} + t\cdot\mathbf{A}.\]</div>
+</li>
+</ol>
+</section>
+<section id="differenz-von-matrizen">
+<h2>Differenz von Matrizen<a class="headerlink" href="#differenz-von-matrizen" title="Link to this heading">#</a></h2>
+<p>Die Subtraktion zweier Matrizen ist streng genommen keine eigene
+Rechenoperation, sondern eine Kombination der Vektoraddition und der
+Skalarmultiplikation mit dem Faktor <span class="math notranslate nohighlight">\(-1\)</span>. Um Berechnungen zu vereinfachen führen
+wir dennoch die <strong>Subtraktion zweier Matrizen</strong> als elementweise Subtraktion der
+Einträge ein:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} - \mathbf{B} =
+\begin{pmatrix}
+a_{11} - b_{11} &amp; a_{12} - b_{12} &amp; \ldots &amp; a_{1n} - b_{1n} \\
+a_{21} - b_{21} &amp; a_{22} - b_{22} &amp; \ldots &amp; a_{2n} - b_{2n} \\
+\vdots          &amp; \vdots          &amp;        &amp; \vdots \\
+a_{m1} - b_{m1} &amp; a_{m2} - b_{m2} &amp; \ldots &amp; a_{mn} - b_{mn} \\
+\end{pmatrix}.\end{split}\]</div>
+<p>Soll beispielsweise die Differenz der folgenden zwei Matrizen gebildet werden,
+werden die entsprechenden Einträge der beiden Matrizen elementweise voneinander
+subtrahiert:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} 3 &amp; -5 \\ 1.5 &amp; 8 \end{pmatrix} -
+\begin{pmatrix} 2 &amp;  3 \\ 0   &amp; -3 \end{pmatrix} =
+\begin{pmatrix} 1 &amp; -8 \\ 1.5 &amp; 11 \end{pmatrix}
+.\end{split}\]</div>
+<p>Wie bei der Vektoraddition kann die Differenz zweier Matrizen nur gebildet
+werden, wenn die Dimension der beiden Matrizen übereinstimmt, d.h. die Anzahl an
+Zeilen und Spalten übereinstimmt.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir die Skalarmultiplikation kennengelernt, bei der
+jeder Eintrag einer Matrix mit einem Skalar multipliziert wird. Die
+Rechengesetze der reellen Zahlen, wie das Kommutativ-, Assoziativ- und
+Distributivgesetz, lassen sich auf die Vektoraddition und die
+Skalarmultiplikation übertragen. Im nächsten Kapitel werden wir die
+Multiplikation zweier Matrizen erlernen.</p>
 </section>
 </section>
 
@@ -570,7 +782,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skalar-mal-matrix">Skalar mal Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechengesetze-fur-die-addition-und-skalarmultiplikation-von-matrizen">Rechengesetze für die Addition und Skalarmultiplikation von Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differenz-von-matrizen">Differenz von Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
