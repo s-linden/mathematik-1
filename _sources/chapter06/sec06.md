@@ -9,6 +9,7 @@
 
 * Sie kennen den Unterschied zwischen einer **oberen Dreiecksmatrix** und einer **unteren Dreiecksmatrix**.
 * Sie kennen die Begriffe **symmetrische Matrix** und **antisymmetrische/schiefsymmetrische Matrix**. Wenn Sie zwei Matrizen bekommen, können Sie bestimmen, ob die beiden Matrizen symmetrisch oder antisymmetrisch sind. 
+* Sie können eine Matrix in einen symmetrischen und antisymmetrischen/schiefsymmetrischen Teil zerlegen.
 ```
 
 ## Videos

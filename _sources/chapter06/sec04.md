@@ -193,6 +193,18 @@ Ebenso überträgt sich das Distributivgesetz von reellen Zahlen auf die Additio
 
    $$(s + t) \cdot \mathbf{A} = s\cdot\mathbf{A} + t\cdot\mathbf{A}.$$
 
+```{dropdown} Video "Rechenregeln Matrizen (Teil 1)" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_9vYtSLNLNI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+```{dropdown} Video "Rechenregeln Matrizen (Teil 2)" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cpVJV6j0O4U"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
 ## Differenz von Matrizen
 
 Die Subtraktion zweier Matrizen ist streng genommen keine eigene

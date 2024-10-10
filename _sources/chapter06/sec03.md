@@ -1,4 +1,4 @@
-# 6.3 Addition von Matrizen
+# 6.3 Matrizenaddition
 
 In den letzten beiden Kapiteln haben wir gelernt, was Matrizen sind, und
 ausgewählte besondere Matrizen kennengelernt. In diesem Kapitel werden wir zum
