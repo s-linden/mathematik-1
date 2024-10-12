@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Spezielle Matrizen &#8212; Mathematik 1 Maschinenbau</title>
+    <title>6.6 Transponierte und symmetrische Matrizen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/sec06';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -239,7 +241,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">6.3 Matrizenaddition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">6.4 Skalarmultiplikation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">6.5 Matrizenmultiplikation</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Spezielle Matrizen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.6 Transponierte und symmetrische Matrizen</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/sec00.html">Videos Determinanten, Eigenwerte und Eigenvektoren</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -455,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Spezielle Matrizen</h1>
+    <h1>6.6 Transponierte und symmetrische Matrizen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -466,7 +468,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transponierte-matrix">Transponierte Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenregeln-fur-transponierte-matrizen">Rechenregeln für transponierte Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrische-und-antisymmetrische-matrizen">Symmetrische und antisymmetrische Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zerlegung-in-symmetrische-und-antisymmetrische-matrix">Zerlegung in symmetrische und antisymmetrische Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -478,39 +484,178 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-spezielle-matrizen">
-<h1>Videos Spezielle Matrizen<a class="headerlink" href="#videos-spezielle-matrizen" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="transponierte-und-symmetrische-matrizen">
+<h1>6.6 Transponierte und symmetrische Matrizen<a class="headerlink" href="#transponierte-und-symmetrische-matrizen" title="Link to this heading">#</a></h1>
+<p>Die Nullmatrix, Diagonalmatrix und die Einheitsmatrix haben wir bereits
+kennengelernt. Nun lernen wir weitere besondere Matrizen kennen, die
+transponierte Matrix und die symmetrische Matrix.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was eine <strong>transponierte Matrix</strong> ist und können zu einer gegebenen Matrix die transponierte Matrix berechnen.</p></li>
-<li><p>Sie kennen die Rechenregeln für die Transponierte einer Matrix.</p></li>
-<li><p>Sie kennen den Unterschied zwischen einer <strong>oberen Dreiecksmatrix</strong> und einer <strong>unteren Dreiecksmatrix</strong>.</p></li>
-<li><p>Sie kennen die Begriffe <strong>symmetrische Matrix</strong> und <strong>antisymmetrische/schiefsymmetrische Matrix</strong>. Wenn Sie zwei Matrizen bekommen, können Sie bestimmen, ob die beiden Matrizen symmetrisch oder antisymmetrisch sind.</p></li>
-<li><p>Sie können eine Matrix in einen symmetrischen und antisymmetrischen/schiefsymmetrischen Teil zerlegen.</p></li>
+<li><p>Sie wissen, was eine <strong>transponierte Matrix</strong> ist und können zu einer
+gegebenen Matrix die transponierte Matrix berechnen.</p></li>
+<li><p>Sie kennen die <strong>Rechenregeln für transponierte Matrizen</strong>.</p></li>
+<li><p>Sie können überprüfen, ob eine Matrix <strong>symmetrisch</strong> oder
+<strong>antisymmetrisch/schiefsymmetrisch</strong> oder nichts davon ist.</p></li>
+<li><p>Sie können eine Matrix in einen symmetrischen und antisymmetrischen Teil
+zerlegen.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tSPrqJXubww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="transponierte-matrix">
+<h2>Transponierte Matrix<a class="headerlink" href="#transponierte-matrix" title="Link to this heading">#</a></h2>
+<p>Eine <strong>transponierte Matrix</strong> entsteht, indem man die Zeilen und die Spalten
+einer Matrix vertauscht. Gegeben sei beispielsweise die Matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\ 5 &amp; 6 \end{pmatrix}.\end{split}\]</div>
+<p>Diese Matrix hat die Dimension <span class="math notranslate nohighlight">\(3\times 2\)</span>, also drei Zeilen und zwei Spalten.
+Die ttansponierte Matrix hat dann zwei Zeilen und drei Spalten. Die erste Zeile
+wird zur ersten Spalte, die zweite Zeile zur zweiten Spalte und die dritte Zeile
+zur dritten Spalte. Insgesamt erhalten wir fúr die transponierte Matrix den
+Ausdruck</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A}^{T} = \begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 2 &amp; 4 &amp; 6 \end{pmatrix}.\end{split}\]</div>
+<p>Die transponierte Matrix von <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> wird mit einem großen “T” bezeichnet,
+also als <span class="math notranslate nohighlight">\(\mathbf{A}^{T}\)</span>. Manchmal wird auch ein kleines “t” verwendet, also
+<span class="math notranslate nohighlight">\(\mathbf{A}^{t}\)</span>. Der Vorgang des Zeilen-Spalten-Tauschens wird
+<strong>Transponieren</strong> genannt.</p>
+<p>Transponieren wir <span class="math notranslate nohighlight">\(\mathbf{A}^{T}\)</span> erneut, erhalten wir die ursprüngliche Matrix
+<span class="math notranslate nohighlight">\(\mathbf{A}\)</span>, wie die folgende Animation zeigt.</p>
+<figure class="align-default" id="matrix-transpose">
+<a class="reference internal image-reference" href="../_images/Matrix_transpose.gif"><img alt="../_images/Matrix_transpose.gif" src="../_images/Matrix_transpose.gif" style="width: 25%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Transponieren einer Matrix, Quelle:
+Von Lucas Vieira, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=50327598">Wikimedia Commons</a>, Lizenz: gemeinfrei</span><a class="headerlink" href="#matrix-transpose" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Transponierte Matrizen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EOFrZaEdUzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w7VBdqbWobk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details></section>
+<section id="rechenregeln-fur-transponierte-matrizen">
+<h2>Rechenregeln für transponierte Matrizen<a class="headerlink" href="#rechenregeln-fur-transponierte-matrizen" title="Link to this heading">#</a></h2>
+<p>Eine Rechenregel für das zweifache Transponieren einer Matrix haben wir oben
+schon als Animation gesehen. Wir halten fest: wird eine Matrix zweimal
+transponiert, so ist das Ergebnis die ursprüngliche Matrix, also</p>
+<div class="math notranslate nohighlight">
+\[\left( \mathbf{A}^{T} \right)^{T} = \mathbf{A}.\]</div>
+<p>Als nächstes betrachten wir die Matrizenaddition und die Skalarmultiplikation in
+Verbindung mit dem Transponieren. Transponieren wir eine Summe von Matrizen,
+können wir auch erst die Matrizen einzeln transponieren und dann die Summe
+berechnen. In Formelschreibweise gilt also</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}+\mathbf{B}\right)^{T} = \mathbf{A}^{T} + \mathbf{B}^{T}.\]</div>
+<p>Auch bei der Skalarmultiplikation ist es irrelevant, ob von dem Ergebnis nach
+der Skalarmultiplikation die transponierte Matrix berechnet wird oder vor der
+Skalarmultiplikation:</p>
+<div class="math notranslate nohighlight">
+\[\left(s\cdot\mathbf{A}\right)^{T} = s\cdot \mathbf{A}^{T}.\]</div>
+<p>Wiederum ist es die Matrizenmultiplikation, die sich besonders verhält. Bei der
+Matrizenmultiplikation ändert sich die Reihenfolge beim Multiplizieren:</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}\cdot\mathbf{B}\right)^{T}=\mathbf{B}^{T}\cdot\mathbf{A}^{T}.\]</div>
+</section>
+<section id="symmetrische-und-antisymmetrische-matrizen">
+<h2>Symmetrische und antisymmetrische Matrizen<a class="headerlink" href="#symmetrische-und-antisymmetrische-matrizen" title="Link to this heading">#</a></h2>
+<p>Eine weitere besondere Matrix ist die <strong>symmetrische Matrix</strong>. Man nennt eine
+quadratische Matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> symmetrisch, wenn das Element <span class="math notranslate nohighlight">\(a_{ij}\)</span> der
+i-ten Zeile und der j-ten Spalte mit dem Element <span class="math notranslate nohighlight">\(a_{ji}\)</span> der j-ten Zeile und
+der i-ten Spalte übereinstimmt. Eine symmetrische Matrix ist also
+spiegelsymmetrisch bezüglich der Hauptdiagonalen. Beispielsweise ist die
+folgende Matrix symmetrisch:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 2 &amp; 3.5 &amp; -1 \\ 3.5 &amp; 4 &amp; 0 \\ -1 &amp; 0 &amp; 17 \end{pmatrix}.\end{split}\]</div>
+<p>Mit Hilfe der Definition der transponierten Matrix können wir eine symmetrische
+Matrix auch folgendermaßen spezifizieren.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine symmetrische Matrix?</p>
+<p>Eine quadratische Matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> ist symmetrisch, wenn</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}^{T} = \mathbf{A}\]</div>
+<p>gilt, wobei <span class="math notranslate nohighlight">\(\mathbf{A}^{T}\)</span> die transponierte Matrix von <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> bezeichnet.</p>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8GqARHX3n04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Oder anders ausgedrückt: der Prozess des Transponieren ändert die Matrix nicht.</p>
+<p>Sind zwei Matrizen symmetrisch, dann ist auch ihre Summe wieder symmetrisch,
+denn es gilt</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}+\mathbf{B}\right)^{T} = \mathbf{A}^{T} + \mathbf{B}^{T} =
+\mathbf{A} + \mathbf{B}.\]</div>
+<p>Das gilt auch für eine Matrix, die mit einem Skalar multipliziert wird. Bei der
+Skalarmultiplikation bleibt die Symmetrie erhalten. Anders sieht es wieder
+einmal aus, wenn wir die Matrizenmultiplikation betrachten.</p>
+<p>Im Allgemeinen gilt für symmetrische Matrizen</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}\cdot\mathbf{B}\right)^{T} = \mathbf{B}^{T}\cdot\mathbf{A}^{T}=
+\mathbf{B}\cdot\mathbf{A} \overset{i.Allg.}{\neq} \mathbf{A}\cdot\mathbf{B}.\]</div>
+<p>Nur wenn für die beiden Matrizen <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> und <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> <em>zufälligerweise</em>
+<span class="math notranslate nohighlight">\(\mathbf{A}\cdot\mathbf{B} = \mathbf{B}\cdot\mathbf{A}\)</span> gilt, ist auch die
+Produktmatrix symmetrisch.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Symmetrische Matrizen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w7VBdqbWobk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EOFrZaEdUzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</details><p>Der Gegenpart zu einer symmetrischen Matrix ist die <strong>antisymmetrische
+Matrix</strong>. Eine Matrix wird antisymmetrisch genannt, wenn die Eigenschaft</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}^{T} = - \mathbf{A}\]</div>
+<p>erfüllt ist. Für alle Elemente der Matrix gilt also <span class="math notranslate nohighlight">\(a_{ij} = - a_{ji}\)</span>.
+Manchmal wird eine solche Matrix auch <strong>schiefsymmetrische Matrix</strong> genannt.</p>
+<p>Ein Beispiel für eine schiefsymmetrische Matrix ist die Matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 2 &amp; 3.5 &amp; -1 \\ -3.5 &amp; 4 &amp; 0 \\ 1 &amp; 0 &amp; 17 \end{pmatrix}.\end{split}\]</div>
+</section>
+<section id="zerlegung-in-symmetrische-und-antisymmetrische-matrix">
+<h2>Zerlegung in symmetrische und antisymmetrische Matrix<a class="headerlink" href="#zerlegung-in-symmetrische-und-antisymmetrische-matrix" title="Link to this heading">#</a></h2>
+<p>Für quadratische Matrizen können wir eine Zerlegung der Matrix in ihren
+symmetrischen Anteil und ihren antisymmetrischen Anteil vornehmen. Zunächst aber
+halten wir fest: wird eine quadratische Matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> zu ihrer eigenen
+Transponierten addiert, dann ist das Ergebnis eine symmetrische Matrix. In
+Formeln notieren wir Folgendes: Wenn <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> eine quadratische Matrix ist,
+dann ist <span class="math notranslate nohighlight">\(\mathbf{A}+\mathbf{A}^{T}\)</span> eine symmetrische Matrix.</p>
+<p>Dass diese Aussage wahr ist, können wir folgendermaßen zeigen. Wir starten mit
+dem Ausdruck <span class="math notranslate nohighlight">\((\mathbf{A}+\mathbf{A}^{T})^{T}\)</span> und vereinfachen ihn gemäß der
+obigen Rechenregeln:</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}+\mathbf{A}^{T}\right)^{T}
+= \mathbf{A}^{T} + \left(\mathbf{A}^{T}\right)^{T} = \mathbf{A}^{T} + \mathbf{A} =
+\mathbf{A} + \mathbf{A}^{T}.\]</div>
+<p>Das ist aber genau die Eigenschaft, die eine quadratische Matrix zu einer
+symmetrischen Matrix macht.</p>
+<p>Analog dazu können wir zeigen, dass <span class="math notranslate nohighlight">\(\mathbf{A} - \mathbf{A}^{T}\)</span> eine
+antisymmetrische Matrix ist:</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}-\mathbf{A}^{T}\right)^{T}
+= \mathbf{A}^{T} - \left(\mathbf{A}^{T}\right)^{T} = \mathbf{A}^{T} - \mathbf{A} =
+-\left(\mathbf{A}-\mathbf{A}^{T}\right).\]</div>
+<p>Wir wissen also, dass <span class="math notranslate nohighlight">\(\mathbf{A}+\mathbf{A}^{T}\)</span> eine symmetrische Matrix und
+<span class="math notranslate nohighlight">\(\mathbf{A}-\mathbf{A}^{T}\)</span> eine antisymmetrische Matrix ist. Addieren wir die
+beiden, erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\left(\mathbf{A}+\mathbf{A}^{T}\right) + \left(\mathbf{A}-\mathbf{A}^{T}\right) =
+2\cdot\mathbf{A}.\]</div>
+<p>Teilen wir auf beiden Seiten der Gleichung durch 2 erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} =
+\underbrace{\frac{1}{2}\left(\mathbf{A}+\mathbf{A}^{T}\right)}_{\text{symmetrisch}} +
+\underbrace{\frac{1}{2}\left(\mathbf{A}-\mathbf{A}^{T}\right)}_{\text{antisymmetrisch}}\]</div>
+<p>und haben so die quadratische Matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> in eine symmetrischen und
+einen antisymmetrischen Teil zerlegt.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir symmetrische Matrizen kennengelernt, die sich beim
+Transponieren nicht verändern. Symmetrische Matrizen sind eines der wichtigsten
+Hilfsmittel der Linearen Algebra und werden uns aber auch in der Analysis wieder
+begegnen, wenn es um die Bestimmung von Extrema zweidimensionaler reellwertiger
+Funktionen gehen wird.</p>
 </section>
 </section>
 
@@ -579,7 +724,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transponierte-matrix">Transponierte Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenregeln-fur-transponierte-matrizen">Rechenregeln für transponierte Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrische-und-antisymmetrische-matrizen">Symmetrische und antisymmetrische Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zerlegung-in-symmetrische-und-antisymmetrische-matrix">Zerlegung in symmetrische und antisymmetrische Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
