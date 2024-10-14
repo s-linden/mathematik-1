@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Inverse und orthogonale Matrix &#8212; Mathematik 1 Maschinenbau</title>
+    <title>7.3 Orthogonale Matrizen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Videos Lösen linearer Gleichungssysteme (LGS)" href="sec04.html" />
-    <link rel="prev" title="Videos Determinante (4x4 und mehr)" href="sec02.html" />
+    <link rel="prev" title="7.2 Inverse Matrizen" href="sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -233,7 +233,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrizen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/sec00.html">6. Matrizenrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/sec00.html">6. Matrizenrechnung (Teil 1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec01.html">6.1 Was ist eine Matrix?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec02.html">6.2 Besondere Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec03.html">6.3 Matrizenaddition</a></li>
@@ -242,10 +242,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec06.html">6.6 Transponierte und symmetrische Matrizen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">Videos Determinanten, Eigenwerte und Eigenvektoren</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">Videos Determinante (2x2 und 3x3)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Determinante (4x4 und mehr)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Inverse und orthogonale Matrix</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">7. Matrizenrechnung (Teil 2)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">7.1 Determinanten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">7.2 Inverse Matrizen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.3 Orthogonale Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Lösen linearer Gleichungssysteme (LGS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Eigenwerte und Eigenvektoren (2x2-Matrix)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher)</a></li>
@@ -455,7 +455,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Inverse und orthogonale Matrix</h1>
+    <h1>7.3 Orthogonale Matrizen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -478,16 +478,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-inverse-und-orthogonale-matrix">
-<h1>Videos Inverse und orthogonale Matrix<a class="headerlink" href="#videos-inverse-und-orthogonale-matrix" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="orthogonale-matrizen">
+<h1>7.3 Orthogonale Matrizen<a class="headerlink" href="#orthogonale-matrizen" title="Link to this heading">#</a></h1>
+<div class="warning admonition">
+<p class="admonition-title">Warnung</p>
+<p>Dieser Abschnitt wird gerade überarbeitet.</p>
+</div>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, wann es erlaubt ist, die <strong>inverse Matrix</strong> einer quadratischen Matrix zu berechnen.</p></li>
-<li><p>Sie können, falls es erlaubt ist, die Inverse einer Matrix berechnen.</p></li>
-<li><p>Sie kennen die Rechenregeln für inverse Matrizen und können sie anwenden.</p></li>
 <li><p>Sie wissen, was eine <strong>orthogonale</strong> Matrix ist.</p></li>
 <li><p>Sie kennen die wichtigsten Eigenschaften von orthogonalen Matrizen.</p></li>
 </ul>
@@ -495,18 +496,6 @@ document.write(`
 </section>
 <section id="videos">
 <h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/usya1zz-skM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t1K_B1pPqmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6JHgy82gwiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 <div class="seealso admonition">
 <p class="admonition-title">Video</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X4oTwBusjMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -550,7 +539,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Determinante (4x4 und mehr)</p>
+        <p class="prev-next-title">7.2 Inverse Matrizen</p>
       </div>
     </a>
     <a class="right-next"

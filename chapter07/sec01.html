@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Determinante (2x2 und 3x3) &#8212; Mathematik 1 Maschinenbau</title>
+    <title>7.1 Determinanten &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter07/sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Videos Determinante (4x4 und mehr)" href="sec02.html" />
-    <link rel="prev" title="Videos Determinanten, Eigenwerte und Eigenvektoren" href="sec00.html" />
+    <link rel="next" title="7.2 Inverse Matrizen" href="sec02.html" />
+    <link rel="prev" title="7. Matrizenrechnung (Teil 2)" href="sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -235,7 +235,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrizen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/sec00.html">6. Matrizenrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/sec00.html">6. Matrizenrechnung (Teil 1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec01.html">6.1 Was ist eine Matrix?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec02.html">6.2 Besondere Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec03.html">6.3 Matrizenaddition</a></li>
@@ -244,10 +244,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec06.html">6.6 Transponierte und symmetrische Matrizen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">Videos Determinanten, Eigenwerte und Eigenvektoren</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Determinante (2x2 und 3x3)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Determinante (4x4 und mehr)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Inverse und orthogonale Matrix</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">7. Matrizenrechnung (Teil 2)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.1 Determinanten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">7.2 Inverse Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">7.3 Orthogonale Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Lösen linearer Gleichungssysteme (LGS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Eigenwerte und Eigenvektoren (2x2-Matrix)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher)</a></li>
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Determinante (2x2 und 3x3)</h1>
+    <h1>7.1 Determinanten</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinante-von-2-times-2-matrizen">Determinante von <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinante-von-n-times-n-matrizen">Determinante von <span class="math notranslate nohighlight">\(n\times n\)</span>-Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-determinanten">Eigenschaften von Determinanten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,28 +483,121 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-determinante-2x2-und-3x3">
-<h1>Videos Determinante (2x2 und 3x3)<a class="headerlink" href="#videos-determinante-2x2-und-3x3" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="determinanten">
+<h1>7.1 Determinanten<a class="headerlink" href="#determinanten" title="Link to this heading">#</a></h1>
+<p>In den vorangegangenen Kapiteln haben wir Matrizen kennengelernt, die eine
+besondere Struktur haben. In diesem Kapitel geht es um eine Eigenschaft von
+quadratischen Matrizen, die durch eine Zahl gemessen wird und nützliche
+Anwendungen hat, die sogenannte Determinante.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie können die <strong>Determinante</strong> einer <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrix berechnen.</p></li>
-<li><p>Sie können die Determinante einer <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrix mit der <strong>Regel von Sarrus</strong> berechnen.</p></li>
+<li><p>Sie können die Determinante einer <span class="math notranslate nohighlight">\(n\times n\)</span>-Matrix mit <span class="math notranslate nohighlight">\(n&gt;2\)</span> berechnen.</p></li>
+<li><p>Sie können die Determinante einer <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrix mit der <strong>Regel von
+Sarrus</strong> berechnen.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wjWTpaGyw1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="determinante-von-2-times-2-matrizen">
+<h2>Determinante von <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrizen<a class="headerlink" href="#determinante-von-2-times-2-matrizen" title="Link to this heading">#</a></h2>
+<p>Die Determinante gibt es nur für quadratische Matrizen. Für eine <span class="math notranslate nohighlight">\(2\times
+2\)</span>-Matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\end{split}\]</div>
+<p>wird die Determinante durch den Ausdruck <span class="math notranslate nohighlight">\(a\cdot d - c\cdot b\)</span> berechnet.Die
+Determinante ordnet jeder quadratischen Matrix eine reelle Zahl zu. Diese
+Eigenschaft ist also eine Funktion und wird in der Regel mit <span class="math notranslate nohighlight">\(\det\)</span> abgekürzt.
+Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[\det(\mathbf{A}) = a\cdot d - c\cdot b.\]</div>
+<p>Manchmal werden auch zwei senkrechte Striche genommen, die die Matrixklammern
+ersetzen, um die Determinante einer Matrix zu kennzeichnen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left|\begin{matrix} a &amp; b \\ c &amp; d \end{matrix}\right|
+= a\cdot d - c\cdot b.\end{split}\]</div>
+<p>Wir betrachten ein Beispiel:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det\begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} =
+\left|\begin{matrix} 2 &amp; 3 \\ 1 &amp; 5 \end{matrix}\right| =
+2\cdot 5 - 1\cdot 3 = 7.\end{split}\]</div>
+</section>
+<section id="determinante-von-n-times-n-matrizen">
+<h2>Determinante von <span class="math notranslate nohighlight">\(n\times n\)</span>-Matrizen<a class="headerlink" href="#determinante-von-n-times-n-matrizen" title="Link to this heading">#</a></h2>
+<p>Hat die Matrix eine höhere Dimension, wird die Determinante rekursiv aus den
+Determinanten von kleineren Teilmatrizen berechnet. Dazu verwenden wir den
+sogenannten <strong>Laplaceschen Entwicklungssatz</strong>.</p>
+<p>Bei der Determinantenberechnung mit dem Laplaceschen Entwicklungssatz entwickeln
+wir die Determinante nach einer Zeile oder einer Spalte. Wenn wir die
+Determinante der Matrix <span class="math notranslate nohighlight">\(\mathbf{A}\in\mathbb{R}^{n\times n}\)</span> nach der i-ten
+Zeile entwickeln, gilt</p>
+<div class="math notranslate nohighlight">
+\[\det(\mathbf{A}) = \sum_{j=1}^{n} a_{ij}\cdot
+(-1)^{i+j}\cdot\det(\mathbf{A}_{ij}),\]</div>
+<p>wobei <span class="math notranslate nohighlight">\(\mathbf{A_{ij}}\)</span> diejenige Matrix ist, die entsteht, wenn die i-te Zeile
+und j-te Spalte gestrichen werden.</p>
+<p>Wird hingegen nach der j-ten Spalte entwickelt, lautet die Formel folgendermaßen:</p>
+<div class="math notranslate nohighlight">
+\[\det(\mathbf{A}) = \sum_{i=1}^{n} a_{ij}\cdot
+(-1)^{i+j}\cdot \det(\mathbf{A}_{ij}).\]</div>
+<p>Auch hier bezeichnet <span class="math notranslate nohighlight">\(\mathbf{A}_{ij}\)</span> die Untermatrix, die durch Streichen der
+i-ten Zeile und j-ten Spalte entsteht.</p>
+<p>Die Formeln sind trocken und schwer zu merken. Am einfachsten ist es, vorab die
+Matrixelelemente mit einem Schachbrettmuster von Plus und Minus zu versehen, wie
+in dem folgenden Video demonstriert wird.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Determinante - Laplace Entwicklungssatz” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3cG0HWdmHLI?si=UT5KjVo88k9dNPoj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dJ7d9wwC2sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details></section>
+<section id="eigenschaften-von-determinanten">
+<h2>Eigenschaften von Determinanten<a class="headerlink" href="#eigenschaften-von-determinanten" title="Link to this heading">#</a></h2>
+<p>Die Determinante ist eine Eigenschaft von quadratischen Matrizen, aber sie
+selbst hat auch wiederum Eigenschaften und Besonderheiten, die wir hier
+notieren.</p>
+<ol class="arabic">
+<li><p>Die Determinante der Einheitmatrix ist Eins.</p></li>
+<li><p>Die Determinante der transponierten Marix ist gleich der Determinanten der
+ursprünglichen Matrix.</p></li>
+<li><p>Für quadratische Matrizen gleicher Dimension gilt:</p>
+<div class="math notranslate nohighlight">
+\[\det(\mathbf{A}\cdot\mathbf{b}) = \det(\mathbf{A})\cdot\det(\mathbf{B}).\]</div>
+</li>
+<li><p>Multipliziert man eine Zeile der Matrix mit einem Skalar, so wird auch die
+Determinante mit diesen Skalar multipliziert.</p></li>
+<li><p>Ist <span class="math notranslate nohighlight">\(s\)</span> ein Skalar und <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> eine quadratische Matrix der Dimension
+<span class="math notranslate nohighlight">\(n\times n\)</span>, dann gilt:</p>
+<div class="math notranslate nohighlight">
+\[\det(s\cdot\mathbf{A}) = s^{n}\cdot\det(\mathbf{A}).\]</div>
+</li>
+<li><p>Hat die Matrix eine Zeile oder eine Spalte, die komplett aus Nullen besteht,
+dann ist die Determinante Null.</p></li>
+<li><p>Sind zwei Zeilen gleich, ist die Determinante Null.</p></li>
+<li><p>Sind zwei Spalten gleich, ist die Determinante Null.</p></li>
+<li><p>Vertauscht man zwei Zeilen, dann wechselt das Vorzeichen der Determinante.</p></li>
+<li><p>Vertauscht man zwei Spalten, dann wechselt das Vorzeichen der Determinante.</p></li>
+<li><p>Addiert man das Vielfache einer anderen Zeile(Spalte) zu einer anderen Zeile, dann
+ändert sich die Determinante nicht. Das kann man ausnutzen, um die
+Determinante einer Matrix beispielsweise mit dem Gauß-Algorithmus zu
+berechnen oder viele Nullen in der Matrix zu erzeugen.</p></li>
+</ol>
+<p>Diese und weitere Rechenregeln werden auch in dem folgenden Video erläutert.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Rechenregeln für Determinanten” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jDerrYHsLcY?si=NQI8V8OeTT034bKN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Zunächst ist die Determinante nur eine Kennzahl einer quadratischen Matrix. Wir
+haben uns in diesem Kapitel mit der Definition und den Rechenregeln beschäftigt.
+In den nächsten Kapiteln werden wir die Determinante anwenden um beispielsweise
+zu entscheiden, ob eine Matrix invertierbar ist oder um die Eigenwerte und
+Eigenvektoren von Matrizen zu berechnen.</p>
 </section>
 </section>
 
@@ -541,7 +637,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Determinanten, Eigenwerte und Eigenvektoren</p>
+        <p class="prev-next-title">7. Matrizenrechnung (Teil 2)</p>
       </div>
     </a>
     <a class="right-next"
@@ -549,7 +645,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Videos Determinante (4x4 und mehr)</p>
+        <p class="prev-next-title">7.2 Inverse Matrizen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -570,7 +666,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinante-von-2-times-2-matrizen">Determinante von <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinante-von-n-times-n-matrizen">Determinante von <span class="math notranslate nohighlight">\(n\times n\)</span>-Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-determinanten">Eigenschaften von Determinanten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
