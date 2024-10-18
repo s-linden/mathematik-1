@@ -10,9 +10,8 @@ Anwendungen hat, die sogenannte Determinante.
 ```{admonition} Lernziele
 :class: goals
 * Sie können die **Determinante** einer $2\times 2$-Matrix berechnen.
-* Sie können die Determinante einer $n\times n$-Matrix mit $n>2$ berechnen.
-* Sie können die Determinante einer $3\times 3$-Matrix mit der **Regel von
-  Sarrus** berechnen.
+* Sie können die Determinante einer $n\times n$-Matrix mit $n>2$ berechnen,
+  indem Sie den **Laplaceschen Entwicklungssatz** anwenden.
 ```
 
 ## Determinante von $2\times 2$-Matrizen
@@ -72,6 +71,22 @@ in dem folgenden Video demonstriert wird.
 
 ```{dropdown} Video "Determinante - Laplace Entwicklungssatz" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cG0HWdmHLI?si=UT5KjVo88k9dNPoj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+```{admonition} Übung "Berechnung von 3x3-Matrizen"
+:class: miniexercise
+Berechnen Sie auf der Internetseite
+[https://matex.mint-kolleg.kit.edu/MATeX/](https://matex.mint-kolleg.kit.edu/MATeX/download.php?0ef5d0cbc6d9fc21b7ad04cc96f84ca4) solange Determinanten von $3\times 3$-Matrizen, bis Sie dreimal hintereinander eine Aufgabe korrekt gelöst haben.
+
+Hinweis: Die Frage nach der Invertierbarkeit können Sie (voererst) ignorieren.
+```
+
+```{admonition} Übung "Berechnung von 4x4-Matrizen"
+:class: miniexercise
+Berechnen Sie auf der Internetseite
+[https://matex.mint-kolleg.kit.edu/MATeX/](https://matex.mint-kolleg.kit.edu/MATeX/download.php?6e6981333ada6c29ae902aae68873c0f) solange Determinanten von $4\times 4$-Matrizen, bis Sie dreimal hintereinander eine Aufgabe korrekt gelöst haben.
+
+Hinweis: Die Frage nach der Invertierbarkeit können Sie (voererst) ignorieren.
 ```
 
 ## Eigenschaften von Determinanten
