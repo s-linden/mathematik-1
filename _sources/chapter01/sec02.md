@@ -1,18 +1,23 @@
 # Videos zu Rechenregeln
 
+```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
+:class: warning
+In den ersten zwei Wochen wird diese Vorlesung klassisch gehalten. Bitte arbeiten Sie daher das in campUAS/Moodle verlinkte Vorlesungsskript durch und ergänzen Sie dieses bei Bedarf durch die unten verlinkten Videos. Ab Woche 3 wechseln wir dann zu eduScrum und diesem Vorlesungsskript.
+```
+
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
 * Sie wissen, was ein **Term** ist. 
 * Sie kennen die wichtigsten Rechenregeln für die reellen Zahlen:
- * Kommutativgesetz (Vertauschungsgesetz),
- * Assoziativgesetz (Verknüpfungsgesetz),
- * Distributivgesetz (Verteilungsgesetz).
+  * Kommutativgesetz (Vertauschungsgesetz),
+  * Assoziativgesetz (Verknüpfungsgesetz),
+  * Distributivgesetz (Verteilungsgesetz).
 * Sie können die Rechenregeln anwenden, um Klammerausdrücke oder Brüche zu vereinfachen oder zusammenzufassen, z.B. mit 
- * Ausmultiplizieren,
- * Ausklammern oder Faktorisieren,
- * Anwenden der binomischen Formeln.
+  * Ausmultiplizieren,
+  * Ausklammern oder Faktorisieren,
+  * Anwenden der binomischen Formeln.
 * Sie kennen die Definition des **Absolutbetrags** einer reellen Zahl und die **Dreiecksungleichung**.
 ```
 

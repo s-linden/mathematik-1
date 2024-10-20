@@ -1,4 +1,4 @@
-# 7. Matrizenrechnung (Teil 2)
+# 7. Anwendungen von Matrizen
 
 Themen:
 

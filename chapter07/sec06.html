@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher) &#8212; Mathematik 1 Maschinenbau</title>
+    <title>7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -235,7 +235,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrizen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/sec00.html">6. Matrizenrechnung (Teil 1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/sec00.html">6. Matrizenrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec01.html">6.1 Was ist eine Matrix?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec02.html">6.2 Besondere Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec03.html">6.3 Matrizenaddition</a></li>
@@ -244,13 +244,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/sec06.html">6.6 Transponierte und symmetrische Matrizen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">7. Matrizenrechnung (Teil 2)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">7. Anwendungen von Matrizen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">7.1 Determinanten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">7.2 Inverse Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">7.3 Orthogonale Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">7.5 Eigenwerte und Eigenvektoren (2x2-Matrix)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -266,7 +266,7 @@
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis (ab Januar 2025)</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/sec00.html">Videos Folgen, Grenzwerte und Stetigkeit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/sec01.html">Videos Grundwissen Zahlenfolgen</a></li>
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher)</h1>
+    <h1>7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-von-eigenwerten-und-eigenvektoren">Definition von Eigenwerten und Eigenvektoren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-der-eigenwerte-fur-3-times-3-matrizen">Berechnung der Eigenwerte für <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-der-eigenvektoren">Berechnung der Eigenvektoren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,23 +483,119 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-eigenwerte-und-eigenvektoren-3x3-matrix-und-hoher">
-<h1>Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher)<a class="headerlink" href="#videos-eigenwerte-und-eigenvektoren-3x3-matrix-und-hoher" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="eigenwerte-und-eigenvektoren-von-3x3-matrizen">
+<h1>7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen<a class="headerlink" href="#eigenwerte-und-eigenvektoren-von-3x3-matrizen" title="Link to this heading">#</a></h1>
+<p>In diesem Kapitel werden wir die Berechnung von Eigenwerten und Eigenvektoren
+für ( 3 \times 3 )-Matrizen Schritt für Schritt erläutern und praktische
+Beispiele vorstellen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können die <strong>Eigenwerte</strong> und <strong>Eigenvektoren</strong> einer <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrix berechnen.</p></li>
+<li><p>Sie können die <strong>Eigenwerte</strong> und <strong>Eigenvektoren</strong> einer <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrix
+berechnen.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/72nXOF8KxEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="definition-von-eigenwerten-und-eigenvektoren">
+<h2>Definition von Eigenwerten und Eigenvektoren<a class="headerlink" href="#definition-von-eigenwerten-und-eigenvektoren" title="Link to this heading">#</a></h2>
+<p>Auch für <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrizen bleibt die Definition eines Eigenwertes und von
+eigenvektoren gleich. Eine quadratische Matrix <span class="math notranslate nohighlight">\(\mathbf{A} \in \mathbb{R}^{3
+\times 3}\)</span> hat einen Eigenvektor <span class="math notranslate nohighlight">\(\vec{v} \neq \vec{0}\)</span>, wenn gilt:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{A} \vec{v} = \lambda \vec{v}.
+\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(\lambda\)</span> ein Eigenwert von <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>, und <span class="math notranslate nohighlight">\(\vec{v}\)</span> ist der
+zugehörige Eigenvektor.</p>
+</section>
+<section id="berechnung-der-eigenwerte-fur-3-times-3-matrizen">
+<h2>Berechnung der Eigenwerte für <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrizen<a class="headerlink" href="#berechnung-der-eigenwerte-fur-3-times-3-matrizen" title="Link to this heading">#</a></h2>
+<p>Auch die Vorgehensweise bei der Berechnung der Eigenwerte bleibt gleich. Um die
+Eigenwerte einer <span class="math notranslate nohighlight">\(3 \times 3\)</span>-Matrix zu berechnen, müssen wir die
+<strong>charakteristische Gleichung</strong> lösen. Diese Gleichung ergibt sich aus der
+Determinante der Matrix <span class="math notranslate nohighlight">\(\mathbf{A} - \lambda \mathbf{E}\)</span>, wobei <span class="math notranslate nohighlight">\(\mathbf{E}\)</span>
+die Einheitsmatrix ist:</p>
+<div class="math notranslate nohighlight">
+\[ \det(\mathbf{A} - \lambda \mathbf{E}) = 0. \]</div>
+<p>Für eine Matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} = \begin{pmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp;
+a_{23} \\ a_{31} &amp; a_{32} &amp; a_{33} \end{pmatrix}\end{split}\]</div>
+<p>ergibt sich die charakteristische Gleichung</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \det \begin{pmatrix} a_{11} - \lambda &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} -
+\lambda &amp; a_{23} \\ a_{31} &amp; a_{32} &amp; a_{33} - \lambda \end{pmatrix} = 0. \end{split}\]</div>
+<p>Diese Gleichung ist ein <strong>Polynom dritten Grades</strong> für <span class="math notranslate nohighlight">\(\lambda\)</span>, dessen
+Lösungen die Eigenwerte der Matrix <span class="math notranslate nohighlight">\( \mathbf{A}\)</span> sind. Der einzige Unterschied
+zur Berechung der Eigenwerte für <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrizen ist also, dass die
+charakteristische Gleichung mit einem Polynom dritten anstatt zweiten Grades
+gebildet wird.</p>
+<p>Gegeben sei beispielhaft die Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \mathbf{A} = \begin{pmatrix} 5 &amp; -1 &amp; 2 \\ -1 &amp; 5 &amp; 2 \\ 2 &amp; 2 &amp; 2
+\end{pmatrix}. \end{split}\]</div>
+<p>Die charakteristische Gleichung lautet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \det\begin{pmatrix} 5 - \lambda &amp; -1 &amp; 2 \\ -1 &amp; 5 - \lambda &amp; 2 \\ 2 &amp; 2 &amp; 2
+- \lambda \end{pmatrix} = 0.\end{split}\]</div>
+<p>Die Berechnung der Determinante ergibt:</p>
+<div class="math notranslate nohighlight">
+\[ -\lambda^3+12\lambda^2-36\lambda = 0 \]</div>
+<p>Es liegt ein Polynom dritten Grades vor, dessen Nullstellen <span class="math notranslate nohighlight">\(\lambda_1 = 6\)</span>,
+<span class="math notranslate nohighlight">\(\lambda_2 = 6\)</span> und <span class="math notranslate nohighlight">\(\lambda_3 = 0\)</span> die Lösung der charakteristischen Gleichung
+und damit die gesuchten Eigenwerte sind.</p>
+</section>
+<section id="berechnung-der-eigenvektoren">
+<h2>Berechnung der Eigenvektoren<a class="headerlink" href="#berechnung-der-eigenvektoren" title="Link to this heading">#</a></h2>
+<p>Sobald die Eigenwerte <span class="math notranslate nohighlight">\(\lambda_1, \lambda_2, \lambda_3\)</span> gefunden sind, können
+die zugehörigen Eigenvektoren durch Lösen des Gleichungssystems</p>
+<div class="math notranslate nohighlight">
+\[
+(\mathbf{A} - \lambda \mathbf{E}) \vec{v} = \vec{0}
+\]</div>
+<p>bestimmt werden. Für jeden Eigenwert <span class="math notranslate nohighlight">\(\lambda\)</span> ergibt dieses System eine oder
+mehrere Lösungen, die die Eigenvektoren der Matrix darstellen.</p>
+<p>Kehren wir zurück zu dem obigen Beispiel. Für den Eigenwert <span class="math notranslate nohighlight">\(\lambda_1 = 7\)</span>
+lösen wir das Gleichungssystem:</p>
+<div class="math notranslate nohighlight">
+\[ (\mathbf{A} - 7 \mathbf{E}) \vec{v} = \vec{0}. \]</div>
+<p>Die Matrix <span class="math notranslate nohighlight">\(\mathbf{A} - 6 \mathbf{E}\)</span> lautet:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \mathbf{A} - 6 \mathbf{E} = \begin{pmatrix} -1 &amp; -1 &amp; 2 \\ -1 &amp; -1 &amp; 2 \\ 2 &amp;
+2 &amp; -4 \end{pmatrix}.\end{split}\]</div>
+<p>Durch Lösen des linearen Gleichungssystems erhalten wir den Eigenvektor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_1 = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}.\end{split}\]</div>
+<p>Wir haben diesmal darauf verzichtet, die Menge alle Eigenvektoren mit einem
+Parameter darszustellen, sondern stattdessen einen Repräsentanten gewählt. Alle
+weiteren Eigenvektoren zu <span class="math notranslate nohighlight">\(\lambda_1 = 6\)</span> sind Vielfache von <span class="math notranslate nohighlight">\(\vec{v}_1\)</span>.</p>
+<p>Für <span class="math notranslate nohighlight">\(\lambda_2 = 6\)</span> und <span class="math notranslate nohighlight">\(\lambda_3 = 0\)</span> führen wir ähnliche Berechnungen durch,
+um die Eigenvektoren</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}\end{split}\]</div>
+<p>und</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{v}_3 = \begin{pmatrix} -1 \\ -1 \\ 2 \end{pmatrix}\end{split}\]</div>
+<p>zu bestimmen.</p>
+<p>Ein weiteres Beispiel wird in dem folgenden Video vorgerechnet.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Eigenwerte und Eigenvektoren berechnen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/72nXOF8KxEg"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir gezeigt, wie die Eigenwerte und Eigenvektoren einer
+<span class="math notranslate nohighlight">\(3 \times 3\)</span>-Matrix berechnet werden. Die Berechnung der Eigenwerte erfolgt
+durch das Lösen der charakteristischen Gleichung, während die Eigenvektoren
+durch Lösen eines homogenen Gleichungssystems bestimmt werden. Weitere Themen
+der linearen Algebra werden wir hier nicht mehr behandeln. Stattdessen kehren
+wir im nächsten Kapitel in die Analysis zurück.</p>
 </section>
 </section>
 
@@ -565,7 +664,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-von-eigenwerten-und-eigenvektoren">Definition von Eigenwerten und Eigenvektoren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-der-eigenwerte-fur-3-times-3-matrizen">Berechnung der Eigenwerte für <span class="math notranslate nohighlight">\(3\times 3\)</span>-Matrizen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-der-eigenvektoren">Berechnung der Eigenvektoren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
