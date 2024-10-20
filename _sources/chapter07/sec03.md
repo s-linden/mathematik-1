@@ -97,7 +97,7 @@ Gemäß der geometrischen Interpretation des Skalarproduktes bleibt der Winkel
 also gleich. Diese Eigenschaften von orthogonalen Matrizen werden ausgenutzt, um
 Drehungen und Spiegelungen zu beschreiben.
 
-### Determinante orhtogonaler Matrizen ist Eins
+### Determinante orthogonaler Matrizen ist Eins
 
 Die Determinante einer orthogonalen Matrix ist immer $\pm 1$. Eine Determinante
 von $1$ bedeutet, dass die Transformation eine Drehung ist, während $−1$ auf
