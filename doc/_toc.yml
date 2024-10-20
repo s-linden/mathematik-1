@@ -76,7 +76,7 @@ parts:
     - file: chapter08/sec04.md
     - file: chapter08/sec05.md
     - file: chapter08/sec06.md
-- caption: Funktionen
+- caption: Analysis (ab Januar 2025)
   chapters:
   - file: chapter09/sec00.md
     sections:

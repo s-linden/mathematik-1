@@ -1,5 +1,10 @@
 # Videos Steigung und Differentialquotient
 
+```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
+:class: warning
+Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.
+```
+
 ## Lernziele
 
 ```{admonition} Lernziele
