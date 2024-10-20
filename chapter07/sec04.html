@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Lösen linearer Gleichungssysteme (LGS) &#8212; Mathematik 1 Maschinenbau</title>
+    <title>7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter07/sec04';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -246,7 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">7.1 Determinanten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">7.2 Inverse Matrizen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">7.3 Orthogonale Matrizen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Lösen linearer Gleichungssysteme (LGS)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">7.5 Eigenwerte und Eigenvektoren (2x2-Matrix)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Eigenwerte und Eigenvektoren (3x3-Matrix und höher)</a></li>
 </ul>
@@ -455,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Lösen linearer Gleichungssysteme (LGS)</h1>
+    <h1>7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -466,7 +468,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrixdarstellung-eines-linearen-gleichungssystems">Matrixdarstellung eines linearen Gleichungssystems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#losung-des-linearen-gleichungssystems-mit-hilfe-der-inversen-matrix">Lösung des linearen Gleichungssystems mit Hilfe der inversen Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -478,28 +482,212 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-losen-linearer-gleichungssysteme-lgs">
-<h1>Videos Lösen linearer Gleichungssysteme (LGS)<a class="headerlink" href="#videos-losen-linearer-gleichungssysteme-lgs" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lineare-gleichungssysteme-mit-matrizenrechnung-losen">
+<h1>7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen<a class="headerlink" href="#lineare-gleichungssysteme-mit-matrizenrechnung-losen" title="Link to this heading">#</a></h1>
+<p>Die Lösung linearer Gleichungssysteme haben wir im 5. Part kennengelernt als es
+darum ging, Schnitte von Geraden und Ebenen zu bestimmen. Da wir
+dreidimensionale Räume betrachtet haben, bestanden die linearen Gleichungssyteme
+aus drei Gleichungen. Mit Hilfe der Matrizenrechnung können auch größere Systeme
+effizient und systematisch gelöst werden. In diesem Kapitel lernen wir, wie
+lineare Gleichungssysteme durch die Anwendung von Matrizen und deren Inversen
+gelöst werden können.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können eine inverse Matrix dazu benutzen, ein lineares Gleichungssystem zu lösen.</p></li>
-<li><p>Sie können den <strong>Gauß-Algorithmus</strong> zur Lösung von linearen Gleichungssystemen anwenden.</p></li>
+<li><p>Sie verstehen, wie lineare Gleichungssysteme mit Hilfe von Matrizen
+dargestellt werden können.</p></li>
+<li><p>Sie können eine inverse Matrix dazu benutzen, ein lineares Gleichungssystem zu
+lösen.</p></li>
+<li><p>Sie können den <strong>Gauß-Algorithmus in Matrix-Darstellung</strong> zur Lösung von
+linearen Gleichungssystemen anwenden.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vaahX3Wdxu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="matrixdarstellung-eines-linearen-gleichungssystems">
+<h2>Matrixdarstellung eines linearen Gleichungssystems<a class="headerlink" href="#matrixdarstellung-eines-linearen-gleichungssystems" title="Link to this heading">#</a></h2>
+<p>Ein lineares Gleichungssystem kann kompakt in Matrixform dargestellt werden.
+Betrachten wir ein allgemeines lineares Gleichungssystem mit <span class="math notranslate nohighlight">\(n\)</span> Gleichungen und
+<span class="math notranslate nohighlight">\(n\)</span> Unbekannten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n &amp;= b_2 \\
+\vdots \\
+a_{n1}x_1 + a_{n2}x_2 + \dots + a_{nn}x_n &amp;= b_n.
+\end{align*}\]</div>
+<p>Dies lässt sich in kompakter Matrixschreibweise darstellen als:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A} \vec{x} = \vec{b},\]</div>
+<p>wobei <span class="math notranslate nohighlight">\(\mathbf{A} \in \mathbb{R}^{n \times n}\)</span> die <strong>Koeffizientenmatrix</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \mathbf{A} = \begin{pmatrix}
+  a_{11} &amp; a_{12} &amp; \dots &amp; a_{1n} \\
+  a_{21} &amp; a_{22} &amp; \dots &amp; a_{2n} \\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  a_{n1} &amp; a_{n2} &amp; \dots &amp; a_{nn}
+  \end{pmatrix}
+\end{split}\]</div>
+<p>ist und <span class="math notranslate nohighlight">\(\vec{x} \in \mathbb{R}^n\)</span> der <strong>Vektor der Unbekannten</strong> mit</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \vec{x} = \begin{pmatrix}
+  x_1 \\
+  x_2 \\
+  \vdots \\
+  x_n
+  \end{pmatrix}.
+\end{split}\]</div>
+<p>Die rechte Seite des linearen Gleichungssystems wird im <strong>Ergebnisvektor</strong>
+<span class="math notranslate nohighlight">\(\vec{b} \in \mathbb{R}^n \)</span> zusammengefasst:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \vec{b} = \begin{pmatrix}
+  b_1 \\
+  b_2 \\
+  \vdots \\
+  b_n
+  \end{pmatrix}.
+\end{split}\]</div>
+<p>Betrachten wir das folgende lineare Gleichungssystem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+3x_1 - 4x_2 - 4x_3 &amp;= -4  \\
+6x_1 - 6x_2 - 7x_3 &amp;= -11 \\
+-3x_1 + 6x_2 + 7x_3 &amp;= 11 \\
+\end{align*}
+\end{split}\]</div>
+<p>Dieses Gleichungssystem können wir in Matrixform darstellen. Die
+Koeffizientenmatrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> ist:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{A} = \begin{pmatrix}
+3 &amp; -4 &amp; -4 \\
+6 &amp; -6 &amp; -7 \\
+-3 &amp; 6 &amp; 7
+\end{pmatrix}.
+\end{split}\]</div>
+<p>Der Vektor der Unbekannten <span class="math notranslate nohighlight">\(\vec{x}\)</span> ist:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{x} = \begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix}
+\end{split}\]</div>
+<p>und der Ergebnisvektor <span class="math notranslate nohighlight">\(\vec{b}\)</span> ist:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{b} = \begin{pmatrix}
+-4 \\
+-11 \\
+11
+\end{pmatrix}.
+\end{split}\]</div>
+<p>Das gesamte lineare Gleichungssystem lässt sich nun in Matrixform schreiben als
+<span class="math notranslate nohighlight">\(\mathbf{A} \vec{x} = \vec{b}\)</span>, also</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+3 &amp; -4 &amp; -4 \\
+6 &amp; -6 &amp; -7 \\
+-3 &amp; 6 &amp; 7
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix}
+= \begin{pmatrix}
+-4 \\
+-11 \\
+11
+\end{pmatrix}.
+\end{split}\]</div>
+</section>
+<section id="losung-des-linearen-gleichungssystems-mit-hilfe-der-inversen-matrix">
+<h2>Lösung des linearen Gleichungssystems mit Hilfe der inversen Matrix<a class="headerlink" href="#losung-des-linearen-gleichungssystems-mit-hilfe-der-inversen-matrix" title="Link to this heading">#</a></h2>
+<p>Um das zuvor dargestellte lineare Gleichungssystem zu lösen, können wir die
+Inverse der Koeffizientenmatrix <span class="math notranslate nohighlight">\( \mathbf{A}\)</span> berechnen, sofern
+<span class="math notranslate nohighlight">\(\det(\mathbf{A})\neq 0\)</span> ist. Die Lösung eines linearen Gleichungssystems der
+Form</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{A} \vec{x} = \vec{b} \]</div>
+<p>kann dann durch die folgende Gleichung bestimmt werden:</p>
+<div class="math notranslate nohighlight">
+\[ \vec{x} = \mathbf{A}^{-1} \vec{b} \]</div>
+<p>Diese Rechnung führen wir nun für das Beispiel aus.</p>
+<p>Zuerst überprüfen wir, ob die Matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> eine Inverse besitzt, indem
+wir ihre Determinante berechnen. Die Determinante von <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> berechnet
+sich wie folgt:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \det(\mathbf{A}) = 3 \cdot \det\begin{pmatrix} -6 &amp; -7 \\ 6 &amp; 7 \end{pmatrix}
+- (-4) \cdot \det\begin{pmatrix} 6 &amp; -7 \\ -3 &amp; 7 \end{pmatrix}
+- 4 \cdot \det\begin{pmatrix} 6 &amp; -6 \\ -3 &amp; 6 \end{pmatrix}. \end{split}\]</div>
+<p>Dies ergibt:</p>
+<div class="math notranslate nohighlight">
+\[ \det(\mathbf{A}) = 3 \cdot (-42 + 42) + 4 \cdot (42 - 21) - 4 \cdot (36 - 18)
+= 12. \]</div>
+<p>Da <span class="math notranslate nohighlight">\(\det(\mathbf{A}) \neq 0\)</span> gilt, hat die Koeffizientenmatrix eine Inverse. Wir
+rechnen die inverse Matrix <span class="math notranslate nohighlight">\(\mathbf{A}^{-1}\)</span> mit dem Gauß-Algorithmus aus und
+erhalten</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A}^{-1} = \frac{1}{12}\cdot
+\begin{pmatrix}
+0 &amp; 4 &amp; 4 \\
+-21 &amp; 9 &amp; -3 \\
+18 &amp; -6 &amp; 6 \\
+\end{pmatrix}.
+\end{split}\]</div>
+<p>Die gesuchte Lösung des linearen Gleichungssystems erhalten wir nun, indem wir
+die Inverse mit dem Ergebnisvektor multiplizieren:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{x}=\mathbf{A}^{-1}\cdot\vec{b}=
+\frac{1}{12}\cdot
+\begin{pmatrix}
+0 &amp; 4 &amp; 4 \\
+-21 &amp; 9 &amp; -3 \\
+18 &amp; -6 &amp; 6 \\
+\end{pmatrix} \cdot
+\begin{pmatrix}
+-4 \\
+-11 \\
+11
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\ -4 \\ 5
+\end{pmatrix}.
+\end{split}\]</div>
+<p>Die gesuchte Lösung ist also <span class="math notranslate nohighlight">\(x_1 = 0\)</span>, <span class="math notranslate nohighlight">\(x_2 = -4\)</span> und <span class="math notranslate nohighlight">\(x_3 = 5\)</span>.</p>
+<p>Haben wir einmal die inverse Marix bestimmt, können wir sie immer wieder
+benutzen. Sollte nun ein anderes Gleichungssystem gelöst werden, bei dem die
+Koeffizientenmatrix gleich bleibt, sich aber der Ergebnisvektor ändert, brauchen
+wir nur die Inverse mit dem neuen Ergebnisvektor zu multiplizieren.</p>
+<p>Sollten wir sicher sein, dass wir nur für einen einzigen Ergebnisvektor das
+lineare Gleichungssystem lösen wollen, können wir den Gauß-Algorithmus auch
+direkt mit der Koeefizientenmatrix und dem Ergebnisvektor durchführen. Diese
+Kurzschreibweise nennt man <strong>erweiterte Koeffizientenweise</strong>. Sie wird in dem
+folgenden Video vorgestellt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Lineare Gleichungssysteme (LGS) lösen - Gauß Verfahren” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ac8r-E5h9FI?si=kStQbW4DMKyP7odg"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHFOP4MnzjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir eine alternative Darstellung kennengelernt, lineare
+Gleichungssysteme mit Matrizen zu lösen. Insbesondere Computerprogramme und
+Verfahren der Künstlichen Intelligenz nutzen diese kompakte und effiziente Art
+und Weise, Informationen darzustellen und zu verarbeiten. Im nächsten Kapitel
+werden wir Eigenschaften von Matrizen lernen, die zur Beschreibung von
+schwingenden Systemen essentiell sind.</p>
 </section>
 </section>
 
@@ -568,7 +756,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrixdarstellung-eines-linearen-gleichungssystems">Matrixdarstellung eines linearen Gleichungssystems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#losung-des-linearen-gleichungssystems-mit-hilfe-der-inversen-matrix">Lösung des linearen Gleichungssystems mit Hilfe der inversen Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
