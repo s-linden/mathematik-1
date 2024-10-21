@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -486,8 +486,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="eigenwerte-und-eigenvektoren-von-3x3-matrizen">
 <h1>7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen<a class="headerlink" href="#eigenwerte-und-eigenvektoren-von-3x3-matrizen" title="Link to this heading">#</a></h1>
 <p>In diesem Kapitel werden wir die Berechnung von Eigenwerten und Eigenvektoren
-für ( 3 \times 3 )-Matrizen Schritt für Schritt erläutern und praktische
-Beispiele vorstellen.</p>
+für <span class="math notranslate nohighlight">\(3 \times 3\)</span>-Matrizen Schritt für Schritt erläutern und praktische Beispiele
+vorstellen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -507,7 +507,7 @@ eigenvektoren gleich. Eine quadratische Matrix <span class="math notranslate noh
 \[
 \mathbf{A} \vec{v} = \lambda \vec{v}.
 \]</div>
-<p>Dabei ist <span class="math notranslate nohighlight">\(\lambda\)</span> ein Eigenwert von <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>, und <span class="math notranslate nohighlight">\(\vec{v}\)</span> ist der
+<p>Dabei ist <span class="math notranslate nohighlight">\(\lambda\)</span> ein Eigenwert von <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> und <span class="math notranslate nohighlight">\(\vec{v}\)</span> ist der
 zugehörige Eigenvektor.</p>
 </section>
 <section id="berechnung-der-eigenwerte-fur-3-times-3-matrizen">
@@ -532,7 +532,7 @@ Lösungen die Eigenwerte der Matrix <span class="math notranslate nohighlight">\
 zur Berechung der Eigenwerte für <span class="math notranslate nohighlight">\(2\times 2\)</span>-Matrizen ist also, dass die
 charakteristische Gleichung mit einem Polynom dritten anstatt zweiten Grades
 gebildet wird.</p>
-<p>Gegeben sei beispielhaft die Matrix:</p>
+<p>Gegeben sei beispielhaft die Matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \mathbf{A} = \begin{pmatrix} 5 &amp; -1 &amp; 2 \\ -1 &amp; 5 &amp; 2 \\ 2 &amp; 2 &amp; 2
 \end{pmatrix}. \end{split}\]</div>
@@ -553,14 +553,14 @@ und damit die gesuchten Eigenwerte sind.</p>
 die zugehörigen Eigenvektoren durch Lösen des Gleichungssystems</p>
 <div class="math notranslate nohighlight">
 \[
-(\mathbf{A} - \lambda \mathbf{E}) \vec{v} = \vec{0}
+(\mathbf{A} - \lambda \mathbf{E})\cdot\vec{v} = \vec{0}
 \]</div>
 <p>bestimmt werden. Für jeden Eigenwert <span class="math notranslate nohighlight">\(\lambda\)</span> ergibt dieses System eine oder
 mehrere Lösungen, die die Eigenvektoren der Matrix darstellen.</p>
-<p>Kehren wir zurück zu dem obigen Beispiel. Für den Eigenwert <span class="math notranslate nohighlight">\(\lambda_1 = 7\)</span>
+<p>Kehren wir zurück zu dem obigen Beispiel. Für den Eigenwert <span class="math notranslate nohighlight">\(\lambda_1 = 6\)</span>
 lösen wir das Gleichungssystem:</p>
 <div class="math notranslate nohighlight">
-\[ (\mathbf{A} - 7 \mathbf{E}) \vec{v} = \vec{0}. \]</div>
+\[ (\mathbf{A} - 6 \mathbf{E}) \cdot \vec{v} = \vec{0}. \]</div>
 <p>Die Matrix <span class="math notranslate nohighlight">\(\mathbf{A} - 6 \mathbf{E}\)</span> lautet:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \mathbf{A} - 6 \mathbf{E} = \begin{pmatrix} -1 &amp; -1 &amp; 2 \\ -1 &amp; -1 &amp; 2 \\ 2 &amp;
@@ -571,14 +571,12 @@ lösen wir das Gleichungssystem:</p>
 <p>Wir haben diesmal darauf verzichtet, die Menge alle Eigenvektoren mit einem
 Parameter darszustellen, sondern stattdessen einen Repräsentanten gewählt. Alle
 weiteren Eigenvektoren zu <span class="math notranslate nohighlight">\(\lambda_1 = 6\)</span> sind Vielfache von <span class="math notranslate nohighlight">\(\vec{v}_1\)</span>.</p>
-<p>Für <span class="math notranslate nohighlight">\(\lambda_2 = 6\)</span> und <span class="math notranslate nohighlight">\(\lambda_3 = 0\)</span> führen wir ähnliche Berechnungen durch,
-um die Eigenvektoren</p>
+<p>Für <span class="math notranslate nohighlight">\(\lambda_2 = 6\)</span> und <span class="math notranslate nohighlight">\(\lambda_3 = 0\)</span> führen wir ähnliche Berechnungen durch
+und erhalten die Eigenvektoren</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\vec{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}\end{split}\]</div>
-<p>und</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\vec{v}_3 = \begin{pmatrix} -1 \\ -1 \\ 2 \end{pmatrix}\end{split}\]</div>
-<p>zu bestimmen.</p>
+\[\begin{split}\vec{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}
+\; \text{ und } \;
+\vec{v}_3 = \begin{pmatrix} -1 \\ -1 \\ 2 \end{pmatrix}.\end{split}\]</div>
 <p>Ein weiteres Beispiel wird in dem folgenden Video vorgerechnet.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">

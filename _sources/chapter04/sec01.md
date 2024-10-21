@@ -7,6 +7,7 @@ Linearkombination von Vektoren, die wir im letzten Kapitel kennengelernt haben.
 ## Lernziele
 
 ```{admonition} Lernziele
+:class: goals
 * Sie wissen, was ein **Erzeugendensystem** ist.
 * Sie wissen, was eine **Basis** ist.
 * Sie wissen, was die **Dimension** eines Vektorraumes ist.
@@ -98,8 +99,8 @@ $\vec{e}_1, \vec{e}_2, \ldots, \vec{e}_n \in E$.
 ```
 
 ```{dropdown} Video "Erzeugendensystem" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Yh8xj_iMe98?si=I7eRSZneTrPf9pvx" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yh8xj_iMe98?si=I7eRSZneTrPf9pvx"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
@@ -219,8 +220,8 @@ Die Bewegungen unseres zweidimensionales Computerspiels werden also durch einen
 Vektorraum der Dimension 2 beschrieben :-)
 
 ```{dropdown} Video "Basis und Dimension" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xhG2nXniUfA?si=meqKP2ryeKV9glv-" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xhG2nXniUfA?si=meqKP2ryeKV9glv-"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 

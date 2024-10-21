@@ -1,8 +1,8 @@
 # 7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen
 
 In diesem Kapitel werden wir die Berechnung von Eigenwerten und Eigenvektoren
-für \( 3 \times 3 \)-Matrizen Schritt für Schritt erläutern und praktische
-Beispiele vorstellen.
+für $3 \times 3$-Matrizen Schritt für Schritt erläutern und praktische Beispiele
+vorstellen.
 
 ## Lernziele
 
@@ -22,7 +22,7 @@ $$
 \mathbf{A} \vec{v} = \lambda \vec{v}.
 $$
 
-Dabei ist $\lambda$ ein Eigenwert von $\mathbf{A}$, und $\vec{v}$ ist der
+Dabei ist $\lambda$ ein Eigenwert von $\mathbf{A}$ und $\vec{v}$ ist der
 zugehörige Eigenvektor.
 
 ## Berechnung der Eigenwerte für $3\times 3$-Matrizen
@@ -51,7 +51,7 @@ zur Berechung der Eigenwerte für $2\times 2$-Matrizen ist also, dass die
 charakteristische Gleichung mit einem Polynom dritten anstatt zweiten Grades
 gebildet wird.
 
-Gegeben sei beispielhaft die Matrix:
+Gegeben sei beispielhaft die Matrix
 
 $$ \mathbf{A} = \begin{pmatrix} 5 & -1 & 2 \\ -1 & 5 & 2 \\ 2 & 2 & 2
 \end{pmatrix}. $$
@@ -75,16 +75,16 @@ Sobald die Eigenwerte $\lambda_1, \lambda_2, \lambda_3$ gefunden sind, können
 die zugehörigen Eigenvektoren durch Lösen des Gleichungssystems
 
 $$
-(\mathbf{A} - \lambda \mathbf{E}) \vec{v} = \vec{0}
+(\mathbf{A} - \lambda \mathbf{E})\cdot\vec{v} = \vec{0}
 $$
 
 bestimmt werden. Für jeden Eigenwert $\lambda$ ergibt dieses System eine oder
 mehrere Lösungen, die die Eigenvektoren der Matrix darstellen.
 
-Kehren wir zurück zu dem obigen Beispiel. Für den Eigenwert $\lambda_1 = 7$
+Kehren wir zurück zu dem obigen Beispiel. Für den Eigenwert $\lambda_1 = 6$
 lösen wir das Gleichungssystem:
 
-$$ (\mathbf{A} - 7 \mathbf{E}) \vec{v} = \vec{0}. $$
+$$ (\mathbf{A} - 6 \mathbf{E}) \cdot \vec{v} = \vec{0}. $$
 
 Die Matrix $\mathbf{A} - 6 \mathbf{E}$ lautet:
 
@@ -99,16 +99,12 @@ Wir haben diesmal darauf verzichtet, die Menge alle Eigenvektoren mit einem
 Parameter darszustellen, sondern stattdessen einen Repräsentanten gewählt. Alle
 weiteren Eigenvektoren zu $\lambda_1 = 6$ sind Vielfache von $\vec{v}_1$.
 
-Für $\lambda_2 = 6$ und $\lambda_3 = 0$ führen wir ähnliche Berechnungen durch,
-um die Eigenvektoren
+Für $\lambda_2 = 6$ und $\lambda_3 = 0$ führen wir ähnliche Berechnungen durch
+und erhalten die Eigenvektoren
 
-$$\vec{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}$$
-
-und
-
-$$\vec{v}_3 = \begin{pmatrix} -1 \\ -1 \\ 2 \end{pmatrix}$$
-
-zu bestimmen.
+$$\vec{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}
+\; \text{ und } \;
+\vec{v}_3 = \begin{pmatrix} -1 \\ -1 \\ 2 \end{pmatrix}.$$
 
 Ein weiteres Beispiel wird in dem folgenden Video vorgerechnet.
 
