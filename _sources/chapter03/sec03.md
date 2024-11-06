@@ -167,7 +167,7 @@ $$\vec{v}=\begin{pmatrix} 2 \\ 1 \end{pmatrix}$$
 
 mit -1 multiplizieren, erhalten wir:
 
-$$-1\cdot \begin{pmatrix} 2 \\ 1 \end{pmatrix}= \begin{pmatrix} -2 \\ 11
+$$-1\cdot \begin{pmatrix} 2 \\ 1 \end{pmatrix}= \begin{pmatrix} -2 \\ -1
 \end{pmatrix}.$$
 ​
 Diese Multiplikation führt zu einer Verschiebung in die entgegengesetzte
