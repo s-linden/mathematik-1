@@ -12,7 +12,7 @@ Vektorraumes, den wir in diesem Kapitel behandeln werden.
 * Sie wissen, wie der **reelle Standardvektorraum** definiert ist, d.h. Sie
   können die
   * **Vektoraddition** und
-  * **Skalarmultiplikation** für n-Tupels anwenden.
+  * **Skalarmultiplikation** für n-Tupel anwenden.
 * Sie wissen, dass ein Element eines Vektorraumes **Vektor** genannt wird.
 * Sie wissen, wie ein allgemeiner, reeller **Vektorraum** definiert ist.
   Insbesondere können Sie die vier Eigenschaften der Vektoraddition und die vier
