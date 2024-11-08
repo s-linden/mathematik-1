@@ -126,36 +126,36 @@ $$s_1\cdot\vec{v}_1 + s_2 \cdot \vec{v}_2 + \ldots + s_n \vec{v}_m = \vec{0}$$
 bedeutet, dass alle Skalare Null sind, also $s_1 = s_2 = \dots = s_m = 0$ folgt.
 
 ```{dropdown} Video "Lineare Abhängigkeit" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pLkde--khqs" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pLkde--khqs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 ```
 
 ```{dropdown} Video "Lineare Unabhängigkeit - Definition" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lrW95QKNfWA" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lrW95QKNfWA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 ```
 
 ```{dropdown} Video "Lineare Unabhängigkeit - Beispiel 1" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O85kVJrvc-g" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O85kVJrvc-g"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 ```
 
 ```{dropdown} Video "Lineare Unabhängigkeit - Beispiel 2" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nUs3G__ZX2c" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nUs3G__ZX2c"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 ```
 
 ```{dropdown} Video "Lineare Unabhängigkeit - Beispiel 3" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Sd9RYIHtTLg" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Sd9RYIHtTLg"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 ```

@@ -105,7 +105,7 @@ Allgemein lautet die Formel zur Normierung eines Vektors $\vec{v}$
 $$\vec{e}_v = \frac{1}{|\vec{v}|} \vec{v}.$$
 
 ```{dropdown} Video "Vektor normieren (Normalenvektor Einheitsvektor)" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/03fcWnj6f4g?si=Lmb0X22BRUU3zjL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/03fcWnj6f4g?si=Lmb0X22BRUU3zjL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
@@ -138,8 +138,8 @@ $$d(P,Q) = \sqrt{(Q_1 - P_1)^2 + (Q_2 - P_2)^2 + \ldots + (Q_n - P_n)^2}.$$
 Das »d« steht dabei für das Wort **Distanz**.
 
 ```{dropdown} Video zu "Abstand zweier Punkte" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eXSMrAB-miM" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eXSMrAB-miM"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 ```
@@ -159,7 +159,7 @@ verschieben. Es gilt also
 $$M = P + \frac{1}{2}\vec{PQ}.$$
 
 ```{dropdown} Video "Vektorrechnung Mittelpunkt berechnen" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/63yukPX43tI?si=YBWaylBuFar8LU1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/63yukPX43tI?si=YBWaylBuFar8LU1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
