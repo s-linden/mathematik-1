@@ -69,8 +69,8 @@ hingegen das Spatprodukt positiv, so bilden die drei Vektoren ein
 **Rechtssystem**.
 
 ```{dropdown} Video "Spatprodukt" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/plM5HpVjycE" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/plM5HpVjycE"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 

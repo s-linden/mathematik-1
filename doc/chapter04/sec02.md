@@ -91,7 +91,7 @@ Skalarprodukt. Allgemein wird sie folgendermaßen definiert.
 Sind $\vec{x}\in\mathbb{R}^n$ und $\vec{y}\in\mathbb{R}^n$ zwei Vektoren des
 reellen Standardvektorraumes, so wird die mathematische Verknüpfung
 
-$$\vec{x} \cdot \vec{y} = 
+$$\vec{x} \cdot \vec{y} =
 \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \cdot
 \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} =
 x_1 \cdot y_1 + x_2 \cdot y_2 + \ldots + x_n \cdot y_n =
@@ -128,9 +128,9 @@ clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
 ```
 
 ```{dropdown} Video "Skalarprodukt berechnen" von Einfach Mathe!
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EpOG1alQUz0?si=E3uP3xzkf8kA2PHB" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-encrypted-media; gyroscope; picture-in-picture; web-share" 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EpOG1alQUz0?si=E3uP3xzkf8kA2PHB"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share"
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
