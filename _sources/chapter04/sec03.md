@@ -66,8 +66,8 @@ $$|\vec{v}|^2 = \vec{v}\cdot\vec{v}$$
 nutzen.
 
 ```{dropdown} Video "Zusammenhang Skalarprodukt und Länge Vektor" von Mathehoch13
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Zjc7aI8cp4o?si=EMLwSAnLYt8aC01V" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zjc7aI8cp4o?si=EMLwSAnLYt8aC01V"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
@@ -88,9 +88,9 @@ griechischen Buchstaben Phi $\varphi$.
 width: 50%
 name: eingeschlossener_winkel
 ---
-Eingeschlossener Winkel $\varphi = \angle (\vec{a},\vec{b})$ zwischen den Vektoren $\vec{a}$ 
-und $\vec{b}$; 
-Quelle: eigene Darstellung, 
+Eingeschlossener Winkel $\varphi = \angle (\vec{a},\vec{b})$ zwischen den Vektoren $\vec{a}$
+und $\vec{b}$;
+Quelle: eigene Darstellung,
 Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 ```
 
@@ -114,7 +114,7 @@ Abbildung zeigt.
 width: 50%
 name: kosinussatz
 ---
-Kosinussatz; Quelle: eigene Darstellung, 
+Kosinussatz; Quelle: eigene Darstellung,
 Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
 ```
 
@@ -168,7 +168,7 @@ berechnet werden.
 ```
 
 ```{dropdown} Video "Herleitung Skalarprodukt"von Mathehoch13
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RQ_7laap-rM?si=AZQR6LYFfESZBuoy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RQ_7laap-rM?si=AZQR6LYFfESZBuoy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 

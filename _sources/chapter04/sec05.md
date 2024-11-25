@@ -82,8 +82,8 @@ alternative Bezeichnung für das Vektorprodukt, die von dem Symbol $\times$
 kommt.
 
 ```{dropdown} Video "Kreuzprodukt zweier Vektoren" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tg9oiUPdrFc" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tg9oiUPdrFc"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
@@ -185,8 +185,8 @@ Flächeninhalt des Parallelogramms ist, das die Vektoren $\vec{a}$ und $\vec{b}$
 aufspannen. Den Beweis können Sie sich in dem folgenden Video ansehen.
 
 ```{dropdown} Video "Kreuzprodukt geometrisch" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vhfwxWjHqeI" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vhfwxWjHqeI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 

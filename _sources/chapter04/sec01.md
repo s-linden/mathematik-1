@@ -166,7 +166,7 @@ ein Erzeugendensystem. Die Menge
 
 $$B = \left\{
 \begin{pmatrix} 1 \\ 0 \end{pmatrix},
-\begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\begin{pmatrix} 0 \\ 1 \end{pmatrix}
 \right\} $$
 
 bildet eine Basis der Bewegungen auf dem Spielfeld.
