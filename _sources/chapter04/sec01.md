@@ -10,6 +10,8 @@ Linearkombination von Vektoren, die wir im letzten Kapitel kennengelernt haben.
 :class: goals
 * Sie wissen, was ein **Erzeugendensystem** ist.
 * Sie wissen, was eine **Basis** ist.
+* Sie kennen die **Standardbasis** des $\mathbb{R}^3$ und die dazugehörigen
+  **kanonischen Einheitsvektoren**.
 * Sie wissen, was die **Dimension** eines Vektorraumes ist.
 ```
 
