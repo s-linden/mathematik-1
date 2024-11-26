@@ -202,11 +202,11 @@ $$\vec{e}_x = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
 \vec{e}_y = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
 \vec{e}_z = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}.$$
 
-Machmal sind auch die Bezeichnungen
+In den Naturwissenschaften sind auch die Bezeichnungen
 
-$$\vec{i} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
-\vec{j} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
-\vec{k} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}$$
+$$\mathbf{i} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
+\mathbf{j} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
+\mathbf{k} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}$$
 
 üblich. Da alle Vektoren die Länge Eins haben, sind es Einheitsvektoren. Um
 kenntlich zu machen, dass es nicht nur irgendwelche Einheitsvektoren sind,
