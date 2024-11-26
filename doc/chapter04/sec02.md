@@ -101,8 +101,11 @@ Skalarprodukt genannt.
 ```
 
 Damit haben wir nun die dritte Bedeutung des Symbols $\;\cdot\;$ kennengelernt.
-Bei den folgenden drei Verknüpfungen wird das Symbol $\;\cdot\;$ benutzt. Nur
-aus dem Zusammenhang wird klar, welche Verknüpfung gemeint ist.
+
+```{admonition} Achtung
+:class: warning
+Die Rechenoperation $\;\cdot\;$ ("mal") hat viele verschiedenen Bedeutungen. Nur
+aus dem Zusammenhang wird klar, was gemeint ist.
 
 1. **Multiplikation**, also Skalar "mal" Skalar = Skalar, z.B.
 
@@ -116,6 +119,7 @@ aus dem Zusammenhang wird klar, welche Verknüpfung gemeint ist.
 
    $$\begin{pmatrix} 1 \\ 2 \end{pmatrix} \cdot \begin{pmatrix} -1 \\ 3.1
    \end{pmatrix} = 5.2.$$
+```
 
 Die folgenden Videos zeigen weitere Beispiele zur Berechnung des Skalarproduktes
 von zwei Vektoren. Danach werden wir uns mit allgemeinen Eigenschaften des
