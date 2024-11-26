@@ -25,7 +25,7 @@ und $R$. Jeder Punkt der Ebene kann dann erreicht werden, indem wir den Punkt
 $P$ um Vielfache in die erste Richtung $\vec{u}$ und um Vielfache in die zweite
 Richtung $\vec{v}$ verschieben. Formal aufgeschrieben erhalten wir
 
-$$X = s\cdot\vec{u} + t\cdot\vec{v}.$$
+$$X = P + s\cdot\vec{u} + t\cdot\vec{v}.$$
 
 Wie bei der Parametergleichung der Ebene nennen wir die beiden reellen Zahlen
 $s$ und $t$ **Parameter der Ebenengleichung**. Für jede Kombination von Werten
@@ -33,7 +33,7 @@ $s\in\mathbb{R}$ und $t\in\mathbb{R}$ erhalten wir einen anderen Punkt in der
 Ebene und umgekehrt gehört zu jedem Punkt der Ebene ein eindeutiges Paar von
 Parametern $(s,t)$. Manchmal wird die Ebenengleichung daher auch als
 
-$$X(s,t) = s\cdot\vec{u} + t\cdot\vec{v}$$
+$$X(s,t) = P + s\cdot\vec{u} + t\cdot\vec{v}$$
 
 notiert.
 
@@ -42,7 +42,7 @@ notiert.
 Eine Ebene ist eine Menge von Punkten $X\in\mathbb{R}^3$, die sich schreiben
 lässt als
 
-$$E = \{ X \in\mathbb{R}^3 \,|\, X = s\cdot\vec{u} + t\cdot\vec{v}\}.$$
+$$E = \{ X \in\mathbb{R}^3 \,|\, X = P + s\cdot\vec{u} + t\cdot\vec{v}\}.$$
 
 Die Skalare $s\in\mathbb{R}$ und $t\in\mathbb{R}$ werden Parameter genannt und
 die beiden Vektoren $\vec{u}\in\mathbb{R}^3$ und $\vec{v}\in\mathbb{R}^3$
