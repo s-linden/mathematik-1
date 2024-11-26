@@ -608,19 +608,21 @@ und in der Geometrie, so dass sie einen eigenen Namen bekommen hat:
 Skalarprodukt. Allgemein wird sie folgendermaßen definiert.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … das Skalarprodukt?</p>
-<p>Sind <span class="math notranslate nohighlight">\(\vec{x}\in\mathbb{R}^n\)</span> und <span class="math notranslate nohighlight">\(\vec{y}\in\mathbb{R}^n\)</span> zwei Vektoren des
+<p>Sind <span class="math notranslate nohighlight">\(\vec{a}\in\mathbb{R}^n\)</span> und <span class="math notranslate nohighlight">\(\vec{b}\in\mathbb{R}^n\)</span> zwei Vektoren des
 reellen Standardvektorraumes, so wird die mathematische Verknüpfung</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\vec{x} \cdot \vec{y} =
-\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \cdot
-\begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} =
-x_1 \cdot y_1 + x_2 \cdot y_2 + \ldots + x_n \cdot y_n =
-\sum_{i=1}^{n} x_i \cdot y_i \end{split}\]</div>
+\[\begin{split}\vec{a} \cdot \vec{b} =
+\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} \cdot
+\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} =
+a_1 \cdot b_1 + a_2 \cdot b_2 + \ldots + a_n \cdot b_n =
+\sum_{i=1}^{n} a_i \cdot b_i \end{split}\]</div>
 <p>Skalarprodukt genannt.</p>
 </div>
-<p>Damit haben wir nun die dritte Bedeutung des Symbols <span class="math notranslate nohighlight">\(\;\cdot\;\)</span> kennengelernt.
-Bei den folgenden drei Verknüpfungen wird das Symbol <span class="math notranslate nohighlight">\(\;\cdot\;\)</span> benutzt. Nur
-aus dem Zusammenhang wird klar, welche Verknüpfung gemeint ist.</p>
+<p>Damit haben wir nun die dritte Bedeutung des Symbols <span class="math notranslate nohighlight">\(\;\cdot\;\)</span> kennengelernt.</p>
+<div class="warning admonition">
+<p class="admonition-title">Achtung</p>
+<p>Die Rechenoperation <span class="math notranslate nohighlight">\(\;\cdot\;\)</span> (“mal”) hat viele verschiedenen Bedeutungen. Nur
+aus dem Zusammenhang wird klar, was gemeint ist.</p>
 <ol class="arabic">
 <li><p><strong>Multiplikation</strong>, also Skalar “mal” Skalar = Skalar, z.B.</p>
 <div class="math notranslate nohighlight">
@@ -636,6 +638,7 @@ aus dem Zusammenhang wird klar, welche Verknüpfung gemeint ist.</p>
    \end{pmatrix} = 5.2.\end{split}\]</div>
 </li>
 </ol>
+</div>
 <p>Die folgenden Videos zeigen weitere Beispiele zur Berechnung des Skalarproduktes
 von zwei Vektoren. Danach werden wir uns mit allgemeinen Eigenschaften des
 Skalarproduktes beschäftigen.</p>
@@ -658,18 +661,18 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <section id="eigenschaften-des-skalarproduktes">
 <h2>Eigenschaften des Skalarproduktes<a class="headerlink" href="#eigenschaften-des-skalarproduktes" title="Link to this heading">#</a></h2>
 <p>Das Skalarprodukt hat einige sehr wichtige Eigenschaften. Für jeden Vektor
-<span class="math notranslate nohighlight">\(\vec{x}\in\mathbb{R}^n\)</span> gilt, dass das Skalarprodukt des Vektors mit sich
+<span class="math notranslate nohighlight">\(\vec{a}\in\mathbb{R}^n\)</span> gilt, dass das Skalarprodukt des Vektors mit sich
 selbst positiv ist. Null kann das Skalarprodukt eines Vektors mit sich selbst
-nur werden, wenn der Vektor <span class="math notranslate nohighlight">\(\vec{x}\)</span> der Nullvektor ist. Negativ hingegen wird
+nur werden, wenn der Vektor <span class="math notranslate nohighlight">\(\vec{a}\)</span> der Nullvektor ist. Negativ hingegen wird
 das Skalarprodukt eines Vektors mit sich selbst nie. Wir können leicht
 nachrechnen, dass diese Aussagen stimmen, indem wir das Skalarprodukt des
 Vektors <span class="math notranslate nohighlight">\(\vec{x}\)</span> mit sich selbst ausrechnen:</p>
 <div class="math notranslate nohighlight">
-\[\vec{x}\cdot\vec{x} = x_1 \cdot x_1 + x_2 \cdot x_2 + \ldots + x_n \cdot x_n =
- x_1^2 + x_2^2 + \ldots + x_n^2.\]</div>
-<p>Da jede Komponente <span class="math notranslate nohighlight">\(x_i\)</span> eine reelle Zahl ist, sind die Quadrate der Komponenten
-nicht-negativ, also <span class="math notranslate nohighlight">\(x_i^2 \geq 0\)</span>. Damit ist aber auch die Summe der Quadrate
-<span class="math notranslate nohighlight">\(x_1^2 + x_2^2 + \ldots + x_n^2\)</span> nicht-negativ. Nur wenn der Vektor <span class="math notranslate nohighlight">\(\vec{x}\)</span>
+\[\vec{a}\cdot\vec{a} = a_1 \cdot a_1 + a_2 \cdot a_2 + \ldots + a_n \cdot a_n =
+ a_1^2 + a_2^2 + \ldots + a_n^2.\]</div>
+<p>Da jede Komponente <span class="math notranslate nohighlight">\(a_i\)</span> eine reelle Zahl ist, sind die Quadrate der Komponenten
+nicht-negativ, also <span class="math notranslate nohighlight">\(a_i^2 \geq 0\)</span>. Damit ist aber auch die Summe der Quadrate
+<span class="math notranslate nohighlight">\(a_1^2 + a_2^2 + \ldots + a_n^2\)</span> nicht-negativ. Nur wenn der Vektor <span class="math notranslate nohighlight">\(\vec{a}\)</span>
 der Nullvektor ist, dann haben wir</p>
 <div class="math notranslate nohighlight">
 \[\vec{0} \cdot \vec{0} = 0\cdot 0 + 0\cdot 0 + \ldots + 0\cdot0 = 0.\]</div>
@@ -677,35 +680,35 @@ der Nullvektor ist, dann haben wir</p>
 Skalarprodukt als <strong>positiv definit</strong>.</p>
 <p>Das Skalarprodukt ist auch <strong>symmetrisch</strong> und erfüllt das <strong>Kommutativgesetz</strong>. Es gilt</p>
 <div class="math notranslate nohighlight">
-\[\vec{x} \cdot \vec{y} = \vec{y} \cdot \vec{x},\]</div>
+\[\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a},\]</div>
 <p>was auch leicht nachgerechnet werden kann:</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*} \vec{x}\cdot\vec{y} &amp;= x_1\cdot y_1 + x_2\cdot y_2 + \ldots +
-x_n\cdot y_n =\\
-&amp;= y_1\cdot x_1 + y_2\cdot x_2 + \ldots + y_n\cdot x_n = \vec{y}\cdot\vec{x}\\
+\[\begin{align*} \vec{a}\cdot\vec{b} &amp;= a_1\cdot b_1 + a_2\cdot b_2 + \ldots +
+a_n\cdot b_n =\\
+&amp;= b_1\cdot a_1 + b_2\cdot a_2 + \ldots + b_n\cdot a_n = \vec{b}\cdot\vec{a}\\
 \end{align*}\]</div>
 <p>Es überträgt sich sozusagen die Symmetrie der “normalen” Multiplikation von
 den reellen Zahlen auf das Skalarprodukt.</p>
 <p>Für das Skalarprodukt gilt darüber hinaus das <strong>gemischte Assoziativgesetz</strong>.
-Sind <span class="math notranslate nohighlight">\(\vec{x}\)</span> und <span class="math notranslate nohighlight">\(\vec{y}\)</span> zwei Vektoren des reellen Standardvektorraumes,
-also <span class="math notranslate nohighlight">\(\vec{x}, \vec{y}\in\mathbb{R}^n\)</span> und ist <span class="math notranslate nohighlight">\(s\)</span> ein Skalar, also
+Sind <span class="math notranslate nohighlight">\(\vec{a}\)</span> und <span class="math notranslate nohighlight">\(\vec{b}\)</span> zwei Vektoren des reellen Standardvektorraumes,
+also <span class="math notranslate nohighlight">\(\vec{a}, \vec{b}\in\mathbb{R}^n\)</span> und ist <span class="math notranslate nohighlight">\(s\)</span> ein Skalar, also
 <span class="math notranslate nohighlight">\(s\in\mathbb{R}\)</span>, dann gilt</p>
 <div class="math notranslate nohighlight">
-\[(s\cdot\vec{x})\cdot\vec{y} = s\cdot (\vec{x}\cdot\vec{y}) = \vec{x}\cdot
+\[(s\cdot\vec{a})\cdot\vec{b} = s\cdot (\vec{a}\cdot\vec{b}) = \vec{a}\cdot
 (s\cdot\vec{b}).\]</div>
 <p>Ein richtiges Assoziativgesetz gilt für das Skalarprodukt nicht. Im Allgemeinen
 gilt also</p>
 <div class="math notranslate nohighlight">
-\[(\vec{x}\cdot\vec{y})\cdot\vec{z} \textcolor{red}{\neq}
-\vec{x}\cdot(\vec{y}\cdot\vec{z}).\]</div>
+\[(\vec{a}\cdot\vec{b})\cdot\vec{c} \textcolor{red}{\neq}
+\vec{a}\cdot(\vec{b}\cdot\vec{c}).\]</div>
 <p>Das Skalarprodukt ist <strong>nicht assoziativ</strong>.</p>
 <p>Die letzte Eigenschaft, mit der wir uns in diesem Kapitel beschäftigen wollen,
-ist das <strong>Distributivgesetz</strong>. Es gelten für alle Vektoren <span class="math notranslate nohighlight">\(\vec{x}, \vec{y},
-\vec{z} \in \mathbb{R}^n\)</span> die beiden Distributivgesetze</p>
+ist das <strong>Distributivgesetz</strong>. Es gelten für alle Vektoren <span class="math notranslate nohighlight">\(\vec{a}, \vec{b},
+\vec{c} \in \mathbb{R}^n\)</span> die beiden Distributivgesetze</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-(\vec{x}+\vec{y})\cdot\vec{z} &amp;= \vec{x}\cdot\vec{z} + \vec{x}\cdot\vec{z} \\
-\vec{x}\cdot(\vec{y}+\vec{z}) &amp;= \vec{x}\cdot\vec{y} + \vec{x}\cdot\vec{z} \\
+(\vec{a}+\vec{b})\cdot\vec{c} &amp;= \vec{a}\cdot\vec{c} + \vec{a}\cdot\vec{c} \\
+\vec{a}\cdot(\vec{b}+\vec{c}) &amp;= \vec{a}\cdot\vec{b} + \vec{a}\cdot\vec{c} \\
 \end{align*}\]</div>
 <p>Aufgrund der beiden letzten Eigenschaften, dem gemischten Assoziativgesetzt und
 dem Distributivgesetz, wird das Skalarprodukt <strong>bilinear</strong> genannt.</p>
