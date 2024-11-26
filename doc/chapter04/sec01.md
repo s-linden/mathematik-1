@@ -181,6 +181,36 @@ entfernt, können nicht mehr alle Vektoren von $V$ durch Linearkombination
 erzeugt werden (= minimal).
 ```
 
+## Kanonische Einheitsvektoren bzw. Standardbasis
+
+Im dreidimensionalen kartesischen $\mathbb{R}^3$ Koordinatensystem wird
+normalerweise die folgende Standardbasis verwendet, um die Richtungen der drei
+Koordinatenachsen zu beschreiben:
+
+$$\vec{e}_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
+\vec{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
+\vec{e}_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}.$$
+
+Dabei werden die Koordinatenachsen als $x_1$-Achse, $x_2$-Achse und $x_3$-Achse
+bezeichnet. Manchmal werden auch andere Bezeichnungen verwendet. Lauten die
+Namen der Koordinatenachsen beispielsweise $x$-Achse, $y$-Achse und $z$-Achse,
+dann werden die Vektoren der Standardbasis folgendermaßen bezeichnet:
+
+$$\vec{e}_x = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
+\vec{e}_y = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
+\vec{e}_z = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}.$$
+
+Machmal sind auch die Bezeichnungen
+
+$$\vec{i} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
+\vec{j} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
+\vec{k} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}$$
+
+üblich. Da alle Vektoren die Länge Eins haben, sind es Einheitsvektoren. Um
+kenntlich zu machen, dass es nicht nur irgendwelche Einheitsvektoren sind,
+sondern die Einheitsvektoren, aus denen die Standardbasis besteht, nennt man
+diese Vektoren die **kanonischen Einheitsvektoren**.
+
 ## Dimension
 
 Offensichtlich ist die Anzahl der Basisvektoren eine wichtige Eigenschaft eines
