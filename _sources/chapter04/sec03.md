@@ -31,10 +31,10 @@ Koordinatensystems als Vektoren des Standardvektorraumes $\mathbb{R}^3$ dar.
 
 ## Skalarprodukt und Betrag/Länge von Vektoren
 
-Für Vektoren des reellen Standardvektorraumes $\vec{x}\in\mathbb{R}^n$ ist der
+Für Vektoren des reellen Standardvektorraumes $\vec{a}\in\mathbb{R}^n$ ist der
 Betrag des Vektors definiert als
 
-$$|\vec{x}| = \sqrt{x_1^2 + x_2^2 + \ldots + x_n^2}.$$
+$$|\vec{a}| = \sqrt{a_1^2 + a_2^2 + \ldots + a_n^2}.$$
 
 Im geometrischen Kontext wird oft der Begriff »Länge eines Vektors« anstatt
 »Betrag eines Vektors« verwendet. Das liegt an der Interpretation des
