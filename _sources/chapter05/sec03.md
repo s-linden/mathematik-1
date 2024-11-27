@@ -261,6 +261,11 @@ vorgerechnet.
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
+Auf der folgenden Internetseite finden Sie neben einem Video und Erläuterungen
+auch ein Quiz zum Gauß-Verfahren.
+
+> [https://studyflix.de/mathematik/gaus-algorithmus-2993](https://studyflix.de/mathematik/gaus-algorithmus-2993)
+
 ## Zusammenfassung und Ausblick
 
 Im nächsten Kapitel werden wir lineare Gleichungssyteme aufstellen, um zu
