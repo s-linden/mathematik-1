@@ -50,6 +50,11 @@ Richtungsvektoren. Wir schreiben auch kurz $E: X = s\cdot\vec{u} +
 t\cdot\vec{v}$ und nennen diese Darstellung Parametergleichung der Ebene.
 ```
 
+Das folgende Video und die dazugehörigen Erläuterungen erklären die
+Parameterform einer Ebene. In dem Video werden Punkte als Vektoren notiert.
+
+> [https://studyflix.de/mathematik/parameterform-2402](https://studyflix.de/mathematik/parameterform-2402)
+
 ## Normalengleichung der Ebene
 
 Alternativ kann eine Ebene auch durch einen Punkt $P$, der in der Ebene liegt,
@@ -113,7 +118,18 @@ der Ebene. Ist der Normalenvektor normiert, nennt man die Darstellung
 **hessesche Normalengleichung**.
 ```
 
-## Videos
+Die folgenden Videos und die dazugehörigen Erläuterungen erklären die
+Normalenform einer Ebene. In den Videos werden Punkte als Vektoren notiert.
+
+> [https://studyflix.de/mathematik/normalenform-2404](https://studyflix.de/mathematik/normalenform-2404)
+
+> [https://studyflix.de/mathematik/hessesche-normalform-2597](https://studyflix.de/mathematik/hessesche-normalform-2597)
+
+> [https://studyflix.de/mathematik/koordinatenform-2403](https://studyflix.de/mathematik/koordinatenform-2403)
+
+> [https://studyflix.de/mathematik/ebenengleichung-5791](https://studyflix.de/mathematik/ebenengleichung-5791)
+
+## Weiteres Lernmaterial
 
 Die folgenden Videos erklären die beiden Darstellungsformen erneut. Meist wird
 nicht strikt zwischen Punkten und Vektoren unterschieden.

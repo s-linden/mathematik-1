@@ -1,7 +1,7 @@
 # 5.4 Lagebeziehungen Geraden und Ebenen
 
 Nun werden wir uns mit der Lagebeziehung von Geraden und Ebenen beschäftigen.
-DAbei berückscihtigen wir die drei möglichen Kombinationen:
+Dabei berücksichtigen wir die drei möglichen Kombinationen:
 
 * Gerade zu Gerade
 * Gerade zu Ebene und
@@ -82,6 +82,10 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
+Auch das folgende Video mit den dazugehörigen Erläuterungen ist hilfreich.
+
+> [https://studyflix.de/mathematik/lagebeziehungen-von-geraden-5826](https://studyflix.de/mathematik/lagebeziehungen-von-geraden-5826)
+
 ## Gerade — Ebene
 
 Bei der Lagebeziehung Gerade zu Ebene gibt es drei Fälle:
@@ -95,7 +99,7 @@ Geradengleichung und die Ebenengleichung gleich. Hat das entstehende
 Gleichungssystem unendlich viele Lösungen, dann liegt die Gerade in der Ebene.
 Hat das Gleichungssystem keine Lösung, so sind die beiden Objekte parallel
 zueinander. Bei einer eindeutigen Lösung des linearen Gleichungssystems haben
-Gerade und Ebene einen Schnittpunkt. Die lösung des Gleichungssystems werden
+Gerade und Ebene einen Schnittpunkt. Die Lösung des Gleichungssystems werden
 entweder in die Geradengleichung oder in die Ebenengleichung eingesetzt, um den
 Schnittpunkt zu berechnen.
 
@@ -104,6 +108,11 @@ Schnittpunkt zu berechnen.
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
+
+In dem folgenden Video wird die Berechnung des Schnittpunktes einer Geraden mit
+einer Ebene vorgeführt.
+
+> [https://studyflix.de/mathematik/schnittpunkt-gerade-ebene-4757](https://studyflix.de/mathematik/schnittpunkt-gerade-ebene-4757)
 
 ## Ebene — Ebene
 
@@ -118,6 +127,10 @@ sie umgewandelt werden. Dann können wir die Normalenvektoren untersuchen.
 * Sind die beiden Normalenvektoren linear unabhängig, dann schneiden sich die
   Ebenen. Die Schnittgerade kann durch Gleichsetzen der beiden Ebenengleichung
   bestimmt werden.
+
+Die Berechnung einer Schnittgerade wird hier vorgeführt.
+
+> [https://studyflix.de/mathematik/schnittgerade-zweier-ebenen-2847](https://studyflix.de/mathematik/schnittgerade-zweier-ebenen-2847)
 
 ```{dropdown} Video "Gegenseitige Lagen von Ebenen" von Flip the Classroom
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PzgF1Z99dyo?si=OLL1rJtSUn5SLza-"
