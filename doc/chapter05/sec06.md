@@ -66,6 +66,11 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
+```{admonition} Übung "Winkel Geraden" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/36](https://mathebattle.de/edu_randomtasks/training_show/36)
+```
+
 ## Winkel zwischen Gerade und Ebene
 
 Möchten wir den Winkel zwischen einer Gerade und einer Ebene berechnen, nehmen
@@ -105,6 +110,11 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
+```{admonition} Übung "Winkel Gerade -  Ebene" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/35](https://mathebattle.de/edu_randomtasks/training_show/35)
+```
+
 ## Winkel zwischen Ebene und Ebene
 
 Soll der Schnittwinkel zweier Ebenen berechnet werden, werden von beiden Ebenen
@@ -134,6 +144,11 @@ clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" refe
 src="https://www.youtube.com/embed/q3V_ZRtx-Yc?si=CWi1w6_meHZsC5JH"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+```{admonition} Übung "Winkel Ebenen" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/34](https://mathebattle.de/edu_randomtasks/training_show/34)
 ```
 
 ## Zusammenfassung und Ausblick

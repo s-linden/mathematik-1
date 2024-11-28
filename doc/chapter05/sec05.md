@@ -97,6 +97,14 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
+```{admonition} Übung "Abstand Punkt - Ebene" von Mathebattle
+:class: miniexercise
+Üben Sie beide Varianten, den Abstand eines Punktes zu berechnen.  
+
+1. [Abstand Punkt - Ebene E (mit Hesse-Form)](https://mathebattle.de/edu_randomtasks/training_show/13)
+2. [Abstand Punkt - Ebene E (mit Lotfußpunkt)](https://mathebattle.de/edu_randomtasks/training_show/31)
+```
+
 ## Abstand eines Punktes zu einer Geraden
 
 Es gibt verschiedene Möglichkeiten, den Abstand eines Punktes $Q$ zu einer
@@ -133,6 +141,12 @@ encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="stric
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J0OI6gxaqSE?si=0-E0kDx2OiathAZ-"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+```{admonition} Übung "Abstand Punkt-Gerade" von Mathebattle
+:class: miniexercise
+
+[https://mathebattle.de/edu_randomtasks/training_show/30](https://mathebattle.de/edu_randomtasks/training_show/30)
 ```
 
 ## Abstand einer Geraden zu einer Geraden
@@ -176,6 +190,14 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
+```{admonition} Übung "Abstand windschiefer Geraden" von Mathebattle
+:class: miniexercise
+Üben Sie beide Varianten, den Abstand zweier windschiefer Geraden zu berechnen.  
+
+1. [Abstand windschiefe Geraden](https://mathebattle.de/edu_randomtasks/training_show/32)
+2. [Abstand windschiefe Geraden mit Lotfußpunkt](https://mathebattle.de/edu_randomtasks/training_show/33)
+```
+
 ## Abstand einer Geraden zu einer Ebene
 
 Betrachten wir eine Gerade, die in einer Ebene liegt oder eine Ebene durchstößt,
@@ -192,6 +214,11 @@ Auch hier ist nur der Fall relevant, wenn die beiden Ebenen parallel zueinander
 liegen. Auch hier genügt es, einen beliebigen Punkt der ersten Ebene zu nehmen
 und seinen Abstand zur zweiten Ebene zu berechnen. Schneiden sich higegen die
 beiden Ebenen oder sind sie identisch, ist ihr Abstand Null.
+
+```{admonition} Übung "Abstand Ebenen" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/38](https://mathebattle.de/edu_randomtasks/training_show/38)
+```
 
 ## Zusammenfassung und Ausblick
 
