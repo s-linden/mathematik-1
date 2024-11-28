@@ -129,6 +129,20 @@ Normalenform einer Ebene. In den Videos werden Punkte als Vektoren notiert.
 
 > [https://studyflix.de/mathematik/ebenengleichung-5791](https://studyflix.de/mathematik/ebenengleichung-5791)
 
+Hier können Sie üben, zunächst die Parametergleichungen einer Ebeneaufzustellen
+und dann diese in die Normalengleichung (Anmerkung: wird hier Koordinatenbene
+genannt) umzuwandeln.
+
+```{admonition} Übung "Koordinatenebene aus 3 Punkten aufstellen" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/8](https://mathebattle.de/edu_randomtasks/training_show/8)
+```
+
+```{admonition} Übung "Koordinatenebene aus einem Punkt und einer Geraden" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/29](https://mathebattle.de/edu_randomtasks/training_show/29)
+```
+
 ## Weiteres Lernmaterial
 
 Die folgenden Videos erklären die beiden Darstellungsformen erneut. Meist wird

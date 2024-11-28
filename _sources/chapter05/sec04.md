@@ -86,6 +86,13 @@ Auch das folgende Video mit den dazugehörigen Erläuterungen ist hilfreich.
 
 > [https://studyflix.de/mathematik/lagebeziehungen-von-geraden-5826](https://studyflix.de/mathematik/lagebeziehungen-von-geraden-5826)
 
+Auf Mathebattle können Sie üben, die Lage zweier Geraden zu bestimmen.
+
+```{admonition} Übung "Gegenseitige Lage zweier Geraden" von Mathebattle
+:class: miniexercise
+[https://mathebattle.de/edu_randomtasks/training_show/128](https://mathebattle.de/edu_randomtasks/training_show/128)
+```
+
 ## Gerade — Ebene
 
 Bei der Lagebeziehung Gerade zu Ebene gibt es drei Fälle:
@@ -114,6 +121,18 @@ einer Ebene vorgeführt.
 
 > [https://studyflix.de/mathematik/schnittpunkt-gerade-ebene-4757](https://studyflix.de/mathematik/schnittpunkt-gerade-ebene-4757)
 
+Auf Mathebattle können Sie üben, die gegenseitige Lage von einer Gerade und
+einer Ebene zu bestimmen.
+
+```{admonition} Übung "Gegenseitige Lage von Gerade und Ebene" von Mathebattle
+:class: miniexercise
+Da wir die Abstandsberechnung noch nicht hatten, geben Sie bitte im Fall "Gerade ist
+parallel zur Ebene" einfach eine 1 als Abstand an. Das ist zwar (wahrscheinlich)
+falsch, aber den restlichen Lösungsweg können Sie mit Ihrer Lösung vergleichen.
+
+[https://mathebattle.de/edu_randomtasks/training_show/37](https://mathebattle.de/edu_randomtasks/training_show/37)
+```
+
 ## Ebene — Ebene
 
 Auch bei der Lagebeziehung zwischen zwei Ebenen gibt es drei Möglichkeiten. Hier
@@ -136,6 +155,18 @@ Die Berechnung einer Schnittgerade wird hier vorgeführt.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PzgF1Z99dyo?si=OLL1rJtSUn5SLza-"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+Auf Mathebattle können Sie üben, die gegenseitige Lage zweier Ebenen zu
+bestimmen.
+
+```{admonition} Übung "Gegenseitige Lage zweier Ebenen" von Mathebattle
+:class: miniexercise
+Da wir die Abstandsberechnung noch nicht hatten, geben Sie bitte im Falle
+paralleler Ebenen einfach eine 1 als Abstand an. Das ist zwar (wahrscheinlich)
+falsch, aber den restlichen Lösungsweg können Sie mit Ihrer Lösung vergleichen.
+
+[https://mathebattle.de/edu_randomtasks/training_show/930](https://mathebattle.de/edu_randomtasks/training_show/930)
 ```
 
 ## Weiteres Lernmaterial
