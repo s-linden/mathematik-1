@@ -253,7 +253,7 @@ das Distributivgesetz, die uns das Rechnen mit Matrizen häufig erleichtern:
 \begin{align*}
 (\mathbf{A}\cdot\mathbf{B})\cdot\mathbf{C} &= \mathbf{A}\cdot(\mathbf{B}\cdot\mathbf{C}) \\
 \mathbf{A}\cdot(\mathbf{B}+\mathbf{C}) &= \mathbf{A}\cdot\mathbf{B} + \mathbf{A}\cdot\mathbf{C} \\
-(\mathbf{A}+\mathbf{C})\cdot\mathbf{C} &= \mathbf{A}\cdot\mathbf{C} + \mathbf{B}\cdot\mathbf{C}
+(\mathbf{A}+\mathbf{B})\cdot\mathbf{C} &= \mathbf{A}\cdot\mathbf{C} + \mathbf{B}\cdot\mathbf{C}
 \end{align*}
 
 Diese Regeln sind besonders nützlich, wenn es darum geht, komplexere
