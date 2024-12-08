@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Grundwissen Zahlenfolgen &#8212; Mathematik 1 Maschinenbau</title>
+    <title>9.1 Grundwissen Zahlenfolgen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -269,7 +269,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis (wird gerade überarbeitet)</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Folgen, Grenzwerte und Stetigkeit</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Grundwissen Zahlenfolgen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.1 Grundwissen Zahlenfolgen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Grenzwert einer Zahlenfolge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Rechnen mit Grenzwerten von Folgen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Funktionsgrenzwerte und ihre Rechenregeln</a></li>
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Grundwissen Zahlenfolgen</h1>
+    <h1>9.1 Grundwissen Zahlenfolgen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +468,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-folge">Was ist eine Folge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-folgen-beschrieben">Wie werden Folgen beschrieben?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,12 +485,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-grundwissen-zahlenfolgen">
-<h1>Videos Grundwissen Zahlenfolgen<a class="headerlink" href="#videos-grundwissen-zahlenfolgen" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="grundwissen-zahlenfolgen">
+<h1>9.1 Grundwissen Zahlenfolgen<a class="headerlink" href="#grundwissen-zahlenfolgen" title="Link to this heading">#</a></h1>
+<p>Folgen von Zahlen haben in der Signalverarbeitung eine wichtige Bedeutung. In
+der Mathematik sind Zahlenfolgen der Baustein, aus dem die Differential- und
+Integralrechnung gebaut werden.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -512,28 +516,182 @@ document.write(`
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
+<section id="was-ist-eine-folge">
+<h2>Was ist eine Folge?<a class="headerlink" href="#was-ist-eine-folge" title="Link to this heading">#</a></h2>
+<p>Wir haben schon Mengen und Tupel kennengelernt, jetzt geht es weiter mit Folgen.
+Bei einem Tupel kommt es auf die Reihenfolge an, in der die Elemente angeordnet
+sind. Beispielsweise werden Farben durch RGB-Werte beschrieben, also den Anteil
+an Rot, Grün und Blau. Ein pures Rot wird gekennzeichnet als (1.0, 0, 0),
+während der RGB-Wert (0,0,1.0) ein reines Blau darstellt. Obwohl in dem Tupel
+jeweils die Werte 0 und 1 vorkommen, werden durch ihre Anordnung zwei sehr
+unterschiedliche Farbenn dargestellt. Tupel haben jedoch nur endlich viele
+Elemente. Daher benutzen wir auch die Bezeichnung n-Tupel, wobei n die Anzahl
+der Elemente ist. Folgen sind Tupel mit unendlich vielen Elementen. Die können
+wir nicht mehr alle auflisten, wir brauchen eine Beschreibung für die unendlich
+vielen Elemente.</p>
+<p>Die Aufzählung</p>
+<div class="math notranslate nohighlight">
+\[2, 4, 6, 8, 10, 12, 14, \ldots\]</div>
+<p>ist ein klassisches Beispiel für eine Folge. Wir erkennen, dass es sich um die
+<em>geraden</em> natürlichen Zahlen handelt.</p>
+<p>An der dritten Stelle der Folge steht das Element 6. Bei Folgen benutzt man
+allerdings selten den Fachbegriff »Element«, sondern spricht von dritten
+<strong>Folgenglied</strong>. Da es bei Folgen auf die Reihenfolge der Elemente ankommt,
+werden die Positionen durchnummeriert, also beispielsweise</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_1 &amp;= 2 \\
+a_2 &amp;= 4 \\
+a_3 &amp;= 6 \\
+a_4 &amp;= 8 \\
+a_5 &amp;= 10 \\
+a_6 &amp;= 12 \\
+&amp; \; \vdots \\
+\end{align*}\]</div>
+<p>Allgemein schreibt man für eine Folge <span class="math notranslate nohighlight">\((a_k)_{k\in\mathbb{N}}\)</span> oder auch einfach
+<span class="math notranslate nohighlight">\((a_k)\)</span> um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
+Folgenglieder <span class="math notranslate nohighlight">\(a_k\)</span> handelt. Die Positionsangabe <span class="math notranslate nohighlight">\(k\)</span> heißt <strong>Index</strong> der Folge.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine Folge?</p>
+<p>Eine Folge <span class="math notranslate nohighlight">\((a_k)_{k\in\mathbb{N}}\)</span> ist eine Aufzählung von unendlich vielen
+Zahlen <span class="math notranslate nohighlight">\(a_k\)</span>, die Folgenglieder genannt werden, bei der es auf die Reihenfolge
+ankommt.</p>
+</div>
+</section>
+<section id="wie-werden-folgen-beschrieben">
+<h2>Wie werden Folgen beschrieben?<a class="headerlink" href="#wie-werden-folgen-beschrieben" title="Link to this heading">#</a></h2>
+<p>Da eine Folge unendlich viele Folgenglieder hat, können wir nicht alle
+hinschreiben. Eine Variante, eine Folge anzugeben, ist die <strong>konkrete
+Aufzählung</strong> der ersten Folgenglieder in der Hoffnung, dass dann jeder versteht,
+nach welchem Muster die Folge gebildet wurde und wie es weiter geht. Das haben
+wir oben getan.</p>
+<p>Eine zweite Variante ist die Angabe einer <strong>expliziten Regel</strong>, wie die
+Folgenglieder gebildet werden sollen. Die explizite Regel können wir uns wie
+eine Funktion vorstellen, bei der die Definitionsmenge die natürlichen Zahlen
+sind. In dem obigen Beispiel lautet eine explizite Regel</p>
+<div class="math notranslate nohighlight">
+\[a_k = 2 \cdot k, \quad k\in\mathbb{N}.\]</div>
+<p>Eine dritte Variante, folgen zu beschreiben, ist die Beschreibung als
+<strong>rekursive Regel</strong>. Wir können bei dem obigen Beispiel festhalten, dass die
+Folge bei <span class="math notranslate nohighlight">\(a_1 = 2\)</span> startet. Ist ein Folgenglied <span class="math notranslate nohighlight">\(a_{k}\)</span> berechnet, wird das
+nächste Folgenglied <span class="math notranslate nohighlight">\(a_{k+1}\)</span> berechnet, indem die Zahl 2 addiert wird. Also
+können wir die Folge auch folgendermaßen beschreiben:</p>
+<div class="math notranslate nohighlight">
+\[a_1 = 2, \quad a_{k+1} = a_{k} + 2, \quad k = 2, 3, 4, \ldots .\]</div>
+<p>Manche Folgen können explizit beschrieben werden, manche rekursiv und manchmal
+ist es möglich, für eine Folge sowohl eine explizite als auch eine rekursive
+Bildungsvorschrift zu finden.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Zahlenfolgen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GfhsHuTwIjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Explizite Formel finden” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c2hHWi-8wKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Rekursive Formel” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t2G7yviicAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
+</details></section>
+<section id="alternierende-folgen">
+<h2>Alternierende Folgen<a class="headerlink" href="#alternierende-folgen" title="Link to this heading">#</a></h2>
+<p>Die obige Folge der geraden natürlichen Zahlen kann auch so abgeändert werden,
+dass das Vorzeichen immer abwechselt:</p>
+<div class="math notranslate nohighlight">
+\[2, -4, 6, -8, 10, -12, \ldots.\]</div>
+<p>Eine solche Folge heißt <strong>alternierend</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “alternierende Folge” vom Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mQLADVxxRU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
+</details></section>
+<section id="monotonie-von-folgen">
+<h2>Monotonie von Folgen<a class="headerlink" href="#monotonie-von-folgen" title="Link to this heading">#</a></h2>
+<p>Da Folgen nur Funktionen mit Definitionsgebiet <span class="math notranslate nohighlight">\(\mathbf{N}\)</span>, verwundert es
+nicht, dass es die Eigenschaft der Monotonie auch für Folgen gibt. Eine Folge
+muss nicht monoton sein. Wenn sie monoton ist, gibt es vier Fälle. Eine Folge
+<span class="math notranslate nohighlight">\((a_k)\)</span> heißt</p>
+<ul class="simple">
+<li><p><strong>monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k \geq a_{k+1}\)</span>,</p></li>
+<li><p><strong>streng monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k &gt; a_{k+1}\)</span>,</p></li>
+<li><p><strong>monoton wachsend</strong>, falls <span class="math notranslate nohighlight">\(a_k \leq a_{k+1}\)</span>,</p></li>
+<li><p><strong>streng monoton wachsend</strong>, falls <span class="math notranslate nohighlight">\(a_k &lt; a_{k+1}\)</span>.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Monotonie von Folgen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YoNAdPOMMGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="beschranktheit-von-folgen">
+<h2>Beschränktheit von Folgen<a class="headerlink" href="#beschranktheit-von-folgen" title="Link to this heading">#</a></h2>
+<p>Als nächstes betrachten wir als Beispiel die Folge</p>
+<div class="math notranslate nohighlight">
+\[1,\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16},\frac{1}{32},\ldots.\]</div>
+<p>Das explizite Bildungsgesetz für diese Folge lautet</p>
+<div class="math notranslate nohighlight">
+\[a_{k} = \left(\frac{1}{2}\right)^{k-1}, \quad k \in\mathbb{N}.\]</div>
+<p>Die Folgenglieder werden immer kleiner und sind irgendwann so klein, dass sie
+kaum von Null zu unterscheiden sind. Aber dennoch bleiben sie positiv, egal wie
+groß auch <span class="math notranslate nohighlight">\(k\)</span> wird. Man sagt daher, dass die Zahl 0 eine untere Schranke für
+diese Folge ist bzw. dass die Folge nach unten beschränkt ist. Es gilt</p>
+<div class="math notranslate nohighlight">
+\[0 \leq a_k, \quad \forall k\in\mathbb{N},\]</div>
+<p>tatsächlich gilt sogar <span class="math notranslate nohighlight">\(0 &lt; a_k\)</span>. Aber auch die Zahl -17.3 ist eine untere
+Schranke für diese Folge, denn es gilt auch</p>
+<div class="math notranslate nohighlight">
+\[-17.3 \leq a_k, \quad \forall k\in\mathbb{N}.\]</div>
+<p>Auch hier gilt sogar das strikte Ungleichheitszeichen <span class="math notranslate nohighlight">\(&lt;\)</span>.</p>
+<p>Alle negativen Zahlen sind untere Schranken für diese Folge. Von den unteren
+Schranken ist <span class="math notranslate nohighlight">\(S_{\text{unten}}=0\)</span> die größte untere Schranke und wird
+<strong>Infimum</strong> genannt.</p>
+<p>Auch nach oben finden wir eine Schranke, die Folge <span class="math notranslate nohighlight">\((a_k)\)</span> ist nach oben
+beschränkt. Beispielsweise sind alle Folgenglieder kleiner als 4, also</p>
+<div class="math notranslate nohighlight">
+\[4 \geq a_k, \quad \forall k\in\mathbb{N}.\]</div>
+<p>Auch hier gilt eigentlich das strikte Ungleichheitszeichen <span class="math notranslate nohighlight">\(&gt;\)</span>. Eine Zahl
+<span class="math notranslate nohighlight">\(S\in\mathbb{R}\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[s \geq a_k, \quad \forall k\in\mathbb{R}\]</div>
+<p>wird obere Schranke genannt. Auch hier gibt es eine kleinste obere Schranke,
+nämlich die Zahl 1, denn es gilt</p>
+<div class="math notranslate nohighlight">
+\[1 \geq a_k, \quad \forall k\in\mathbb{R}.\]</div>
+<p>Die kleinste obere Schranke wird <strong>Supremum</strong> genannt. Allrdings gibt es hier
+bei diesem konkreten Beispiel einen Unterschied zwischen dem Infimum 0 und dem
+Supremum 1. Es gibt kein Folgenglied <span class="math notranslate nohighlight">\(a_k\)</span>, das jemals den Wert 0 annimmt. Das
+Infimum kommt niemals in der Folge vor. Aber das Supremum 1 entspricht gleich
+dem ersten Folgenglied <span class="math notranslate nohighlight">\(a_1 = 1\)</span>. Weil das Supremum tatsächlich auch ein
+Folgenglied ist, bezeichnet man das Supremum als <strong>Maximum</strong>. Gäbe es ein
+Folgenglied mit dem Infimum, hätte man das Infimum auch <strong>Minimum</strong> genannt.</p>
+<p>Halten wir noch fest, was beschränkt bedeutet: eine Folge die sowohl nach oben
+als auch nach unten beschränkt ist, heißt einfach nur <strong>beschränkt</strong>.</p>
+<blockquote>
+<div><p>Weiteres Lernmaterial: <a class="reference external" href="https://studyflix.de/mathematik/zahlenfolgen-5710">https://studyflix.de/mathematik/zahlenfolgen-5710</a></p>
+</div></blockquote>
+<p>Das folgende Video brauchen Sie nur bis ca. 7:58 min schauen, Konvergenz kommt
+erst im nächten Kapitel.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Beschränktheit, Monotonie, Konvergenz von Zahlenfolgen” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vlvdGYZyHo8?si=O1-MnemNzXvMOwH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, was eine Folge ist und was die
+mathematischen Fachbegriffe Folgenglied und Index bedeuten. Es gibt verschiedene
+Varianten, Folgen zu beschreiben, beispielsweise die Aufzählung, die explizite
+Regel oder die rekursive Formel. Neben den alternierenden Folgen haben Sie auch
+gelernt, was Monotonie und Beschränktheit von Folgen bedeutet. Beides werden wir
+im folgenden Kapitel brauchen, wenn es um Grenzwerte bzw. Konvergenz von Folgen
+geht.</p>
 </section>
 </section>
 
@@ -602,7 +760,12 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-folge">Was ist eine Folge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-folgen-beschrieben">Wie werden Folgen beschrieben?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
