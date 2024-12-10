@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Grenzwert einer Zahlenfolge &#8212; Mathematik 1 Maschinenbau</title>
+    <title>9.2 Grenzwert einer Zahlenfolge &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -270,7 +270,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Folgen, Grenzwerte und Stetigkeit</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">9.1 Grundwissen Zahlenfolgen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Grenzwert einer Zahlenfolge</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.2 Grenzwert einer Zahlenfolge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Rechnen mit Grenzwerten von Folgen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Funktionsgrenzwerte und ihre Rechenregeln</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Stetigkeit</a></li>
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Grenzwert einer Zahlenfolge</h1>
+    <h1>9.2 Grenzwert einer Zahlenfolge</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,6 +468,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grenzwert">Grenzwert</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
 </ul>
             </nav>
@@ -480,12 +481,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-grenzwert-einer-zahlenfolge">
-<h1>Videos Grenzwert einer Zahlenfolge<a class="headerlink" href="#videos-grenzwert-einer-zahlenfolge" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="grenzwert-einer-zahlenfolge">
+<h1>9.2 Grenzwert einer Zahlenfolge<a class="headerlink" href="#grenzwert-einer-zahlenfolge" title="Link to this heading">#</a></h1>
+<p>Im letzten Kapitel haben wir gelernt, was Zahlenfolgen sind und auch die beiden
+Eigenschaften Monotonie und Beschränktheit betrachtet. In diesem Kapitel geht es
+darum abzuschätzen, wie sich eine Folge für große Indizes verhält.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -496,14 +496,25 @@ document.write(`
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-(a_k) \rightarrow a \text{ für } k \rightarrow \infty \quad \text{ oder } \quad \lim_{k\rightarrow\infty} a_k = a.
+(a_n) \rightarrow a \text{ für } n \rightarrow \infty \quad \text{ oder } \quad \lim_{n\rightarrow\infty} a_n = a.
 \end{equation*}\]</div>
-<p>Man sagt dazu: »Der Limes von <span class="math notranslate nohighlight">\(a_k\)</span> für <span class="math notranslate nohighlight">\(k\)</span> gegen unendlich ist <span class="math notranslate nohighlight">\(a\)</span>.«</p>
+<p>Man sagt dazu: »Der Limes von <span class="math notranslate nohighlight">\(a_n\)</span> für <span class="math notranslate nohighlight">\(n\)</span> gegen unendlich ist <span class="math notranslate nohighlight">\(a\)</span>.«</p>
 <ul class="simple">
 <li><p>Sie wissen, dass eine Zahlenfolge, die keinen Grenzwert hat, <strong>divergent</strong> genannt wird.</p></li>
 <li><p>Sie wissen, dass eine Zahlenfolge mit dem Grenzwert 0 <strong>Nullfolge</strong> heißt.</p></li>
 <li><p>Sie wissen, dass jede monotone und beschränkte Folge automatisch konvergent ist (also einen Grenzwert hat).</p></li>
 </ul>
+</div>
+</section>
+<section id="grenzwert">
+<h2>Grenzwert<a class="headerlink" href="#grenzwert" title="Link to this heading">#</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Was ist … der Grenzwert?</p>
+<p>Eine Folge <span class="math notranslate nohighlight">\((a_n)\)</span> besitzt den Grenzwert <span class="math notranslate nohighlight">\(a\)</span>, falls für jede (sehr kleine) Zahl
+<span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span> alle Folgenglieder <span class="math notranslate nohighlight">\(a_n\)</span> ab einem bestimmten Index <span class="math notranslate nohighlight">\(N\)</span> in dem
+offenen Intervall um <span class="math notranslate nohighlight">\(a\)</span> liegen, d.h.</p>
+<div class="math notranslate nohighlight">
+\[|a_{n} - a| &lt; \varepsilon, \quad \text{ falls } n \geq N.\]</div>
 </div>
 </section>
 <section id="videos">
@@ -584,6 +595,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grenzwert">Grenzwert</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
 </ul>
   </nav></div>
