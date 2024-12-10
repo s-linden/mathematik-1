@@ -208,7 +208,7 @@ $$\mathbf{A}\cdot\mathbf{B} =
 \begin{pmatrix}
 -1 & 0 & 2 \\
 -4 & -3 & -1 \\
- 3 & 9 & 14 \\
+ 3 & 9 & 21 \\
 -2 & 3 & 13 \\
 \end{pmatrix}.
 $$
