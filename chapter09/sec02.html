@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -468,8 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grenzwert">Grenzwert</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grenzwert-einer-folge">Grenzwert einer Folge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel">Beispiel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergente-zahlenfolgen">Divergente Zahlenfolgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -491,42 +493,157 @@ darum abzuschätzen, wie sich eine Folge für große Indizes verhält.</p>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was der <strong>Grenzwert</strong> einer Folge ist. Manchmal wird der Grenzwert auch als <strong>Limes</strong> bezeichnet. Das kommt aus dem Lateinischen, erinnert aber auch an den englischen Begriff Limit.</p></li>
-<li><p>Sie wissen, dass eine Zahlenfolge <strong>konvergent</strong> genannt wird, wenn sie einen Grenzwert hat. Außerdem kennen Sie die beiden üblichen Schreibweisen für Grenzwerte:</p></li>
+<li><p>Sie wissen, was der <strong>Grenzwert</strong> einer Folge ist. Manchmal wird der Grenzwert
+auch als <strong>Limes</strong> bezeichnet. Das kommt aus dem Lateinischen, erinnert aber
+auch an den englischen Begriff Limit.</p></li>
+<li><p>Sie wissen, dass eine Zahlenfolge <strong>konvergent</strong> genannt wird, wenn sie einen
+Grenzwert hat. Außerdem kennen Sie die beiden üblichen Schreibweisen für
+Grenzwerte:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-(a_n) \rightarrow a \text{ für } n \rightarrow \infty \quad \text{ oder } \quad \lim_{n\rightarrow\infty} a_n = a.
+\[\begin{equation*} (a_n) \rightarrow a \text{ für } n \rightarrow
+\infty \quad \text{ oder } \quad \lim_{n\rightarrow\infty} a_n = a.
 \end{equation*}\]</div>
-<p>Man sagt dazu: »Der Limes von <span class="math notranslate nohighlight">\(a_n\)</span> für <span class="math notranslate nohighlight">\(n\)</span> gegen unendlich ist <span class="math notranslate nohighlight">\(a\)</span>.«</p>
+<p>Man sagt dazu: »Der Limes von <span class="math notranslate nohighlight">\(a_n\)</span> für <span class="math notranslate nohighlight">\(n\)</span> gegen unendlich ist
+<span class="math notranslate nohighlight">\(a\)</span>.«</p>
 <ul class="simple">
-<li><p>Sie wissen, dass eine Zahlenfolge, die keinen Grenzwert hat, <strong>divergent</strong> genannt wird.</p></li>
+<li><p>Sie wissen, dass eine Zahlenfolge, die keinen Grenzwert hat, <strong>divergent</strong>
+genannt wird.</p></li>
 <li><p>Sie wissen, dass eine Zahlenfolge mit dem Grenzwert 0 <strong>Nullfolge</strong> heißt.</p></li>
-<li><p>Sie wissen, dass jede monotone und beschränkte Folge automatisch konvergent ist (also einen Grenzwert hat).</p></li>
+<li><p>Sie wissen, dass jede monotone und beschränkte Folge automatisch konvergent
+ist (also einen Grenzwert hat).</p></li>
 </ul>
 </div>
 </section>
-<section id="grenzwert">
-<h2>Grenzwert<a class="headerlink" href="#grenzwert" title="Link to this heading">#</a></h2>
+<section id="grenzwert-einer-folge">
+<h2>Grenzwert einer Folge<a class="headerlink" href="#grenzwert-einer-folge" title="Link to this heading">#</a></h2>
+<p>In technischen Systemen, wie Feder-Dämpfer-Systemen, treten oft Schwingungen
+auf, deren Amplitude mit der Zeit abnimmt. Die Amplitudenfolge <span class="math notranslate nohighlight">\(a_n = A_0 \cdot
+e^{-kn}\)</span> beschreibt die Abnahme der Schwingung, wobei <span class="math notranslate nohighlight">\(A_0\)</span> die Anfangsamplitude
+ist und <span class="math notranslate nohighlight">\(k\)</span> der Dämpfungskoeffizient.</p>
+<p>Für <span class="math notranslate nohighlight">\(A_0 = 10\)</span> und <span class="math notranslate nohighlight">\(k = 0.2\)</span> ergibt sich:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_1 = 10 \cdot e^{-0.2} \approx 8.19\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_2 = 10 \cdot e^{-0.4} \approx 6.70\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_3 = 10 \cdot e^{-0.6} \approx 5.49\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_4 = 10 \cdot e^{-0.8} \approx 4.49\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_5 = 10 \cdot e^{-1} \approx 3.68\)</span></p></li>
+</ul>
+<p>Die Amplitudenfolge lautet: <span class="math notranslate nohighlight">\(10, 8.19, 6.70, 5.49, 4.49, 3.68 \dots\)</span>.</p>
+<p>Wenn wir diese Amplitudenfolge weiter betrachten, wird die Amplitude immer
+weiter gedämpft, bis sie irgendwann kaum noch von Null zu unterscheiden ist.
+Allgemein kann sich eine Folge <span class="math notranslate nohighlight">\((a_n)\)</span> einem festen Wert <span class="math notranslate nohighlight">\(a\)</span> annähern, wenn <span class="math notranslate nohighlight">\(n\)</span>
+gegen unendlich geht. Diesen Wert nennt man den Grenzwert der Folge.</p>
+<p>Die mathematisch präzise Definition eines Grenzwertes lautet wie folgt.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … der Grenzwert?</p>
-<p>Eine Folge <span class="math notranslate nohighlight">\((a_n)\)</span> besitzt den Grenzwert <span class="math notranslate nohighlight">\(a\)</span>, falls für jede (sehr kleine) Zahl
+<p>Eine Folge <span class="math notranslate nohighlight">\((a_n)\)</span> besitzt den Grenzwert <span class="math notranslate nohighlight">\(a\)</span>, wenn für jede (sehr kleine) Zahl
 <span class="math notranslate nohighlight">\(\varepsilon &gt;0\)</span> alle Folgenglieder <span class="math notranslate nohighlight">\(a_n\)</span> ab einem bestimmten Index <span class="math notranslate nohighlight">\(N\)</span> in dem
 offenen Intervall um <span class="math notranslate nohighlight">\(a\)</span> liegen, d.h.</p>
 <div class="math notranslate nohighlight">
 \[|a_{n} - a| &lt; \varepsilon, \quad \text{ falls } n \geq N.\]</div>
 </div>
+<p>Eine Zahlenfolge, die einen Grenzwert besitzt, heißt <strong>konvergent</strong>. Wenn dieser
+Grenzwert Null ist, wird die Folge eine <strong>Nullfolge</strong> genannt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “konvergente Zahlenfolgen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bG4qS9eHKM0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Grenzverhalten von Folgen” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ag_SQh4Ikds?si=YaDprtKvxNXzcLGv" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Grenzwert Folge” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p4itQ6UmtXA?si=JP66PWQVX2OwoI_K"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beispiel">
+<h2>Beispiel<a class="headerlink" href="#beispiel" title="Link to this heading">#</a></h2>
+<p>Die Folge <span class="math notranslate nohighlight">\(a_n = 2 + \frac{1}{n}\)</span> hat vermutlich den Grenzwert <span class="math notranslate nohighlight">\(a=2\)</span>. Dies
+wollen wir überprüfen. Wir probieren zunächst mit einem Taschenrechner aus, ob
+wir für verschiedene (sehr kleine) Werte von <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> einen Index <span class="math notranslate nohighlight">\(N\)</span>
+finden, so dass</p>
+<div class="math notranslate nohighlight">
+\[\left|2 + \frac{1}{n} - 2\right| &lt; \varepsilon\]</div>
+<p>gilt. Da <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> für alle natürlichen Zahlen <span class="math notranslate nohighlight">\(n\)</span> positiv ist, können wir
+obige Ungleichung vereinfachen zu</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{n} &lt; \varepsilon.\]</div>
+<p>Damit finden wir leicht die folgenden Indizes <span class="math notranslate nohighlight">\(N\)</span> mit dem Taschenrechner:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon = 0.1\)</span>: Index <span class="math notranslate nohighlight">\(N = 11\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon = 0.01\)</span>: Index <span class="math notranslate nohighlight">\(N = 101\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon = 0.001\)</span>: Index <span class="math notranslate nohighlight">\(N = 1001\)</span></p></li>
+</ul>
+<p>Allgemein können wir festhalten, dass die Ungleichung <span class="math notranslate nohighlight">\(\frac{1}{n} &lt;
+\varepsilon\)</span> erfüllt ist, wenn <span class="math notranslate nohighlight">\(N\)</span> größer gewählt wird als
+<span class="math notranslate nohighlight">\(\frac{1}{\varepsilon}\)</span>. Damit gilt für dieses Beispiel</p>
+<div class="math notranslate nohighlight">
+\[ \left(2+\frac{1}{n}\right) \rightarrow 2 \; \text{ für } \; n \rightarrow
+\infty \quad \text{ oder } \quad \lim_{n\rightarrow\infty} \left(2+\frac{1}{n}\right) = 2.\]</div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bG4qS9eHKM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="divergente-zahlenfolgen">
+<h2>Divergente Zahlenfolgen<a class="headerlink" href="#divergente-zahlenfolgen" title="Link to this heading">#</a></h2>
+<p>Nicht jede Zahlenfolge besitzt einen Grenzwert. Folgen, die keinen Grenzwert
+haben, werden <strong>divergent</strong> genannt. Typische Beispiele für divergente Folgen
+sind unbeschränkte Folgen wie die folgenden Beispiele.</p>
+<ol class="arabic simple">
+<li><p>Unbeschränkt wachsende Folge:<br>
+<span class="math notranslate nohighlight">\(a_n = n \quad \text{mit} \quad a_1 = 1, \, a_2 = 2, \, a_3 = 3, \dots \)</span></p></li>
+<li><p>Unbeschränkt fallende Folge:<br>
+<span class="math notranslate nohighlight">\(b_n = -n \quad \text{mit} \quad b_1 = -1, \, b_2 = -2, \, b_3 = -3, \dots \)</span></p></li>
+</ol>
+<p>Aber auch beschränkte Folgen können keinen Grenzwert haben, wie die folgenden
+Beispiele zeigen.</p>
+<ol class="arabic simple" start="3">
+<li><p>Periodische Folge ohne Grenzwert:<br>
+<span class="math notranslate nohighlight">\(c_n = (-1)^n \quad \text{mit} \quad c_1 = 1, \, c_2 = -1, \, c_3 = 1, \, c_4 = -1, \dots \)</span></p></li>
+<li><p>Unregelmäßige Folge:<br>
+<span class="math notranslate nohighlight">\(d_n = \sin(n) \quad \text{mit} \quad d_1 = \sin(1), \, d_2 = \sin(2), \, d_3 = \sin(3), \dots \)</span></p></li>
+</ol>
+<p>Die ersten beiden Beispiele für divergente Folgen sind unbeschränkte Folgen. Im
+dritten und vierten Beispiel sind die Zahlenfolgen beschränkt, jedoch nicht
+monoton. Tatsächlich kann man beweisen, dass monotone und beschränkte Folgen
+konvergent sind.</p>
+<div class="hint admonition">
+<p class="admonition-title">Konvergenz für monotone und beschränkte Folgen</p>
+<p>Jede monotone und beschränkte Folge ist konvergent.</p>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YUyyKPzurMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Die Umkehrung gilt nicht unbedingt. Zwar ist jede konvergent Folge beschränkt,
+aber nicht jede konvergente Folge ist monoton. Beispielsweise ist die Folge</p>
+<div class="math notranslate nohighlight">
+\[a_n = \frac{(-1)^n}{n}\]</div>
+<p>eine Nullfolge, d.h. sie hat den Grenzwert Null. Dennoch ist sie nicht monoton.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “divergente Zahlenfolgen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YUyyKPzurMw"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Konvergenz - Beschränktheit - Monotonie” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lsRMf7e8M98?si=xSWUu1H6ytaeuH-3"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir gelernt, was ein Grenzwert einer Folge ist. Im
+nächsten Kapitel werden wir uns damit beschäftigen, wie Grenzwerte leichter aus
+schon bekannten Grenzwerten berechnet werden können.</p>
 </section>
 </section>
 
@@ -595,8 +712,10 @@ offenen Intervall um <span class="math notranslate nohighlight">\(a\)</span> lie
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grenzwert">Grenzwert</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grenzwert-einer-folge">Grenzwert einer Folge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel">Beispiel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergente-zahlenfolgen">Divergente Zahlenfolgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
