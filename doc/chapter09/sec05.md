@@ -12,8 +12,12 @@ modellieren, zu simulieren und zu analysieren.
 * Sie können entscheiden, ob eine Funktion **stetig** ist oder nicht.
 Mathematisch präzise wird eine Funktion **stetig an der Stelle $x_0$** genannt,
  wenn der Grenzwert der Funktion für $x$ gegen $x_0$ existiert und gleich dem
-Funktionswert an der Stelle $x_0$ ist, falls also gilt \begin{equation*}
-\lim_{x\rightarrow x_0} f(x) = f(x_0). \end{equation*}
+Funktionswert an der Stelle $x_0$ ist, falls also gilt 
+
+\begin{equation*}
+\lim_{x\rightarrow x_0} f(x) = f(x_0). 
+\end{equation*}
+
 * Die Funktion heißt **stetig**, wenn das für alle Stellen $x_0$ ihres
   Definitionsbereiches gilt.
 * Sie wissen, dass die Summe oder Differenz zweier stetiger Funktionen wieder
