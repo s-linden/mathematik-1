@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Stetigkeit &#8212; Mathematik 1 Maschinenbau</title>
+    <title>9.5 Stetigkeit &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -273,7 +273,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">9.2 Grenzwert einer Zahlenfolge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">9.3 Rechnen mit konvergenten Folgen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">9.4 Funktionsgrenzwerte und ihre Rechenregeln</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Stetigkeit</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.5 Stetigkeit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Unstetigkeitsstellen</a></li>
 </ul>
 </details></li>
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Stetigkeit</h1>
+    <h1>9.5 Stetigkeit</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-stetigkeit">Was ist Stetigkeit?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-fur-stetige-funktionen">Beispiele für stetige Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-stetigen-funktionen">Eigenschaften von stetigen Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,53 +483,173 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-stetigkeit">
-<h1>Videos Stetigkeit<a class="headerlink" href="#videos-stetigkeit" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="stetigkeit">
+<h1>9.5 Stetigkeit<a class="headerlink" href="#stetigkeit" title="Link to this heading">#</a></h1>
+<p>Stetigkeit ist ein fundamentales Konzept der Mathematik, das in zahlreichen
+technischen und ingenieurwissenschaftlichen Anwendungen eine zentrale Rolle
+spielt. In der Praxis ist Stetigkeit oft eine Voraussetzung, um Systeme zu
+modellieren, zu simulieren und zu analysieren.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können entscheiden, ob eine Funktion <strong>stetig</strong> ist oder nicht. Mathematisch präzise wird eine Funktion <strong>stetig an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span></strong> genannt, wenn der Grenzwert der Funktion für <span class="math notranslate nohighlight">\(x\)</span> gegen <span class="math notranslate nohighlight">\(x_0\)</span> existiert und gleich dem Funktionswert an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ist, falls also gilt</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
- \lim_{x\rightarrow x_0} f(x) = f(x_0).
-\end{equation*}\]</div>
-<ul class="simple">
-<li><p>Die Funktion heißt <strong>stetig</strong>, wenn das für alle Stellen <span class="math notranslate nohighlight">\(x_0\)</span> ihres Definitionsbereiches gilt.</p></li>
-<li><p>Sie kennen den <strong>Zwischenwertsatz</strong>. Vereinfacht ausgedrückt können stetige Funktionen gezeichnet werden, ohne den Stift abzusetzen.</p></li>
-<li><p>Sie wissen, dass die Summe oder Differenz zweier stetiger Funktionen wieder stetig ist. Das gilt auch für das Produkt oder den Quotienten zweier stetiger Funktionen (sofern nicht durch 0 geteilt wird).</p></li>
-<li><p>Sie wissen, dass die Komposition (Verkettung) zweier stetiger Funktionen wieder stetig ist. Oder anders ausgedrückt, wenn ich eine stetige Funktion in eine andere stetige Funktion einsetze, ist das Ergebnis wieder stetig.</p></li>
+<li><p>Sie können entscheiden, ob eine Funktion <strong>stetig</strong> ist oder nicht.
+Mathematisch präzise wird eine Funktion <strong>stetig an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span></strong> genannt,
+wenn der Grenzwert der Funktion für <span class="math notranslate nohighlight">\(x\)</span> gegen <span class="math notranslate nohighlight">\(x_0\)</span> existiert und gleich dem
+Funktionswert an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ist, falls also gilt \begin{equation*}
+\lim_{x\rightarrow x_0} f(x) = f(x_0). \end{equation*}</p></li>
+<li><p>Die Funktion heißt <strong>stetig</strong>, wenn das für alle Stellen <span class="math notranslate nohighlight">\(x_0\)</span> ihres
+Definitionsbereiches gilt.</p></li>
+<li><p>Sie wissen, dass die Summe oder Differenz zweier stetiger Funktionen wieder
+stetig ist. Das gilt auch für das Produkt oder den Quotienten zweier stetiger
+Funktionen (sofern nicht durch 0 geteilt wird).</p></li>
+<li><p>Sie wissen, dass die Komposition (Verkettung) zweier stetiger Funktionen
+wieder stetig ist. Oder anders ausgedrückt, wenn ich eine stetige Funktion in
+eine andere stetige Funktion einsetze, ist das Ergebnis wieder stetig.</p></li>
+<li><p>Sie kennen den <strong>Zwischenwertsatz</strong>. Vereinfacht ausgedrückt können stetige
+Funktionen gezeichnet werden, ohne den Stift abzusetzen.</p></li>
+<li><p>Sie kennen den <strong>Satz vom Minimum und Maximum</strong>.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2CU9QN5pjME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="was-ist-stetigkeit">
+<h2>Was ist Stetigkeit?<a class="headerlink" href="#was-ist-stetigkeit" title="Link to this heading">#</a></h2>
+<p>Im letzten Kapitel haben Sie gelernt, wie Funktionsgrenzwerte bestimmt werden.
+Stetigkeit kann als eine Erweiterung dieses Konzepts verstanden werden. Eine
+Funktion ist genau dann stetig, wenn der Grenzwert einer Funktion an einer
+Stelle mit dem Funktionswert übereinstimmt.</p>
+<p>Mathematisch ausgedrückt bedeutet dies:</p>
+<div class="note admonition">
+<p class="admonition-title">Wann ist eine Funktion stetig?</p>
+<p>Eine reelle Funktion <span class="math notranslate nohighlight">\(f\)</span> ist an einer Stelle <span class="math notranslate nohighlight">\(x_0\)</span> stetig, wenn der Grenzwert
+<span class="math notranslate nohighlight">\(\lim_{x\to x_0}f(x)\)</span> existiert und dieser Grenzwert mit dem Funktionswert
+<span class="math notranslate nohighlight">\(f(x_0)\)</span> übereinstimmt, also</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to x_0} f(x) = f(x_0)\]</div>
+<p>gilt. Ist die Funktion an allen Stellen des Definitionsgebietes stetig, so
+bezeichnet man sie als stetige Funktion.</p>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XPXXg1cDMe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> nicht stetig, dann nennt man sie an
+dieser Stelle <strong>unstetig</strong>.</p>
+<p>Es gibt auch eine alternative Definition von Stetigkeit, das sogenannte
+<strong><span class="math notranslate nohighlight">\(\varepsilon\)</span>-<span class="math notranslate nohighlight">\(\delta\)</span>-Kriterium</strong>. Demnach ist eine reelle Funktion <span class="math notranslate nohighlight">\(f\)</span> an
+der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> stetig, wenn zu jedem <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> ein <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>
+existiert, so dass für alle <span class="math notranslate nohighlight">\(x\)</span> der Definitionsmenge mit</p>
+<div class="math notranslate nohighlight">
+\[|x - x_0| &lt; \delta\]</div>
+<p>gilt:</p>
+<div class="math notranslate nohighlight">
+\[|f(x) - f(x_0)| &lt; \varepsilon.\]</div>
+<p>In dem folgenden Video wird das erste Kriterium für Stetigkeit, das sogenannte
+Folgenkriterium verwendet.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Definition stetige Funktionen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2CU9QN5pjME"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kMP1LmadQxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details><p>In dem nächsten Video wird ein Beispiel vorgerechnet, wie die Stetigkeit einer
+Funktion überprüft werden kann.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Stetigkeit überprüfen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_ke4E-zjI7k?si=xJ-4nocEoruJyx_e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/odF1yjnXLQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details><p>Weiteres Lernmaterial finden Sie hier:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://studyflix.de/mathematik/stetigkeit-3251">https://studyflix.de/mathematik/stetigkeit-3251</a></p>
+</div></blockquote>
+</section>
+<section id="beispiele-fur-stetige-funktionen">
+<h2>Beispiele für stetige Funktionen<a class="headerlink" href="#beispiele-fur-stetige-funktionen" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Beispiele stetige Funktionen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XPXXg1cDMe4"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J-m5Ib76ues" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Wichtige stetige Funktionen I” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kMP1LmadQxM"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Wichtige stetige Funktionen II” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/odF1yjnXLQs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Wichtige stetige Funktionen III” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J-m5Ib76ues"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="eigenschaften-von-stetigen-funktionen">
+<h2>Eigenschaften von stetigen Funktionen<a class="headerlink" href="#eigenschaften-von-stetigen-funktionen" title="Link to this heading">#</a></h2>
+<p>Funktionen, die auf einem abgeschlossenen Intervall <span class="math notranslate nohighlight">\([a,b]\subset\mathbb{R}\)</span>
+stetig sind, haben zwei wichtige Eigenschaften.</p>
+<p>Der Zwischenwertsatz besagt:</p>
+<div class="note admonition">
+<p class="admonition-title">Was sagt der Zwischenwertsatz aus?</p>
+<p>Sei <span class="math notranslate nohighlight">\(f\)</span> eine auf einem abgeschlossenen Intervall <span class="math notranslate nohighlight">\([a, b]\)</span> stetige Funktion. Dann
+nimmt <span class="math notranslate nohighlight">\(f\)</span> jeden beliebigen Wert <span class="math notranslate nohighlight">\(y\)</span> zwischen <span class="math notranslate nohighlight">\(f(a)\)</span> und <span class="math notranslate nohighlight">\(f(b)\)</span> an mindestens
+einer Stelle <span class="math notranslate nohighlight">\(c\in [a,b]\)</span> an, d.h. <span class="math notranslate nohighlight">\(f(c) = y\)</span>.</p>
+</div>
+<p>Anschaulich bedeutet der Zwischenwertsatz, dass eine stetige Funktion alle Werte
+zwischen <span class="math notranslate nohighlight">\(f(a)\)</span> und <span class="math notranslate nohighlight">\(f(b)\)</span> annimmt, ohne »Sprünge« zu machen. Das hat auch eine
+wichtige Konsequenz, falls die Vorzeichen von <span class="math notranslate nohighlight">\(f(a)\)</span> und <span class="math notranslate nohighlight">\(f(b)\)</span> unterschiedlich
+sind.</p>
+<p>Betrachten wir beispielsweise die Funktion <span class="math notranslate nohighlight">\(f(x) = x^2 - 2\)</span> auf dem Intervall
+<span class="math notranslate nohighlight">\([1, 2]\)</span>. Wir haben</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(1) = -1\)</span> und</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(2) = 2\)</span>.</p></li>
+</ul>
+<p>Da <span class="math notranslate nohighlight">\(f\)</span> stetig ist und die Werte -1 und 2 unterschiedliche Vorzeichen haben,
+garantiert der Zwischenwertsatz, dass eine Nullstelle im Intervall <span class="math notranslate nohighlight">\([1, 2]\)</span>
+existiert. Diese ist tatsächlich <span class="math notranslate nohighlight">\(x = \sqrt{2}\)</span>.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://studyflix.de/mathematik/zwischenwertsatz-2405">https://studyflix.de/mathematik/zwischenwertsatz-2405</a></p>
+</div></blockquote>
+<p>Der Satz vom Minimum und Maximum besagt:</p>
+<div class="note admonition">
+<p class="admonition-title">Was sagt der Satz vom Minimum und Maximum?</p>
+<p>Eine auf einem abgeschlossenen Intervall <span class="math notranslate nohighlight">\([a, b]\)</span> stetige Funktion besitzt
+mindestens einen Punkt <span class="math notranslate nohighlight">\(x_{\text{max}} \in [a, b]\)</span>, an dem sie ihren Maximalwert
+annimmt, und mindestens einen Punkt <span class="math notranslate nohighlight">\(x_{\text{min}} \in [a, b]\)</span>, an dem sie
+ihren Minimalwert annimmt.</p>
+</div>
+<p>Dies bedeutet, dass der Graph der Funktion innerhalb eines geschlossenen
+Intervalls stets einen höchsten und einen niedrigsten Punkt erreicht.</p>
+<p>Wir betrachten als Beispiel die Funktion <span class="math notranslate nohighlight">\(f(x) = -x^2 + 4x\)</span>, die auf dem
+Intervall <span class="math notranslate nohighlight">\([0, 4]\)</span> stetig ist. Sie erreicht</p>
+<ul class="simple">
+<li><p>das Maximum <span class="math notranslate nohighlight">\(4\)</span> bei <span class="math notranslate nohighlight">\(x = 2\)</span>, denn <span class="math notranslate nohighlight">\(f(2) = 4\)</span> und</p></li>
+<li><p>das Minimum <span class="math notranslate nohighlight">\(0\)</span> bei <span class="math notranslate nohighlight">\(x = 0\)</span>, denn <span class="math notranslate nohighlight">\(f(0) = 0\)</span> und zusätzlich <span class="math notranslate nohighlight">\(x = 4\)</span>, denn
+<span class="math notranslate nohighlight">\(f(4)=0\)</span>.</p></li>
+</ul>
+<p>Leider liefert dieser Satz nur die Existenz eines Minimums und eines Maximums.
+Wie die beiden sogenannten Extremwerte berechnet werden, sagt dieser Satz nicht.
+Dazu benötigen wir Ableitungen.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Funktionen, die auf Intervallen stetig sind, haben besondere Eigenschaften
+beschrieben durch den Zwischenwertsatz und den Satz vom Minimum und Maximum.
+Diese Eigenschaften sind in der Ingenieurpraxis essentiell, um Nullstellen,
+Maxima und Minima von Funktionen zu bestimmen und technische Prozesse zu
+modellieren. Im nächsten Kapitel werden wir uns mit unstetigen Funktionen
+beschäftigen.</p>
 </section>
 </section>
 
@@ -595,7 +718,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-stetigkeit">Was ist Stetigkeit?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-fur-stetige-funktionen">Beispiele für stetige Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-stetigen-funktionen">Eigenschaften von stetigen Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
