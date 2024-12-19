@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Unstetigkeitsstellen &#8212; Mathematik 1 Maschinenbau</title>
+    <title>9.6 Unstetigkeitsstellen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter09/sec06';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -266,13 +268,13 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis (wird gerade überarbeitet)</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Folgen, Grenzwerte und Stetigkeit</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">9. Folgen, Grenzwerte und Stetigkeit</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">9.1 Grundwissen Zahlenfolgen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">9.2 Grenzwert einer Zahlenfolge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">9.3 Rechnen mit konvergenten Folgen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">9.4 Funktionsgrenzwerte und ihre Rechenregeln</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">9.5 Stetigkeit</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Unstetigkeitsstellen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.6 Unstetigkeitsstellen</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/sec00.html">In Arbeit: Differentialrechnung (Teil 1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -455,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Unstetigkeitsstellen</h1>
+    <h1>9.6 Unstetigkeitsstellen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -466,7 +468,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hebbare-unstetigkeitsstellen">Hebbare Unstetigkeitsstellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sprungstellen">Sprungstellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polstellen">Polstellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -478,33 +483,120 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-unstetigkeitsstellen">
-<h1>Videos Unstetigkeitsstellen<a class="headerlink" href="#videos-unstetigkeitsstellen" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="unstetigkeitsstellen">
+<h1>9.6 Unstetigkeitsstellen<a class="headerlink" href="#unstetigkeitsstellen" title="Link to this heading">#</a></h1>
+<p>Vielleicht mag es verwundern, dass wir dem Thema Unstetigkeit ein eigenes Thema
+widmen. In diesem Kapitel geht es aber nicht nur darum festzuhalten, was
+Unstetigkeit bedeutet, sondern vor allem darum, die Art der Unstetigkeit zu
+klassifizieren.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie kennen <strong>hebbare Unstetigkeitsstellen</strong> und können sie korrigieren.</p></li>
-<li><p>Sie kennen <strong>Unstetigkeitsstellen 1. Art</strong>, d.h. Funktionen mit Sprungsstellen.</p></li>
+<li><p>Sie kennen <strong>Unstetigkeitsstellen 1. Art</strong>, d.h. Funktionen mit <strong>Sprungsstellen</strong>.</p></li>
 <li><p>Sie kennen <strong>Unstetigkeitsstellen 2. Art</strong>, d.h. Funktionen mit einer Polstelle oder einer Oszillation.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XUnIpTvZcUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="hebbare-unstetigkeitsstellen">
+<h2>Hebbare Unstetigkeitsstellen<a class="headerlink" href="#hebbare-unstetigkeitsstellen" title="Link to this heading">#</a></h2>
+<p>Bei hebbaren Unstetigkeitsstellen gibt es den linksseitigen Grenzwert und den
+rechtsseitigen Grenzwert und diese stimmen sogar überein. Aber die beiden
+Grenzwerte sind nicht gleich dem Funktionswert oder aber die Funktion hat an
+dieser Stelle eine Definitionslücke.</p>
+<p>Als Beispiel betrachten wir die Funktion</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{x^2-1}{x-1}.\]</div>
+<p>Da der Nenner bei <span class="math notranslate nohighlight">\(x_0 = 1\)</span> Null wird, ist diese Funktion an der Stelle <span class="math notranslate nohighlight">\(x_0 =
+1\)</span> nicht definiert, der Funktionswert <span class="math notranslate nohighlight">\(f(1)\)</span> existiert nicht. Wir berechnen nun
+den linksseitigen Grenzwert:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 1^{-}} \left(\frac{x^2-1}{x-1}\right) =
+\lim_{x\to 1^{-}}\left(\frac{(x+1)(x-1)}{x-1}\right) =
+\lim_{x\to 1^{-}}(x + 1) = 2.\]</div>
+<p>Aber
+Das Kürzen des Bruches ist erlaubt, da wir uns von links der Stelle <span class="math notranslate nohighlight">\(x_0 = 1\)</span>
+nähern und daher immer <span class="math notranslate nohighlight">\(x \neq 1\)</span> gilt. Analog dazu berechnen wir den
+rechtsseitigen Grenzwert als</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 1^{+}} \left(\frac{x^2-1}{x-1}\right) =
+\lim_{x\to 1^{+}}(x + 1) = 2,\]</div>
+<p>wo erneut das Kürzen erlaubt ist, weil wir uns von rechts der Stelle <span class="math notranslate nohighlight">\(x_0 = 1\)</span>
+nähern und daher stets <span class="math notranslate nohighlight">\(x\neq 1\)</span> gilt. Wir führen jetzt eine neue Funktion
+<span class="math notranslate nohighlight">\(\tilde{f}\)</span> ein, die folgendermaßen definiert ist:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tilde{f}(x) =
+\begin{cases}
+\frac{x^2-1}{x-1}, \quad &amp; x\neq 1, \\
+2, \quad &amp; x = 1.
+\end{cases}\end{split}\]</div>
+<p>Die neue Funktion <span class="math notranslate nohighlight">\(\tilde{f}\)</span> behebt die Lücke bzw. die Unstetigkeitsstelle.</p>
+</section>
+<section id="sprungstellen">
+<h2>Sprungstellen<a class="headerlink" href="#sprungstellen" title="Link to this heading">#</a></h2>
+<p>Wenn eine Funktion an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> einen linksseitigen und einen
+rechtsseitigen Grenzwert hat, diese jedoch unterschiedlich sind, liegt eine
+sogenannte <strong>Sprungstelle</strong> vor.</p>
+<p>Als Beispiel betrachten wir die sogenannte Sägezahnfunktion, die in der
+Signalverarbeitung häufig verwendet wird. Auf der x-Achse ist die Zeit in
+Sekunden abgebildet. Für 2 Sekunden wachsen die Funktionswerte linear von -1 auf
+1, dann springen die Funktionswerte zurück auf -1, um dann erneut in 2 Sekunden
+wieder auf 1 linear anzuwachsen. Dieser Vorgang wiederholt sich periodisch alle
+2 Sekunden.</p>
+<figure class="align-default" id="chap05-plot-saegezahn">
+<a class="reference internal image-reference" href="../_images/plot_saegezahn.png"><img alt="../_images/plot_saegezahn.png" src="../_images/plot_saegezahn.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Beispiel einer Sägezahnfunktion, die zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-saegezahn" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Betrachten wir nun beispielsweise die Stelle <span class="math notranslate nohighlight">\(x_0 = 0\)</span>, so stellen wir fest,
+dass der linksseitige Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0^{-}}f(x) = 1\]</div>
+<p>ist, während der rechtsseitige Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0^{+}}f(x) = -1\]</div>
+<p>ist. Diese Stelle ist daher eine Sprungstelle (so wie auch alle weiteren
+Vielfachen von 2).</p>
+</section>
+<section id="polstellen">
+<h2>Polstellen<a class="headerlink" href="#polstellen" title="Link to this heading">#</a></h2>
+<p>Hebbare Unstetigkeitsstellen und Sprungstellen werden auch als
+<strong>Unstetigkeitsstellen 1. Art</strong> bezeichnet. Nun widmen wir uns noch den
+<strong>Unstetigkeitsstellen 2. Art</strong>. Dazu gehören die Stellen, an denen überhaupt
+kein Grenzwert existiert. Aber auch die Stellen, an denen der Grenzwert nur im
+uneigentlichen Sinne existiert, gehören dazu.</p>
+<p>Eine Definitionslücke einer reellen Funktion, bei der die Funktionswerte in der
+Umgebung betragsmäßig beliebig groß werden, nennen wir <strong>Polstelle</strong>, also wenn
+beispielsweise</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to x_0}f(x)=+\infty \; \text{ oder } \; \lim_{x\to x_0}f(x) =
+-\infty.\]</div>
+<p>Beispielsweise hat die Funktion</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1}{(x-1)^2}, \quad x\neq 1\]</div>
+<p>an der Stelle <span class="math notranslate nohighlight">\(x_0 = 1\)</span> eine Polstelle, wie auch die folgende Visualisierung
+zeigt:</p>
+<figure class="align-default" id="plot-polstelle">
+<a class="reference internal image-reference" href="../_images/plot_polstelle.svg"><img alt="../_images/plot_polstelle.svg" src="../_images/plot_polstelle.svg" width="600px" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Beispiel einer Funktion mit einer Polstelle bei <span class="math notranslate nohighlight">\(x_0 = 1\)</span></span><a class="headerlink" href="#plot-polstelle" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Unstetigkeitsstellen bestimmen” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XUnIpTvZcUE"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MI93ZGBb9zE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir die verschiedenen Arten von Unstetigkeitsstellen
+erläutert. Im nächsten Kapitel steigen wir in das Thema Ableitungen ein.</p>
 </section>
 </section>
 
@@ -573,7 +665,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hebbare-unstetigkeitsstellen">Hebbare Unstetigkeitsstellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sprungstellen">Sprungstellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polstellen">Polstellen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
