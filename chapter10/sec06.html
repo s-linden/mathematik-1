@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Ableitung der Umkehrfunktion &#8212; Mathematik 1 Maschinenbau</title>
+    <title>10.6 Ableitung der Umkehrfunktion &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -61,10 +61,11 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter10/sec06';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="In Arbeit: Differentialrechnung (Teil 2)" href="../chapter11/sec00.html" />
-    <link rel="prev" title="Videos Kettenregel" href="sec05.html" />
+    <link rel="prev" title="10.5 Kettenregel" href="sec05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -277,13 +278,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/sec06.html">9.6 Unstetigkeitsstellen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Differentialrechnung (Teil 1)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">Videos Steigung und Differentialquotient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Ableitung von elementaren Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Faktor-, Summen- und Produktregel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Quotientenregel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Kettenregel</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Ableitung der Umkehrfunktion</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">10. Differentialrechnung (Teil 1)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">10.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">10.2 Ableitung von elementaren Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">10.3 Faktor-, Summen- und Produktregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec04.html">10.4 Quotientenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec05.html">10.5 Kettenregel</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/sec00.html">In Arbeit: Differentialrechnung (Teil 2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -457,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Ableitung der Umkehrfunktion</h1>
+    <h1>10.6 Ableitung der Umkehrfunktion</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +469,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-umkehrfunktion">Was ist eine Umkehrfunktion?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ableitung der Umkehrfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,12 +483,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-ableitung-der-umkehrfunktion">
-<h1>Videos Ableitung der Umkehrfunktion<a class="headerlink" href="#videos-ableitung-der-umkehrfunktion" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="ableitung-der-umkehrfunktion">
+<h1>10.6 Ableitung der Umkehrfunktion<a class="headerlink" href="#ableitung-der-umkehrfunktion" title="Link to this heading">#</a></h1>
+<p>Die Ableitung einer Funktion liefert die Steigung ihrer Tangente an einem bestimmten Punkt. Doch was passiert, wenn wir nicht nur die Funktion, sondern auch ihre Umkehrfunktion betrachten? Wie hängen ihre Ableitungen zusammen?</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -498,12 +498,53 @@ document.write(`
 <p>wobei <span class="math notranslate nohighlight">\(y=f(x)\)</span> und <span class="math notranslate nohighlight">\(x=f^{-1}(y)\)</span>.</p>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/77DjMQsv1rA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section id="was-ist-eine-umkehrfunktion">
+<h2>Was ist eine Umkehrfunktion?<a class="headerlink" href="#was-ist-eine-umkehrfunktion" title="Link to this heading">#</a></h2>
+<p>Die Umkehrfunktion kehrt die Zuordnung einer Funktion um, sodass sie zu jeden
+Funktionswert den ursprünglichen Wert liefert. Beispielsweise ist die
+Umkehrfunktion von <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> (für <span class="math notranslate nohighlight">\(x \geq 0\)</span>) die Funktion <span class="math notranslate nohighlight">\(f^{-1}(x) =
+\sqrt{x}\)</span>.</p>
+<p>Eine interessante Fragestellung dabei ist: Wie verhalten sich die Ableitungen
+<span class="math notranslate nohighlight">\(f'\)</span> und <span class="math notranslate nohighlight">\((f^{-1})'\)</span>, wenn die Umkehrfunktion differenzierbar ist? Dies wollen
+wir systematisch untersuchen.</p>
+<p>Um die Ableitung der Umkehrfunktion zu untersuchen, müssen wir erst einmal
+voraussetzen, dass zu einer reellen Funktion <span class="math notranslate nohighlight">\(f\)</span> die Umkehrfunktion <span class="math notranslate nohighlight">\(f^{-1}\)</span>
+existiert. Wir setzen also voraus, dass <span class="math notranslate nohighlight">\(f: D \to W\)</span> eine bijektive Funktion
+ist, also eine Funktion, die injektiv und surjektiv ist. <span class="math notranslate nohighlight">\(D\)</span> ist die
+Definitionsmenge und <span class="math notranslate nohighlight">\(W\)</span> die Wertemenge. Die Umkehrfunktion <span class="math notranslate nohighlight">\(f^{-1}\)</span> ist
+definiert durch:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f^{-1}(f(x)) = x, \quad &amp; \text{ für alle } x \in D,\\
+f(f^{-1}(y)) = y, \quad &amp; \text{ für alle } y \in W.
+\end{align*}\]</div>
+</section>
+<section id="id1">
+<h2>Ableitung der Umkehrfunktion<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Nachdem wir wiederholt haben, was eine Umkehrfunktion ist, wenden wir uns nun
+der Ableitung zu. Dazu setzen wir voraus, dass die Funktion <span class="math notranslate nohighlight">\(f\)</span> differenzierbar
+ist und dass <span class="math notranslate nohighlight">\(f^{-1}\)</span> existiert und ebenfalls differenzierbar ist. Dann gilt</p>
+<div class="math notranslate nohighlight">
+\[\left(f^{-1}(y)\right)' = \frac{1}{f'(x)},\]</div>
+<p>wobei <span class="math notranslate nohighlight">\(y=f(x)\)</span> und <span class="math notranslate nohighlight">\(x=f^{-1}(y)\)</span>.</p>
+<p>Diese Formel ergibt sich aus der Kettenregel. Zur Herleitung setzen wir <span class="math notranslate nohighlight">\(y =
+f(x)\)</span> und differenzieren die Identität <span class="math notranslate nohighlight">\(f(f^{-1}(y)) = y\)</span> nach y:</p>
+<div class="math notranslate nohighlight">
+\[\left(f(f^{-1}(y))\right)' \cdot (f^{-1}(y))' = 1.\]</div>
+<p>Auflösen nach <span class="math notranslate nohighlight">\((f^{-1}(y))'\)</span> liefert die obige Beziehung.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Umkehrfunktion ableiten” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/77DjMQsv1rA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem und den letzten Kapitel haben wir uns mit der Ableitung von Funktionen
+beschäftigt. In den nächsten Kapiteln werden wir Ableitungen anwenden um
+beispielsweise geometrische Probleme zu lösen.</p>
 </section>
 </section>
 
@@ -543,7 +584,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Kettenregel</p>
+        <p class="prev-next-title">10.5 Kettenregel</p>
       </div>
     </a>
     <a class="right-next"
@@ -572,7 +613,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-umkehrfunktion">Was ist eine Umkehrfunktion?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ableitung der Umkehrfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

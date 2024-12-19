@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Ableitung von elementaren Funktionen &#8212; Mathematik 1 Maschinenbau</title>
+    <title>10.2 Ableitung von elementaren Funktionen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -61,10 +61,11 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter10/sec02';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Videos Faktor-, Summen- und Produktregel" href="sec03.html" />
-    <link rel="prev" title="Videos Steigung und Differentialquotient" href="sec01.html" />
+    <link rel="next" title="10.3 Faktor-, Summen- und Produktregel" href="sec03.html" />
+    <link rel="prev" title="10.1 Ableitungen" href="sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -277,13 +278,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/sec06.html">9.6 Unstetigkeitsstellen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Differentialrechnung (Teil 1)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">Videos Steigung und Differentialquotient</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Ableitung von elementaren Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Faktor-, Summen- und Produktregel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Quotientenregel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Kettenregel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Ableitung der Umkehrfunktion</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">10. Differentialrechnung (Teil 1)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">10.1 Ableitungen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.2 Ableitung von elementaren Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">10.3 Faktor-, Summen- und Produktregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec04.html">10.4 Quotientenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec05.html">10.5 Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/sec00.html">In Arbeit: Differentialrechnung (Teil 2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -457,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Ableitung von elementaren Funktionen</h1>
+    <h1>10.2 Ableitung von elementaren Funktionen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +469,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ableitungsfunktion">Die Ableitungsfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungen-von-wichtigen-grundfunktionen">Ableitungen von wichtigen Grundfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,12 +483,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-ableitung-von-elementaren-funktionen">
-<h1>Videos Ableitung von elementaren Funktionen<a class="headerlink" href="#videos-ableitung-von-elementaren-funktionen" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="ableitung-von-elementaren-funktionen">
+<h1>10.2 Ableitung von elementaren Funktionen<a class="headerlink" href="#ableitung-von-elementaren-funktionen" title="Link to this heading">#</a></h1>
+<p>Es ist umständlich, den Differentialquotienten zu berechnen. Glücklicherweise
+sind für viele wichtige Funktionen die Ableitungen schon bekannt.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -527,12 +528,120 @@ f(x)=\cot(x) &amp;\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\
 \[f(x)=\ln(x) \Rightarrow f'(x)=\frac{1}{x}.\]</div>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
+<section id="die-ableitungsfunktion">
+<h2>Die Ableitungsfunktion<a class="headerlink" href="#die-ableitungsfunktion" title="Link to this heading">#</a></h2>
+<p>Im letzten Kapitel haben wir den Differentialquotienten bzw. die Ableitung an
+einer einzelnen Stelle berechnet. In diesem Abschnitt wollen wir dieses Vorgehen
+auf ein Intervall verallgemeinern. Wir betrachten dazu als Beispiel die Funktion
+<span class="math notranslate nohighlight">\(f(x) = x^2\)</span>. Zunächst berechnen wir die Ableitung an einer einzelnen Stelle,
+beispielsweise für <span class="math notranslate nohighlight">\(x_1 = 2\)</span>. Dazu bilden wir den Grenzwert der Folge der
+Differentialquotienten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f'(2)
+&amp;= \lim_{x_2 \to 2} \frac{f(x_2) - f(2)}{x_2 - 2} = \\
+&amp;= \lim_{x_2 \to 2} \frac{x_2^2 - 4}{x_2 - 2} = \\
+&amp;= \lim_{x_2 \to 2} \frac{(x_2 - 2) \cdot (x_2 + 2)}{x_2 - 2} = \\
+&amp;= \lim_{x_2 \to 2} x_2 + 2 = \\
+&amp;= 4.
+\end{align*}\]</div>
+<p>Jetzt verallgemeinern wir die Grenzwertbildung auf beliebige Stellen
+<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>. Die Vorgehensweise zur Berechnung des Grenzwertes bleibt dabei
+gleich:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f'(x)
+&amp;= \lim_{x_2 \to x} \frac{f(x_2) - f(x)}{x_2 - x} = \\
+&amp;= \lim_{x_2 \to x} \frac{x_2^2 - x^2}{x_2 - x} = \\
+&amp;= \lim_{x_2 \to x} \frac{(x_2 - x) \cdot (x_2 + x)}{x_2 - x} = \\
+&amp;= \lim_{x_2 \to x} x_2 + x = \\
+&amp;= 2x.
+\end{align*}\]</div>
+<p>Wir haben also zu jeder Stelle <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span> einen Wert für die Ableitung
+<span class="math notranslate nohighlight">\(f'(x)\)</span> an dieser Stelle gefunden, nämlich <span class="math notranslate nohighlight">\(f'(x) = 2x\)</span>. Damit ist <span class="math notranslate nohighlight">\(f'\)</span> eine
+Funktion, denn jedem x-Wert wird eindeutig ein y-Wert f’(x) zugeordnet. Diese
+Erkenntnis klingt erst einmal banal, hilft ungemein bei der konkreten Berechnung
+von Ableitungen. Für häufig vorkommene Funktionen sind deren
+Ableitungsfunktionen in Tabellen hinterlegt. Und wie wir in den nächsten
+Abschnitten sehen werden, können viele komplizierte Funktionen aus einfachen
+Grundfunktionen zusammengesetzt werden. Kennen wir die Ableitungsfunktionen der
+Grundfunktionen, können wir so wieder die Ableitungsfunktion der komplizierten
+Funktion zusammensetzen.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Ableitungsfunktion?</p>
+<p>Wenn für eine Funktion <span class="math notranslate nohighlight">\(f\)</span> an jeder Stelle ihrer Definitionsmenge die Ableitung
+existiert, kann eine neue Funktion gebildet werden, die jedes <span class="math notranslate nohighlight">\(x\)</span> aus der
+Definitionsmenge auf die Ableitung <span class="math notranslate nohighlight">\(f'(x)\)</span> abbildet. Diese Funktion <span class="math notranslate nohighlight">\(f'\)</span> wird
+Ableitungsfunktion von <span class="math notranslate nohighlight">\(f\)</span> genannt.</p>
+</div>
+</section>
+<section id="ableitungen-von-wichtigen-grundfunktionen">
+<h2>Ableitungen von wichtigen Grundfunktionen<a class="headerlink" href="#ableitungen-von-wichtigen-grundfunktionen" title="Link to this heading">#</a></h2>
+<p>Eine <strong>konstante Funktion</strong> ist besonders leicht abzuleiten, denn die Ableitung
+ist an jeder Stelle Null:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=C \Rightarrow f'(x)=0.\]</div>
+<p>Beispiel:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 5 \Rightarrow f'(x) = 0.\]</div>
+<p>Die Ableitung einer Potenzfunktion ergibt wieder eine Potenzfunktion, allerdings
+wird der Exponent um Eins verringert und der alte Exponent wird ein neuer
+Vorfaktor. Für natürliche Exponenten <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> lautet die
+Ableitung:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^{n} \Rightarrow f'(x)=n\cdot x^{n-1}.\]</div>
+<p>Die Wurzelfunktion ist etwas schwieriger abzuleiten.</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\sqrt{x} \Rightarrow f'(x)=\frac{1}{2\sqrt{x}}.\]</div>
+<p>Tatsächlich kann die Wurzelfunktion auch als Potenzfunktion interpretiert
+werden, also <span class="math notranslate nohighlight">\(\sqrt{x} = x^{\frac{1}{2}}\)</span>. Für Potenzfunktionen, bei denen der
+Exponent ein Bruch oder gar eine reelle Zahl ist, gelten dieselben
+Ableitungsregeln wie für Potenzfunktionen mit natürlichem Expoenten. Die einzige
+Einschränkung dabei ist, dass <span class="math notranslate nohighlight">\(x\)</span> positiv sein muss.</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x^{r} \Rightarrow f'(x) = r\cdot x^{r-1}, \quad x &gt;0.\]</div>
+<p>Mit diesem Wissen kann die Ableitung der Wurzelfunktion auch folgendermaßen
+berechnet werden:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x^{\frac{1}{2}} \Rightarrow f'(x) = \frac{1}{2} x^{-\frac{1}{2}} = \frac{1}{2} \frac{1}{x^{\frac{1}{2}}} = \frac{1}{2}\frac{1}{\sqrt{x}}.\]</div>
+<p>Die Liste der Ableitungen der trigonometrischen Funktionen lautet:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f(x)=\sin(x) &amp;\Rightarrow f'(x)=\cos(x) \\
+f(x)=\cos(x) &amp;\Rightarrow f'(x)=-\sin(x) \\
+f(x)=\tan(x) &amp;\Rightarrow f'(x)=\frac{1}{\cos^2(x)} \\
+f(x)=\cot(x) &amp;\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\
+\end{align*}\]</div>
+<p>Am einfachsten lässt sich die Exponentialfunktion ableiten, sie bleibt sie
+selbst.</p>
+<div class="math notranslate nohighlight">
+\[f(x)=e^{x}=\exp(x) \Rightarrow f'(x)=e^{x}=\exp(x).\]</div>
+<p>Zum Abschluss der Liste mit den wichtigsten Ableitungsfunktionen notieren wir
+noch die Ableitung der Logarithmsfunktion:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\ln(x) \Rightarrow f'(x)=\frac{1}{x}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video zu “Wichtige Ableitungen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jf7-EVLjpZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+</details><blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/e-funktion-ableiten-1850">Studyflix: Exponentialfunktion ableiten</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/ln-ableiten-1851">Studyflix: Logarithmusfunktion ableiten</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/ableitung-sinus-1852">Studyflix: Sinusfunktion ableiten</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/ableitung-cosinus-1853">Studyflix: Kosinusfunktion ableiten</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/ableitung-tangens-1854">Studyflix: Tangensfunktion ableiten</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/ableitung-1-x-6523">Studyflix: 1/x ableiten</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/wurzel-ableiten-1849">Studyflix: Wuzel ableiten</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Kennen wir die Ableitungen von elementaren Grundfunktionen, können wir oft
+Ableitungen von komplizierteren Funktionen aus diesen zusammensetzen. Wie das
+funktioniert, sehen wir im nächsten Kapitel.</p>
 </section>
 </section>
 
@@ -572,7 +681,7 @@ f(x)=\cot(x) &amp;\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Steigung und Differentialquotient</p>
+        <p class="prev-next-title">10.1 Ableitungen</p>
       </div>
     </a>
     <a class="right-next"
@@ -580,7 +689,7 @@ f(x)=\cot(x) &amp;\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Videos Faktor-, Summen- und Produktregel</p>
+        <p class="prev-next-title">10.3 Faktor-, Summen- und Produktregel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -601,7 +710,9 @@ f(x)=\cot(x) &amp;\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ableitungsfunktion">Die Ableitungsfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungen-von-wichtigen-grundfunktionen">Ableitungen von wichtigen Grundfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
