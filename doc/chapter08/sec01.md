@@ -216,13 +216,13 @@ wird. Dieser Teil der komplexen Zahl wird **Imaginärteil** genannt.
 $$z = 2 + 3\mathrm{i}$$
 
 hat den Realteil $2$ und den Imaginärteil $3$. In der Gaußschen Zahlenebene wird
-$z = 3+2\mathrm{i}$ als Punkt $(2,3)$ notiert.
+$z = 2+3\mathrm{i}$ als Punkt $(2,3)$ notiert.
 
 **Beispiel 2:** Die komplexe Zahl
 
 $$z = -\frac{5}{2} - \sqrt{3}\mathrm{i}$$
 
-hat den Realteil $-\frac{5}{2}$ und den Imaginärteil $\sqrt{3}$. In der
+hat den Realteil $-\frac{5}{2}$ und den Imaginärteil $-\sqrt{3}$. In der
 Gaußschen Zahlenebene wird $z = -\frac{5}{2} - \sqrt{3}\mathrm{i}$ als Punkt
 $(-\frac{5}{2},-\sqrt{3})$ notiert.
 
@@ -252,7 +252,7 @@ und
 
 $$\mathrm{Re}\left(-\frac{5}{2} - \sqrt{3}\mathrm{i}\right) = -\frac{5}{2}
 \; \text{ und } \;
-\mathrm{Im}\left(\frac{5}{2} - \sqrt{3}\mathrm{i}\right) = -\sqrt{3}.$$
+\mathrm{Im}\left(-\frac{5}{2} - \sqrt{3}\mathrm{i}\right) = -\sqrt{3}.$$
 
 Das folgende Video fasst die oben eingeführten Begriffe zusammen.
 
