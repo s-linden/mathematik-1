@@ -1,3 +1,3 @@
-# In Arbeit: Integralrechnung
+# In Arbeit: Anwendung Differentialrechnung
 
-Und hier kommt die Integralrechnung!
+Und hier kommen die Anwendungen der Differentialrechnung!

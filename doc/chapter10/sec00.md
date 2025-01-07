@@ -1,7 +1,7 @@
-# 10. Differentialrechnung (Teil 1)
+# 10. Differentialrechnung
 
-In dieser Woche lernen wir zunächst, was eine Ableitung ist. In der nächsten
-Woche werden wir dann Ableitungen anwenden.
+In dieser Woche lernen wir zunächst, was eine Ableitung ist. Später werden wir
+dann Ableitungen anwenden.
 
 Themen:
 

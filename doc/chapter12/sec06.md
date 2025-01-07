@@ -1,4 +1,4 @@
-# Videos Substitutionsregel und partielle Integration
+# Videos Wendepunkte
 
 ```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
 :class: warning
@@ -9,58 +9,16 @@ Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele auf
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können die **Substitutionsregel** anwenden:
-
-$$\int f(u(x)) \cdot u'(x)\; dx = \int f(u) \; du.$$
-
-* Sie können Funktionen teilweise integrieren. Das nennt man auch **partielle Integration**:
-
-$$\int f(x)\cdot g'(x) \; dx = f(x)\cdot g(x) - \int f'(x)\cdot g(x) \; dx.$$ 
+* Sie wissen, was ein **Wendepunkt** ist.
+* Sie kennen die Bedingungen, unter denen eine Funktion einen Wendepunkt hat.
+* Sie wissen, was ein **Sattelpunkt/Terassenpunkt** ist.
+* Sie wissen, was ein **globales Minimum** oder ein **globales Maximum** ist.
+* Sie wissen, dass jede stetige Funktion auf einem abgeschlossenen Intervall $[a,b]$ ein globales Minimum und ein globales Maximum hat. Es kann jedoch mehrere Stellen geben, an denen die Funktion den minimalen und den maximalen Funktionswert annimmt.
 ```
 
 ## Videos
 
 ```{admonition} Video
 :class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t-V6tY5XHqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AWN01OjmgWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rKGlE4av4-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lUstL3M42Ec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
