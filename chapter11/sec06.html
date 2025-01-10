@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Substitutionsregel und partielle Integration &#8212; Mathematik 1 Maschinenbau</title>
+    <title>11.6 Integralfunktionen und das uneigentliche Intgeral &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -65,7 +65,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="In Arbeit: Anwendung Differentialrechnung" href="../chapter12/sec00.html" />
-    <link rel="prev" title="Videos Integrationstechnik" href="sec05.html" />
+    <link rel="prev" title="11.5 Integration durch Substitution" href="sec05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -287,13 +287,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">Videos Integration als Umkehrung der Differentiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Bestimmtes Integral und Rechenregeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Unbestimmtes Integral bzw. Stammfunktion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Hauptsatz der Differential- und Integralrechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Integrationstechnik</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Substitutionsregel und partielle Integration</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">11. Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">11.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">11.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">11.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec04.html">11.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec05.html">11.5 Integration durch Substitution</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.6 Integralfunktionen und das uneigentliche Intgeral</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/sec00.html">In Arbeit: Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Substitutionsregel und partielle Integration</h1>
+    <h1>11.6 Integralfunktionen und das uneigentliche Intgeral</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,7 +469,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-die-integralfunktion">Was ist die Integralfunktion?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uneigentliche-integrale">Uneigentliche Integrale</a></li>
 </ul>
             </nav>
         </div>
@@ -481,66 +482,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-substitutionsregel-und-partielle-integration">
-<h1>Videos Substitutionsregel und partielle Integration<a class="headerlink" href="#videos-substitutionsregel-und-partielle-integration" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="integralfunktionen-und-das-uneigentliche-intgeral">
+<h1>11.6 Integralfunktionen und das uneigentliche Intgeral<a class="headerlink" href="#integralfunktionen-und-das-uneigentliche-intgeral" title="Link to this heading">#</a></h1>
+<p>Das bestimmte Intgeral liefert eine Zahl. Wir können das bestimmte Integral auch
+dazu nutzen, eine neue Funktion einzuführen, indem wir die untere Grenze auf
+einen festen Wert setzen und die obere Grenze als Variable betrachten. Damit
+erhalten wir die sogenannte Integralfunktion.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können die <strong>Substitutionsregel</strong> anwenden:</p></li>
+<li><p>Sie wissen, was eine <strong>Integralfunktion</strong> ist.</p></li>
+<li><p>Sie kennen <strong>uneigentliche Intgerale</strong>.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\int f(u(x)) \cdot u'(x)\; dx = \int f(u) \; du.\]</div>
-<ul class="simple">
-<li><p>Sie können Funktionen teilweise integrieren. Das nennt man auch <strong>partielle Integration</strong>:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int f(x)\cdot g'(x) \; dx = f(x)\cdot g(x) - \int f'(x)\cdot g(x) \; dx.\]</div>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t-V6tY5XHqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AWN01OjmgWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rKGlE4av4-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+<section id="was-ist-die-integralfunktion">
+<h2>Was ist die Integralfunktion?<a class="headerlink" href="#was-ist-die-integralfunktion" title="Link to this heading">#</a></h2>
+<p>Wenn wir einen Punkt <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span> festlegen, dann ist das bestimmte Integral</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{x} f(t)\, dt\]</div>
+<p>eine Funktion, denn für jeden Wert <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span> wird durch diese Vorschrift
+ein Funktionswert</p>
+<div class="math notranslate nohighlight">
+\[I_{a}(x) = \int_{a}^{x} f(t)\, dt\]</div>
+<p>erzeugt. Wichtig dabei ist, dass die untere Grenze <span class="math notranslate nohighlight">\(a\)</span> festgelegt ist. Diese
+Funktion wird <strong>Integralfunktion</strong> genannt.</p>
+<p>Weitere Informationen finden Sie hier:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://studyflix.de/mathematik/integralfunktion-6480">https://studyflix.de/mathematik/integralfunktion-6480</a></p>
+</div></blockquote>
+</section>
+<section id="uneigentliche-integrale">
+<h2>Uneigentliche Integrale<a class="headerlink" href="#uneigentliche-integrale" title="Link to this heading">#</a></h2>
+<p>Uneigentliche Integrale treten auf, wenn ein Integral entweder eine oder zwei
+unendliche Grenzen hat oder wenn der Integran unstetig ist. Das uneigentliche
+Integral ist eine Erweiterung des bestimmten Integrals und erlaubt die Analyse
+von Flächeninhalten oder Summen, die auf den ersten Blick divergieren könnten.</p>
+<p>Wir gehen jetzt davon aus, dass <span class="math notranslate nohighlight">\(f\)</span> eine Funktion ist, die auf jedem Intervall
+<span class="math notranslate nohighlight">\([a,b]\)</span> mit <span class="math notranslate nohighlight">\(b\in (a,\infty)\)</span> definiert ist. Wenn der Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\lim_{t \to b}\int_{a}^{t} f(x)\, dx\]</div>
+<p>existiert, dann nennt man</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{\infty} f(x)\, dx = \lim_{t \to b}\int_{a}^{t} f(x)\, dx\]</div>
+<p>das uneigentliche Integral von <span class="math notranslate nohighlight">\(f\)</span> über <span class="math notranslate nohighlight">\([a,\infty)\)</span>.</p>
+<p>Falls die untere Grenze unendlich sein sollte, wird analog vorgegangen. Ebenso
+wird das Integral über einen Grenzwert definiiert, wenn der Integrand ein
+einzelnen Stellen unstetig sein sollte.</p>
+<p>Weitere Informationen finden Sie hier:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://studyflix.de/mathematik/uneigentliche-integrale-1806">https://studyflix.de/mathematik/uneigentliche-integrale-1806</a></p>
+</div></blockquote>
 </section>
 </section>
 
@@ -580,7 +574,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Integrationstechnik</p>
+        <p class="prev-next-title">11.5 Integration durch Substitution</p>
       </div>
     </a>
     <a class="right-next"
@@ -609,7 +603,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-die-integralfunktion">Was ist die Integralfunktion?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uneigentliche-integrale">Uneigentliche Integrale</a></li>
 </ul>
   </nav></div>
 

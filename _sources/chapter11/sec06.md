@@ -1,66 +1,58 @@
-# Videos Substitutionsregel und partielle Integration
+# 11.6 Integralfunktionen und das uneigentliche Intgeral
 
-```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
-:class: warning
-Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.
-```
+Das bestimmte Intgeral liefert eine Zahl. Wir können das bestimmte Integral auch
+dazu nutzen, eine neue Funktion einzuführen, indem wir die untere Grenze auf
+einen festen Wert setzen und die obere Grenze als Variable betrachten. Damit
+erhalten wir die sogenannte Integralfunktion.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können die **Substitutionsregel** anwenden:
-
-$$\int f(u(x)) \cdot u'(x)\; dx = \int f(u) \; du.$$
-
-* Sie können Funktionen teilweise integrieren. Das nennt man auch **partielle Integration**:
-
-$$\int f(x)\cdot g'(x) \; dx = f(x)\cdot g(x) - \int f'(x)\cdot g(x) \; dx.$$ 
+* Sie wissen, was eine **Integralfunktion** ist.
+* Sie kennen **uneigentliche Intgerale**.
 ```
 
-## Videos
+## Was ist die Integralfunktion?
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+Wenn wir einen Punkt $a\in\mathbb{R}$ festlegen, dann ist das bestimmte Integral
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+$$\int_{a}^{x} f(t)\, dt$$
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+eine Funktion, denn für jeden Wert $x\in\mathbb{R}$ wird durch diese Vorschrift
+ein Funktionswert
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+$$I_{a}(x) = \int_{a}^{x} f(t)\, dt$$
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+erzeugt. Wichtig dabei ist, dass die untere Grenze $a$ festgelegt ist. Diese
+Funktion wird **Integralfunktion** genannt.
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+Weitere Informationen finden Sie hier:
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t-V6tY5XHqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+> [https://studyflix.de/mathematik/integralfunktion-6480](https://studyflix.de/mathematik/integralfunktion-6480)
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AWN01OjmgWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+## Uneigentliche Integrale
 
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rKGlE4av4-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+Uneigentliche Integrale treten auf, wenn ein Integral entweder eine oder zwei
+unendliche Grenzen hat oder wenn der Integran unstetig ist. Das uneigentliche
+Integral ist eine Erweiterung des bestimmten Integrals und erlaubt die Analyse
+von Flächeninhalten oder Summen, die auf den ersten Blick divergieren könnten.
+
+Wir gehen jetzt davon aus, dass $f$ eine Funktion ist, die auf jedem Intervall
+$[a,b]$ mit $b\in (a,\infty)$ definiert ist. Wenn der Grenzwert
+
+$$\lim_{t \to b}\int_{a}^{t} f(x)\, dx$$
+
+existiert, dann nennt man
+
+$$\int_{a}^{\infty} f(x)\, dx = \lim_{t \to b}\int_{a}^{t} f(x)\, dx$$
+
+das uneigentliche Integral von $f$ über $[a,\infty)$.
+
+Falls die untere Grenze unendlich sein sollte, wird analog vorgegangen. Ebenso
+wird das Integral über einen Grenzwert definiiert, wenn der Integrand ein
+einzelnen Stellen unstetig sein sollte.
+
+Weitere Informationen finden Sie hier:
+
+> [https://studyflix.de/mathematik/uneigentliche-integrale-1806](https://studyflix.de/mathematik/uneigentliche-integrale-1806)

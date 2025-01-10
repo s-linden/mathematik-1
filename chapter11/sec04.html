@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Hauptsatz der Differential- und Integralrechnung &#8212; Mathematik 1 Maschinenbau</title>
+    <title>11.4 Partielle Integration &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -64,8 +64,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Videos Integrationstechnik" href="sec05.html" />
-    <link rel="prev" title="Videos Unbestimmtes Integral bzw. Stammfunktion" href="sec03.html" />
+    <link rel="next" title="11.5 Integration durch Substitution" href="sec05.html" />
+    <link rel="prev" title="11.3 Eigenschaften von Integralen" href="sec03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -287,13 +287,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">Videos Integration als Umkehrung der Differentiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Bestimmtes Integral und Rechenregeln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Unbestimmtes Integral bzw. Stammfunktion</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Hauptsatz der Differential- und Integralrechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Integrationstechnik</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Substitutionsregel und partielle Integration</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">11. Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">11.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">11.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">11.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec05.html">11.5 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec06.html">11.6 Integralfunktionen und das uneigentliche Intgeral</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/sec00.html">In Arbeit: Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Hauptsatz der Differential- und Integralrechnung</h1>
+    <h1>11.4 Partielle Integration</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,7 +469,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrieren-von-produkten">Integrieren von Produkten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-partielle-integration">Beispiel für partielle Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
 </ul>
             </nav>
         </div>
@@ -481,30 +483,92 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-hauptsatz-der-differential-und-integralrechnung">
-<h1>Videos Hauptsatz der Differential- und Integralrechnung<a class="headerlink" href="#videos-hauptsatz-der-differential-und-integralrechnung" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="partielle-integration">
+<h1>11.4 Partielle Integration<a class="headerlink" href="#partielle-integration" title="Link to this heading">#</a></h1>
+<p>Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
+jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:</p>
+<div class="math notranslate nohighlight">
+\[\left( u(x)\cdot v(x)\right)^{\prime} = u^{\prime}(x)\cdot v(x) +
+u(x)\cdot v^{\prime}(x).\]</div>
+<p>Da Integration die Umkehrung der Ableitung ist, dürfen Produkte auch nicht
+einfach so integriert werden. Dafür gibt es die Produktregel für Integrale, die
+offiziell <strong>partielle Integration</strong> heißt.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie kennen den <em>Hauptsatz der Differential- und Integralrechnung</em>: Das bestimmte Integral einer Funktion <span class="math notranslate nohighlight">\(f\)</span> kann durch eine Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> berechnet werden:</p></li>
-</ul>
+<p>Sie können ein Produkt von zwei Funktionen <span class="math notranslate nohighlight">\(u\cdot v\)</span> mit der partiellen
+Integrationsregel im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> integrieren:</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\, dx = \big[ F(x) \big]_{a}^{b} = F(b) - F(b).\]</div>
+\[\int_{a}^{b} u(x) \cdot
+v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.\]</div>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QzDdSbLt7bE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+<section id="integrieren-von-produkten">
+<h2>Integrieren von Produkten<a class="headerlink" href="#integrieren-von-produkten" title="Link to this heading">#</a></h2>
+<p>Die partielle Integration kann durch folgende Formel ausgedrückt werden:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.\]</div>
+<p>Hierbei sind <span class="math notranslate nohighlight">\(u(x)\)</span> und <span class="math notranslate nohighlight">\(v(x)\)</span> zwei Funktionen, deren Produkt integriert werden
+soll, und <span class="math notranslate nohighlight">\(u'(x)\)</span> und <span class="math notranslate nohighlight">\(v'(x)\)</span> sind die Ableitungen von <span class="math notranslate nohighlight">\(u(x)\)</span> und <span class="math notranslate nohighlight">\(v(x)\)</span>.</p>
 </section>
+<section id="beispiel-fur-partielle-integration">
+<h2>Beispiel für partielle Integration<a class="headerlink" href="#beispiel-fur-partielle-integration" title="Link to this heading">#</a></h2>
+<p>Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
+Integrals</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.\]</div>
+<p>Als erstes müssen wir auswählen, welche Funktion <span class="math notranslate nohighlight">\(u\)</span> sein soll und was <span class="math notranslate nohighlight">\(v\)</span>. Wir wählen</p>
+<div class="math notranslate nohighlight">
+\[u(x)=2x \quad \text{ und } \quad v'(x)=\sin(x).\]</div>
+<p>Dann werden in einer Nebenrechnung die Ableitung <span class="math notranslate nohighlight">\(u^{\prime}\)</span> von <span class="math notranslate nohighlight">\(u\)</span> und eine
+Stammfunktion <span class="math notranslate nohighlight">\(v\)</span> von <span class="math notranslate nohighlight">\(v^{\prime}\)</span> ausgerechnet:</p>
+<div class="math notranslate nohighlight">
+\[u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).\]</div>
+<p>Das wird alles in die obige Formel eingesetzt:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
+\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.\]</div>
+<p>Das bestimmte Integral <span class="math notranslate nohighlight">\(\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}\)</span>
+können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
+<span class="math notranslate nohighlight">\(\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx\)</span>, das noch weiter ausgerechnet werden
+muss.</p>
+<p>Aber das geht jetzt relativ leicht, denn von der Funktion <span class="math notranslate nohighlight">\(v(x)=-\cos(x)\)</span> kennen wir ebenfalls eine Stammfunktion, nämlich <span class="math notranslate nohighlight">\(V(x)=-\sin(x)\)</span>. Daher ist <span class="math notranslate nohighlight">\(\int_{0}^{\pi} 2
+\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}\)</span> und insgesamt gilt dann:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
+\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.\]</div>
+<p>Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
+Ergebnis ist</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.\]</div>
+<p>Achtung: Hätten wir eine andere Wahl getroffen, nämlich</p>
+<div class="math notranslate nohighlight">
+\[u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,\]</div>
+<p>dann wäre die Suche nach der Stammfunktion von <span class="math notranslate nohighlight">\(v'\)</span> zwar einfacher gelaufen (das
+wäre <span class="math notranslate nohighlight">\(v(x)=x^2\)</span> gewesen), aber insgesamt wäre es zu kompliziert, denn wir hätten</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[\sin(x)\cdot x^2 \big]_{0}^{\pi} -
+\int_{0}^{\pi} \cos(x)\cdot x^2 \, dx.\]</div>
+<p>Das letzte Integral kann nicht gelöst werden.</p>
+</section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Link to this heading">#</a></h2>
+<p>Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
+wird und an Beispielen vorgeführt wird.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Partielle Integration: Rechenregel” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Partielle Intgeration: Beispiele” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -543,7 +607,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Videos Unbestimmtes Integral bzw. Stammfunktion</p>
+        <p class="prev-next-title">11.3 Eigenschaften von Integralen</p>
       </div>
     </a>
     <a class="right-next"
@@ -551,7 +615,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Videos Integrationstechnik</p>
+        <p class="prev-next-title">11.5 Integration durch Substitution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -572,7 +636,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrieren-von-produkten">Integrieren von Produkten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-partielle-integration">Beispiel für partielle Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
 </ul>
   </nav></div>
 
