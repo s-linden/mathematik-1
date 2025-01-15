@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Linearisierung &#8212; Mathematik 1 Maschinenbau</title>
+    <title>12.1 Linearisierung &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -65,7 +65,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Videos Regel von Bernoulli de l’Hospital" href="sec02.html" />
-    <link rel="prev" title="In Arbeit: Anwendung Differentialrechnung" href="sec00.html" />
+    <link rel="prev" title="12. Anwendung Differentialrechnung" href="sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -296,8 +296,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/sec06.html">11.6 Integralfunktionen und das uneigentliche Intgeral</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">In Arbeit: Anwendung Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Linearisierung</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">12. Anwendung Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.1 Linearisierung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">Videos Regel von Bernoulli de l’Hospital</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Neigungswinkel / Schnittwinkel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Monotonie und Krümmung</a></li>
@@ -458,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Linearisierung</h1>
+    <h1>12.1 Linearisierung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,7 +469,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idee-der-linearisierung">Idee der Linearisierung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangentenansatz">Tangentenansatz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel">Beispiel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -481,30 +484,111 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-linearisierung">
-<h1>Videos Linearisierung<a class="headerlink" href="#videos-linearisierung" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="linearisierung">
+<h1>12.1 Linearisierung<a class="headerlink" href="#linearisierung" title="Link to this heading">#</a></h1>
+<p>Die Welt, in der wir leben, ist selten linear. Dennoch können wir viele Prozesse
+in einer ersten Näherung als linear behandeln. In diesem Kapitel beschäftigen
+wir uns daher mit der Linearisierung von nichtlinearen Funktionen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie wissen, dass eine nichtlineare Funktion <strong>linearisiert</strong> werden kann. Damit ist gemeint, dass die nichtlineare Funktion <span class="math notranslate nohighlight">\(y=f(x)\)</span> näherungsweise durch die lineare Funktion</p></li>
-</ul>
+<p>Sie wissen, dass eine nichtlineare Funktion <strong>linearisiert</strong> werden kann. Damit
+ist gemeint, dass die nichtlineare Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>
+näherungsweise durch die lineare Funktion</p>
 <div class="math notranslate nohighlight">
-\[y = f'(x_0)\cdot (x-x_0) + y_0\]</div>
-<p>ersetzt werden kann. Das stimmt nur in der Nähe des sogenannten <strong>Arbeitspunktes</strong> <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>.</p>
+\[T(x) = f(x_0) + f'(x_0)\cdot (x-x_0)\]</div>
+<p>ersetzt werden kann. Das stimmt nur in der Nähe des sogenannten
+<strong>Arbeitspunktes</strong> <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span>.</p>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9-sYXAkbJQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section id="idee-der-linearisierung">
+<h2>Idee der Linearisierung<a class="headerlink" href="#idee-der-linearisierung" title="Link to this heading">#</a></h2>
+<p>Die Kernidee der Linearisierung liegt in der Annäherung einer Funktion durch
+eine lineare Funktion an einem bestimmten Punkt. Die folgende Grafik zeigt, wie
+die nichtlineare Exponentialfunktion <span class="math notranslate nohighlight">\(f(x) = \exp(x)\)</span> in dem Punkt <span class="math notranslate nohighlight">\((0, 1)\)</span>
+durch die lineare Funktion</p>
+<div class="math notranslate nohighlight">
+\[T(x) = x + 1\]</div>
+<p>angenähert wird. In der Mathematik sagt man auch, die Exponentialfunktion wird
+in dem Punkt <span class="math notranslate nohighlight">\((0, 1)\)</span> durch die lineare Funktion <strong>approximiert</strong>.</p>
+<figure class="align-default" id="exp-e">
+<a class="reference internal image-reference" href="../_images/Exp_e.svg"><img alt="../_images/Exp_e.svg" src="../_images/Exp_e.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Quelle: Von Marcel Marnitz, reworked by user:Georg-Johann - Selbst erstellt (own work using GeoGebra),
+completely reworked 2010-08-22, Gemeinfrei, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=5905583">https://commons.wikimedia.org/w/index.php?curid=5905583</a></span><a class="headerlink" href="#exp-e" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Im Folgenden beschreiben wir, wie man auf die Funktionsgleichung der linearen Funktion kommt.</p>
+</section>
+<section id="tangentenansatz">
+<h2>Tangentenansatz<a class="headerlink" href="#tangentenansatz" title="Link to this heading">#</a></h2>
+<p>Der Tangentenansatz ist eine wichtige Methode zur Linearisierung von
+eindimensionalen Funktionen. Er wird für Funktionen verwendet, die abgeleitet
+werden können. Der Tangentenansatz basiert auf der Idee, dass eine Funktion in
+der Nähe eines bestimmten Punktes durch ihre Tangente genähert werden kann.</p>
+<p>Geometrisch betrachtet ist die Tangente an einer Funktion die gerade Linie, die
+die Funktion in dem Arbeitspunkt <span class="math notranslate nohighlight">\((x_0, f(x_0)\)</span> berührt und deren Steigung
+<span class="math notranslate nohighlight">\(f'(x_0)\)</span> entspricht. Generell hat die Gerade die Funktionsgleichung</p>
+<div class="math notranslate nohighlight">
+\[y = m\cdot x + b\]</div>
+<p>mit der Steigung <span class="math notranslate nohighlight">\(m\)</span> und dem y-Achsenabschnitt <span class="math notranslate nohighlight">\(b\)</span>. Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span>
+differenzierbar ist, stimmt die Steigung der Tangente mit der ersten Ableitung
+<span class="math notranslate nohighlight">\(f'(x_0)\)</span> über ein, es gilt also <span class="math notranslate nohighlight">\(m = f'(x_0)\)</span>. Jetzt setzen wir den Punkt
+<span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> in die Geradengleichung <span class="math notranslate nohighlight">\(y = m\cdot x + b\)</span> ein und erhalten für
+<span class="math notranslate nohighlight">\(b\)</span> den Term <span class="math notranslate nohighlight">\(f(x_0) - f'(x_0)\cdot x_0\)</span>. Somit lässt sich die
+Funktionsvorschrift der Tangente schreiben als</p>
+<div class="math notranslate nohighlight">
+\[T(x) = f(x_0) + f'(x_0) \cdot (x - x_0).\]</div>
+<p>In der Nähe dieses Punktes liegt die Tangente sehr nah an der Funktion und
+bietet somit eine einfache lineare Beschreibung des ursprünglich nichtlinearen
+Verhaltens.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Tangentenfunktion” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9-sYXAkbJQQ"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="beispiel">
+<h2>Beispiel<a class="headerlink" href="#beispiel" title="Link to this heading">#</a></h2>
+<p>Linearisiere die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> im Punkt <span class="math notranslate nohighlight">\(x_0 = \frac{\pi}{4}\)</span>.</p>
+<p>Als erstes bestimmen wir den Funktionswert an der Stelle <span class="math notranslate nohighlight">\(x_0 = \frac{\pi}{4}\)</span>.
+Es gilt</p>
+<div class="math notranslate nohighlight">
+\[f(x_0)= f\left(\frac{\pi}{4}\right) = \sin\left(\frac{\pi}{4} \right) =
+\frac{\sqrt{2}}{2}.\]</div>
+<p>Als zweites berechnen wir die Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = \cos(x).\]</div>
+<p>Der Wert der Ableitung an der Stelle <span class="math notranslate nohighlight">\(x_0 = \frac{\pi}{4}\)</span> ist</p>
+<div class="math notranslate nohighlight">
+\[f'\left(\frac{\pi}{4}\right) = \cos\left(\frac{\pi}{4}\right) =
+\frac{\sqrt{2}}{2}.\]</div>
+<p>Eingesetzt in die Tangentenfunktion</p>
+<div class="math notranslate nohighlight">
+\[T(x) = f(x_0) + f'(x_0) \cdot (x - x_0)\]</div>
+<p>erhalten wir somit die Linearisierung von <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span></p>
+<div class="math notranslate nohighlight">
+\[T(x) = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} \cdot \left(x -
+\frac{\pi}{4}\right).\]</div>
+<p>Diese Funktionsvorschrift können wir noch zur</p>
+<div class="math notranslate nohighlight">
+\[T(x) = \frac{\sqrt{2}}{2} \cdot x - \frac{\sqrt{2}\pi}{8} +
+\frac{\sqrt{2}}{2}\]</div>
+<p>vereinfachen. Die folgende Grafik zeigt die Sinusfunktion und ihre
+Linearisierung im Arbeitspunkt <span class="math notranslate nohighlight">\((\frac{\pi}{4}, \frac{\sqrt{2}}{2})\)</span>.</p>
+<figure class="align-default" id="tangente-sinus">
+<a class="reference internal image-reference" href="../_images/tangente_sinus.svg"><img alt="../_images/tangente_sinus.svg" src="../_images/tangente_sinus.svg" width="75%" /></a>
+</figure>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In der Mathematik 2 werden wir lernen, wir wir beispielsweise eine quadratische
+Funktion an eine Funktion <span class="math notranslate nohighlight">\(f\)</span> annähern. Allgemein können beliebige Polynome
+benutzt werden, um eine Funktion au approximieren. Diese Polynome heißen
+Taylorpolynome.</p>
 </section>
 </section>
 
@@ -544,7 +628,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">In Arbeit: Anwendung Differentialrechnung</p>
+        <p class="prev-next-title">12. Anwendung Differentialrechnung</p>
       </div>
     </a>
     <a class="right-next"
@@ -573,7 +657,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idee-der-linearisierung">Idee der Linearisierung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangentenansatz">Tangentenansatz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel">Beispiel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
