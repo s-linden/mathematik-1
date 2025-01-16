@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Regel von Bernoulli de l’Hospital &#8212; Mathematik 1 Maschinenbau</title>
+    <title>12.2 Regel von Bernoulli-de L’Hospital &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
@@ -298,7 +298,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">12. Anwendung Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sec01.html">12.1 Linearisierung</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Regel von Bernoulli de l’Hospital</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.2 Regel von Bernoulli-de L’Hospital</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">Videos Neigungswinkel / Schnittwinkel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">Videos Monotonie und Krümmung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">Videos Extrema</a></li>
@@ -458,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Regel von Bernoulli de l’Hospital</h1>
+    <h1>12.2 Regel von Bernoulli-de L’Hospital</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,7 +469,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele">Beispiele</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-1-lim-x-to-0-frac-sin-x-x">Beispiel 1: <span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{\sin(x)}{x}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-2-lim-x-to-infty-frac-ln-x-x">Beispiel 2: <span class="math notranslate nohighlight">\(\lim_{x \to \infty} \frac{\ln(x)}{x}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mehrfaches-anwenden-der-regel">Mehrfaches Anwenden der Regel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -481,29 +488,114 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-regel-von-bernoulli-de-lhospital">
-<h1>Videos Regel von Bernoulli de l’Hospital<a class="headerlink" href="#videos-regel-von-bernoulli-de-lhospital" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="regel-von-bernoulli-de-lhospital">
+<h1>12.2 Regel von Bernoulli-de L’Hospital<a class="headerlink" href="#regel-von-bernoulli-de-lhospital" title="Link to this heading">#</a></h1>
+<p>Die Regel von Bernoulli-de L’Hospital erlaubt die Berechnung von
+Funktionsgrenzwerten der Form <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> oder <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span>. Oft
+wird auch nur der kürzere Name Regel von L’Hospital verwendet.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können die Regel von Bernoulli-de l’Hospital anwenden, um Grenzwerte auszurechnen.</p></li>
-<li><p>Sie wissen, dass sich die Sinusfunktion für kleine Werte <span class="math notranslate nohighlight">\(x\)</span> wie <span class="math notranslate nohighlight">\(x\)</span> selbst verhält, also <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0} \frac{\sin(x)}{x} = 1.\)</span></p></li>
-<li><p>Sie können das asymptotische Verhalten von Exponential- und Potenzfunktionen abschätzen. Für große <span class="math notranslate nohighlight">\(x\)</span> wächst die Exponentialfunktion schneller als jede Potenzfunktion und damit auch schneller als jedes Polynom.</p></li>
+<li><p>Sie können die Regel von Bernoulli-de L’Hospital anwenden, um Grenzwerte
+auszurechnen.</p></li>
+<li><p>Sie wissen, dass sich die Sinusfunktion für kleine Werte <span class="math notranslate nohighlight">\(x\)</span> wie <span class="math notranslate nohighlight">\(x\)</span> selbst
+verhält, also <span class="math notranslate nohighlight">\(\lim_{x\rightarrow 0} \frac{\sin(x)}{x} = 1.\)</span></p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qmfHgIBL-Jk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section id="id1">
+<h2>Regel von Bernoulli-de L’Hospital<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Die Regel von L’Hospital kann nur unter bestimmten Bedingungen angewendet werden:</p>
+<ol class="arabic simple">
+<li><p><strong>Form:</strong> Der Grenzwert der betrachteten Funktionen muss entweder die Form
+<span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> oder <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span> haben.</p></li>
+<li><p><strong>Differenzierbarkeit:</strong> Sowohl der Zähler <span class="math notranslate nohighlight">\(f(x)\)</span> als auch der Nenner <span class="math notranslate nohighlight">\(g(x)\)</span>
+müssen im betrachteten Intervall differenzierbar sein.</p></li>
+<li><p><strong>Existenz des Grenzwertes:</strong> Der Grenzwert <span class="math notranslate nohighlight">\(\lim_{x \to x_0}
+\frac{f'(x)}{g'(x)}\)</span> muss existieren.</p></li>
+</ol>
+<p>Seien <span class="math notranslate nohighlight">\(f(x)\)</span> und <span class="math notranslate nohighlight">\(g(x)\)</span> differenzierbar in einem Intervall um <span class="math notranslate nohighlight">\(x_0\)</span> mit Ausnahme
+von <span class="math notranslate nohighlight">\(x_0\)</span> selbst. Wenn <span class="math notranslate nohighlight">\(\lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = 0\)</span> oder
+<span class="math notranslate nohighlight">\(\pm\infty\)</span>, dann gilt:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)},\]</div>
+<p>vorausgesetzt, der Grenzwert auf der rechten Seite existiert.</p>
+</section>
+<section id="beispiele">
+<h2>Beispiele<a class="headerlink" href="#beispiele" title="Link to this heading">#</a></h2>
+<section id="beispiel-1-lim-x-to-0-frac-sin-x-x">
+<h3>Beispiel 1: <span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{\sin(x)}{x}\)</span><a class="headerlink" href="#beispiel-1-lim-x-to-0-frac-sin-x-x" title="Link to this heading">#</a></h3>
+<p>Die Funktionsgrenzwerte der Zählerfunktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> und der Nennerfunktion
+<span class="math notranslate nohighlight">\(g(x)=x\)</span> lauten</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0}\sin(x) = 0, \; \lim_{x\to 0}x = 0.\]</div>
+<p>Damit hat der Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0}\frac{\sin(x)}{x}\]</div>
+<p>die Form <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span>. Sowohl die Zählerfunktion als auch die Nennerfunktion
+sind differenzierbar, ihre Ableitungen lauten</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = \cos(x), \; g'(x) = 1.\]</div>
+<p>Damit können wir die Regel von L’Hospital anwenden:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0} \frac{\sin(x)}{x} = \lim_{x \to 0} \frac{\cos(x)}{1} = \cos(0) = 1.\]</div>
+</section>
+<section id="beispiel-2-lim-x-to-infty-frac-ln-x-x">
+<h3>Beispiel 2: <span class="math notranslate nohighlight">\(\lim_{x \to \infty} \frac{\ln(x)}{x}\)</span><a class="headerlink" href="#beispiel-2-lim-x-to-infty-frac-ln-x-x" title="Link to this heading">#</a></h3>
+<p>Die Funktionsgrenzwerte der Zählerfunktion <span class="math notranslate nohighlight">\(f(x)=\ln(x)\)</span> und der Nennerfunktion
+<span class="math notranslate nohighlight">\(g(x)=x\)</span> lauten</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to\infty}\ln(x)=\infty, \; \lim_{x\to\infty}x = \infty.\]</div>
+<p>Damit hat der Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to\infty}\frac{\ln(x)}{x}\]</div>
+<p>die Form <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span>. Beide Funktionen sind differenzierbar, ihre
+Ableitungen lauten</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = \frac{1}{x}, \;  g'(x) = 1.\]</div>
+<p>Damit können wir die Regel von L’Hospital anwenden:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to \infty} \frac{\ln(x)}{x} = \lim_{x \to \infty}
+\frac{\frac{1}{x}}{1} = \lim_{x \to \infty} \frac{1}{x} = 0.\]</div>
+</section>
+</section>
+<section id="mehrfaches-anwenden-der-regel">
+<h2>Mehrfaches Anwenden der Regel<a class="headerlink" href="#mehrfaches-anwenden-der-regel" title="Link to this heading">#</a></h2>
+<p>Es kann vorkommen, dass die Regel von L’Hospital mehrmals angewendet werden
+muss, wenn der Grenzwert nach dem ersten Schritt noch eine unbestimmte Form hat.
+Ein Beispiel dafür ist <span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{1 - \cos(x)}{x^2}\)</span>.</p>
+<p>Wir setzen <span class="math notranslate nohighlight">\(f(x) = 1 - \cos(x)\)</span> und <span class="math notranslate nohighlight">\(g(x) = x^2\)</span>. Die ersten Ableitungen sind</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = \sin(x), \; g'(x) = 2x.\]</div>
+<p>Die einmalige Anwendung der Regel von L’Hospital reicht diesmal nicht aus:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0} \frac{1 - \cos(x)}{x^2} = \lim_{x \to 0} \frac{\sin(x)}{2x}.\]</div>
+<p>Es liegt immer noch die Form <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> vor. Aber wir können ein weiteres Mal
+ableiten und die Regel von L’Hospital erneut anwenden:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0} \frac{\sin(x)}{2x} = \lim_{x \to 0} \frac{\cos(x)}{2} = \frac{1}{2}.\]</div>
+<p>Somit gilt insgesamt</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0} \frac{1 - \cos(x)}{x^2} = \lim_{x \to 0} \frac{\sin(x)}{2x} =
+\lim_{x \to 0} \frac{\cos(x)}{2} = \frac{1}{2}.\]</div>
+<p>Weitere Beispiele finden Sie in dem folgenden Video.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Grenzwerte von Funktionen: L’Hospital” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qmfHgIBL-Jk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, Funktionsgrenzwerte von unbestimmten
+Ausdrücken der Form <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> und <span class="math notranslate nohighlight">\(\frac{\infty}{\infty}\)</span> zu bestimmen,
+falls die Funktionen differenzierbar sind. In den nächsten Kapiteln untersuchen
+wir Funktionen bzgl. ihrer geometrischen Eigenschaften mit Hilfe von
+Ableitungen.</p>
 </section>
 </section>
 
@@ -572,7 +664,14 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele">Beispiele</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-1-lim-x-to-0-frac-sin-x-x">Beispiel 1: <span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{\sin(x)}{x}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-2-lim-x-to-infty-frac-ln-x-x">Beispiel 2: <span class="math notranslate nohighlight">\(\lim_{x \to \infty} \frac{\ln(x)}{x}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mehrfaches-anwenden-der-regel">Mehrfaches Anwenden der Regel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
