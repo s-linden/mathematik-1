@@ -50,7 +50,8 @@ Fachbegriffe lautet Minima, Maxima und Extrema.
 
 ## Vorzeichenwechselkriterium
 
-Wenn eine Funktion differenzierbar ist, ist die Steigung der Tangente an einer Extremstelle 0. Es gilt also
+Wenn eine Funktion differenzierbar ist, ist die Steigung der Tangente an einer
+Extremstelle 0. Es gilt also
 
 $$f'(x_0)=0.$$
 
@@ -76,7 +77,9 @@ x > x_0,$$
 
 ## Kriterium mit 2. Ableitung
 
-Ist die Funktion zweimal differenzierbar, können wir alternativ zum Vorzeihenwechselkriterium auch die zweite Ableitung nutzen, um Extremstellen zu berechen. Es gilt:
+Ist die Funktion zweimal differenzierbar, können wir alternativ zum
+Vorzeihenwechselkriterium auch die zweite Ableitung nutzen, um Extremstellen zu
+berechen. Es gilt:
 
 * Wenn $f'(x_0) = 0$ und $f''(x_0) < 0$, dann hat $f$ an der Stelle $x_0$ ein
   lokales Maximum $f(x_0)$ bzw. einen Hochpunkt $(x_0, f(x_0))$.
