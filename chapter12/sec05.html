@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Extrema &#8212; Mathematik 1 Maschinenbau</title>
+    <title>12.5 Extremwerte &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -58,6 +58,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter12/sec05';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -299,7 +301,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sec02.html">12.2 Regel von Bernoulli-de L’Hospital</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">12.3 Neigungswinkel / Schnittwinkel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">12.4 Monotonie und Krümmung</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Extrema</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.5 Extremwerte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec06.html">Videos Wendepunkte</a></li>
 </ul>
 </details></li>
@@ -456,7 +458,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Extrema</h1>
+    <h1>12.5 Extremwerte</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -467,7 +469,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum">Minimum und Maximum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorzeichenwechselkriterium">Vorzeichenwechselkriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kriterium-mit-2-ableitung">Kriterium mit 2. Ableitung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -479,37 +484,119 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-extrema">
-<h1>Videos Extrema<a class="headerlink" href="#videos-extrema" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="extremwerte">
+<h1>12.5 Extremwerte<a class="headerlink" href="#extremwerte" title="Link to this heading">#</a></h1>
+<p>In diesem Kapitel betrachten wir einzelne Punkte des Funktionsgraphens, die eine
+besondere Bedeutung haben. Um diese Punkt zu berechnen, sind Ableitungen
+nützlich.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was ein <strong>lokales Minimum (Tiefpunkt)</strong> und ein <strong>lokales Maximum (Hochpunkt)</strong> sind.</p></li>
+<li><p>Sie wissen, was ein <strong>lokales Minimum</strong> und ein <strong>lokales Maximum</strong> sind.</p></li>
 <li><p>Sie kennen die Bedingungen für ein Minimum, wenn die Funktion differenzierbar ist.</p></li>
 <li><p>Sie kennen die Bedingungen für ein Maximum, wenn die Funktion differenzierbar ist.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5qkvVQgjczU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section id="minimum-und-maximum">
+<h2>Minimum und Maximum<a class="headerlink" href="#minimum-und-maximum" title="Link to this heading">#</a></h2>
+<p>Als nächstes betrachten wir die Funktion</p>
+<div class="math notranslate nohighlight">
+\[f(x) =\frac{\cos(3\pi x)}{x}\]</div>
+<p>im Intervall <span class="math notranslate nohighlight">\(0.1 \leq x \leq 1.1\)</span>. Der Funktionsgraph ist in der folgenden
+Abbildung visualisiert.</p>
+<figure class="align-default" id="extrema-example">
+<a class="reference internal image-reference" href="../_images/Extrema_example_de.svg"><img alt="../_images/Extrema_example_de.svg" src="../_images/Extrema_example_de.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Quelle: Georg-Johann - Eigenes Werk, Gemeinfrei, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=11692680">https://commons.wikimedia.org/w/index.php?curid=11692680</a></span><a class="headerlink" href="#extrema-example" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In diesem Intervall hat die Funktion je ein lokales und globales Minimum und je
+ein lokales und globales Maximum. Ein <strong>lokales Minimum</strong> ist ein Funktionswert
+<span class="math notranslate nohighlight">\(f(x_0)\)</span>, so dass in einer Umgebung um die Stelle <span class="math notranslate nohighlight">\(x_0\)</span> alle Funktionswerte
+größer oder gleich als <span class="math notranslate nohighlight">\(f(x_0)\)</span> sind. Ist dieser Funktionswert sogar kleiner
+(oder gleich) als alle anderen Funktionswerte für alle <span class="math notranslate nohighlight">\(x\)</span> aus der
+Definitionsmenge, dann nennt man diesen Funktionswert <strong>globales Minimum</strong>. Der
+Punkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> wird dann <strong>Tiefpunkt</strong> genannt.</p>
+<p>Die Begriffe <strong>lokales Maximum</strong> und <strong>globales Maximum</strong> sind analog definiert.
+Bei einem lokalen Maximum <span class="math notranslate nohighlight">\(f(x_0)\)</span> sind die Funktionswerte in einer Umgebung von
+<span class="math notranslate nohighlight">\(x_0\)</span> alle kleiner oder gleich diesem Funktionswert. Gilt das sogar für alle
+<span class="math notranslate nohighlight">\(x\)</span> aus der Definitionsmenge, dann sprechen wir von einem globalen Maximum. Der
+Punkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> wird dann <strong>Hochpunkt</strong> genannt.</p>
+<p>Wenn man allgemein von einem Minimum oder einem Maximum sprechen möchte,
+verwendet man den Begriff <strong>Extremum</strong> oder <strong>Extremwert</strong>. Der Plural dieser
+Fachbegriffe lautet Minima, Maxima und Extrema.</p>
+</section>
+<section id="vorzeichenwechselkriterium">
+<h2>Vorzeichenwechselkriterium<a class="headerlink" href="#vorzeichenwechselkriterium" title="Link to this heading">#</a></h2>
+<p>Wenn eine Funktion differenzierbar ist, ist die Steigung der Tangente an einer Extremstelle 0. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[f'(x_0)=0.\]</div>
+<p>Bei differenzierbaren Funktionen ist es notwendig, dass die erste Ableitung am
+Extremum verschwindet, aber diese Bedingung ist nicht hinreichend. Bei der
+Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> ist die erste Ableitung <span class="math notranslate nohighlight">\(f'(x)=3x^2\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span>
+auch Null, aber diese Funktion hat an dem Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> kein Extremum.
+Zusätzlich zu der Bedingung <span class="math notranslate nohighlight">\(f'(x)=0\)</span> muss noch das Vorzeichen in einer Umgebung
+von <span class="math notranslate nohighlight">\(x_0\)</span> wechseln.</p>
+<p>Bei einem Minimum wechselt das Vorzeichen der ersten Ableitung von Minus nach
+Plus, d.h. gilt zusätzlich</p>
+<div class="math notranslate nohighlight">
+\[f'(x) &gt; 0, \text{ falls } x &lt; x_0 \; \text{ und } \; f'(x) &lt; 0, \text{ falls }
+x &gt; x_0,\]</div>
+<p>dann hat <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein lokales Minimum.</p>
+<p>Bei einem lokalen Maximum erfolgt der Wechsel von Plus nach Minus, also</p>
+<div class="math notranslate nohighlight">
+\[f'(x) &lt; 0, \text{ falls } x &lt; x_0 \; \text{ und } \; f'(x) &gt; 0, \text{ falls }
+x &gt; x_0,\]</div>
+</section>
+<section id="kriterium-mit-2-ableitung">
+<h2>Kriterium mit 2. Ableitung<a class="headerlink" href="#kriterium-mit-2-ableitung" title="Link to this heading">#</a></h2>
+<p>Ist die Funktion zweimal differenzierbar, können wir alternativ zum Vorzeihenwechselkriterium auch die zweite Ableitung nutzen, um Extremstellen zu berechen. Es gilt:</p>
+<ul class="simple">
+<li><p>Wenn <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und <span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span>, dann hat <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
+lokales Maximum <span class="math notranslate nohighlight">\(f(x_0)\)</span> bzw. einen Hochpunkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span>.</p></li>
+<li><p>Wenn <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und <span class="math notranslate nohighlight">\(f''(x_0) &gt; 0\)</span>, dann hat <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
+lokales Minimum <span class="math notranslate nohighlight">\(f(x_0)\)</span> bzw. einen Teifpunkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span>.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “lokale Extrema: notwendige Bedingung” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5qkvVQgjczU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cpzvX___VZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “lokale Extrema: hinreichende Bedingung” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cpzvX___VZA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/icHYGCoyyz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “lokale Extrema: Vorzeichenwechselkriterium” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/icHYGCoyyz0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+</details><p>Weiteres Material finden Sie hier:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/extremwerte-berechnen-5248">https://studyflix.de/mathematik/extremwerte-berechnen-5248</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/extrempunkte-berechnen-2127">https://studyflix.de/mathematik/extrempunkte-berechnen-2127</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/extremstellen-4147">https://studyflix.de/mathematik/extremstellen-4147</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/hochpunkt-und-tiefpunkt-2126">https://studyflix.de/mathematik/hochpunkt-und-tiefpunkt-2126</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Für die Fuktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> haben wir schon festgestellt, dass die erste
+Ableitung Null ist, aber trotzdem dort kein Extremum vorliegt. Auch die zweite
+Ableitung ist an dieser Stelle Null und die Krümmung wechselt dort. Solche
+Wendestellen betrachten wir im nächsten Kapitel.</p>
 </section>
 </section>
 
@@ -578,7 +665,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum">Minimum und Maximum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorzeichenwechselkriterium">Vorzeichenwechselkriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kriterium-mit-2-ableitung">Kriterium mit 2. Ableitung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
