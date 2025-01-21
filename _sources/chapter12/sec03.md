@@ -108,7 +108,7 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Zusammenfassung und Aucblick
+## Zusammenfassung und Ausblick
 
 Die Angabe des Neigungswinkels einer Funktion und des Schnittwinkels von zwei
 Funktionen ist nur eine von vielen geometrischen Eigenschaften einer Funktion,
