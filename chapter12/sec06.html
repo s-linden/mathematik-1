@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos Wendepunkte &#8212; Mathematik 1 Maschinenbau</title>
+    <title>12.6 Wendepunkte &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -301,7 +301,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sec03.html">12.3 Neigungswinkel / Schnittwinkel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec04.html">12.4 Monotonie und Krümmung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sec05.html">12.5 Extremwerte</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos Wendepunkte</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.6 Wendepunkte</a></li>
 </ul>
 </details></li>
 </ul>
@@ -457,7 +457,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos Wendepunkte</h1>
+    <h1>12.6 Wendepunkte</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -468,7 +468,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wendepunkt">Wendepunkt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sattelpunkt">Sattelpunkt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -480,12 +482,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-wendepunkte">
-<h1>Videos Wendepunkte<a class="headerlink" href="#videos-wendepunkte" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>Dieses Kapitel wird derzeit überarbeitet, daher sind hier nur die Lernziele aufgelistet und die Videos verlinkt. Die neue komplette Version finden Sie hier ab Januar 2025.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="wendepunkte">
+<h1>12.6 Wendepunkte<a class="headerlink" href="#wendepunkte" title="Link to this heading">#</a></h1>
+<p>Auch die Nullstellen der zweiten Ableitung haben eine besondere geometrische
+Bedeutung, die wir in diesem Kapitel uns erarbeiten.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -494,17 +494,57 @@ document.write(`
 <li><p>Sie wissen, was ein <strong>Wendepunkt</strong> ist.</p></li>
 <li><p>Sie kennen die Bedingungen, unter denen eine Funktion einen Wendepunkt hat.</p></li>
 <li><p>Sie wissen, was ein <strong>Sattelpunkt/Terassenpunkt</strong> ist.</p></li>
-<li><p>Sie wissen, was ein <strong>globales Minimum</strong> oder ein <strong>globales Maximum</strong> ist.</p></li>
-<li><p>Sie wissen, dass jede stetige Funktion auf einem abgeschlossenen Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> ein globales Minimum und ein globales Maximum hat. Es kann jedoch mehrere Stellen geben, an denen die Funktion den minimalen und den maximalen Funktionswert annimmt.</p></li>
 </ul>
 </div>
 </section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading">#</a></h2>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lUstL3M42Ec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section id="wendepunkt">
+<h2>Wendepunkt<a class="headerlink" href="#wendepunkt" title="Link to this heading">#</a></h2>
+<p>In der Mathematik nennt man einen Punkt, an dem sich das Krümmungsverhalten
+einer Funktion ändert, Wendepunkt. In dem folgenden Beispiel geht der
+Funktionsgraph bei <span class="math notranslate nohighlight">\(W\)</span> von einer Rechtskrümmung in eine Linkskrümmung über.</p>
+<figure class="align-default" id="inflection-point">
+<a class="reference internal image-reference" href="../_images/inflection_point.png"><img alt="../_images/inflection_point.png" src="../_images/inflection_point.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Quelle: Wolfgang Dvorak - Eigenes Werk, CC BY-SA 3.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=1283725">https://commons.wikimedia.org/w/index.php?curid=1283725</a></span><a class="headerlink" href="#inflection-point" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ist eine Funktion zweimal differenzierbar, dann hat die erste Ableitung bei
+einem Wendepunkt ein lokales Maximum oder ein lokales Minimum. Es ist also
+notwendig, dass die zweite Ableitung an einer Wendestelle Null ist:</p>
+<div class="math notranslate nohighlight">
+\[f''(x) = 0.\]</div>
+<p>Damit eine Stelle <span class="math notranslate nohighlight">\(x_0\)</span> hinreichend eine Wendestelle ist, muss die zweite
+Ableitung auf einen Vorzeichenwechsel untersucht werden oder die dritte
+Ableitung überprüft werden. Liegt ein Vorzeichenwechsel von <span class="math notranslate nohighlight">\(f''\)</span> an der Stelle
+<span class="math notranslate nohighlight">\(x_0\)</span> von Minus nach Plus vor, dann liegt eine Rechts-links-Wendestelle vor.
+Alternativ besagt <span class="math notranslate nohighlight">\(f'''(x_0) &gt; 0\)</span>, dass eine Rechts-links-Wendestelle vorliegt.
+Liegt ein Vorzeichenwechsel von <span class="math notranslate nohighlight">\(f''\)</span> von Plus nach Minus vor oder ist
+<span class="math notranslate nohighlight">\(f'''(x_0)&lt;0\)</span>, dann liegt eine Links-rechts-Wendestelle vor.</p>
+</section>
+<section id="sattelpunkt">
+<h2>Sattelpunkt<a class="headerlink" href="#sattelpunkt" title="Link to this heading">#</a></h2>
+<p>Manchmal hat eine Wendestelle auch gleichzeitig eine Tangente mit Steigung Null,
+d.h. einer Tangente die parallel zur x-Achse ist. Dann nennt man diesen Punkt
+Sattelpunkt oder Terrassenpunkt. Die folgende Abbildung zeigt ein Beispiel mit
+zwei Sattelpunkten.</p>
+<figure class="align-default" id="two-saddle-points">
+<a class="reference internal image-reference" href="../_images/Two_saddle_points.svg"><img alt="../_images/Two_saddle_points.svg" src="../_images/Two_saddle_points.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Quelle: HilberTraum - Eigenes Werk, CC BY-SA 4.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=34972980">https://commons.wikimedia.org/w/index.php?curid=34972980</a></span><a class="headerlink" href="#two-saddle-points" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Wendestellen und Sattelstellen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lUstL3M42Ec"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Die Analyse der wichtigsten geometrischen Eigenschaften einr Funktion werden
+auch Kurvendiskussion genannt.</p>
 </section>
 </section>
 
@@ -564,7 +604,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wendepunkt">Wendepunkt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sattelpunkt">Sattelpunkt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
