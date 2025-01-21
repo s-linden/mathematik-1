@@ -1,4 +1,4 @@
-# 11.6 Integralfunktionen und das uneigentliche Intgeral
+# 11.6 Integralfunktionen und das uneigentliche Integral
 
 Das bestimmte Intgeral liefert eine Zahl. Wir können das bestimmte Integral auch
 dazu nutzen, eine neue Funktion einzuführen, indem wir die untere Grenze auf
@@ -10,7 +10,7 @@ erhalten wir die sogenannte Integralfunktion.
 ```{admonition} Lernziele
 :class: goals
 * Sie wissen, was eine **Integralfunktion** ist.
-* Sie kennen **uneigentliche Intgerale**.
+* Sie kennen **uneigentliche Integrale**.
 ```
 
 ## Was ist die Integralfunktion?
