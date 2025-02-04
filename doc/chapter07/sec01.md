@@ -100,7 +100,7 @@ notieren.
    ursprünglichen Matrix.
 3. Für quadratische Matrizen gleicher Dimension gilt:
 
-   $$\det(\mathbf{A}\cdot\mathbf{b}) = \det(\mathbf{A})\cdot\det(\mathbf{B}).$$
+   $$\det(\mathbf{A}\cdot\mathbf{B}) = \det(\mathbf{A})\cdot\det(\mathbf{B}).$$
 4. Multipliziert man eine Zeile der Matrix mit einem Skalar, so wird auch die
    Determinante mit diesen Skalar multipliziert.
 5. Ist $s$ ein Skalar und $\mathbf{A}$ eine quadratische Matrix der Dimension
