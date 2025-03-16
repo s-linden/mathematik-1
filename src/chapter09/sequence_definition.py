@@ -97,7 +97,7 @@ class Motivation(Scene):
         group.arrange(DOWN, aligned_edge=LEFT, buff=0.3)
         group.move_to([2,0,0])
 
-        self.play(Transform(term, group[0]))
+        self.play(ReplacementTransform(term, group[0]))
         self.play(FadeOut(text))
 
         for i in range(1,5):
@@ -115,9 +115,7 @@ class Motivation(Scene):
             term.next_to(next_rectangle)
             self.play(AddTextLetterByLetter(term))
             self.wait(PAUSE)
-            self.play(Transform(term, group[i]))
-        
-        self.play(Create(group[5]))
+            self.play(ReplacementTransform(term, group[i]))
 
         for i in range(5,11):
 
@@ -129,7 +127,14 @@ class Motivation(Scene):
             next_rectangle.move_to([x,y,0])
             self.play(Transform(start_rectangle, next_rectangle))
         
+        self.play(Create(group[5]))
         self.wait(PAUSE)
+
+        self.play(FadeOut(annotated_square), FadeOut(start_rectangle))
+        group.generate_target()
+        group.target.move_to([-5,0,0], aligned_edge=LEFT)
+        self.play(MoveToTarget(group))
+
 
 class InformalDefinition(Scene):
     def construct(self):
@@ -158,6 +163,7 @@ class InformalDefinition(Scene):
 
         arrow = Arrow(start=group.get_top()+2*RIGHT+UP, end=group.get_bottom()+2*RIGHT+DOWN)
         self.play(Create(arrow))
+        self.wait(PAUSE)
 
         text01 =  Text('Folge =', font='Inter', font_size=32)
         text02 = Text('unendliche Aufzählung von Zahlen', font='Inter', font_size=32)
