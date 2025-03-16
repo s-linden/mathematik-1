@@ -35,7 +35,7 @@ sind. Beispielsweise werden Farben durch RGB-Werte beschrieben, also den Anteil
 an Rot, Grün und Blau. Ein pures Rot wird gekennzeichnet als (1.0, 0, 0),
 während der RGB-Wert (0,0,1.0) ein reines Blau darstellt. Obwohl in dem Tupel
 jeweils die Werte 0 und 1 vorkommen, werden durch ihre Anordnung zwei sehr
-unterschiedliche Farbenn dargestellt. Tupel haben jedoch nur endlich viele
+unterschiedliche Farben dargestellt. Tupel haben jedoch nur endlich viele
 Elemente. Daher benutzen wir auch die Bezeichnung n-Tupel, wobei n die Anzahl
 der Elemente ist. Folgen sind Tupel mit unendlich vielen Elementen. Die können
 wir nicht mehr alle auflisten, wir brauchen eine Beschreibung für die unendlich
@@ -63,16 +63,20 @@ a_6 &= 12 \\
 & \; \vdots \\
 \end{align*}
 
-Allgemein schreibt man für eine Folge $(a_k)_{k\in\mathbb{N}}$ oder auch einfach
-$(a_k)$ um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
-Folgenglieder $a_k$ handelt. Die Positionsangabe $k$ heißt **Index** der Folge.
+Allgemein schreibt man für eine Folge $(a_i)_{i\in\mathbb{N}}$ oder auch einfach
+$(a_i)$ um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
+Folgenglieder $a_i$ handelt. Die Positionsangabe $i$ heißt **Index** der Folge.
 
 ```{admonition} Was ist ... eine Folge?
 :class: note
 
-Eine Folge $(a_k)_{k\in\mathbb{N}}$ ist eine Aufzählung von unendlich vielen
-Zahlen $a_k$, die Folgenglieder genannt werden, bei der es auf die Reihenfolge
-ankommt.
+Eine Folge ist eine Aufzählung von unendlich vielen Zahlen $a_i$ und wird mit
+runden Klammern geschrieben: 
+
+$$(a_i)_{i\in\mathbb{N}}.$$ 
+
+Eine einzelne Zahl der Folge wird Folgenglied genannt. Die Position eines
+Folgenglieds innerhalb der Folge wird Index genannt.
 ```
 
 ## Wie werden Folgen beschrieben?
