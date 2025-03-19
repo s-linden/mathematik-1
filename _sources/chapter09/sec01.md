@@ -8,15 +8,26 @@ Integralrechnung gebaut werden.
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was eine **Zahlenfolge** ist und was ein **Folgenglied** ist.
+
+* Sie wissen, was eine **Folge** ist.
+* Im Zusammenhang mit Folgen können Sie die Fachbegriffe **Folgenglied** und
+  **Index** erklären.
 * Sie können Zahlenfolgen definieren
 
-    * durch die konkrete **Aufzählung** von Folgengliedern, z.B. $(a_k) = \{1,4,9,16,25,36, \ldots\}$,
-    * durch eine **explizite Regel**, d.h. man gibt eine Formel an, mit der jedes Folgenglied unabhängig von den anderen berechnet werden kann, z.B. $a_k = k^2, \, k=1,2,\ldots$ oder
-    * durch eine **rekursive Regel**, d.h. man gibt ein paar Anfangsglieder an und danach eine Formel, wie sich die übrigen daraus berechnen, z.B. $a_0 = 0, a_1 = 1 \text{ und } a_{k} = a_{k-2} + a_{k-1}$ für alle $k\geq 2$.
+    * durch die konkrete **Aufzählung** von Folgengliedern, z.B. $(a_k) =
+      \{1,4,9,16,25,36, \ldots\}$,
+    * durch eine **explizite Regel**, d.h. man gibt eine Formel an, mit der
+      jedes Folgenglied unabhängig von den anderen berechnet werden kann, z.B.
+      $a_k = k^2, \, k=1,2,\ldots$ oder
+    * durch eine **rekursive Regel**, d.h. man gibt ein paar Anfangsglieder an
+      und danach eine Formel, wie sich die übrigen daraus berechnen, z.B. $a_0 =
+      0, a_1 = 1 \text{ und } a_{k} = a_{k-2} + a_{k-1}$ für alle $k\geq 2$.
 
-* Sie kennen den Fachbegriff **alternierend**, um Folgen zu beschreiben, bei denen sich das Vorzeichen abwechselt.  
-* Sie können von einer gegebenen Folge bestimmen, ob die Zahlenfolge monoton fallend, streng monoton fallend, monoton wachsend oder streng monoton wachsend ist. Zur Erinnerung, man nennt eine Zahlenfolge $(a_k)$
+* Sie kennen den Fachbegriff **alternierend**, um Folgen zu beschreiben, bei
+  denen sich das Vorzeichen abwechselt.  
+* Sie können von einer gegebenen Folge bestimmen, ob die Zahlenfolge monoton
+  fallend, streng monoton fallend, monoton wachsend oder streng monoton wachsend
+  ist. Zur Erinnerung, man nennt eine Zahlenfolge $(a_k)$
 
     * **monoton fallend**, falls $a_k \geq a_{k+1}$,
     * **streng monoton fallend**, falls $a_k > a_{k+1}$,
@@ -24,22 +35,24 @@ Integralrechnung gebaut werden.
     * **streng monoton wachsend**, falls $a_k < a_{k+1}$.
 
 * Sie können den Fachbegriff **beschränkte Zahlenfolge** erklären. 
-
 ```
 
 ## Was ist eine Folge?
 
 Wir haben schon Mengen und Tupel kennengelernt, jetzt geht es weiter mit Folgen.
-Bei einem Tupel kommt es auf die Reihenfolge an, in der die Elemente angeordnet
-sind. Beispielsweise werden Farben durch RGB-Werte beschrieben, also den Anteil
-an Rot, Grün und Blau. Ein pures Rot wird gekennzeichnet als (1.0, 0, 0),
-während der RGB-Wert (0,0,1.0) ein reines Blau darstellt. Obwohl in dem Tupel
-jeweils die Werte 0 und 1 vorkommen, werden durch ihre Anordnung zwei sehr
-unterschiedliche Farbenn dargestellt. Tupel haben jedoch nur endlich viele
-Elemente. Daher benutzen wir auch die Bezeichnung n-Tupel, wobei n die Anzahl
-der Elemente ist. Folgen sind Tupel mit unendlich vielen Elementen. Die können
-wir nicht mehr alle auflisten, wir brauchen eine Beschreibung für die unendlich
-vielen Elemente.
+Bei einem Tupel ist die Reihenfolge der Elemente entscheidend, in der die
+Elemente angeordnet sind. Beispielsweise werden Farben durch RGB-Werte
+beschrieben, also den Anteil an Rot, Grün und Blau. Ein pures Rot wird
+gekennzeichnet als (1, 0, 0), während der RGB-Wert (0, 0, 1) ein reines Blau
+darstellt. In dem Tupel dürfen Werte mehrfach vorkommen so wie beispielsweise
+die Null in Rot zweimal auftaucht. Dafür ist die Reihenfolge entscheidend, denn
+in der Farbe Blau kommt die Null ebenfalls zweimal vor und die Eins einmal, aber
+dennoch beschreiben die beiden Tupel unterschiedliche Farben. Tupel haben
+endlich viele Elemente. Daher verwenden wir auch die Bezeichnung n-Tupel, wobei
+n die Anzahl der Elemente angibt. Jetzt lösen wir uns von der Einschränkung,
+dass die Anzahl endlich ist. **Folgen** sind Tupel mit unendlich vielen
+Elementen. Die können wir nicht mehr alle auflisten, wir brauchen eine
+Beschreibung für die unendlich vielen Elemente.
 
 Die Aufzählung
 
@@ -63,16 +76,26 @@ a_6 &= 12 \\
 & \; \vdots \\
 \end{align*}
 
-Allgemein schreibt man für eine Folge $(a_k)_{k\in\mathbb{N}}$ oder auch einfach
-$(a_k)$ um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
-Folgenglieder $a_k$ handelt. Die Positionsangabe $k$ heißt **Index** der Folge.
+Allgemein schreibt man für eine Folge $(a_i)_{i\in\mathbb{N}}$ oder auch einfach
+$(a_i)$ um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
+Folgenglieder $a_i$ handelt. Die Positionsangabe $i$ heißt **Index** der Folge.
 
 ```{admonition} Was ist ... eine Folge?
 :class: note
 
-Eine Folge $(a_k)_{k\in\mathbb{N}}$ ist eine Aufzählung von unendlich vielen
-Zahlen $a_k$, die Folgenglieder genannt werden, bei der es auf die Reihenfolge
-ankommt.
+Eine Folge ist eine Aufzählung von unendlich vielen Zahlen $a_i$ und wird mit
+runden Klammern geschrieben: 
+
+$$(a_i)_{i\in\mathbb{N}}.$$ 
+
+Eine einzelne Zahl der Folge wird Folgenglied genannt. Die Position eines
+Folgenglieds innerhalb der Folge wird Index genannt.
+```
+
+```{dropdown} Video "Was ist eine Folge?"
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=54f28901-772e-4dbd-94fc-b2a500ba4de9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all"
+height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"
+aria-label="Panopto Embedded Video Player" aria-description="Was ist eine Folge?" ></iframe>
 ```
 
 ## Wie werden Folgen beschrieben?
@@ -114,7 +137,12 @@ Bildungsvorschrift zu finden.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t2G7yviicAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-## Alternierende Folgen
+## Eigenschaften von Folgen
+
+Folgen werden auch durch ihre Eigenschaften beschrieben. Im Folgenden betrachten
+wir die drei Eigenschaften alternierend, monoton und beschränkt.
+
+### Alternierende Folgen
 
 Die obige Folge der geraden natürlichen Zahlen kann auch so abgeändert werden,
 dass das Vorzeichen immer abwechselt:
@@ -127,7 +155,7 @@ Eine solche Folge heißt **alternierend**.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mQLADVxxRU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-## Monotonie von Folgen
+### Monotonie von Folgen
 
 Da Folgen nur Funktionen mit Definitionsgebiet $\mathbf{N}$, verwundert es
 nicht, dass es die Eigenschaft der Monotonie auch für Folgen gibt. Eine Folge
@@ -143,7 +171,7 @@ $(a_k)$ heißt
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YoNAdPOMMGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-## Beschränktheit von Folgen
+### Beschränktheit von Folgen
 
 Als nächstes betrachten wir als Beispiel die Folge
 

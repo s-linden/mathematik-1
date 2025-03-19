@@ -16,31 +16,34 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="9. Folgen, Grenzwerte und Stetigkeit" href="sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,21 +151,17 @@
     
     
     <img src="../_static/maths_background_small.png" class="logo__image only-light" alt="Mathematik 1 Maschinenbau - Home"/>
-    <script>document.write(`<img src="../_static/maths_background_small.png" class="logo__image only-dark" alt="Mathematik 1 Maschinenbau - Home"/>`);</script>
+    <img src="../_static/maths_background_small.png" class="logo__image only-dark pst-js-only" alt="Mathematik 1 Maschinenbau - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -313,9 +302,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -427,24 +421,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -471,9 +457,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-folge">Was ist eine Folge?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-folgen-beschrieben">Wie werden Folgen beschrieben?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-folgen">Eigenschaften von Folgen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
@@ -496,16 +485,26 @@ Integralrechnung gebaut werden.</p>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was eine <strong>Zahlenfolge</strong> ist und was ein <strong>Folgenglied</strong> ist.</p></li>
+<li><p>Sie wissen, was eine <strong>Folge</strong> ist.</p></li>
+<li><p>Im Zusammenhang mit Folgen können Sie die Fachbegriffe <strong>Folgenglied</strong> und
+<strong>Index</strong> erklären.</p></li>
 <li><p>Sie können Zahlenfolgen definieren</p>
 <ul>
-<li><p>durch die konkrete <strong>Aufzählung</strong> von Folgengliedern, z.B. <span class="math notranslate nohighlight">\((a_k) = \{1,4,9,16,25,36, \ldots\}\)</span>,</p></li>
-<li><p>durch eine <strong>explizite Regel</strong>, d.h. man gibt eine Formel an, mit der jedes Folgenglied unabhängig von den anderen berechnet werden kann, z.B. <span class="math notranslate nohighlight">\(a_k = k^2, \, k=1,2,\ldots\)</span> oder</p></li>
-<li><p>durch eine <strong>rekursive Regel</strong>, d.h. man gibt ein paar Anfangsglieder an und danach eine Formel, wie sich die übrigen daraus berechnen, z.B. <span class="math notranslate nohighlight">\(a_0 = 0, a_1 = 1 \text{ und } a_{k} = a_{k-2} + a_{k-1}\)</span> für alle <span class="math notranslate nohighlight">\(k\geq 2\)</span>.</p></li>
+<li><p>durch die konkrete <strong>Aufzählung</strong> von Folgengliedern, z.B. <span class="math notranslate nohighlight">\((a_k) =
+\{1,4,9,16,25,36, \ldots\}\)</span>,</p></li>
+<li><p>durch eine <strong>explizite Regel</strong>, d.h. man gibt eine Formel an, mit der
+jedes Folgenglied unabhängig von den anderen berechnet werden kann, z.B.
+<span class="math notranslate nohighlight">\(a_k = k^2, \, k=1,2,\ldots\)</span> oder</p></li>
+<li><p>durch eine <strong>rekursive Regel</strong>, d.h. man gibt ein paar Anfangsglieder an
+und danach eine Formel, wie sich die übrigen daraus berechnen, z.B. <span class="math notranslate nohighlight">\(a_0 =
+0, a_1 = 1 \text{ und } a_{k} = a_{k-2} + a_{k-1}\)</span> für alle <span class="math notranslate nohighlight">\(k\geq 2\)</span>.</p></li>
 </ul>
 </li>
-<li><p>Sie kennen den Fachbegriff <strong>alternierend</strong>, um Folgen zu beschreiben, bei denen sich das Vorzeichen abwechselt.</p></li>
-<li><p>Sie können von einer gegebenen Folge bestimmen, ob die Zahlenfolge monoton fallend, streng monoton fallend, monoton wachsend oder streng monoton wachsend ist. Zur Erinnerung, man nennt eine Zahlenfolge <span class="math notranslate nohighlight">\((a_k)\)</span></p>
+<li><p>Sie kennen den Fachbegriff <strong>alternierend</strong>, um Folgen zu beschreiben, bei
+denen sich das Vorzeichen abwechselt.</p></li>
+<li><p>Sie können von einer gegebenen Folge bestimmen, ob die Zahlenfolge monoton
+fallend, streng monoton fallend, monoton wachsend oder streng monoton wachsend
+ist. Zur Erinnerung, man nennt eine Zahlenfolge <span class="math notranslate nohighlight">\((a_k)\)</span></p>
 <ul>
 <li><p><strong>monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k \geq a_{k+1}\)</span>,</p></li>
 <li><p><strong>streng monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k &gt; a_{k+1}\)</span>,</p></li>
@@ -520,16 +519,19 @@ Integralrechnung gebaut werden.</p>
 <section id="was-ist-eine-folge">
 <h2>Was ist eine Folge?<a class="headerlink" href="#was-ist-eine-folge" title="Link to this heading">#</a></h2>
 <p>Wir haben schon Mengen und Tupel kennengelernt, jetzt geht es weiter mit Folgen.
-Bei einem Tupel kommt es auf die Reihenfolge an, in der die Elemente angeordnet
-sind. Beispielsweise werden Farben durch RGB-Werte beschrieben, also den Anteil
-an Rot, Grün und Blau. Ein pures Rot wird gekennzeichnet als (1.0, 0, 0),
-während der RGB-Wert (0,0,1.0) ein reines Blau darstellt. Obwohl in dem Tupel
-jeweils die Werte 0 und 1 vorkommen, werden durch ihre Anordnung zwei sehr
-unterschiedliche Farbenn dargestellt. Tupel haben jedoch nur endlich viele
-Elemente. Daher benutzen wir auch die Bezeichnung n-Tupel, wobei n die Anzahl
-der Elemente ist. Folgen sind Tupel mit unendlich vielen Elementen. Die können
-wir nicht mehr alle auflisten, wir brauchen eine Beschreibung für die unendlich
-vielen Elemente.</p>
+Bei einem Tupel ist die Reihenfolge der Elemente entscheidend, in der die
+Elemente angeordnet sind. Beispielsweise werden Farben durch RGB-Werte
+beschrieben, also den Anteil an Rot, Grün und Blau. Ein pures Rot wird
+gekennzeichnet als (1, 0, 0), während der RGB-Wert (0, 0, 1) ein reines Blau
+darstellt. In dem Tupel dürfen Werte mehrfach vorkommen so wie beispielsweise
+die Null in Rot zweimal auftaucht. Dafür ist die Reihenfolge entscheidend, denn
+in der Farbe Blau kommt die Null ebenfalls zweimal vor und die Eins einmal, aber
+dennoch beschreiben die beiden Tupel unterschiedliche Farben. Tupel haben
+endlich viele Elemente. Daher verwenden wir auch die Bezeichnung n-Tupel, wobei
+n die Anzahl der Elemente angibt. Jetzt lösen wir uns von der Einschränkung,
+dass die Anzahl endlich ist. <strong>Folgen</strong> sind Tupel mit unendlich vielen
+Elementen. Die können wir nicht mehr alle auflisten, wir brauchen eine
+Beschreibung für die unendlich vielen Elemente.</p>
 <p>Die Aufzählung</p>
 <div class="math notranslate nohighlight">
 \[2, 4, 6, 8, 10, 12, 14, \ldots\]</div>
@@ -549,16 +551,26 @@ a_5 &amp;= 10 \\
 a_6 &amp;= 12 \\
 &amp; \; \vdots \\
 \end{align*}\]</div>
-<p>Allgemein schreibt man für eine Folge <span class="math notranslate nohighlight">\((a_k)_{k\in\mathbb{N}}\)</span> oder auch einfach
-<span class="math notranslate nohighlight">\((a_k)\)</span> um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
-Folgenglieder <span class="math notranslate nohighlight">\(a_k\)</span> handelt. Die Positionsangabe <span class="math notranslate nohighlight">\(k\)</span> heißt <strong>Index</strong> der Folge.</p>
+<p>Allgemein schreibt man für eine Folge <span class="math notranslate nohighlight">\((a_i)_{i\in\mathbb{N}}\)</span> oder auch einfach
+<span class="math notranslate nohighlight">\((a_i)\)</span> um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
+Folgenglieder <span class="math notranslate nohighlight">\(a_i\)</span> handelt. Die Positionsangabe <span class="math notranslate nohighlight">\(i\)</span> heißt <strong>Index</strong> der Folge.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine Folge?</p>
-<p>Eine Folge <span class="math notranslate nohighlight">\((a_k)_{k\in\mathbb{N}}\)</span> ist eine Aufzählung von unendlich vielen
-Zahlen <span class="math notranslate nohighlight">\(a_k\)</span>, die Folgenglieder genannt werden, bei der es auf die Reihenfolge
-ankommt.</p>
+<p>Eine Folge ist eine Aufzählung von unendlich vielen Zahlen <span class="math notranslate nohighlight">\(a_i\)</span> und wird mit
+runden Klammern geschrieben:</p>
+<div class="math notranslate nohighlight">
+\[(a_i)_{i\in\mathbb{N}}.\]</div>
+<p>Eine einzelne Zahl der Folge wird Folgenglied genannt. Die Position eines
+Folgenglieds innerhalb der Folge wird Index genannt.</p>
 </div>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Was ist eine Folge?”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=54f28901-772e-4dbd-94fc-b2a500ba4de9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all"
+height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"
+aria-label="Panopto Embedded Video Player" aria-description="Was ist eine Folge?" ></iframe>
+</div>
+</details></section>
 <section id="wie-werden-folgen-beschrieben">
 <h2>Wie werden Folgen beschrieben?<a class="headerlink" href="#wie-werden-folgen-beschrieben" title="Link to this heading">#</a></h2>
 <p>Da eine Folge unendlich viele Folgenglieder hat, können wir nicht alle
@@ -598,8 +610,12 @@ Bildungsvorschrift zu finden.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t2G7yviicAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="eigenschaften-von-folgen">
+<h2>Eigenschaften von Folgen<a class="headerlink" href="#eigenschaften-von-folgen" title="Link to this heading">#</a></h2>
+<p>Folgen werden auch durch ihre Eigenschaften beschrieben. Im Folgenden betrachten
+wir die drei Eigenschaften alternierend, monoton und beschränkt.</p>
 <section id="alternierende-folgen">
-<h2>Alternierende Folgen<a class="headerlink" href="#alternierende-folgen" title="Link to this heading">#</a></h2>
+<h3>Alternierende Folgen<a class="headerlink" href="#alternierende-folgen" title="Link to this heading">#</a></h3>
 <p>Die obige Folge der geraden natürlichen Zahlen kann auch so abgeändert werden,
 dass das Vorzeichen immer abwechselt:</p>
 <div class="math notranslate nohighlight">
@@ -612,7 +628,7 @@ dass das Vorzeichen immer abwechselt:</p>
 </div>
 </details></section>
 <section id="monotonie-von-folgen">
-<h2>Monotonie von Folgen<a class="headerlink" href="#monotonie-von-folgen" title="Link to this heading">#</a></h2>
+<h3>Monotonie von Folgen<a class="headerlink" href="#monotonie-von-folgen" title="Link to this heading">#</a></h3>
 <p>Da Folgen nur Funktionen mit Definitionsgebiet <span class="math notranslate nohighlight">\(\mathbf{N}\)</span>, verwundert es
 nicht, dass es die Eigenschaft der Monotonie auch für Folgen gibt. Eine Folge
 muss nicht monoton sein. Wenn sie monoton ist, gibt es vier Fälle. Eine Folge
@@ -630,7 +646,7 @@ muss nicht monoton sein. Wenn sie monoton ist, gibt es vier Fälle. Eine Folge
 </div>
 </details></section>
 <section id="beschranktheit-von-folgen">
-<h2>Beschränktheit von Folgen<a class="headerlink" href="#beschranktheit-von-folgen" title="Link to this heading">#</a></h2>
+<h3>Beschränktheit von Folgen<a class="headerlink" href="#beschranktheit-von-folgen" title="Link to this heading">#</a></h3>
 <p>Als nächstes betrachten wir als Beispiel die Folge</p>
 <div class="math notranslate nohighlight">
 \[1,\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16},\frac{1}{32},\ldots.\]</div>
@@ -684,6 +700,7 @@ erst im nächten Kapitel.</p>
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 </details></section>
+</section>
 <section id="zusammenfassung-und-ausblick">
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
 <p>In diesem Kapitel haben Sie gelernt, was eine Folge ist und was die
@@ -751,7 +768,8 @@ geht.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -763,9 +781,12 @@ geht.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-folge">Was ist eine Folge?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-folgen-beschrieben">Wie werden Folgen beschrieben?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-folgen">Eigenschaften von Folgen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
@@ -814,8 +835,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
