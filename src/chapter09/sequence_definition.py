@@ -249,3 +249,28 @@ class Test(Scene):
         self.add(text01)
 
 
+class IntroPicture(Scene):
+    def construct(self):
+        self.camera.background_color = COLOR_BG
+        myTemplate = TexTemplate(documentclass='\\documentclass[preview, varwidth=240px]{standalone}')
+        myTemplate.add_to_preamble(r'\usepackage{microtype, mlmodern}')
+        myTemplate.add_to_preamble(r'\usepackage[sfdefault, scaled=0.85]{inter}')
+        myTemplate.add_to_preamble(r'\usepackage[bb=ncmbbk, bfbb]{mathalpha}')       
+        myTemplate.add_to_preamble(r"\usepackage{xfrac}")
+        rectangles_list = []
+        for i in range(5):
+            w,h = compute_shape(i)
+            rect = Rectangle(height=h, width=w).set_fill(ManimColor(colorlist[i]), opacity=1.0)
+            rectangles_list.append(rect)
+        rectangles = VGroup(rectangles_list).arrange(RIGHT, buff=0.7, center=True, aligned_edge=DOWN).shift(0.5*DOWN)
+        self.add(rectangles)
+        for i in range(5):
+            if i == 0:
+                string = r'1'
+            else:
+                string = r'\sfrac{1}{' + str(2**i) + '}'
+            text = MathTex(string, tex_template=myTemplate)
+            text.next_to(rectangles_list[i], DOWN)
+            self.add(text)
+        title = Text('Was ist eine Folge?', font='Inter').shift(2.5*UP)
+        self.add(title)
