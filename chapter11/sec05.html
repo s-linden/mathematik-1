@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>11.5 Integration durch Substitution &#8212; Mathematik 1 Maschinenbau</title>
+    <title>11.5 Extremwerte &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -67,8 +67,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11.6 Integralfunktionen und das uneigentliche Integral" href="sec06.html" />
-    <link rel="prev" title="11.4 Partielle Integration" href="sec04.html" />
+    <link rel="next" title="11.6 Wendepunkte" href="sec06.html" />
+    <link rel="prev" title="11.4 Monotonie und Krümmung" href="sec04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -276,22 +276,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">11. Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">11.1 Stammfunktion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">11.2 Bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">11.3 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec04.html">11.4 Partielle Integration</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.5 Integration durch Substitution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec06.html">11.6 Integralfunktionen und das uneigentliche Integral</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">11. Anwendung Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">11.1 Linearisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">11.2 Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">11.3 Neigungswinkel / Schnittwinkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec04.html">11.4 Monotonie und Krümmung</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.5 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec06.html">11.6 Wendepunkte</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/sec00.html">12. Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec01.html">12.1 Linearisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec02.html">12.2 Regel von Bernoulli-de L’Hospital</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec03.html">12.3 Neigungswinkel / Schnittwinkel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec04.html">12.4 Monotonie und Krümmung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec05.html">12.5 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec06.html">12.6 Wendepunkte</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/sec00.html">12. Integralrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec01.html">12.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec02.html">12.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec03.html">12.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec04.html">12.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec05.html">12.5 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec06.html">12.6 Integralfunktionen und das uneigentliche Integral</a></li>
 </ul>
 </details></li>
 </ul>
@@ -444,7 +444,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>11.5 Integration durch Substitution</h1>
+    <h1>11.5 Extremwerte</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -455,9 +455,10 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitutionsregel">Substitutionsregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-integration-durch-substitution">Beispiel für Integration durch Substitution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum">Minimum und Maximum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorzeichenwechselkriterium">Vorzeichenwechselkriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kriterium-mit-2-ableitung">Kriterium mit 2. Ableitung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -469,111 +470,123 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="integration-durch-substitution">
-<h1>11.5 Integration durch Substitution<a class="headerlink" href="#integration-durch-substitution" title="Link to this heading">#</a></h1>
-<p>Auch verkettete Funktionen lassen sich nicht so einfach integrieren. Wenn <span class="math notranslate nohighlight">\(F\)</span>
-eine Stammfunktion der Funktion <span class="math notranslate nohighlight">\(f\)</span> ist, dann gilt für die der verketten
-Funktion <span class="math notranslate nohighlight">\(F\circ g\)</span> die Kettenregel:</p>
-<div class="math notranslate nohighlight">
-\[\big(F(g(x))\big)^{\prime} = F'(g(x)) \cdot g'(x) = f(g(x))\cdot g'(x).\]</div>
-<p>Die Umkehrung davon ist die Integration durch Substitution.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="extremwerte">
+<h1>11.5 Extremwerte<a class="headerlink" href="#extremwerte" title="Link to this heading">#</a></h1>
+<p>In diesem Kapitel betrachten wir einzelne Punkte des Funktionsgraphens, die eine
+besondere Bedeutung haben. Um diese Punkt zu berechnen, sind Ableitungen
+nützlich.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<p>Sie können die Substitutionsregel</p>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
-dz\]</div>
-<p>anwenden.</p>
+<ul class="simple">
+<li><p>Sie wissen, was ein <strong>lokales Minimum</strong> und ein <strong>lokales Maximum</strong> sind.</p></li>
+<li><p>Sie kennen die Bedingungen für ein Minimum, wenn die Funktion differenzierbar ist.</p></li>
+<li><p>Sie kennen die Bedingungen für ein Maximum, wenn die Funktion differenzierbar ist.</p></li>
+</ul>
 </div>
 </section>
-<section id="substitutionsregel">
-<h2>Substitutionsregel<a class="headerlink" href="#substitutionsregel" title="Link to this heading">#</a></h2>
-<p>Die Idee der Substitutionsregel ist es, die Kettenregel sozusagen umzukehren.
-Wir gehen jetzt davon aus, dass die Funktion <span class="math notranslate nohighlight">\(f(g(x))\cdot g^{\prime}(x)\)</span> auf
-dem Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> integriert werden soll, also die rechte Seite der obigen
-Kettenregel. Dann ist das Ergebnis</p>
+<section id="minimum-und-maximum">
+<h2>Minimum und Maximum<a class="headerlink" href="#minimum-und-maximum" title="Link to this heading">#</a></h2>
+<p>Als nächstes betrachten wir die Funktion</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
-dz.\]</div>
-<p>Das klappt übrigens nur, wenn die Funktion <span class="math notranslate nohighlight">\(g\)</span> stetig differenzierbar ist. In
-den Ingenieurswissenschaften ist das aber meistens der Fall, so dass diese
-Einschränkung kein Problem darstellt. Problematisch ist dahingegen, dass
-meistens nur die verkette Funktion ohne den Term <span class="math notranslate nohighlight">\(g'(x)\)</span> im Integral steht.
-Daher muss sehr oft der Integrand passend erweitert werden, um ihn erstmal auf
-die Form</p>
-<div class="math notranslate nohighlight">
-\[f(g(x))\cdot g^{\prime}(x)\]</div>
-<p>zu bringen.</p>
+\[f(x) =\frac{\cos(3\pi x)}{x}\]</div>
+<p>im Intervall <span class="math notranslate nohighlight">\(0.1 \leq x \leq 1.1\)</span>. Der Funktionsgraph ist in der folgenden
+Abbildung visualisiert.</p>
+<figure class="align-default" id="extrema-example">
+<a class="reference internal image-reference" href="../_images/Extrema_example_de.svg"><img alt="../_images/Extrema_example_de.svg" src="../_images/Extrema_example_de.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Quelle: Georg-Johann - Eigenes Werk, Gemeinfrei, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=11692680">https://commons.wikimedia.org/w/index.php?curid=11692680</a></span><a class="headerlink" href="#extrema-example" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In diesem Intervall hat die Funktion je ein lokales und globales Minimum und je
+ein lokales und globales Maximum. Ein <strong>lokales Minimum</strong> ist ein Funktionswert
+<span class="math notranslate nohighlight">\(f(x_0)\)</span>, so dass in einer Umgebung um die Stelle <span class="math notranslate nohighlight">\(x_0\)</span> alle Funktionswerte
+größer oder gleich als <span class="math notranslate nohighlight">\(f(x_0)\)</span> sind. Ist dieser Funktionswert sogar kleiner
+(oder gleich) als alle anderen Funktionswerte für alle <span class="math notranslate nohighlight">\(x\)</span> aus der
+Definitionsmenge, dann nennt man diesen Funktionswert <strong>globales Minimum</strong>. Der
+Punkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> wird dann <strong>Tiefpunkt</strong> genannt.</p>
+<p>Die Begriffe <strong>lokales Maximum</strong> und <strong>globales Maximum</strong> sind analog definiert.
+Bei einem lokalen Maximum <span class="math notranslate nohighlight">\(f(x_0)\)</span> sind die Funktionswerte in einer Umgebung von
+<span class="math notranslate nohighlight">\(x_0\)</span> alle kleiner oder gleich diesem Funktionswert. Gilt das sogar für alle
+<span class="math notranslate nohighlight">\(x\)</span> aus der Definitionsmenge, dann sprechen wir von einem globalen Maximum. Der
+Punkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> wird dann <strong>Hochpunkt</strong> genannt.</p>
+<p>Wenn man allgemein von einem Minimum oder einem Maximum sprechen möchte,
+verwendet man den Begriff <strong>Extremum</strong> oder <strong>Extremwert</strong>. Der Plural dieser
+Fachbegriffe lautet Minima, Maxima und Extrema.</p>
 </section>
-<section id="beispiel-fur-integration-durch-substitution">
-<h2>Beispiel für Integration durch Substitution<a class="headerlink" href="#beispiel-fur-integration-durch-substitution" title="Link to this heading">#</a></h2>
-<p>Wir wollen die Funktion <span class="math notranslate nohighlight">\(\sqrt{1+3x^2}\cdot x\)</span> auf dem Intervall <span class="math notranslate nohighlight">\([0,1]\)</span>
-integrieren, also</p>
+<section id="vorzeichenwechselkriterium">
+<h2>Vorzeichenwechselkriterium<a class="headerlink" href="#vorzeichenwechselkriterium" title="Link to this heading">#</a></h2>
+<p>Wenn eine Funktion differenzierbar ist, ist die Steigung der Tangente an einer
+Extremstelle 0. Es gilt also</p>
 <div class="math notranslate nohighlight">
-\[\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx\]</div>
-<p>ausrechnen.</p>
-<p>Da die Funktion <span class="math notranslate nohighlight">\(g(x)=1+3x^2\)</span> in die Wurzelfunktion <span class="math notranslate nohighlight">\(f(x)=\sqrt{x}\)</span> eingesetzt
-wird, liegt eine verkettete Funktion vor: <span class="math notranslate nohighlight">\(f(g(x)) = \sqrt{1+3x^2}\)</span>. Wir müssen
-als erstes den Integranden so umformen, dass noch mit der Ableitung
-<span class="math notranslate nohighlight">\(g'(x)=\left(1+3x^2\right)=6x\)</span> multipliziert wird. Tatsächlich wird ja mit <span class="math notranslate nohighlight">\(x\)</span>
-multipliziert, aber dummerweise nicht mit <span class="math notranslate nohighlight">\(6x\)</span>. Also ergänzen wir noch die
-fehlende <span class="math notranslate nohighlight">\(6\)</span> im Integranden und teilen aber wieder durch <span class="math notranslate nohighlight">\(6\)</span>, da wir ja den
-Integranden nicht verändern wollen. Zusammengefasst also</p>
+\[f'(x_0)=0.\]</div>
+<p>Bei differenzierbaren Funktionen ist es notwendig, dass die erste Ableitung am
+Extremum verschwindet, aber diese Bedingung ist nicht hinreichend. Bei der
+Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> ist die erste Ableitung <span class="math notranslate nohighlight">\(f'(x)=3x^2\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span>
+auch Null, aber diese Funktion hat an dem Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> kein Extremum.
+Zusätzlich zu der Bedingung <span class="math notranslate nohighlight">\(f'(x)=0\)</span> muss noch das Vorzeichen in einer Umgebung
+von <span class="math notranslate nohighlight">\(x_0\)</span> wechseln.</p>
+<p>Bei einem Minimum wechselt das Vorzeichen der ersten Ableitung von Minus nach
+Plus, d.h. gilt zusätzlich</p>
 <div class="math notranslate nohighlight">
-\[\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx =
-\textcolor{red}{\frac{1}{6}}\int_{0}^{1} \sqrt{1+3x^2}\cdot \textcolor{red}{6}x \, dx.\]</div>
-<p>Für das so umgeschriebene Integral dürfen wir die Substitutionsregel anwenden.
-Dazu müssen noch die untere und obere neuen Integrationsgrenzen ausgerechnet
-werden:</p>
+\[f'(x) &gt; 0, \text{ falls } x &lt; x_0 \; \text{ und } \; f'(x) &lt; 0, \text{ falls }
+x &gt; x_0,\]</div>
+<p>dann hat <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein lokales Minimum.</p>
+<p>Bei einem lokalen Maximum erfolgt der Wechsel von Plus nach Minus, also</p>
+<div class="math notranslate nohighlight">
+\[f'(x) &lt; 0, \text{ falls } x &lt; x_0 \; \text{ und } \; f'(x) &gt; 0, \text{ falls }
+x &gt; x_0,\]</div>
+</section>
+<section id="kriterium-mit-2-ableitung">
+<h2>Kriterium mit 2. Ableitung<a class="headerlink" href="#kriterium-mit-2-ableitung" title="Link to this heading">#</a></h2>
+<p>Ist die Funktion zweimal differenzierbar, können wir alternativ zum
+Vorzeihenwechselkriterium auch die zweite Ableitung nutzen, um Extremstellen zu
+berechen. Es gilt:</p>
 <ul class="simple">
-<li><p>untere Grenze: <span class="math notranslate nohighlight">\(x = 0 \Rightarrow g(0) = 1+3\cdot 0^2 = 1\)</span></p></li>
-<li><p>obere Grenze: <span class="math notranslate nohighlight">\(x = 1 \Rightarrow g(1) = 1 + 3\cdot 1^2 = 4\)</span></p></li>
+<li><p>Wenn <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und <span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span>, dann hat <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
+lokales Maximum <span class="math notranslate nohighlight">\(f(x_0)\)</span> bzw. einen Hochpunkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span>.</p></li>
+<li><p>Wenn <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und <span class="math notranslate nohighlight">\(f''(x_0) &gt; 0\)</span>, dann hat <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
+lokales Minimum <span class="math notranslate nohighlight">\(f(x_0)\)</span> bzw. einen Teifpunkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span>.</p></li>
 </ul>
-<p>Wir erhalten also:</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{6} \int_{0}^{1} \sqrt{1+3x^2}\cdot 6x \, dx =
-\frac{1}{6} \int_{\textcolor{red}{1}}^{\textcolor{red}{4}} \sqrt{z} \, dz. \]</div>
-<p>Die Wurzelfunktion zu integrieren ist aber nicht so schwer, also</p>
-<div class="math notranslate nohighlight">
-\[ \frac{1}{6} \int_{1}^{4} \sqrt{z} \, dz = \frac{1}{6} \big[
-\frac{2}{3}z^{\frac{3}{2}} \big] = \frac{1}{9} \big( 4^{\frac{3}{2}} -
-1^{\frac{3}{2}}\big) = \frac{7}{9}.\]</div>
-<p>Somit haben wir das Ergebnis</p>
-<div class="math notranslate nohighlight">
-\[\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx = \frac{7}{9}.\]</div>
-</section>
-<section id="weiteres-lernmaterial">
-<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Link to this heading">#</a></h2>
-<p>Integration durch Substitution ist nicht einfach. Daher folgen hier einige
-Videos zur Vertiefung.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Integration durch Substitution 1” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “lokale Extrema: notwendige Bedingung” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5qkvVQgjczU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Integration durch Substitution 2” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “lokale Extrema: hinreichende Bedingung” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cpzvX___VZA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Integration durch Substitution 3” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “lokale Extrema: Vorzeichenwechselkriterium” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/icHYGCoyyz0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Integration durch Substitution 4” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Integration durch Substitution” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0j55gTZVwy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details></section>
+</details><p>Weiteres Material finden Sie hier:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/extremwerte-berechnen-5248">https://studyflix.de/mathematik/extremwerte-berechnen-5248</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/extrempunkte-berechnen-2127">https://studyflix.de/mathematik/extrempunkte-berechnen-2127</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/extremstellen-4147">https://studyflix.de/mathematik/extremstellen-4147</a></p></li>
+<li><p><a class="reference external" href="https://studyflix.de/mathematik/hochpunkt-und-tiefpunkt-2126">https://studyflix.de/mathematik/hochpunkt-und-tiefpunkt-2126</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Für die Fuktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> haben wir schon festgestellt, dass die erste
+Ableitung Null ist, aber trotzdem dort kein Extremum vorliegt. Auch die zweite
+Ableitung ist an dieser Stelle Null und die Krümmung wechselt dort. Solche
+Wendestellen betrachten wir im nächsten Kapitel.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -612,7 +625,7 @@ Videos zur Vertiefung.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">11.4 Partielle Integration</p>
+        <p class="prev-next-title">11.4 Monotonie und Krümmung</p>
       </div>
     </a>
     <a class="right-next"
@@ -620,7 +633,7 @@ Videos zur Vertiefung.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">11.6 Integralfunktionen und das uneigentliche Integral</p>
+        <p class="prev-next-title">11.6 Wendepunkte</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -642,9 +655,10 @@ Videos zur Vertiefung.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitutionsregel">Substitutionsregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-integration-durch-substitution">Beispiel für Integration durch Substitution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum">Minimum und Maximum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorzeichenwechselkriterium">Vorzeichenwechselkriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kriterium-mit-2-ableitung">Kriterium mit 2. Ableitung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

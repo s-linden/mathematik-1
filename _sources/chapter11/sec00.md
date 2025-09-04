@@ -1,4 +1,4 @@
-# 11. Integralrechnung
+# 11. Anwendung Differentialrechnung
 
 Themen:
 

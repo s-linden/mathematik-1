@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>12.4 Monotonie und Krümmung &#8212; Mathematik 1 Maschinenbau</title>
+    <title>12.4 Partielle Integration &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -67,8 +67,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12.5 Extremwerte" href="sec05.html" />
-    <link rel="prev" title="12.3 Neigungswinkel / Schnittwinkel" href="sec03.html" />
+    <link rel="next" title="12.5 Integration durch Substitution" href="sec05.html" />
+    <link rel="prev" title="12.3 Eigenschaften von Integralen" href="sec03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -276,22 +276,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/sec00.html">11. Integralrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec01.html">11.1 Stammfunktion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec02.html">11.2 Bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec03.html">11.3 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec04.html">11.4 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec05.html">11.5 Integration durch Substitution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec06.html">11.6 Integralfunktionen und das uneigentliche Integral</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/sec00.html">11. Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec01.html">11.1 Linearisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec02.html">11.2 Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec03.html">11.3 Neigungswinkel / Schnittwinkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec04.html">11.4 Monotonie und Krümmung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec05.html">11.5 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/sec06.html">11.6 Wendepunkte</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">12. Anwendung Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="sec01.html">12.1 Linearisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">12.2 Regel von Bernoulli-de L’Hospital</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">12.3 Neigungswinkel / Schnittwinkel</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.4 Monotonie und Krümmung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec05.html">12.5 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec06.html">12.6 Wendepunkte</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">12. Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sec01.html">12.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">12.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">12.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec05.html">12.5 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec06.html">12.6 Integralfunktionen und das uneigentliche Integral</a></li>
 </ul>
 </details></li>
 </ul>
@@ -444,7 +444,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>12.4 Monotonie und Krümmung</h1>
+    <h1>12.4 Partielle Integration</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -455,10 +455,9 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hohere-ableitungen">Höhere Ableitungen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie">Monotonie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krummung">Krümmung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrieren-von-produkten">Integrieren von Produkten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-partielle-integration">Beispiel für partielle Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
 </ul>
             </nav>
         </div>
@@ -470,120 +469,92 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="monotonie-und-krummung">
-<h1>12.4 Monotonie und Krümmung<a class="headerlink" href="#monotonie-und-krummung" title="Link to this heading">#</a></h1>
-<p>Als nächstes betrachten wir Monotonie und Krümmung.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="partielle-integration">
+<h1>12.4 Partielle Integration<a class="headerlink" href="#partielle-integration" title="Link to this heading">#</a></h1>
+<p>Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
+jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:</p>
+<div class="math notranslate nohighlight">
+\[\left( u(x)\cdot v(x)\right)^{\prime} = u^{\prime}(x)\cdot v(x) +
+u(x)\cdot v^{\prime}(x).\]</div>
+<p>Da Integration die Umkehrung der Ableitung ist, dürfen Produkte auch nicht
+einfach so integriert werden. Dafür gibt es die Produktregel für Integrale, die
+offiziell <strong>partielle Integration</strong> heißt.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie wissen, was <strong>höhere Ableitungen</strong> sind.</p></li>
-<li><p>Die erste Ableitung an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> beschreibt das <strong>Monotonieverhalten</strong>
-einer Funktion <span class="math notranslate nohighlight">\(f\)</span> in der unmittelbaren Umgebung von <span class="math notranslate nohighlight">\(x_0\)</span>. Ist <span class="math notranslate nohighlight">\(f'(x_0)&lt;0\)</span>,
-dann fällt die Funktion. Ist <span class="math notranslate nohighlight">\(f'(x_0)&gt;0\)</span>, dann wächst die Funktion.</p></li>
-<li><p>Die zweite Ableitung an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> beschreibt das <strong>Krümmungsverhalten</strong>
-der Funktion in der näheren Umgebung von <span class="math notranslate nohighlight">\(x_0\)</span>. Ist <span class="math notranslate nohighlight">\(f''(x_0)&lt;0\)</span>, so haben wir
-Rechtskrümmung. Ist <span class="math notranslate nohighlight">\(f''(x_0)&gt;0\)</span>, so Linkskrümmung.</p></li>
-</ul>
+<p>Sie können ein Produkt von zwei Funktionen <span class="math notranslate nohighlight">\(u\cdot v\)</span> mit der partiellen
+Integrationsregel im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> integrieren:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} u(x) \cdot
+v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.\]</div>
 </div>
 </section>
-<section id="hohere-ableitungen">
-<h2>Höhere Ableitungen<a class="headerlink" href="#hohere-ableitungen" title="Link to this heading">#</a></h2>
-<p>Ist die Ableitung <span class="math notranslate nohighlight">\(f'\)</span> einer Funktion wiederum differenzierbar, so bezeichnen
-wir ihre Ableitung als zweite Ableitung von <span class="math notranslate nohighlight">\(f\)</span> und notieren sie mit zwei
-Strichen: <span class="math notranslate nohighlight">\(f''\)</span>. Ist nun die zweite Ableitung wiederum differenzierbar, dann
-bezeichnen wir ihre Ableitung als dritte Ableitung: <span class="math notranslate nohighlight">\(f'''\)</span>. Alternativ dürfen
-diese sogenannten höheren Ableitungen auch mit einer Zahl notiert werden:</p>
+<section id="integrieren-von-produkten">
+<h2>Integrieren von Produkten<a class="headerlink" href="#integrieren-von-produkten" title="Link to this heading">#</a></h2>
+<p>Die partielle Integration kann durch folgende Formel ausgedrückt werden:</p>
 <div class="math notranslate nohighlight">
-\[f''=f^{(2)}, \quad f'''= f^{(3)}.\]</div>
-<p>Ab der vierten Ableitung sind nur noch Zahlen üblich: <span class="math notranslate nohighlight">\(f^{(4)}, f^{(5)},
-\ldots\)</span>.</p>
-<p>Beispiel: Das Polynom vierten Grades</p>
-<div class="math notranslate nohighlight">
-\[f(x) = 2x^4 + 5x^3 -7x^2 + x +2\]</div>
-<p>ist unendlich oft differenzierbar. Die ersten sieben Ableitungen lauten:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f'(x)      &amp;= 8x^3 + 15x^2 - 14x + 1 \\
-f''(x)     &amp;= 24x^2 + 30x - 14 \\
-f'''(x)    &amp;= 48x + 30 \\
-f^{(4)}(x) &amp;= 48 \\
-f^{(5)}(x) &amp;= 0 \\
-f^{(6)}(x) &amp;= 0 \\
-f^{(7)}(x) &amp;= 0 \\
-\vdots\; &amp;= \;\vdots \\
-\end{align*}\]</div>
+\[\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.\]</div>
+<p>Hierbei sind <span class="math notranslate nohighlight">\(u(x)\)</span> und <span class="math notranslate nohighlight">\(v(x)\)</span> zwei Funktionen, deren Produkt integriert werden
+soll, und <span class="math notranslate nohighlight">\(u'(x)\)</span> und <span class="math notranslate nohighlight">\(v'(x)\)</span> sind die Ableitungen von <span class="math notranslate nohighlight">\(u(x)\)</span> und <span class="math notranslate nohighlight">\(v(x)\)</span>.</p>
 </section>
-<section id="monotonie">
-<h2>Monotonie<a class="headerlink" href="#monotonie" title="Link to this heading">#</a></h2>
-<p>Den Begriff Monotonie haben wir schon bei Folgen kennengelernt. Bei Funktionen
-wird Monotonie analog definiert.</p>
-<p>Wir betrachten alle Stellen <span class="math notranslate nohighlight">\(x_1\)</span> und <span class="math notranslate nohighlight">\(x_2\)</span> mit der Eigenschaft <span class="math notranslate nohighlight">\(x_1 &lt; x_2\)</span>.
-Dann vergleichen wir die zugehörigen Funktionswerte <span class="math notranslate nohighlight">\(f(x_1)\)</span> und <span class="math notranslate nohighlight">\(f(x_2)\)</span>. Je
-nachdem, wie der Vergleich ausfällt, führen wir die folgenden Bezeichnungen ein:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f\)</span> ist streng monoton fallend, wenn <span class="math notranslate nohighlight">\(f(x_1) &gt; f(x_2)\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(f\)</span> ist monoton fallend, wenn <span class="math notranslate nohighlight">\(f(x_1) \geq f(x_2)\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(f\)</span> ist streng monoton wachsend, wenn <span class="math notranslate nohighlight">\(f(x_1) &lt; f(x_2)\)</span> und</p></li>
-<li><p><span class="math notranslate nohighlight">\(f\)</span> ist monoton wachsend, wenn <span class="math notranslate nohighlight">\(f(x_1) \leq f(x_2)\)</span>.</p></li>
-</ul>
-<p>Manchmal wird auch der Begriff steigend für wachsend verwendet und strikt für
-streng. Eine Funktion kann aber keine der vier oben genannten
-Monotonieeigenschaften haben.</p>
-<p>Ist eine Funktion differenzierbar, dann können wir das Monotonieverhalten mit
-der ersten Ableitung bestimmen:</p>
-<ul class="simple">
-<li><p>Ist <span class="math notranslate nohighlight">\(f'(x)&gt;0\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span>, dann wächst <span class="math notranslate nohighlight">\(f\)</span> streng mononton.</p></li>
-<li><p>Ist <span class="math notranslate nohighlight">\(f'(x)&lt;0\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span>, dann fällt <span class="math notranslate nohighlight">\(f\)</span> streng monoton.</p></li>
-</ul>
-<p>Die Umkehrung gilt nicht. Es gibt auch streng monotone Funktionen, bei der die
-erste Ableitung Null wird. Beispielsweise ist die Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> streng
-monoton wachsend, aber die erste Ableitung an der Stelle <span class="math notranslate nohighlight">\(x_0 = 0\)</span> wird Null.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference external" href="https://studyflix.de/mathematik/monotonie-2157">https://studyflix.de/mathematik/monotonie-2157</a></p></li>
-<li><p><a class="reference external" href="https://studyflix.de/mathematik/monotonieverhalten-4227">https://studyflix.de/mathematik/monotonieverhalten-4227</a></p></li>
-</ul>
-</div></blockquote>
+<section id="beispiel-fur-partielle-integration">
+<h2>Beispiel für partielle Integration<a class="headerlink" href="#beispiel-fur-partielle-integration" title="Link to this heading">#</a></h2>
+<p>Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
+Integrals</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.\]</div>
+<p>Als erstes müssen wir auswählen, welche Funktion <span class="math notranslate nohighlight">\(u\)</span> sein soll und was <span class="math notranslate nohighlight">\(v\)</span>. Wir wählen</p>
+<div class="math notranslate nohighlight">
+\[u(x)=2x \quad \text{ und } \quad v'(x)=\sin(x).\]</div>
+<p>Dann werden in einer Nebenrechnung die Ableitung <span class="math notranslate nohighlight">\(u^{\prime}\)</span> von <span class="math notranslate nohighlight">\(u\)</span> und eine
+Stammfunktion <span class="math notranslate nohighlight">\(v\)</span> von <span class="math notranslate nohighlight">\(v^{\prime}\)</span> ausgerechnet:</p>
+<div class="math notranslate nohighlight">
+\[u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).\]</div>
+<p>Das wird alles in die obige Formel eingesetzt:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
+\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.\]</div>
+<p>Das bestimmte Integral <span class="math notranslate nohighlight">\(\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}\)</span>
+können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
+<span class="math notranslate nohighlight">\(\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx\)</span>, das noch weiter ausgerechnet werden
+muss.</p>
+<p>Aber das geht jetzt relativ leicht, denn von der Funktion <span class="math notranslate nohighlight">\(v(x)=-\cos(x)\)</span> kennen wir ebenfalls eine Stammfunktion, nämlich <span class="math notranslate nohighlight">\(V(x)=-\sin(x)\)</span>. Daher ist <span class="math notranslate nohighlight">\(\int_{0}^{\pi} 2
+\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}\)</span> und insgesamt gilt dann:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
+\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.\]</div>
+<p>Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
+Ergebnis ist</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.\]</div>
+<p>Achtung: Hätten wir eine andere Wahl getroffen, nämlich</p>
+<div class="math notranslate nohighlight">
+\[u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,\]</div>
+<p>dann wäre die Suche nach der Stammfunktion von <span class="math notranslate nohighlight">\(v'\)</span> zwar einfacher gelaufen (das
+wäre <span class="math notranslate nohighlight">\(v(x)=x^2\)</span> gewesen), aber insgesamt wäre es zu kompliziert, denn wir hätten</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[\sin(x)\cdot x^2 \big]_{0}^{\pi} -
+\int_{0}^{\pi} \cos(x)\cdot x^2 \, dx.\]</div>
+<p>Das letzte Integral kann nicht gelöst werden.</p>
+</section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Link to this heading">#</a></h2>
+<p>Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
+wird und an Beispielen vorgeführt wird.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Monotonie” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R0zBCociKiI"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Partielle Integration: Rechenregel” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</details></section>
-<section id="krummung">
-<h2>Krümmung<a class="headerlink" href="#krummung" title="Link to this heading">#</a></h2>
-<p>Die Krümmung beschreibt die Veränderung der Steigung. Wir unterscheiden zwischen
-links- und rechtsgekrümmten Funktionen bzw. eine Funktion kann auch gar keine
-Krümmung haben. Befinden wir uns an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> und ist die Funktion <span class="math notranslate nohighlight">\(f\)</span>
-zwei differenzierbar, dann können wir die Krümmung durch die zweite Ableitung
-beschreiben:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span>: rechtsgekrümmt, die Steigung nimmt ab</p></li>
-<li><p><span class="math notranslate nohighlight">\(f''(x_0) &gt; 0\)</span>: linksgekrümmt, die Steigung nimmt zu</p></li>
-</ul>
-<p>Wietere Details finden Sie und in dem nachfolgenden Video.</p>
-<blockquote>
-<div><p><a class="reference external" href="https://studyflix.de/mathematik/kruemmungsverhalten-5168">https://studyflix.de/mathematik/kruemmungsverhalten-5168</a></p>
-</div></blockquote>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Krümmung einer Funktion” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a1QIlo7Xf_A"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Partielle Intgeration: Beispiele” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="zusammenfassung-und-ausblick">
-<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
-<p>Die Eigenschaften Monotonie und Krümmung fokussieren sich auf das generelle
-Verhalten einer Funktion auf einem Intervall. In den nächsten Kapiteln
-betrachten wir einezelne Punkte, die von besonderer Bedeutung für einen
-Funktionsgraphen sind.</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -622,7 +593,7 @@ Funktionsgraphen sind.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">12.3 Neigungswinkel / Schnittwinkel</p>
+        <p class="prev-next-title">12.3 Eigenschaften von Integralen</p>
       </div>
     </a>
     <a class="right-next"
@@ -630,7 +601,7 @@ Funktionsgraphen sind.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">12.5 Extremwerte</p>
+        <p class="prev-next-title">12.5 Integration durch Substitution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -652,10 +623,9 @@ Funktionsgraphen sind.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hohere-ableitungen">Höhere Ableitungen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie">Monotonie</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krummung">Krümmung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrieren-von-produkten">Integrieren von Produkten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-partielle-integration">Beispiel für partielle Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
 </ul>
   </nav></div>
 

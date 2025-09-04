@@ -1,58 +1,67 @@
-# 11.6 Integralfunktionen und das uneigentliche Integral
+# 11.6 Wendepunkte
 
-Das bestimmte Intgeral liefert eine Zahl. Wir können das bestimmte Integral auch
-dazu nutzen, eine neue Funktion einzuführen, indem wir die untere Grenze auf
-einen festen Wert setzen und die obere Grenze als Variable betrachten. Damit
-erhalten wir die sogenannte Integralfunktion.
+Auch die Nullstellen der zweiten Ableitung haben eine besondere geometrische
+Bedeutung, die wir in diesem Kapitel uns erarbeiten.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was eine **Integralfunktion** ist.
-* Sie kennen **uneigentliche Integrale**.
+* Sie wissen, was ein **Wendepunkt** ist.
+* Sie kennen die Bedingungen, unter denen eine Funktion einen Wendepunkt hat.
+* Sie wissen, was ein **Sattelpunkt/Terassenpunkt** ist.
 ```
 
-## Was ist die Integralfunktion?
+## Wendepunkt
 
-Wenn wir einen Punkt $a\in\mathbb{R}$ festlegen, dann ist das bestimmte Integral
+In der Mathematik nennt man einen Punkt, an dem sich das Krümmungsverhalten
+einer Funktion ändert, Wendepunkt. In dem folgenden Beispiel geht der
+Funktionsgraph bei $W$ von einer Rechtskrümmung in eine Linkskrümmung über.
 
-$$\int_{a}^{x} f(t)\, dt$$
+```{figure} pics/inflection_point.png
+---
+width: 50%
+name: inflection_point
+---
+Quelle: Wolfgang Dvorak - Eigenes Werk, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=1283725>
+```
 
-eine Funktion, denn für jeden Wert $x\in\mathbb{R}$ wird durch diese Vorschrift
-ein Funktionswert
+Ist eine Funktion zweimal differenzierbar, dann hat die erste Ableitung bei
+einem Wendepunkt ein lokales Maximum oder ein lokales Minimum. Es ist also
+notwendig, dass die zweite Ableitung an einer Wendestelle Null ist:
 
-$$I_{a}(x) = \int_{a}^{x} f(t)\, dt$$
+$$f''(x) = 0.$$
 
-erzeugt. Wichtig dabei ist, dass die untere Grenze $a$ festgelegt ist. Diese
-Funktion wird **Integralfunktion** genannt.
+Damit eine Stelle $x_0$ hinreichend eine Wendestelle ist, muss die zweite
+Ableitung auf einen Vorzeichenwechsel untersucht werden oder die dritte
+Ableitung überprüft werden. Liegt ein Vorzeichenwechsel von $f''$ an der Stelle
+$x_0$ von Minus nach Plus vor, dann liegt eine Rechts-links-Wendestelle vor.
+Alternativ besagt $f'''(x_0) > 0$, dass eine Rechts-links-Wendestelle vorliegt.
+Liegt ein Vorzeichenwechsel von $f''$ von Plus nach Minus vor oder ist
+$f'''(x_0)<0$, dann liegt eine Links-rechts-Wendestelle vor.
 
-Weitere Informationen finden Sie hier:
+## Sattelpunkt
 
-> [https://studyflix.de/mathematik/integralfunktion-6480](https://studyflix.de/mathematik/integralfunktion-6480)
+Manchmal hat eine Wendestelle auch gleichzeitig eine Tangente mit Steigung Null,
+d.h. einer Tangente die parallel zur x-Achse ist. Dann nennt man diesen Punkt
+Sattelpunkt oder Terrassenpunkt. Die folgende Abbildung zeigt ein Beispiel mit
+zwei Sattelpunkten.
 
-## Uneigentliche Integrale
+```{figure} pics/Two_saddle_points.svg
+---
+width: 50%
+name: Two_saddle_points
+---
+Quelle: HilberTraum - Eigenes Werk, CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=34972980>
+```
 
-Uneigentliche Integrale treten auf, wenn ein Integral entweder eine oder zwei
-unendliche Grenzen hat oder wenn der Integran unstetig ist. Das uneigentliche
-Integral ist eine Erweiterung des bestimmten Integrals und erlaubt die Analyse
-von Flächeninhalten oder Summen, die auf den ersten Blick divergieren könnten.
+```{dropdown} Video "Wendestellen und Sattelstellen" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lUstL3M42Ec"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
-Wir gehen jetzt davon aus, dass $f$ eine Funktion ist, die auf jedem Intervall
-$[a,b]$ mit $b\in (a,\infty)$ definiert ist. Wenn der Grenzwert
+## Zusammenfassung und Ausblick
 
-$$\lim_{t \to b}\int_{a}^{t} f(x)\, dx$$
-
-existiert, dann nennt man
-
-$$\int_{a}^{\infty} f(x)\, dx = \lim_{t \to b}\int_{a}^{t} f(x)\, dx$$
-
-das uneigentliche Integral von $f$ über $[a,\infty)$.
-
-Falls die untere Grenze unendlich sein sollte, wird analog vorgegangen. Ebenso
-wird das Integral über einen Grenzwert definiiert, wenn der Integrand ein
-einzelnen Stellen unstetig sein sollte.
-
-Weitere Informationen finden Sie hier:
-
-> [https://studyflix.de/mathematik/uneigentliche-integrale-1806](https://studyflix.de/mathematik/uneigentliche-integrale-1806)
+Die Analyse der wichtigsten geometrischen Eigenschaften einr Funktion werden
+auch Kurvendiskussion genannt.

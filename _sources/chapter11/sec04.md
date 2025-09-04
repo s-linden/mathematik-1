@@ -1,95 +1,111 @@
-# 11.4 Partielle Integration
+# 11.4 Monotonie und Krümmung
 
-Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
-jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:
-
-$$\left( u(x)\cdot v(x)\right)^{\prime} = u^{\prime}(x)\cdot v(x) +
-u(x)\cdot v^{\prime}(x).$$
-
-Da Integration die Umkehrung der Ableitung ist, dürfen Produkte auch nicht
-einfach so integriert werden. Dafür gibt es die Produktregel für Integrale, die
-offiziell **partielle Integration** heißt.
+Als nächstes betrachten wir Monotonie und Krümmung.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-Sie können ein Produkt von zwei Funktionen $u\cdot v$ mit der partiellen
-Integrationsregel im Intervall $[a,b]$ integrieren:
-
-$$\int_{a}^{b} u(x) \cdot
-v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
-- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
+* Sie wissen, was **höhere Ableitungen** sind.
+* Die erste Ableitung an der Stelle $x_0$ beschreibt das **Monotonieverhalten**
+  einer Funktion $f$ in der unmittelbaren Umgebung von $x_0$. Ist $f'(x_0)<0$,
+  dann fällt die Funktion. Ist $f'(x_0)>0$, dann wächst die Funktion.
+* Die zweite Ableitung an der Stelle $x_0$ beschreibt das **Krümmungsverhalten**
+  der Funktion in der näheren Umgebung von $x_0$. Ist $f''(x_0)<0$, so haben wir
+  Rechtskrümmung. Ist $f''(x_0)>0$, so Linkskrümmung.
 ```
 
-## Integrieren von Produkten
+## Höhere Ableitungen
 
-Die partielle Integration kann durch folgende Formel ausgedrückt werden:
+Ist die Ableitung $f'$ einer Funktion wiederum differenzierbar, so bezeichnen
+wir ihre Ableitung als zweite Ableitung von $f$ und notieren sie mit zwei
+Strichen: $f''$. Ist nun die zweite Ableitung wiederum differenzierbar, dann
+bezeichnen wir ihre Ableitung als dritte Ableitung: $f'''$. Alternativ dürfen
+diese sogenannten höheren Ableitungen auch mit einer Zahl notiert werden:
 
-$$\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
-- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
+$$f''=f^{(2)}, \quad f'''= f^{(3)}.$$
 
-Hierbei sind $u(x)$ und $v(x)$ zwei Funktionen, deren Produkt integriert werden
-soll, und $u'(x)$ und $v'(x)$ sind die Ableitungen von $u(x)$ und $v(x)$.
+Ab der vierten Ableitung sind nur noch Zahlen üblich: $f^{(4)}, f^{(5)},
+\ldots$.
 
-## Beispiel für partielle Integration
+Beispiel: Das Polynom vierten Grades
 
-Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
-Integrals
+$$f(x) = 2x^4 + 5x^3 -7x^2 + x +2$$
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.$$
+ist unendlich oft differenzierbar. Die ersten sieben Ableitungen lauten:
 
-Als erstes müssen wir auswählen, welche Funktion $u$ sein soll und was $v$. Wir wählen
+\begin{align*}
+f'(x)      &= 8x^3 + 15x^2 - 14x + 1 \\
+f''(x)     &= 24x^2 + 30x - 14 \\
+f'''(x)    &= 48x + 30 \\
+f^{(4)}(x) &= 48 \\
+f^{(5)}(x) &= 0 \\
+f^{(6)}(x) &= 0 \\
+f^{(7)}(x) &= 0 \\
+\vdots\; &= \;\vdots \\
+\end{align*}
 
-$$u(x)=2x \quad \text{ und } \quad v'(x)=\sin(x).$$
+## Monotonie
 
-Dann werden in einer Nebenrechnung die Ableitung $u^{\prime}$ von $u$ und eine
-Stammfunktion $v$ von $v^{\prime}$ ausgerechnet:
+Den Begriff Monotonie haben wir schon bei Folgen kennengelernt. Bei Funktionen
+wird Monotonie analog definiert.
 
-$$u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).$$
+Wir betrachten alle Stellen $x_1$ und $x_2$ mit der Eigenschaft $x_1 < x_2$.
+Dann vergleichen wir die zugehörigen Funktionswerte $f(x_1)$ und $f(x_2)$. Je
+nachdem, wie der Vergleich ausfällt, führen wir die folgenden Bezeichnungen ein:
 
-Das wird alles in die obige Formel eingesetzt:
+* $f$ ist streng monoton fallend, wenn $f(x_1) > f(x_2)$,
+* $f$ ist monoton fallend, wenn $f(x_1) \geq f(x_2)$,
+* $f$ ist streng monoton wachsend, wenn $f(x_1) < f(x_2)$ und
+* $f$ ist monoton wachsend, wenn $f(x_1) \leq f(x_2)$.
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
-\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.$$
+Manchmal wird auch der Begriff steigend für wachsend verwendet und strikt für
+streng. Eine Funktion kann aber keine der vier oben genannten
+Monotonieeigenschaften haben.
 
-Das bestimmte Integral $\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}$
-können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
-$\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx$, das noch weiter ausgerechnet werden
-muss.
+Ist eine Funktion differenzierbar, dann können wir das Monotonieverhalten mit
+der ersten Ableitung bestimmen:
 
-Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist $\int_{0}^{\pi} 2
-\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und insgesamt gilt dann:
+* Ist $f'(x)>0$ für alle $x$, dann wächst $f$ streng mononton.
+* Ist $f'(x)<0$ für alle $x$, dann fällt $f$ streng monoton.
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
-\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.$$
+Die Umkehrung gilt nicht. Es gibt auch streng monotone Funktionen, bei der die
+erste Ableitung Null wird. Beispielsweise ist die Funktion $f(x)=x^3$ streng
+monoton wachsend, aber die erste Ableitung an der Stelle $x_0 = 0$ wird Null.
 
-Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
-Ergebnis ist
+> * [https://studyflix.de/mathematik/monotonie-2157](https://studyflix.de/mathematik/monotonie-2157)
+> * [https://studyflix.de/mathematik/monotonieverhalten-4227](https://studyflix.de/mathematik/monotonieverhalten-4227)
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.$$
-
-Achtung: Hätten wir eine andere Wahl getroffen, nämlich
-
-$$u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,$$
-
-dann wäre die Suche nach der Stammfunktion von $v'$ zwar einfacher gelaufen (das
-wäre $v(x)=x^2$ gewesen), aber insgesamt wäre es zu kompliziert, denn wir hätten
-
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[\sin(x)\cdot x^2 \big]_{0}^{\pi} -
-\int_{0}^{\pi} \cos(x)\cdot x^2 \, dx.$$
-
-Das letzte Integral kann nicht gelöst werden.
-
-## Weiteres Lernmaterial
-
-Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
-wird und an Beispielen vorgeführt wird.
-
-```{dropdown} Video "Partielle Integration: Rechenregel" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video "Monotonie" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R0zBCociKiI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video "Partielle Intgeration: Beispiele" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Krümmung
+
+Die Krümmung beschreibt die Veränderung der Steigung. Wir unterscheiden zwischen
+links- und rechtsgekrümmten Funktionen bzw. eine Funktion kann auch gar keine
+Krümmung haben. Befinden wir uns an der Stelle $x_0$ und ist die Funktion $f$
+zwei differenzierbar, dann können wir die Krümmung durch die zweite Ableitung
+beschreiben:
+
+* $f''(x_0) < 0$: rechtsgekrümmt, die Steigung nimmt ab
+* $f''(x_0) > 0$: linksgekrümmt, die Steigung nimmt zu
+
+Wietere Details finden Sie und in dem nachfolgenden Video.
+
+> [https://studyflix.de/mathematik/kruemmungsverhalten-5168](https://studyflix.de/mathematik/kruemmungsverhalten-5168)
+
+```{dropdown} Video "Krümmung einer Funktion" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a1QIlo7Xf_A"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Die Eigenschaften Monotonie und Krümmung fokussieren sich auf das generelle
+Verhalten einer Funktion auf einem Intervall. In den nächsten Kapiteln
+betrachten wir einezelne Punkte, die von besonderer Bedeutung für einen
+Funktionsgraphen sind.

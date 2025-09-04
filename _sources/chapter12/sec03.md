@@ -1,116 +1,107 @@
-# 12.3 Neigungswinkel / Schnittwinkel
+# 12.3 Eigenschaften von Integralen
 
-Mit Ableitungen lassen sich geometrische Eigenschaften des Funktionsgraphens
-bestimmen. In diesem Kapitel geht es um den Neigungsewinkel und den
-Schnittwinkel.
+Kennt man die Eigenschaften von Integralen, so kann das so manche Rechnung
+erheblich vereinfachen. Im Folgenden werden die wichtigsten Eigenschaften von
+Integralen präsentiert.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Die erste Ableitung einer Funktion beschreibt den Neigungswinkel an dem Punkt
-  $(x_0, f(x_0))$, also $f'(x_0) = \tan (\alpha)$. 
-* Wenn zwei Funktionen sich in dem Punkt $(x_0,y_0)$ treffen, dann sind sie
-  senkrecht zueinander, wenn $f'(x_0)\cdot g'(x_0)=-1$ gilt. Und sie berühren
-  sich nur, wenn $f'(x_0) = g'(x_0)$.
+* Sie wissen, wie sich das Integral verändert, wenn die beiden Integrationsgrenzen
+  miteinander vertauscht werden:
+
+$$\int_{a}^{b} f(x)\,dx = - \int_{b}^{a} f(x)\, dx.$$
+
+* Sie wissen, dass das Integral Null ist, wenn die untere Integrationsgrenze
+  gleich der oberen Integrationsgrenze ist:
+
+$$\int_{a}^{a} f(x)\, dx = 0.\Rule{0 px}{0 em}{1.5 em}$$
+
+* Sie wissen, dass ein Integral mit dem Punkt $c$ in zwei Integrale aufgespalten
+  werden kann:
+
+$$\int_{a}^{b} f(x) \,dx = \int_{a}^{c} f(x) \,dx + \int_{c}^{b} f(x) \,dx.
+\Rule{0 px}{0 em}{1.5 em}$$
+
+* Sie kennen die **Faktorregel**:
+
+$$\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
+\int_{a}^{b} f(x)\, dx.$$
+
+* Sie kennen die **Summenregel**:
+
+$$\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
+g(x)\, dx.$$
 ```
 
-## Neigungswinkel
+## Integrationsgrenzen
 
-Der **Neigungswinkel**, manchmal auch **Steigungswinkel** genannt, ist derjenige
-Winkel, den eine Gerade mit der x-Achse hat. Da bei einer Gerade die Steigung
-konstant ist, muss der Winkel nicht an der Nullstelle abgelesen werden, sondern
-kann auch an anderen Stellen über das Steigungsdreieck bestimmt werden, wie die
-folgende Abbildung zeigt.
+Als erstes betrachten wir die Eigenschaften von Integralen, wenn der Integrand
+$f$ gleich bleibt, aber die Integrationsgrenzen geändert werden.
 
-```{figure} pics/neigungswinkel.svg
----
-width: 75%
-name: neigungswinkel
----
+Werden die beiden Integrationsgrenzen vertauscht, so ändert sich das Vorzeichen
+des Integrals. Integrieren wir also die Funktion $f$ von $b$ nach $a$ anstatt
+von $a$ nach $b$, müssen wir dieses Integral nur mit $-1$ multiplizieren, um das
+ursprüngliche Integral von $a$ nach $b$ zu erhalten. In Formeln sieht das so aus:
+
+$$\int_{a}^{b} f(x)\,dx = - \int_{\textcolor{red}{b}}^{\textcolor{red}{a}}
+f(x)\, dx.$$
+
+Gar nicht erst rechnen müssen wir, wenn das Integral über $f$ von $a$ bis $a$
+geht. In anderen Worten betrachten wir jetzt ein Integral, bei dem die untere
+Integrationsgrenze und die obere Integrationsgrenze zusammenfallen. Wenn wir das
+Integral als orientierte Fläche zwischen dem Funktionsgraphen $f(x)$ und der
+x-Achse interpretieren, heißt das, dass gar kein Rechteck mehr existiert.
+Anstatt eines Rechtecke liegt sozusagen nur noch ein unendlich dünner Strich an
+der Stelle $x=a$ vor, weil es ja von $a$ nach $a$ geht. Ein Strich hat keinen
+Flächeninhalt, das Integral ist also Null. Als mathematische Formel notiert
+heißt das:
+
+$$\int_{\textcolor{red}{a}}^{\textcolor{red}{a}} f(x)\, dx = 0.\Rule{0 px}{0
+em}{1.5 em}$$
+
+Weiter geht es... wiederum hilft die Flächeninterpretation weiter. Diesmal
+erfinden wir einen neuen Punkt $c$. Dann kann die Fläche zwischen
+Funktionsgraph, x-Achse und den Grenzen a und b in zwei Flächen aufgeteilt
+werden. Die erste Fläche ist die Fläche zwischen Funktionsgraph und x-Achse von
+$a$ nach $c$. Die zweite Fläche ist die Fläche zwischen Funktionsgraph und
+x-Achse von $c$ nach $b$. Und beide Flächen zusammen müssen wieder die
+ursprüngliche Fläche ergeben. Also:
+
+$$\int_{a}^{b} f(x) \,dx = \int_{a}^{\textcolor{red}{c}} f(x) \,dx +
+\int_{\textcolor{red}{c}}^{b} f(x) \,dx. \Rule{0 px}{0 em}{1.5 em}$$
+
+Alle drei Eigenschaften werden nochmal in dem folgenden Video erläutert.
+
+```{dropdown} Video: Eigenschaften/Rechenregeln des Integrals I
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BKgcS2wgwu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-Die Steigung $m$ einer Gerade $f(x) = m\cdot x + b$ ist gegeben als
+## Linearität des Integrals
 
-$$m = \frac{\Delta y}{\Delta x}.$$
+Linearität des Integrals klingt kompliziert, ist es aber nicht. Gemeint sind
+damit die folgenden zwei Eigenschaften.
 
-Wenn wir das Steigungsdreieck einzeichnen, sehen wir aber auch, dass der
-Neigungswinkel $\alpha$ über den Tangens berechnet werden kann. Es gilt also
+Faktorregel: Wenn die Funktion $f$ mit einer konstanten Zahl $c$ multipliziert
+wird und dann integriert werden soll, dann können wir auch zuerst das Integral
+von $f$ berechnen und danach das Ergebnis $c$ multiplizieren. Oder anders
+ausgedrückt: wenn im Integranden ein konstanter Faktor ist, dann darf man diesen
+konstanten Faktor auch vor das Integral ziehen.
 
-$$m = \tan(\alpha).$$
+$$\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
+\int_{a}^{b} f(x)\, dx.$$
 
-Wenden wir die Arkustangensfunktion an, können wir so den Neigungswinkel aus der
-Steigung der Geraden berechnen:
+Summenregel: Soll die Summe oder die Differenz zweier Funktionen integriert
+werden, dürfen auch zuerst die beiden Einzelintegrale berechnet werden und
+danach Summe oder Differenz gebildet werden:
 
-$$\alpha = \arctan(m).$$
+$$\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
+g(x)\, dx.$$
 
-Der Begriff des Neigungs- oder Steigungswinkel lässt sich von Geraden auch auf
-andere Funktionen übertragen. Handelt es sich jedoch nicht um eine Gerade, so
-variiert der Winkel und ist abhängig von dem Punkt $(x_0, y_0)$ auf dem
-Funktionsgraphen, an dem der Neigungswinkel bestimmt werden soll.
+In dem folgenden Video werden beide Eigenschaften erläutert und anhand eines
+Beispiels demonstriert.
 
-```{admonition} Was ist ... der Neigungswinkel?
-:class: note
-Der Neigungswinkel im Punkt $(x_0, f(x_0))$ einer Funktion $f$ ist der Winkel
-$\alpha$, den ihre Tangente an dieser Stelle mit der x-Achse bildet. Da die
-Steigung der Tangente an dieser Stelle durch die erste Ableitung $f'(x_0)$
-gegeben ist, erhalten wir
-
-$$\tan(\alpha) = f'(x_0).$$
+```{dropdown} Video: Eigenschaften/Rechenregeln des Integrals II
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eMGWYY96Hno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
-```{dropdown} Video "Steigungswinkel berechnen" von Mister Mathe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oraxntrhRYI"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Schnittwinkel
-
-Der Schnittwinkel für den Punkt $(x_0,y_0)$ ist definiert für zwei beliebige
-Funktionen $f$ und $g$, die sich in diesem Punkt schneiden. An jede der beiden
-Funktionen kann eine Tangente gelegt werden. Der Schnittwinkel ist dann der
-Winkel, den die beiden Tangenten einschließen.
-
-```{figure} pics/Schnittwinkel.svg
----
-width: 50%
-name: schnittwinkel
----
-Quelle: MushroomCloud - selbst gezeichnet, Bild-frei,
-<https://de.wikipedia.org/w/index.php?curid=2905230>
-```
-
-Man kann diesen Winkel $\alpha$ auch als Differenz der beiden Neigungswinkel
-berechnen. Wenn $\alpha_f$ der Neigungswinkel der Funktion $f$ ist und
-$\alpha_g$ der Neigungswinkel der Funktion $g$, dann ist der gesuchte
-Schnitwinkel
-
-$$\alpha = \left|\alpha_f - \alpha_g\right|.$$
-
-Da wir beide Neigungswinkel auch mit den Ableitungen formulieren können und ein
-Additionstheorem für den Tangens gilt, erhalten wir
-
-$$\tan(\alpha) = \left|\frac{f'(x_0) - g'(x_0)}{1 + f'(x_0)g'(x_0)}\right|.$$
-
-Sind die beiden Tangenten senkrecht zueinander, dann ist
-
-$$f'(x_0)\cdot g'(x_0)=-1.$$
-
-Und sie berühren sich nur, wenn $f'(x_0) = g'(x_0)$ gilt. Weitere Deteils findem
-Sie hier:
-
-> [https://studyflix.de/mathematik/schnittwinkel-berechnen-5408](https://studyflix.de/mathematik/schnittwinkel-berechnen-5408)
-
-```{dropdown} Video "Schnittwinkel berechnen" von Mister Mathe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Dm_Uznx-lBw"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Zusammenfassung und Ausblick
-
-Die Angabe des Neigungswinkels einer Funktion und des Schnittwinkels von zwei
-Funktionen ist nur eine von vielen geometrischen Eigenschaften einer Funktion,
-die mit Hilfe von Ableitungen berechnet werden kann. Weitere geometrische
-Eigenschaften wie Monotonie und Krümmung lernen wir im nächsten Kapitel kennen.

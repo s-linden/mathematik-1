@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>11.1 Stammfunktion &#8212; Mathematik 1 Maschinenbau</title>
+    <title>11.1 Linearisierung &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -67,8 +67,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11.2 Bestimmtes Integral" href="sec02.html" />
-    <link rel="prev" title="11. Integralrechnung" href="sec00.html" />
+    <link rel="next" title="11.2 Regel von Bernoulli-de L’Hospital" href="sec02.html" />
+    <link rel="prev" title="11. Anwendung Differentialrechnung" href="sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -276,22 +276,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">11. Integralrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.1 Stammfunktion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec02.html">11.2 Bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec03.html">11.3 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec04.html">11.4 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec05.html">11.5 Integration durch Substitution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sec06.html">11.6 Integralfunktionen und das uneigentliche Integral</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec00.html">11. Anwendung Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.1 Linearisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec02.html">11.2 Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec03.html">11.3 Neigungswinkel / Schnittwinkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec04.html">11.4 Monotonie und Krümmung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec05.html">11.5 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sec06.html">11.6 Wendepunkte</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/sec00.html">12. Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec01.html">12.1 Linearisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec02.html">12.2 Regel von Bernoulli-de L’Hospital</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec03.html">12.3 Neigungswinkel / Schnittwinkel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec04.html">12.4 Monotonie und Krümmung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec05.html">12.5 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec06.html">12.6 Wendepunkte</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/sec00.html">12. Integralrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec01.html">12.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec02.html">12.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec03.html">12.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec04.html">12.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec05.html">12.5 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/sec06.html">12.6 Integralfunktionen und das uneigentliche Integral</a></li>
 </ul>
 </details></li>
 </ul>
@@ -444,7 +444,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>11.1 Stammfunktion</h1>
+    <h1>11.1 Linearisierung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -455,8 +455,9 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Stammfunktion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wichtige-stammfunktionen">Wichtige Stammfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idee-der-linearisierung">Idee der Linearisierung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangentenansatz">Tangentenansatz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel">Beispiel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
@@ -469,84 +470,111 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="stammfunktion">
-<h1>11.1 Stammfunktion<a class="headerlink" href="#stammfunktion" title="Link to this heading">#</a></h1>
-<p>In diesem Abschnitt führen wir zunächst Stammfunktionen ein.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="linearisierung">
+<h1>11.1 Linearisierung<a class="headerlink" href="#linearisierung" title="Link to this heading">#</a></h1>
+<p>Die Welt, in der wir leben, ist selten linear. Dennoch können wir viele Prozesse
+in einer ersten Näherung als linear behandeln. In diesem Kapitel beschäftigen
+wir uns daher mit der Linearisierung von nichtlinearen Funktionen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie wissen, was eine <strong>Stammfunktion</strong> ist.</p></li>
-<li><p>Sie wissen, dass wenn es eine Stammfunktion gibt, es gleich unendlich viele
-Stammfunktionen gibt, die sich durch eine <strong>Integrationskonstante</strong>
-unterscheiden.</p></li>
-</ul>
+<p>Sie wissen, dass eine nichtlineare Funktion <strong>linearisiert</strong> werden kann. Damit
+ist gemeint, dass die nichtlineare Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>
+näherungsweise durch die lineare Funktion</p>
+<div class="math notranslate nohighlight">
+\[T(x) = f(x_0) + f'(x_0)\cdot (x-x_0)\]</div>
+<p>ersetzt werden kann. Das stimmt nur in der Nähe des sogenannten
+<strong>Arbeitspunktes</strong> <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span>.</p>
 </div>
 </section>
-<section id="id1">
-<h2>Stammfunktion<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="note admonition">
-<p class="admonition-title">Was ist … eine Stammfunktion?</p>
-<p>Angenommen, die Funktion <span class="math notranslate nohighlight">\(f\)</span> ist stetig. Dann wird die Funktion <span class="math notranslate nohighlight">\(F\)</span>
-Stammfunktion von <span class="math notranslate nohighlight">\(f\)</span> genannt, wenn ihre Ableitungsfunktion gleich <span class="math notranslate nohighlight">\(f\)</span> ist, also
-wenn gilt <span class="math notranslate nohighlight">\(F'(x) =  f(x)\)</span>.</p>
-</div>
-<p>Beispiel: Wir betrachten die Funktion <span class="math notranslate nohighlight">\(f(x)=x\)</span>. Mit ein bisschen Probieren fällt
-auf, dass die Funktion <span class="math notranslate nohighlight">\(F(x)=\frac{1}{2}x^2\)</span> abgeleitet genau <span class="math notranslate nohighlight">\(x\)</span> ergibt. Also
-ist die Funktion <span class="math notranslate nohighlight">\(F\)</span> eine Stammfunktion von <span class="math notranslate nohighlight">\(f\)</span>. Jetzt probieren wir die
-Funktion <span class="math notranslate nohighlight">\(\tilde{F}(x)=\frac{1}{2}x^2+1\)</span> aus. Wenn wir diese Funktion ableiten,
-kommt</p>
+<section id="idee-der-linearisierung">
+<h2>Idee der Linearisierung<a class="headerlink" href="#idee-der-linearisierung" title="Link to this heading">#</a></h2>
+<p>Die Kernidee der Linearisierung liegt in der Annäherung einer Funktion durch
+eine lineare Funktion an einem bestimmten Punkt. Die folgende Grafik zeigt, wie
+die nichtlineare Exponentialfunktion <span class="math notranslate nohighlight">\(f(x) = \exp(x)\)</span> in dem Punkt <span class="math notranslate nohighlight">\((0, 1)\)</span>
+durch die lineare Funktion</p>
 <div class="math notranslate nohighlight">
-\[\tilde{F}'(x) = \left( \frac{1}{2}x^2 + 1 \right)'= x + 0 = x\]</div>
-<p>heraus. Das ist aber auch gleich der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Welches ist denn nun die
-richtige Stammfunktion?</p>
-<p>Beide Funktionen sind eine Stammfunktion. Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> eine
-Stammfunktion hat, dann hat sie gleich unendlich viele Stammfunktionen, denn es
-muss nur eine reelle Zahl hinzuaddiert werden und schon hat man eine neue
-Stammfunktion.</p>
-<div class="note admonition">
-<p class="admonition-title">Wie viele Stammfunktionen gibt es?</p>
-<p>Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> eine Stammfunktion hat, hat sie gleich unendlich viele
-Stammfunktionen. Die Stammfunktionen unterscheiden sich nur dadurch, dass eine
-reelle Zahl am Ende dazuaddiert wird. Diese Zahl wird <strong>Integrationskonstante</strong>
-genannt.</p>
-</div>
-<p>Begründung: Wenn <span class="math notranslate nohighlight">\(F\)</span> die erste gefundene Stammfunktion ist, dann muss ihre 1.
-Ableitung gleich <span class="math notranslate nohighlight">\(f\)</span> sein, also <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> gelten. Dann basteln wir eine
-neue Funktion <span class="math notranslate nohighlight">\(\tilde{F}(x) = F(x) + c\)</span> mit <span class="math notranslate nohighlight">\(c\in\mathbb{R}\)</span>. Das muss dann aber
-auch eine Stammfunktion sein, denn</p>
+\[T(x) = x + 1\]</div>
+<p>angenähert wird. In der Mathematik sagt man auch, die Exponentialfunktion wird
+in dem Punkt <span class="math notranslate nohighlight">\((0, 1)\)</span> durch die lineare Funktion <strong>approximiert</strong>.</p>
+<figure class="align-default" id="exp-e">
+<a class="reference internal image-reference" href="../_images/Exp_e.svg"><img alt="../_images/Exp_e.svg" src="../_images/Exp_e.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Quelle: Von Marcel Marnitz, reworked by user:Georg-Johann - Selbst erstellt (own work using GeoGebra),
+completely reworked 2010-08-22, Gemeinfrei, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=5905583">https://commons.wikimedia.org/w/index.php?curid=5905583</a></span><a class="headerlink" href="#exp-e" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Im Folgenden beschreiben wir, wie man auf die Funktionsgleichung der linearen Funktion kommt.</p>
+</section>
+<section id="tangentenansatz">
+<h2>Tangentenansatz<a class="headerlink" href="#tangentenansatz" title="Link to this heading">#</a></h2>
+<p>Der Tangentenansatz ist eine wichtige Methode zur Linearisierung von
+eindimensionalen Funktionen. Er wird für Funktionen verwendet, die abgeleitet
+werden können. Der Tangentenansatz basiert auf der Idee, dass eine Funktion in
+der Nähe eines bestimmten Punktes durch ihre Tangente genähert werden kann.</p>
+<p>Geometrisch betrachtet ist die Tangente an einer Funktion die gerade Linie, die
+die Funktion in dem Arbeitspunkt <span class="math notranslate nohighlight">\((x_0, f(x_0)\)</span> berührt und deren Steigung
+<span class="math notranslate nohighlight">\(f'(x_0)\)</span> entspricht. Generell hat die Gerade die Funktionsgleichung</p>
 <div class="math notranslate nohighlight">
-\[\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).\]</div>
+\[y = m\cdot x + b\]</div>
+<p>mit der Steigung <span class="math notranslate nohighlight">\(m\)</span> und dem y-Achsenabschnitt <span class="math notranslate nohighlight">\(b\)</span>. Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span>
+differenzierbar ist, stimmt die Steigung der Tangente mit der ersten Ableitung
+<span class="math notranslate nohighlight">\(f'(x_0)\)</span> über ein, es gilt also <span class="math notranslate nohighlight">\(m = f'(x_0)\)</span>. Jetzt setzen wir den Punkt
+<span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> in die Geradengleichung <span class="math notranslate nohighlight">\(y = m\cdot x + b\)</span> ein und erhalten für
+<span class="math notranslate nohighlight">\(b\)</span> den Term <span class="math notranslate nohighlight">\(f(x_0) - f'(x_0)\cdot x_0\)</span>. Somit lässt sich die
+Funktionsvorschrift der Tangente schreiben als</p>
+<div class="math notranslate nohighlight">
+\[T(x) = f(x_0) + f'(x_0) \cdot (x - x_0).\]</div>
+<p>In der Nähe dieses Punktes liegt die Tangente sehr nah an der Funktion und
+bietet somit eine einfache lineare Beschreibung des ursprünglich nichtlinearen
+Verhaltens.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video: Stammfunktion und unbestimmtes Integral</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m__ID4PHBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Tangentenfunktion” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9-sYXAkbJQQ"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="wichtige-stammfunktionen">
-<h2>Wichtige Stammfunktionen<a class="headerlink" href="#wichtige-stammfunktionen" title="Link to this heading">#</a></h2>
-<p>Zu Funktionen, die häufig im Maschinenbau vorkommen, sollten Sie die
-Stammfunktionen auswendig kennen.</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(x) = a \Rightarrow F(x) = ax + c\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x) = x^{n} \Rightarrow F(x) = \frac{1}{n+1} x^{n+1} + c\)</span> (<span class="math notranslate nohighlight">\(n\)</span> muss ungleich -1 sein)</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = |\ln(x)| + c\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x) = e^{x} \Rightarrow F(x)=e^{x}+c\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x) = \sin(x) \Rightarrow F(x)=-\cos(x)+c\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x)=\frac{1}{1+x^2} \Rightarrow F(x) = \arctan(x) + c\)</span></p></li>
-</ul>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video: wichtige Stammfunktionen</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hKiAG99XmTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details></section>
+<section id="beispiel">
+<h2>Beispiel<a class="headerlink" href="#beispiel" title="Link to this heading">#</a></h2>
+<p>Linearisiere die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> im Punkt <span class="math notranslate nohighlight">\(x_0 = \frac{\pi}{4}\)</span>.</p>
+<p>Als erstes bestimmen wir den Funktionswert an der Stelle <span class="math notranslate nohighlight">\(x_0 = \frac{\pi}{4}\)</span>.
+Es gilt</p>
+<div class="math notranslate nohighlight">
+\[f(x_0)= f\left(\frac{\pi}{4}\right) = \sin\left(\frac{\pi}{4} \right) =
+\frac{\sqrt{2}}{2}.\]</div>
+<p>Als zweites berechnen wir die Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = \cos(x).\]</div>
+<p>Der Wert der Ableitung an der Stelle <span class="math notranslate nohighlight">\(x_0 = \frac{\pi}{4}\)</span> ist</p>
+<div class="math notranslate nohighlight">
+\[f'\left(\frac{\pi}{4}\right) = \cos\left(\frac{\pi}{4}\right) =
+\frac{\sqrt{2}}{2}.\]</div>
+<p>Eingesetzt in die Tangentenfunktion</p>
+<div class="math notranslate nohighlight">
+\[T(x) = f(x_0) + f'(x_0) \cdot (x - x_0)\]</div>
+<p>erhalten wir somit die Linearisierung von <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span></p>
+<div class="math notranslate nohighlight">
+\[T(x) = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} \cdot \left(x -
+\frac{\pi}{4}\right).\]</div>
+<p>Diese Funktionsvorschrift können wir noch zur</p>
+<div class="math notranslate nohighlight">
+\[T(x) = \frac{\sqrt{2}}{2} \cdot x - \frac{\sqrt{2}\pi}{8} +
+\frac{\sqrt{2}}{2}\]</div>
+<p>vereinfachen. Die folgende Grafik zeigt die Sinusfunktion und ihre
+Linearisierung im Arbeitspunkt <span class="math notranslate nohighlight">\((\frac{\pi}{4}, \frac{\sqrt{2}}{2})\)</span>.</p>
+<figure class="align-default" id="tangente-sinus">
+<a class="reference internal image-reference" href="../_images/tangente_sinus.svg"><img alt="../_images/tangente_sinus.svg" src="../_images/tangente_sinus.svg" width="75%" /></a>
+</figure>
+</section>
 <section id="zusammenfassung-und-ausblick">
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
-<p>Im nächsten Kapitel lernen wir das bestimmte Integral kennen und klären, was das
-bestimmte Integral mit einer Stammfunktion zu tun hat.</p>
+<p>In der Mathematik 2 werden wir lernen, wir wir beispielsweise eine quadratische
+Funktion an eine Funktion <span class="math notranslate nohighlight">\(f\)</span> annähern. Allgemein können beliebige Polynome
+benutzt werden, um eine Funktion au approximieren. Diese Polynome heißen
+Taylorpolynome.</p>
 </section>
 </section>
 
@@ -586,7 +614,7 @@ bestimmte Integral mit einer Stammfunktion zu tun hat.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">11. Integralrechnung</p>
+        <p class="prev-next-title">11. Anwendung Differentialrechnung</p>
       </div>
     </a>
     <a class="right-next"
@@ -594,7 +622,7 @@ bestimmte Integral mit einer Stammfunktion zu tun hat.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">11.2 Bestimmtes Integral</p>
+        <p class="prev-next-title">11.2 Regel von Bernoulli-de L’Hospital</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -616,8 +644,9 @@ bestimmte Integral mit einer Stammfunktion zu tun hat.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Stammfunktion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wichtige-stammfunktionen">Wichtige Stammfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idee-der-linearisierung">Idee der Linearisierung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangentenansatz">Tangentenansatz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel">Beispiel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
