@@ -6,108 +6,108 @@ root: intro
 parts:
 - caption: Mathematischer Werkzeugkasten
   chapters:
-  - file: chapter01/sec00.md
+  - file: chapter01/chap01_sec00.md
     sections:
-    - file: chapter01/sec01.md
-    - file: chapter01/sec02.md
-    - file: chapter01/sec03.md
-    - file: chapter01/sec04.md
-    - file: chapter01/sec05.md
-    - file: chapter01/sec06.md
-  - file: chapter02/sec00.md
+    - file: chapter01/chap01_sec01.md
+    - file: chapter01/chap01_sec02.md
+    - file: chapter01/chap01_sec03.md
+    - file: chapter01/chap01_sec04.md
+    - file: chapter01/chap01_sec05.md
+    - file: chapter01/chap01_sec06.md
+  - file: chapter02/chap02_sec00.md
     sections:
-    - file: chapter02/sec01.md
-    - file: chapter02/sec02.md
-    - file: chapter02/sec03.md
-    - file: chapter02/sec04.md
-    - file: chapter02/sec05.md
-    - file: chapter02/sec06.md
+    - file: chapter02/chap02_sec01.md
+    - file: chapter02/chap02_sec02.md
+    - file: chapter02/chap02_sec03.md
+    - file: chapter02/chap02_sec04.md
+    - file: chapter02/chap02_sec05.md
+    - file: chapter02/chap02_sec06.md
 - caption: Vektoren und ihre Anwendungen
   chapters:
-  - file: chapter03/sec00.md
+  - file: chapter03/chap03_sec00.md
     sections:
-    - file: chapter03/sec01.md
-    - file: chapter03/sec02.md
-    - file: chapter03/sec03.md
-    - file: chapter03/sec04.md
-    - file: chapter03/sec05.md
-    - file: chapter03/sec06.md
-  - file: chapter04/sec00.md
+    - file: chapter03/chap03_sec01.md
+    - file: chapter03/chap03_sec02.md
+    - file: chapter03/chap03_sec03.md
+    - file: chapter03/chap03_sec04.md
+    - file: chapter03/chap03_sec05.md
+    - file: chapter03/chap03_sec06.md
+  - file: chapter04/chap04_sec00.md
     sections:
-    - file: chapter04/sec01.md
-    - file: chapter04/sec02.md
-    - file: chapter04/sec03.md
-    - file: chapter04/sec04.md
-    - file: chapter04/sec05.md
-    - file: chapter04/sec06.md
-  - file: chapter05/sec00.md
+    - file: chapter04/chap04_sec01.md
+    - file: chapter04/chap04_sec02.md
+    - file: chapter04/chap04_sec03.md
+    - file: chapter04/chap04_sec04.md
+    - file: chapter04/chap04_sec05.md
+    - file: chapter04/chap04_sec06.md
+  - file: chapter05/chap05_sec00.md
     sections:
-    - file: chapter05/sec01.md
-    - file: chapter05/sec02.md
-    - file: chapter05/sec03.md
-    - file: chapter05/sec04.md
-    - file: chapter05/sec05.md
-    - file: chapter05/sec06.md
+    - file: chapter05/chap05_sec01.md
+    - file: chapter05/chap05_sec02.md
+    - file: chapter05/chap05_sec03.md
+    - file: chapter05/chap05_sec04.md
+    - file: chapter05/chap05_sec05.md
+    - file: chapter05/chap05_sec06.md
 - caption: Matrizen
   chapters:
-  - file: chapter06/sec00.md
+  - file: chapter06/chap06_sec00.md
     sections:
-    - file: chapter06/sec01.md
-    - file: chapter06/sec02.md
-    - file: chapter06/sec03.md
-    - file: chapter06/sec04.md
-    - file: chapter06/sec05.md
-    - file: chapter06/sec06.md
-  - file: chapter07/sec00.md
+    - file: chapter06/chap06_sec01.md
+    - file: chapter06/chap06_sec02.md
+    - file: chapter06/chap06_sec03.md
+    - file: chapter06/chap06_sec04.md
+    - file: chapter06/chap06_sec05.md
+    - file: chapter06/chap06_sec06.md
+  - file: chapter07/chap07_sec00.md
     sections:
-    - file: chapter07/sec01.md
-    - file: chapter07/sec02.md
-    - file: chapter07/sec03.md
-    - file: chapter07/sec04.md
-    - file: chapter07/sec05.md
-    - file: chapter07/sec06.md
+    - file: chapter07/chap07_sec01.md
+    - file: chapter07/chap07_sec02.md
+    - file: chapter07/chap07_sec03.md
+    - file: chapter07/chap07_sec04.md
+    - file: chapter07/chap07_sec05.md
+    - file: chapter07/chap07_sec06.md
 - caption: Komplexe Zahlen    
   chapters:
-  - file: chapter08/sec00.md
+  - file: chapter08/chap08_sec00.md
     sections:
-    - file: chapter08/sec01.md
-    - file: chapter08/sec02.md
-    - file: chapter08/sec03.md
-    - file: chapter08/sec04.md
-    - file: chapter08/sec05.md
-    - file: chapter08/sec06.md
+    - file: chapter08/chap08_sec01.md
+    - file: chapter08/chap08_sec02.md
+    - file: chapter08/chap08_sec03.md
+    - file: chapter08/chap08_sec04.md
+    - file: chapter08/chap08_sec05.md
+    - file: chapter08/chap08_sec06.md
 - caption: Analysis
   chapters:
-  - file: chapter09/sec00.md
+  - file: chapter09/chap09_sec00.md
     sections:
-    - file: chapter09/sec01.md
-    - file: chapter09/sec02.md
-    - file: chapter09/sec03.md
-    - file: chapter09/sec04.md
-    - file: chapter09/sec05.md
-    - file: chapter09/sec06.md
-  - file: chapter10/sec00.md
+    - file: chapter09/chap09_sec01.md
+    - file: chapter09/chap09_sec02.md
+    - file: chapter09/chap09_sec03.md
+    - file: chapter09/chap09_sec04.md
+    - file: chapter09/chap09_sec05.md
+    - file: chapter09/chap09_sec06.md
+  - file: chapter10/chap10_sec00.md
     sections:
-    - file: chapter10/sec01.md
-    - file: chapter10/sec02.md
-    - file: chapter10/sec03.md
-    - file: chapter10/sec04.md
-    - file: chapter10/sec05.md
-    - file: chapter10/sec06.md
-  - file: chapter11/sec00.md
+    - file: chapter10/chap10_sec01.md
+    - file: chapter10/chap10_sec02.md
+    - file: chapter10/chap10_sec03.md
+    - file: chapter10/chap10_sec04.md
+    - file: chapter10/chap10_sec05.md
+    - file: chapter10/chap10_sec06.md
+  - file: chapter11/chap11_sec00.md
     sections:
-    - file: chapter11/sec01.md   
-    - file: chapter11/sec02.md  
-    - file: chapter11/sec03.md  
-    - file: chapter11/sec04.md  
-    - file: chapter11/sec05.md  
-    - file: chapter11/sec06.md  
-  - file: chapter12/sec00.md
+    - file: chapter11/chap11_sec01.md   
+    - file: chapter11/chap11_sec02.md  
+    - file: chapter11/chap11_sec03.md  
+    - file: chapter11/chap11_sec04.md  
+    - file: chapter11/chap11_sec05.md  
+    - file: chapter11/chap11_sec06.md  
+  - file: chapter12/chap12_sec00.md
     sections:
-    - file: chapter12/sec01.md
-    - file: chapter12/sec02.md
-    - file: chapter12/sec03.md
-    - file: chapter12/sec04.md
-    - file: chapter12/sec05.md
-    - file: chapter12/sec06.md
+    - file: chapter12/chap12_sec01.md
+    - file: chapter12/chap12_sec02.md
+    - file: chapter12/chap12_sec03.md
+    - file: chapter12/chap12_sec04.md
+    - file: chapter12/chap12_sec05.md
+    - file: chapter12/chap12_sec06.md
 

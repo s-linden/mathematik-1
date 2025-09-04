@@ -1,4 +1,4 @@
-# 12.6 Wendepunkte
+# 11.6 Wendepunkte
 
 Auch die Nullstellen der zweiten Ableitung haben eine besondere geometrische
 Bedeutung, die wir in diesem Kapitel uns erarbeiten.

@@ -1,4 +1,4 @@
-# 12.1 Linearisierung
+# 11.1 Linearisierung
 
 Die Welt, in der wir leben, ist selten linear. Dennoch können wir viele Prozesse
 in einer ersten Näherung als linear behandeln. In diesem Kapitel beschäftigen

@@ -1,4 +1,4 @@
-# 12.3 Neigungswinkel / Schnittwinkel
+# 11.3 Neigungswinkel / Schnittwinkel
 
 Mit Ableitungen lassen sich geometrische Eigenschaften des Funktionsgraphens
 bestimmen. In diesem Kapitel geht es um den Neigungsewinkel und den

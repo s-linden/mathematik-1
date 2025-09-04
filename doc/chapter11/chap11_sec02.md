@@ -1,4 +1,4 @@
-# 12.2 Regel von Bernoulli-de L'Hospital
+# 11.2 Regel von Bernoulli-de L'Hospital
 
 Die Regel von Bernoulli-de L'Hospital erlaubt die Berechnung von
 Funktionsgrenzwerten der Form $\frac{0}{0}$ oder $\frac{\infty}{\infty}$. Oft

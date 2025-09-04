@@ -1,0 +1,36 @@
+\documentclass[11pt]{standalone}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[no-math]{fontspec}
+\usepackage{unicode-math}
+\usepackage{libertinus}
+
+\usepackage{pgf,xcolor}
+\definecolor{itwm_blue}{HTML}{005A94}
+\definecolor{itwm_red}{HTML}{C00000}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    domain=-3:3,
+    axis lines = center,
+    xlabel = {$x$},
+    ylabel = {$f(x)$},
+    height=12cm, width=12cm, 
+    grid = both,
+    %axis equal,
+    xmin=-3*1.1, xmax=3*1.1,
+    ymin=-0.25, ymax = 1.1,
+    axis line style={ultra thick},
+]
+    
+\addplot[draw=itwm_blue, ultra thick, samples=300] {(1/sqrt(2*pi)) * exp(-x^2/2)};
+
+         
+\end{axis}
+\end{tikzpicture}
+\end{document}

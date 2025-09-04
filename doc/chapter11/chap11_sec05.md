@@ -1,4 +1,4 @@
-# 12.5 Extremwerte
+# 11.5 Extremwerte
 
 In diesem Kapitel betrachten wir einzelne Punkte des Funktionsgraphens, die eine
 besondere Bedeutung haben. Um diese Punkt zu berechnen, sind Ableitungen

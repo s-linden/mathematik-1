@@ -1,4 +1,4 @@
-# 11.6 Integralfunktionen und das uneigentliche Integral
+# 12.6 Integralfunktionen und das uneigentliche Integral
 
 Das bestimmte Intgeral liefert eine Zahl. Wir können das bestimmte Integral auch
 dazu nutzen, eine neue Funktion einzuführen, indem wir die untere Grenze auf

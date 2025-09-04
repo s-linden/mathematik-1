@@ -1,4 +1,4 @@
-# 12.4 Monotonie und Krümmung
+# 11.4 Monotonie und Krümmung
 
 Als nächstes betrachten wir Monotonie und Krümmung.
 

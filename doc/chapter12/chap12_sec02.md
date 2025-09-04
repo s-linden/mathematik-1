@@ -1,4 +1,4 @@
-# 11.2 Bestimmtes Integral
+# 12.2 Bestimmtes Integral
 
 ## Lernziele
 

@@ -1,4 +1,4 @@
-# 11.4 Partielle Integration
+# 12.4 Partielle Integration
 
 Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
 jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:

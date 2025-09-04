@@ -1,0 +1,81 @@
+\RequirePackage[l2tabu, orthodox, abort]{nag}
+\documentclass[paper=a4, fontsize=11pt, parskip=half]{scrartcl}
+\usepackage[a4paper, width=170mm, height=250mm]{geometry}
+
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[no-math]{fontspec}
+\usepackage{unicode-math}
+\usepackage{libertinus}
+\usepackage{tikz}
+
+% Keine Seitennummerierung
+\pagestyle{empty}
+
+% Befehl für ein Memory-Kartenpaar
+\newcommand{\memorypaar}[2]{%
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+        % Formel-Karte (links)
+        \draw[thick] (0,0) rectangle (8,8);
+        \node at (4,4) {\Large #2};
+        
+        % Bild-Karte (rechts) - 2cm Abstand zwischen den Karten
+        \draw[thick] (9,0) rectangle (17,8);
+        \node at (13,4) {\includegraphics[width=7.8cm,height=7.8cm,keepaspectratio]{#1}};
+    \end{tikzpicture}%
+}
+
+% Befehl für ein Memory-Kartenpaar mit mehrzeiliger mathematischer Formel
+\newcommand{\memorypaargather}[2]{%
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+        % Formel-Karte (links)
+        \draw[thick] (0,0) rectangle (8,8);
+        \node at (4,4) {\Large $\begin{gathered} #2 \end{gathered}$};
+        
+        % Bild-Karte (rechts) - 2cm Abstand zwischen den Karten
+        \draw[thick] (9,0) rectangle (17,8);
+        \node at (13,4) {\includegraphics[width=7.8cm,height=7.8cm,keepaspectratio]{#1}};
+    \end{tikzpicture}%
+}
+
+
+\begin{document}
+\centering
+
+\memorypaar{function01_diagonal.pdf}{f(x) = x}
+
+\memorypaar{function02_parabola.pdf}{$f(x) = x^2$}
+
+\memorypaar{function03_cubic.pdf}{$f(x)=x^3$}
+
+\memorypaar{function04_4th.pdf}{$f(x)=x^4$}
+
+\memorypaar{function05_negative_exponent_1.pdf}{$f(x)=x^{-1}=\frac{1}{x}$}
+
+\memorypaar{function06_negative_exponent_2.pdf}{$f(x)=x^{-2}=\frac{1}{x^2}$}
+
+\memorypaar{function07_sqrt.pdf}{$f(x)=\sqrt{x}$}
+
+\memorypaar{function08_exp.pdf}{$f(x)=e^{x}=\exp(x)$}
+
+\memorypaar{function09_log.pdf}{$f(x)=\ln(x)$}
+
+\memorypaar{function10_abs.pdf}{$f(x)=|x|$}
+
+\memorypaar{function11_sin.pdf}{$f(x)=\sin(x)$}
+
+\memorypaar{function12_cos.pdf}{$f(x)=\cos(x$)}
+
+\memorypaargather{function13_tan.pdf}{f(x)=\tan \\ \text{D} = \mathbb{R} \setminus \{ k\pi+\frac{\pi}{2} \,\large|\, k\in\mathbb{Z}\}}
+
+\memorypaar{function14_heaviside.pdf}{$H(x) = \begin{cases} 
+0 & \text{für } x < 0 \\
+0.5 & \text{für } x = 0 \\
+1 & \text{für } x > 0
+\end{cases}$}
+
+\memorypaar{function15_gauss.pdf}{$f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2}$}
+
+
+\end{document}

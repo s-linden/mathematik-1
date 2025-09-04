@@ -1,0 +1,82 @@
+\RequirePackage[l2tabu, orthodox, abort]{nag}
+\documentclass[paper=a4, fontsize=11pt, parskip=half]{scrartcl}
+\usepackage[a4paper, width=150mm, height=250mm]{geometry}
+
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[no-math]{fontspec}
+\usepackage{unicode-math}
+\usepackage{libertinus}
+\usepackage{tikz}
+
+% Seitenränder auf Minimum setzen
+%\geometry{
+%    left=0.5cm,
+%    right=0.5cm,
+%    top=0.5cm,
+%    bottom=0.5cm
+%}
+
+% Keine Seitennummerierung
+\pagestyle{empty}
+
+% Befehl für eine einzelne Karte
+\newcommand{\formelkarte}[1]{%
+    \begin{tikzpicture}
+        % Kartenhintergrund mit Rahmen
+        \draw[thick] (0,0) rectangle (6,6);
+        
+        % Formel in der Mitte
+        \node at (3,3) {\huge $\displaystyle #1$};
+    \end{tikzpicture}%
+}
+
+% Befehl für eine Bildkarte mit externem PDF
+\newcommand{\bildkarte}[2][1]{%
+    \begin{tikzpicture}
+        % Kartenhintergrund mit Rahmen
+        \draw[thick] (0,0) rectangle (12,12);
+        
+        % PDF in der Mitte einbetten
+        % #1 = Skalierungsfaktor (optional, Standard: 1)
+        % #2 = PDF-Dateiname
+        \node at (6,6) {\includegraphics[scale=#1]{#2}};
+    \end{tikzpicture}%
+}
+
+% Befehl für eine Bildkarte mit Größenanpassung
+\newcommand{\bildkartefit}[2][10cm]{%
+    \begin{tikzpicture}
+        % Kartenhintergrund mit Rahmen
+        \draw[thick] (0,0) rectangle (6,6);
+        
+        % PDF in der Mitte einbetten mit Größenanpassung
+        % #1 = maximale Breite/Höhe (optional, Standard: 10cm)
+        % #2 = PDF-Dateiname
+        \node at (3,3) {\includegraphics[width=#1,height=#1,keepaspectratio]{#2}};
+    \end{tikzpicture}%
+}
+
+
+
+\begin{document}
+\centering
+
+\formelkarte{f(x) = x}
+
+\bildkartefit[6cm]{function01_diagonal.pdf}
+
+\bildkarte{function01_diagonal.pdf}
+
+\bildkarte{function01_diagonal.pdf}
+
+\bildkarte{function01_diagonal.pdf}
+
+\bildkarte{function01_diagonal.pdf}
+
+\bildkarte{function01_diagonal.pdf}
+
+\bildkarte{function01_diagonal.pdf}
+
+\end{document}

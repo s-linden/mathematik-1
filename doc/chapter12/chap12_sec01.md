@@ -1,4 +1,4 @@
-# 11.1 Stammfunktion
+# 12.1 Stammfunktion
 
 In diesem Abschnitt führen wir zunächst Stammfunktionen ein.
 
