@@ -3,19 +3,18 @@
 Die Höhe einer Kugel, die eine Kugelbahn durchläuft - wie können wir diese
 mathematisch beschreiben? Diese scheinbar einfache Frage führt uns direkt zu
 einem der wichtigsten Konzepte der Mathematik: dem Begriff der Funktion. In
-diesem Kapitel entwickeln wir anhand einer GraviTrax-Kugelbahn das mathematische
-Werkzeug, um technische Zusammenhänge präzise zu erfassen.
+diesem Kapitel entwickeln wir anhand einer Kugelbahn das mathematische Werkzeug,
+um technische Zusammenhänge präzise zu erfassen.
 
 ## Lernziele
 
 ```{admonition} Lernziele Funktionen
 :class: goals
-* Sie wissen, wie in der Mathematik eine **Funktion** definiert wird und kennen
-  typische Darstellungsformen von Funktionen.
-* Sie können die **Definitionsmenge** und **Wertemenge/Zielmenge** einer
-  Funktion bestimmen.
-* Sie können **Funktionen zur Beschreibung technischer Systeme** (am Beispiel
-  einer Kugelbahn) entwickeln und anwenden.
+* Sie wissen, wie in der Mathematik eine **Funktion** definiert wird.
+* Sie können die **Definitionsmenge** und **Wertemenge** einer Funktion
+  bestimmen.
+* Sie kennen die verschiedenen Darstellungsformen einer Funktion wie
+  **Wertetabelle**, **Funktionsgleichung** und **Funktionsgraph**.
 ```
 
 ## Was ist eine Funktion?
@@ -30,262 +29,164 @@ Kugel an jeder beliebigen Position entlang der Bahn?*
 width: 75%
 name: kugelbahn_gerade_w800px
 ---
-Kugelbahn der Marke GraviTrax (Quelle: eigene Darstellung; 
-Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0))
+Kugelbahn der Marke
+[GraviTrax](https://www.ravensburger.de/de-DE/entdecken/gravitrax)
+(Quelle: eigene Darstellung; Lizenz: [CC BY-SA
+4.0](https://creativecommons.org/licenses/by-sa/4.0))
 ```
 
 Um die Höhe mathematisch zu beschreiben, benötigen wir ein Koordinatensystem.
-Als erste Achse wählen wir die Gerade, die durch Start- und Zielstein geht und
-die sozusagen auf der Tischoberfläche liegt. Als zweite Achse wählen wir die
-Höhe über der Tischoberfläche, eine Gerade die senkrecht auf der Tischoberfläche
-steht. Den Ursprung des Koordinatensystems können wir frei wählen. Wir nehmen
-die Position des Start-Steins auf der Tischoberfläche als Ursprung $O$. Jetzt
-können wir die Position der Kugel beschreiben, indem wir ihren Abstand zum
-Ursprung auf der ersten Achse messen. Die Position kürzen wir mit $x$ ab. Die
-Höhe über der Tischoberfläche kürzen wir mit $h$ ab.
+Als erste Achse wählen wir die Gerade, die durch Start- und Zielstein geht. Diese
+liegt auf der Tischoberfläche. Als zweite Achse wählen wir die Höhe über der
+Tischoberfläche. Diese steht senkrecht auf der Tischoberfläche. Den Ursprung des
+Koordinatensystems können wir frei wählen. Wir nehmen die Position des Start-Steins
+auf der Tischoberfläche als Ursprung $O$.
+
+Jetzt können wir die Position der Kugel eindeutig beschreiben. Wir messen ihren
+Abstand zum Ursprung auf der ersten Achse. Diese Position kürzen wir mit $x$ ab.
+Die Höhe über der Tischoberfläche kürzen wir mit $h$ ab.
 
 Mit diesem Koordinatensystem können wir jeder Position $x$ der Kugel eindeutig
-eine Höhe $h$ zuordnen.
+eine Höhe $h$ zuordnen. Eindeutig bedeutet: Es gibt nicht zwei verschiedene
+Höhen zu einer x-Position. Wir können nun messen und die x-Positionen mit ihrer
+jeweiligen Höhe in einer Tabelle notieren:
 
-### Von der Zuordnung zur Funktion
+| Position x \[cm\] | Höhe h \[cm\] |
+| ------------------| --------------|
+| 0.0 | 6.0 |
+| 4.8 | 4.8 |
+| 9.6 | 3.6 |
+| 14.4 | 2.4 |
+| 19.2 | 1.2 |
+| 24.0 | 0.0 |
 
-**Beobachtung:** Für jede Position x gibt es **genau eine** zugehörige Höhe h.
+Wir haben nicht an jeder Position der Kugelbahn die Höhe gemessen, aber wir
+könnten es tun. Auch an Zwischenstellen wie beispielsweise $x = 0.567~\text{cm}$
+oder $x = 17.9~\text{cm}$ lassen sich die zugehörigen Höhen messen.
 
-Diese **eindeutige Zuordnung** ist das Wesen einer mathematischen Funktion:
-
-- **Eingabe (Input):** Position x entlang der Bahn
-- **Ausgabe (Output):** Höhe h an dieser Position
-- **Eindeutigkeit:** Zu jedem x gehört genau ein h
+Diese eindeutige Zuordnung zwischen Position und Höhe ist das Wesen einer
+mathematischen Funktion. In der Mathematik bezeichnet man eine solche eindeutige
+Zuordnung zwischen zwei Mengen als **Funktion**. Formal definieren wir eine
+mathematische Funktion folgendermaßen:
 
 ```{admonition} Was ist ... eine Funktion?
 :class: note
-Eine **Funktion** ist eine eindeutige Zuordnung zwischen zwei Mengen. Jedem
+Eine Funktion ist eine eindeutige Zuordnung zwischen zwei Mengen. Jedem
 Element der ersten Menge (Definitionsmenge) wird genau ein Element der zweiten
 Menge (Wertemenge) zugeordnet.
-
-**Mathematische Schreibweise:** f: X → Y oder y = f(x)
-- f: Name der Funktion
-- x: unabhängige Variable (Eingabewert)  
-- y: abhängige Variable (Ausgabewert, hängt von x ab)
 ```
 
-**Für unsere Kugelbahn:** h = f(x), wobei f die "Höhenfunktion" ist, die jeder
-Position x die entsprechende Höhe h zuordnet.
+Kürzen wir die Definitionsmenge mit $D$ ab, die Wertemenge mit $W$ und die
+Funktion mit $f$, so lässt sich diese Definition auch kompakt schreiben als:
 
-### Funktionen in der Technik
+$$f: D \to W, \quad x \mapsto f(x).$$
 
-Das Kugelbahn-Beispiel zeigt ein universelles Prinzip der
-Ingenieurswissenschaften: **Technische Größen hängen voneinander ab.**
-Funktionen beschreiben diese Abhängigkeiten mathematisch präzise:
-
-- Geschwindigkeit hängt von der Zeit ab: v(t)
-- Spannung hängt von der Dehnung ab: σ(ε)  
-- Leistung hängt von der Drehzahl ab: P(n)
+Das Element aus der Wertemenge, das dem Element $x$ aus der Definitionsmenge
+zugeordnet wird, heißt **Funktionswert** und wird mit $f(x)$ abgekürzt.
 
 ## Darstellungsformen von Funktionen
 
 Für unsere Kugelbahn-Höhenfunktion gibt es verschiedene Möglichkeiten der
 mathematischen Beschreibung. Jede hat ihre spezifischen Vorteile.
 
-### 1. Funktionsgleichung (analytische Darstellung)
+Eine der einfachsten Darstellungen ist die **Wertetabelle**. Sie ist besonders
+vorteilhaft, wenn die Funktion durch Messungen bestimmt wird. Die Tabelle mit
+den Messwerten unserer Kugelbahn haben wir bereits oben erstellt. Die Wertetabelle
+ist ideal für experimentelle Daten und praktische Messungen.
 
-Für eine **gerade Schiene** mit konstanter Neigung können wir die Höhe
-mathematisch exakt beschreiben:
+Im Fall der Kugelbahn können wir die Höhe der Kugel auch mathematisch exakt
+beschreiben als:
 
-$$h(x) = mx + h₀$$
+$$h(x) = -\frac{1}{4}x + 6$$
 
-Dabei ist:
+$h(x)$ gibt die Höhe an der Position $x$ wieder. Wir haben also eine *exakte
+Formel* zur Berechnung der Höhe an jeder beliebigen Position in Form einer
+Gleichung. Daher wird diese Darstellungsform **Funktionsgleichung** genannt.
+Die Funktionsgleichung ist präzise, kompakt und ideal für Berechnungen.
 
-- **m:** Neigung der Schiene (negativ, da bergab)
-- **h₀:** Starthöhe (Höhe bei x = 0)
-- **x:** Position entlang der Bahn
-- **h(x):** Höhe an Position x
+Eine weitere Darstellungsform ist der **Funktionsgraph** oder **Plot** der
+Funktion. Der Funktionsgraph entspricht der Seitenansicht unserer Kugelbahn. Zu
+jedem $x$-Wert wird der zugehörige Funktionswert $h(x)$ ermittelt. Üblicherweise
+wird der Funktionswert mit $y$ abgekürzt. Die Punkte $(x,y)$ werden dann in ein
+xy-Koordinatensystem eingezeichnet.
 
-Die Funktionsgleichung gibt uns die **exakte Formel** zur Berechnung der Höhe an
-jeder beliebigen Position.
-
-### 2. Funktionsgraph (visuelle Darstellung)
-
-Der **Funktionsgraph** ist eine **Seitenansicht** unserer Kugelbahn im
-Koordinatensystem:
-
-- **x-Achse:** Position entlang der Bahn
-- **y-Achse:** Höhe über Referenzniveau
-- **Gerade Linie:** Entspricht der schrägen Schiene
-
-*[TODO Skizze/Grafik eingefügen: Koordinatensystem mit eingezeichneter Geraden]*
+```{figure} pics/function_marble_track.svg
+---
+width: 75%
+name: function_marble_track
+---
+Graph bzw. Plot der Höhenfunktion der Kugel in der Kugelbahn
+(Quelle: eigene Darstellung; Lizenz: [CC BY-SA
+4.0](https://creativecommons.org/licenses/by-sa/4.0))
+```
 
 Der Graph macht den Funktionsverlauf sofort sichtbar und ist besonders nützlich
-für das intuitive Verständnis.
+für das intuitive Verständnis. Alle drei Darstellungsformen beschreiben dieselbe
+Funktion, nur in unterschiedlicher Weise.
 
-### 3. Wertetabelle (diskrete Datenpunkte)
+## Definitionsmenge und Wertemenge
 
-Durch **Messungen an verschiedenen Positionen** erstellen wir eine Tabelle:
+Unsere Kugelbahn ist nicht unendlich lang, und auch die möglichen Höhenwerte
+sind begrenzt. Diese physikalischen Grenzen führen uns zu wichtigen
+mathematischen Konzepten.
 
-| Position x [cm] | Höhe h [cm] |
-|-----------------|-------------|
-| 0               | 20          |
-| 10              | 18          |
-| 20              | 16          |
-| 30              | 14          |
-| 40              | 12          |
+Nicht alle x-Positionen sind sinnvoll. Positionen links des Start-Steins (also
+$x < 0~\text{cm}$) und rechts des Ziel-Steins ($x > 24~\text{cm}$) sind nicht
+relevant. Wir betrachten daher nur das Intervall:
 
-Die Wertetabelle ist ideal für **experimentelle Daten** und praktische
-Messungen.
+$$D = [0; 24] \quad \text{gemessen in cm}.$$
 
-### 4. Mengenschreibweise (mathematisch exakt)
+Die tatsächlich relevanten x-Positionen bezeichnen wir als **Definitionsmenge**.
 
-$$H = \{(x,h) | h = mx + h₀, x ∈ D\}$$
+Für die Höhenwerte bestimmen wir die **Wertemenge**. Die Kugel startet bei 6 cm
+und endet bei 0 cm. Daher ist die Wertemenge:
 
-Diese Schreibweise definiert die Funktion als **Menge aller Wertepaare**
-(Position, Höhe).
+$$W = [0; 6] \quad \text{gemessen in cm}.$$
 
-### Vergleich der Darstellungsformen
-
-- Funktionsgleichung: Präzise, kompakt, für Berechnungen ideal
-- Funktionsgraph: Anschaulich, für Trends und Verläufe
-- Wertetabelle: Praktisch für Messdaten und Experimente  
-- Mengenschreibweise: Mathematisch vollständig, für theoretische Betrachtungen
-
-Alle vier Formen beschreiben **dieselbe Funktion**, nur in unterschiedlicher Weise.
-
-## Definitionsmenge, Zielmenge und Wertemenge
-
-### Grenzen der Kugelbahn
-
-Unsere GraviTrax-Schiene ist nicht unendlich lang, und wir können auch nicht beliebig hohe oder tiefe Werte messen. Diese **physikalischen Grenzen** führen uns zu wichtigen mathematischen Konzepten, die bei jeder Funktion zu beachten sind.
-
-### Definitionsmenge: "Wo ist überhaupt Schiene?"
-
-Die **Definitionsmenge D** umfasst alle x-Werte, für die unsere Funktion h(x) definiert ist.
-
-**Für unsere Kugelbahn:**
-
-- **Schienanfang:** x = 0 cm (Startblock)
-- **Schienenende:** x = 50 cm (Auffangbehälter)
-- **Definitionsmenge:** D = [0, 50] (Intervall von 0 bis 50 cm)
-
-```{admonition} Was ist ... die Definitionsmenge?
+```{admonition} Was ist ... die Definitionsmenge und Wertemenge?
 :class: note
-Die **Definitionsmenge** einer Funktion ist die Menge aller zulässigen Eingabewerte (x-Werte), für die die Funktion definiert ist.
+**Definitionsmenge D:** Die Menge aller zulässigen Eingabewerte (x-Werte), für
+die die Funktion definiert ist.
 
-**Notation:** D oder D_f
-
-**Bestimmung:** 
-1. **Physikalische Grenzen** (z.B. Baulängen, Materialgrenzen)
-2. **Mathematische Einschränkungen** (z.B. Division durch Null vermeiden)
+**Wertemenge W:** Die Menge aller Ausgabewerte (y-Werte), die die Funktion
+tatsächlich annimmt.
 ```
 
-### Zielmenge: "Welche Höhen können wir theoretisch messen?"
+Die **Definitionsmenge** ist der Gültigkeitsbereich für die Funktion. Außerhalb der
+Definitionsmenge ergibt unsere Formel $h(x) = -\frac{1}{4}x + 6$ keinen
+physikalischen Sinn. Bei $x = -10~\text{cm}$ würde die Formel eine Höhe
+berechnen, aber dort ist gar keine Schiene! Extrapolation, also das Verlassen
+des Gültigkeitsbereichs, ist gefährlich: Formeln gelten nur in ihrem
+Definitionsbereich.
 
-Die **Zielmenge Z** ist die Menge aller Werte, **in die** unsere Funktion
-abbilden könnte. Sie wird bei der Definition der Funktion **vorab festgelegt**.
+Die **Wertemenge** zeigt uns die realisierbaren Werte. Sie gibt an, welche
+Höhen die Kugel auf unserer Bahn erreichen kann. Dies ist wichtig für die
+Konstruktion: Wo müssen Auffangbehälter platziert werden? Können wir den
+Höhenbereich durch Umkonstruktion erweitern?
 
-**Für unsere Kugelbahn:**
-
-- **Zielmenge:** Z = [0, 100] cm
-- **Begründung:** Unser Maßband reicht von der Tischoberfläche (0 cm) bis zur Decke (100 cm)
-- **Interpretation:** "Alle Höhen, die wir theoretisch messen könnten"
-
-### Wertemenge: "Welche Höhen nimmt die Kugel tatsächlich an?"
-
-Die **Wertemenge W** (auch Bildmenge genannt) enthält alle h-Werte, die unsere Funktion **tatsächlich** annimmt.
-
-**Für unsere schräge Kugelbahn:**
-
-- **Höchster Punkt:** h(0) = 20 cm (Start)
-- **Tiefster Punkt:** h(50) = 10 cm (Ende)
-- **Wertemenge:** W = [10, 20] cm
-
-**Wichtiger Zusammenhang:** Die Wertemenge ist **immer eine Teilmenge** der Zielmenge: W ⊆ Z
-
-```{admonition} Was ist ... der Unterschied zwischen Zielmenge und Wertemenge?
-:class: note
-**Zielmenge:** Die Menge, **in die** eine Funktion abbildet (vorab festgelegt, "theoretisch möglich")
-
-**Wertemenge:** Die Menge der **tatsächlich angenommenen** Funktionswerte (Teilmenge der Zielmenge)
-
-**Beispiel:** Messgerät mit Bereich 0-1000°C (Zielmenge), aber Motor arbeitet nur bei 20-150°C (Wertemenge)
+```{dropdown} Video "Funktion und Graph" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9HiHcxXhYn4"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-### Praktische Bedeutung für Ingenieure
+```{dropdown} Video "Funktionen: Notation" von HM Kompakt
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QZKQDLh1evA?si=OD-6-bDDpErXUvh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 
-**Definitionsmenge = Gültigkeitsbereich:**
-
-- Außerhalb der Definitionsmenge macht unsere Formel h(x) = mx + h₀ **keinen
-  physikalischen Sinn**
-- Bei x = -10 cm würde die Formel eine Höhe berechnen, aber dort ist gar keine
-  Schiene!
-- **Extrapolation** ist gefährlich: Formeln gelten nur in ihrem
-  Definitionsbereich
-
-**Zielmenge = Messbereich:**
-
-- Definiert den **theoretischen Rahmen** unserer Betrachtung
-- Legt fest, welche Werte **prinzipiell möglich** sind
-- Wichtig für die **Sensorauswahl** und Messgeräte-Spezifikation
-
-**Wertemenge = Realisierbare Werte:**
-
-- Zeigt uns, **welche Höhen** die Kugel auf unserer speziellen Bahn erreichen kann
-- Wichtig für die **Konstruktion:** Wo müssen Auffangbehälter platziert werden?
-- **Optimierung:** Können wir den Höhenbereich durch Umkonstruktion erweitern?
-
-### Erweiterungen des Konzepts
-
-**Was passiert bei komplexeren Bahnen?**
-
-**Unterbrochene Schienen:**
-
-- Wenn zwischen den Schienenstücken eine Lücke ist
-- **Definitionsmenge:** D = [0,20] ∪ [30,50] (Vereinigung von Intervallen)
-- **Interpretation:** "Die Funktion ist nur dort definiert, wo auch Schiene ist"
-
-**Höhenbegrenzungen:**
-
-- **Zielmenge physikalisch begrenzt:** Nicht höher als die Decke, nicht tiefer
-  als der Boden
-- **Wertemenge durch Konstruktion begrenzt:** Abhängig vom gewählten Bahnverlauf
-
-**Wichtige Erkenntnis:** Nicht alles, was **mathematisch möglich** ist (negative
-Höhen, unendliche Positionen), ist auch **physikalisch sinnvoll**. Die
-Ingenieurskunst liegt darin, die mathematischen Modelle so zu wählen, dass sie
-die **physikalische Realität** korrekt abbilden.
+```{dropdown} Video "Was ist eine Funktion?" von studyVEMINT
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u4lbFXPlyAI?si=ufbDe-Zyl-rwYQHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 
 ## Zusammenfassung und Ausblick
 
-### Kernkonzepte
-
-**Funktion:** Eine eindeutige Zuordnung zwischen Position und Höhe (allgemein:
-zwischen zwei Mengen)
-
-**Vier Darstellungsformen:**
-
-- Funktionsgleichung (h(x) = mx + h₀)
-- Funktionsgraph (Seitenansicht der Bahn)
-- Wertetabelle (Messpunkte)
-- Mengenschreibweise (mathematisch exakt)
-
-**Definitions- und Wertemenge:** Gültigkeitsbereich und realisierbare Werte
-unserer Beschreibung
-
-### Ausblick auf die folgenden Kapitel
-
-Unsere einfache gerade Schiene ist nur der Anfang. In den kommenden Kapiteln erweitern wir unser Kugelbahn-System:
-
-**Kapitel 2.2 - Eigenschaften von Funktionen:** Was passiert, wenn wir ein **ebenes Plateau** in die Bahn einbauen? (konstante Bereiche, Monotonie)
-
-**Kapitel 2.3 - Polynome:** Wie beschreiben wir **Kurven und Bögen**? (quadratische und höhere Funktionen)
-
-**Kapitel 2.4 - Exponential- und Logarithmusfunktionen:** Spezielle Bahnformen mit **charakteristischen Verläufen**
-
-**Kapitel 2.5 - Trigonometrische Funktionen:** **Schwingungen und periodische Bewegungen**
-
-Mit jeder Erweiterung werden unsere mathematischen Werkzeuge mächtiger - aber das physikalische Grundprinzip bleibt gleich: **Position bestimmt Höhe, mathematisch ausgedrückt durch Funktionen.**
-
-## Videos zu Funktionen
-
-```{admonition} Video
-:class: seealso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9HiHcxXhYn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
+In diesem Kapitel haben wir anhand einer einfachen Kugelbahn die Grundlagen von
+Funktionen entwickelt: Eine Funktion ist eine eindeutige Zuordnung zwischen
+Position und Höhe, die wir durch Wertetabelle, Funktionsgleichung oder
+Funktionsgraph darstellen können. Definitionsmenge und Wertemenge bestimmen den
+Gültigkeitsbereich und die realisierbaren Werte unserer mathematischen
+Beschreibung. Unsere einfache gerade Schiene ist nur der Anfang. In den
+kommenden Kapiteln erweitern wir unser Kugelbahn-System, um weitere
+mathematische Konzepte zu entdecken.
