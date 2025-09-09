@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9.1 Grundwissen Zahlenfolgen &#8212; Mathematik 1 Maschinenbau</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter09/chap09_sec01';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.2 Grenzwert einer Zahlenfolge" href="chap09_sec02.html" />
+    <link rel="prev" title="9. Folgen, Grenzwerte und Stetigkeit" href="chap09_sec00.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/maths_background_small.png" class="logo__image only-light" alt="Mathematik 1 Maschinenbau - Home"/>
+    <img src="../_static/maths_background_small.png" class="logo__image only-dark pst-js-only" alt="Mathematik 1 Maschinenbau - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Willkommen zur Mathematik 1
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematischer Werkzeugkasten</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chap01_sec00.html">Videos zu Grundlagen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec01.html">Videos zu Mengen und Intervalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec02.html">Videos zu Rechenregeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec03.html">Videos zu Potenzen, Wurzeln und Logarithmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec04.html">Videos zu Gleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec05.html">Videos zu Polynomdivision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec06.html">Videos zu Trigonometrie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chap02_sec00.html">2. Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec01.html">2.1 Funktionen - Grundlagen und Definitionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec02.html">Videos zu Eigenschaften von Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec03.html">Videos zu Polynomen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec04.html">Videos zu Exponential- und Logarithmusfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec05.html">Videos zu Trigonometrische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec06.html">Videos zu Beziehungen zwischen trigonometrischen Funktionen</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vektoren und ihre Anwendungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chap03_sec00.html">3. Vektorräume</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec01.html">3.1 Koordinaten und Koordinatensysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec02.html">3.2 Vektoren und Vektorräume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec03.html">3.3 Vektoren in der Geometrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec04.html">3.4 Affine Punkträume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec05.html">3.5 Betrag Vektor und Abstand Punkte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec06.html">3.6 Linearkombination und lineare Unabhängigkeit</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chap04_sec00.html">4. Vektorrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec01.html">4.1 Basis und Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec02.html">4.2 Skalarprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec03.html">4.3 Geometrische Interpretation Skalarprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec04.html">4.4 Anwendungen Skalarprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec05.html">4.5 Vektorprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec06.html">4.6 Spatprodukt</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chap05_sec00.html">5. Punkte, Geraden und Ebenen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec01.html">5.1 Geraden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec02.html">5.2 Ebenen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec03.html">5.3 Lineare Gleichungssysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec04.html">5.4 Lagebeziehungen Geraden und Ebenen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec05.html">5.5 Abstände</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec06.html">5.6 Winkel</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrizen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chap06_sec00.html">6. Matrizenrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec01.html">6.1 Was ist eine Matrix?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec02.html">6.2 Besondere Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec03.html">6.3 Matrizenaddition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec04.html">6.4 Skalarmultiplikation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec05.html">6.5 Matrizenmultiplikation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec06.html">6.6 Transponierte und symmetrische Matrizen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chap07_sec00.html">7. Anwendungen von Matrizen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec01.html">7.1 Determinanten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec02.html">7.2 Inverse Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec03.html">7.3 Orthogonale Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec04.html">7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec05.html">7.5 Eigenwerte und Eigenvektoren (2x2-Matrix)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec06.html">7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Komplexe Zahlen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chap08_sec00.html">8. Komplexe Zahlen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chap08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chap08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chap08_sec03.html">8.3 Betrag, komplexe Konjugation und Division</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chap08_sec04.html">8.4 Komplexe Zahlen in trigonometrischer Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chap08_sec05.html">8.5 Komplexe Zahlen in Exponentialform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chap08_sec06.html">8.6 Potenzen und Wurzeln komplexer Zahlen</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chap09_sec00.html">9. Folgen, Grenzwerte und Stetigkeit</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.1 Grundwissen Zahlenfolgen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap09_sec02.html">9.2 Grenzwert einer Zahlenfolge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap09_sec03.html">9.3 Rechnen mit konvergenten Folgen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap09_sec04.html">9.4 Funktionsgrenzwerte und ihre Rechenregeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap09_sec05.html">9.5 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap09_sec06.html">9.6 Unstetigkeitsstellen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chap10_sec00.html">10. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec01.html">10.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec02.html">10.2 Ableitung von elementaren Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec03.html">10.3 Faktor-, Summen- und Produktregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec04.html">10.4 Quotientenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec05.html">10.5 Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chap11_sec00.html">11. Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec01.html">11.1 Linearisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec02.html">11.2 Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec03.html">11.3 Neigungswinkel / Schnittwinkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec04.html">11.4 Monotonie und Krümmung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec05.html">11.5 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec06.html">11.6 Wendepunkte</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chap12_sec00.html">12. Integralrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec01.html">12.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec02.html">12.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec03.html">12.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec04.html">12.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec05.html">12.5 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec06.html">12.6 Integralfunktionen und das uneigentliche Integral</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/gramschs/book_mathe01" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter09/chap09_sec01.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9.1 Grundwissen Zahlenfolgen</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-folge">Was ist eine Folge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-folgen-beschrieben">Wie werden Folgen beschrieben?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-folgen">Eigenschaften von Folgen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="grundwissen-zahlenfolgen">
+<h1>9.1 Grundwissen Zahlenfolgen<a class="headerlink" href="#grundwissen-zahlenfolgen" title="Link to this heading">#</a></h1>
+<p>Folgen von Zahlen haben in der Signalverarbeitung eine wichtige Bedeutung. In
+der Mathematik sind Zahlenfolgen der Baustein, aus dem die Differential- und
+Integralrechnung gebaut werden.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
+<div class="goals admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was eine <strong>Folge</strong> ist.</p></li>
+<li><p>Im Zusammenhang mit Folgen können Sie die Fachbegriffe <strong>Folgenglied</strong> und
+<strong>Index</strong> erklären.</p></li>
+<li><p>Sie können Zahlenfolgen definieren</p>
+<ul>
+<li><p>durch die konkrete <strong>Aufzählung</strong> von Folgengliedern, z.B. <span class="math notranslate nohighlight">\((a_k) =
+\{1,4,9,16,25,36, \ldots\}\)</span>,</p></li>
+<li><p>durch eine <strong>explizite Regel</strong>, d.h. man gibt eine Formel an, mit der
+jedes Folgenglied unabhängig von den anderen berechnet werden kann, z.B.
+<span class="math notranslate nohighlight">\(a_k = k^2, \, k=1,2,\ldots\)</span> oder</p></li>
+<li><p>durch eine <strong>rekursive Regel</strong>, d.h. man gibt ein paar Anfangsglieder an
+und danach eine Formel, wie sich die übrigen daraus berechnen, z.B. <span class="math notranslate nohighlight">\(a_0 =
+0, a_1 = 1 \text{ und } a_{k} = a_{k-2} + a_{k-1}\)</span> für alle <span class="math notranslate nohighlight">\(k\geq 2\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Sie kennen den Fachbegriff <strong>alternierend</strong>, um Folgen zu beschreiben, bei
+denen sich das Vorzeichen abwechselt.</p></li>
+<li><p>Sie können von einer gegebenen Folge bestimmen, ob die Zahlenfolge monoton
+fallend, streng monoton fallend, monoton wachsend oder streng monoton wachsend
+ist. Zur Erinnerung, man nennt eine Zahlenfolge <span class="math notranslate nohighlight">\((a_k)\)</span></p>
+<ul>
+<li><p><strong>monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k \geq a_{k+1}\)</span>,</p></li>
+<li><p><strong>streng monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k &gt; a_{k+1}\)</span>,</p></li>
+<li><p><strong>monoton wachsend</strong>, falls <span class="math notranslate nohighlight">\(a_k \leq a_{k+1}\)</span>,</p></li>
+<li><p><strong>streng monoton wachsend</strong>, falls <span class="math notranslate nohighlight">\(a_k &lt; a_{k+1}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Sie können den Fachbegriff <strong>beschränkte Zahlenfolge</strong> erklären.</p></li>
+</ul>
+</div>
+</section>
+<section id="was-ist-eine-folge">
+<h2>Was ist eine Folge?<a class="headerlink" href="#was-ist-eine-folge" title="Link to this heading">#</a></h2>
+<p>Wir haben schon Mengen und Tupel kennengelernt, jetzt geht es weiter mit Folgen.
+Bei einem Tupel ist die Reihenfolge der Elemente entscheidend, in der die
+Elemente angeordnet sind. Beispielsweise werden Farben durch RGB-Werte
+beschrieben, also den Anteil an Rot, Grün und Blau. Ein pures Rot wird
+gekennzeichnet als (1, 0, 0), während der RGB-Wert (0, 0, 1) ein reines Blau
+darstellt. In dem Tupel dürfen Werte mehrfach vorkommen so wie beispielsweise
+die Null in Rot zweimal auftaucht. Dafür ist die Reihenfolge entscheidend, denn
+in der Farbe Blau kommt die Null ebenfalls zweimal vor und die Eins einmal, aber
+dennoch beschreiben die beiden Tupel unterschiedliche Farben. Tupel haben
+endlich viele Elemente. Daher verwenden wir auch die Bezeichnung n-Tupel, wobei
+n die Anzahl der Elemente angibt. Jetzt lösen wir uns von der Einschränkung,
+dass die Anzahl endlich ist. <strong>Folgen</strong> sind Tupel mit unendlich vielen
+Elementen. Die können wir nicht mehr alle auflisten, wir brauchen eine
+Beschreibung für die unendlich vielen Elemente.</p>
+<p>Die Aufzählung</p>
+<div class="math notranslate nohighlight">
+\[2, 4, 6, 8, 10, 12, 14, \ldots\]</div>
+<p>ist ein klassisches Beispiel für eine Folge. Wir erkennen, dass es sich um die
+<em>geraden</em> natürlichen Zahlen handelt.</p>
+<p>An der dritten Stelle der Folge steht das Element 6. Bei Folgen benutzt man
+allerdings selten den Fachbegriff »Element«, sondern spricht von dritten
+<strong>Folgenglied</strong>. Da es bei Folgen auf die Reihenfolge der Elemente ankommt,
+werden die Positionen durchnummeriert, also beispielsweise</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_1 &amp;= 2 \\
+a_2 &amp;= 4 \\
+a_3 &amp;= 6 \\
+a_4 &amp;= 8 \\
+a_5 &amp;= 10 \\
+a_6 &amp;= 12 \\
+&amp; \; \vdots \\
+\end{align*}\]</div>
+<p>Allgemein schreibt man für eine Folge <span class="math notranslate nohighlight">\((a_i)_{i\in\mathbb{N}}\)</span> oder auch einfach
+<span class="math notranslate nohighlight">\((a_i)\)</span> um anzudeuten, dass es sich hier um eine Aufzählung unendlich vieler
+Folgenglieder <span class="math notranslate nohighlight">\(a_i\)</span> handelt. Die Positionsangabe <span class="math notranslate nohighlight">\(i\)</span> heißt <strong>Index</strong> der Folge.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine Folge?</p>
+<p>Eine Folge ist eine Aufzählung von unendlich vielen Zahlen <span class="math notranslate nohighlight">\(a_i\)</span> und wird mit
+runden Klammern geschrieben:</p>
+<div class="math notranslate nohighlight">
+\[(a_i)_{i\in\mathbb{N}}.\]</div>
+<p>Eine einzelne Zahl der Folge wird Folgenglied genannt. Die Position eines
+Folgenglieds innerhalb der Folge wird Index genannt.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Was ist eine Folge?”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=54f28901-772e-4dbd-94fc-b2a500ba4de9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all"
+height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"
+aria-label="Panopto Embedded Video Player" aria-description="Was ist eine Folge?" ></iframe>
+</div>
+</details></section>
+<section id="wie-werden-folgen-beschrieben">
+<h2>Wie werden Folgen beschrieben?<a class="headerlink" href="#wie-werden-folgen-beschrieben" title="Link to this heading">#</a></h2>
+<p>Da eine Folge unendlich viele Folgenglieder hat, können wir nicht alle
+hinschreiben. Eine Variante, eine Folge anzugeben, ist die <strong>konkrete
+Aufzählung</strong> der ersten Folgenglieder in der Hoffnung, dass dann jeder versteht,
+nach welchem Muster die Folge gebildet wurde und wie es weiter geht. Das haben
+wir oben getan.</p>
+<p>Eine zweite Variante ist die Angabe einer <strong>expliziten Regel</strong>, wie die
+Folgenglieder gebildet werden sollen. Die explizite Regel können wir uns wie
+eine Funktion vorstellen, bei der die Definitionsmenge die natürlichen Zahlen
+sind. In dem obigen Beispiel lautet eine explizite Regel</p>
+<div class="math notranslate nohighlight">
+\[a_k = 2 \cdot k, \quad k\in\mathbb{N}.\]</div>
+<p>Eine dritte Variante, folgen zu beschreiben, ist die Beschreibung als
+<strong>rekursive Regel</strong>. Wir können bei dem obigen Beispiel festhalten, dass die
+Folge bei <span class="math notranslate nohighlight">\(a_1 = 2\)</span> startet. Ist ein Folgenglied <span class="math notranslate nohighlight">\(a_{k}\)</span> berechnet, wird das
+nächste Folgenglied <span class="math notranslate nohighlight">\(a_{k+1}\)</span> berechnet, indem die Zahl 2 addiert wird. Also
+können wir die Folge auch folgendermaßen beschreiben:</p>
+<div class="math notranslate nohighlight">
+\[a_1 = 2, \quad a_{k+1} = a_{k} + 2, \quad k = 2, 3, 4, \ldots .\]</div>
+<p>Manche Folgen können explizit beschrieben werden, manche rekursiv und manchmal
+ist es möglich, für eine Folge sowohl eine explizite als auch eine rekursive
+Bildungsvorschrift zu finden.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Zahlenfolgen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GfhsHuTwIjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Explizite Formel finden” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c2hHWi-8wKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Rekursive Formel” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t2G7yviicAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="eigenschaften-von-folgen">
+<h2>Eigenschaften von Folgen<a class="headerlink" href="#eigenschaften-von-folgen" title="Link to this heading">#</a></h2>
+<p>Folgen werden auch durch ihre Eigenschaften beschrieben. Im Folgenden betrachten
+wir die drei Eigenschaften alternierend, monoton und beschränkt.</p>
+<section id="alternierende-folgen">
+<h3>Alternierende Folgen<a class="headerlink" href="#alternierende-folgen" title="Link to this heading">#</a></h3>
+<p>Die obige Folge der geraden natürlichen Zahlen kann auch so abgeändert werden,
+dass das Vorzeichen immer abwechselt:</p>
+<div class="math notranslate nohighlight">
+\[2, -4, 6, -8, 10, -12, \ldots.\]</div>
+<p>Eine solche Folge heißt <strong>alternierend</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “alternierende Folge” vom Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mQLADVxxRU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="monotonie-von-folgen">
+<h3>Monotonie von Folgen<a class="headerlink" href="#monotonie-von-folgen" title="Link to this heading">#</a></h3>
+<p>Da Folgen nur Funktionen mit Definitionsgebiet <span class="math notranslate nohighlight">\(\mathbf{N}\)</span>, verwundert es
+nicht, dass es die Eigenschaft der Monotonie auch für Folgen gibt. Eine Folge
+muss nicht monoton sein. Wenn sie monoton ist, gibt es vier Fälle. Eine Folge
+<span class="math notranslate nohighlight">\((a_k)\)</span> heißt</p>
+<ul class="simple">
+<li><p><strong>monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k \geq a_{k+1}\)</span>,</p></li>
+<li><p><strong>streng monoton fallend</strong>, falls <span class="math notranslate nohighlight">\(a_k &gt; a_{k+1}\)</span>,</p></li>
+<li><p><strong>monoton wachsend</strong>, falls <span class="math notranslate nohighlight">\(a_k \leq a_{k+1}\)</span>,</p></li>
+<li><p><strong>streng monoton wachsend</strong>, falls <span class="math notranslate nohighlight">\(a_k &lt; a_{k+1}\)</span>.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Monotonie von Folgen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YoNAdPOMMGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beschranktheit-von-folgen">
+<h3>Beschränktheit von Folgen<a class="headerlink" href="#beschranktheit-von-folgen" title="Link to this heading">#</a></h3>
+<p>Als nächstes betrachten wir als Beispiel die Folge</p>
+<div class="math notranslate nohighlight">
+\[1,\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16},\frac{1}{32},\ldots.\]</div>
+<p>Das explizite Bildungsgesetz für diese Folge lautet</p>
+<div class="math notranslate nohighlight">
+\[a_{k} = \left(\frac{1}{2}\right)^{k-1}, \quad k \in\mathbb{N}.\]</div>
+<p>Die Folgenglieder werden immer kleiner und sind irgendwann so klein, dass sie
+kaum von Null zu unterscheiden sind. Aber dennoch bleiben sie positiv, egal wie
+groß auch <span class="math notranslate nohighlight">\(k\)</span> wird. Man sagt daher, dass die Zahl 0 eine untere Schranke für
+diese Folge ist bzw. dass die Folge nach unten beschränkt ist. Es gilt</p>
+<div class="math notranslate nohighlight">
+\[0 \leq a_k, \quad \forall k\in\mathbb{N},\]</div>
+<p>tatsächlich gilt sogar <span class="math notranslate nohighlight">\(0 &lt; a_k\)</span>. Aber auch die Zahl -17.3 ist eine untere
+Schranke für diese Folge, denn es gilt auch</p>
+<div class="math notranslate nohighlight">
+\[-17.3 \leq a_k, \quad \forall k\in\mathbb{N}.\]</div>
+<p>Auch hier gilt sogar das strikte Ungleichheitszeichen <span class="math notranslate nohighlight">\(&lt;\)</span>.</p>
+<p>Alle negativen Zahlen sind untere Schranken für diese Folge. Von den unteren
+Schranken ist <span class="math notranslate nohighlight">\(S_{\text{unten}}=0\)</span> die größte untere Schranke und wird
+<strong>Infimum</strong> genannt.</p>
+<p>Auch nach oben finden wir eine Schranke, die Folge <span class="math notranslate nohighlight">\((a_k)\)</span> ist nach oben
+beschränkt. Beispielsweise sind alle Folgenglieder kleiner als 4, also</p>
+<div class="math notranslate nohighlight">
+\[4 \geq a_k, \quad \forall k\in\mathbb{N}.\]</div>
+<p>Auch hier gilt eigentlich das strikte Ungleichheitszeichen <span class="math notranslate nohighlight">\(&gt;\)</span>. Eine Zahl
+<span class="math notranslate nohighlight">\(S\in\mathbb{R}\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[s \geq a_k, \quad \forall k\in\mathbb{R}\]</div>
+<p>wird obere Schranke genannt. Auch hier gibt es eine kleinste obere Schranke,
+nämlich die Zahl 1, denn es gilt</p>
+<div class="math notranslate nohighlight">
+\[1 \geq a_k, \quad \forall k\in\mathbb{R}.\]</div>
+<p>Die kleinste obere Schranke wird <strong>Supremum</strong> genannt. Allrdings gibt es hier
+bei diesem konkreten Beispiel einen Unterschied zwischen dem Infimum 0 und dem
+Supremum 1. Es gibt kein Folgenglied <span class="math notranslate nohighlight">\(a_k\)</span>, das jemals den Wert 0 annimmt. Das
+Infimum kommt niemals in der Folge vor. Aber das Supremum 1 entspricht gleich
+dem ersten Folgenglied <span class="math notranslate nohighlight">\(a_1 = 1\)</span>. Weil das Supremum tatsächlich auch ein
+Folgenglied ist, bezeichnet man das Supremum als <strong>Maximum</strong>. Gäbe es ein
+Folgenglied mit dem Infimum, hätte man das Infimum auch <strong>Minimum</strong> genannt.</p>
+<p>Halten wir noch fest, was beschränkt bedeutet: eine Folge die sowohl nach oben
+als auch nach unten beschränkt ist, heißt einfach nur <strong>beschränkt</strong>.</p>
+<blockquote>
+<div><p>Weiteres Lernmaterial: <a class="reference external" href="https://studyflix.de/mathematik/zahlenfolgen-5710">https://studyflix.de/mathematik/zahlenfolgen-5710</a></p>
+</div></blockquote>
+<p>Das folgende Video brauchen Sie nur bis ca. 7:58 min schauen, Konvergenz kommt
+erst im nächten Kapitel.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Beschränktheit, Monotonie, Konvergenz von Zahlenfolgen” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vlvdGYZyHo8?si=O1-MnemNzXvMOwH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, was eine Folge ist und was die
+mathematischen Fachbegriffe Folgenglied und Index bedeuten. Es gibt verschiedene
+Varianten, Folgen zu beschreiben, beispielsweise die Aufzählung, die explizite
+Regel oder die rekursive Formel. Neben den alternierenden Folgen haben Sie auch
+gelernt, was Monotonie und Beschränktheit von Folgen bedeutet. Beides werden wir
+im folgenden Kapitel brauchen, wenn es um Grenzwerte bzw. Konvergenz von Folgen
+geht.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter09"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chap09_sec00.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">9. Folgen, Grenzwerte und Stetigkeit</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chap09_sec02.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">9.2 Grenzwert einer Zahlenfolge</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-folge">Was ist eine Folge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-folgen-beschrieben">Wie werden Folgen beschrieben?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften-von-folgen">Eigenschaften von Folgen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternierende-folgen">Alternierende Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-von-folgen">Monotonie von Folgen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-von-folgen">Beschränktheit von Folgen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simone Gramsch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

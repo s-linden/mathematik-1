@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8.3 Betrag, komplexe Konjugation und Division &#8212; Mathematik 1 Maschinenbau</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter08/chap08_sec03';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.4 Komplexe Zahlen in trigonometrischer Form" href="chap08_sec04.html" />
+    <link rel="prev" title="8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen" href="chap08_sec02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/maths_background_small.png" class="logo__image only-light" alt="Mathematik 1 Maschinenbau - Home"/>
+    <img src="../_static/maths_background_small.png" class="logo__image only-dark pst-js-only" alt="Mathematik 1 Maschinenbau - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Willkommen zur Mathematik 1
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematischer Werkzeugkasten</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chap01_sec00.html">Videos zu Grundlagen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec01.html">Videos zu Mengen und Intervalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec02.html">Videos zu Rechenregeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec03.html">Videos zu Potenzen, Wurzeln und Logarithmen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec04.html">Videos zu Gleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec05.html">Videos zu Polynomdivision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chap01_sec06.html">Videos zu Trigonometrie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chap02_sec00.html">2. Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec01.html">2.1 Funktionen - Grundlagen und Definitionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec02.html">Videos zu Eigenschaften von Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec03.html">Videos zu Polynomen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec04.html">Videos zu Exponential- und Logarithmusfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec05.html">Videos zu Trigonometrische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chap02_sec06.html">Videos zu Beziehungen zwischen trigonometrischen Funktionen</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vektoren und ihre Anwendungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chap03_sec00.html">3. Vektorräume</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec01.html">3.1 Koordinaten und Koordinatensysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec02.html">3.2 Vektoren und Vektorräume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec03.html">3.3 Vektoren in der Geometrie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec04.html">3.4 Affine Punkträume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec05.html">3.5 Betrag Vektor und Abstand Punkte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chap03_sec06.html">3.6 Linearkombination und lineare Unabhängigkeit</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chap04_sec00.html">4. Vektorrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec01.html">4.1 Basis und Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec02.html">4.2 Skalarprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec03.html">4.3 Geometrische Interpretation Skalarprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec04.html">4.4 Anwendungen Skalarprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec05.html">4.5 Vektorprodukt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chap04_sec06.html">4.6 Spatprodukt</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chap05_sec00.html">5. Punkte, Geraden und Ebenen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec01.html">5.1 Geraden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec02.html">5.2 Ebenen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec03.html">5.3 Lineare Gleichungssysteme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec04.html">5.4 Lagebeziehungen Geraden und Ebenen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec05.html">5.5 Abstände</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chap05_sec06.html">5.6 Winkel</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Matrizen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chap06_sec00.html">6. Matrizenrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec01.html">6.1 Was ist eine Matrix?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec02.html">6.2 Besondere Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec03.html">6.3 Matrizenaddition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec04.html">6.4 Skalarmultiplikation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec05.html">6.5 Matrizenmultiplikation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chap06_sec06.html">6.6 Transponierte und symmetrische Matrizen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chap07_sec00.html">7. Anwendungen von Matrizen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec01.html">7.1 Determinanten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec02.html">7.2 Inverse Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec03.html">7.3 Orthogonale Matrizen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec04.html">7.4 Lineare Gleichungssysteme mit Matrizenrechnung lösen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec05.html">7.5 Eigenwerte und Eigenvektoren (2x2-Matrix)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chap07_sec06.html">7.6 Eigenwerte und Eigenvektoren von 3x3-Matrizen</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Komplexe Zahlen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chap08_sec00.html">8. Komplexe Zahlen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap08_sec01.html">8.1 Was sind komplexe Zahlen?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap08_sec02.html">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.3 Betrag, komplexe Konjugation und Division</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap08_sec04.html">8.4 Komplexe Zahlen in trigonometrischer Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap08_sec05.html">8.5 Komplexe Zahlen in Exponentialform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap08_sec06.html">8.6 Potenzen und Wurzeln komplexer Zahlen</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chap09_sec00.html">9. Folgen, Grenzwerte und Stetigkeit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chap09_sec01.html">9.1 Grundwissen Zahlenfolgen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chap09_sec02.html">9.2 Grenzwert einer Zahlenfolge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chap09_sec03.html">9.3 Rechnen mit konvergenten Folgen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chap09_sec04.html">9.4 Funktionsgrenzwerte und ihre Rechenregeln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chap09_sec05.html">9.5 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chap09_sec06.html">9.6 Unstetigkeitsstellen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chap10_sec00.html">10. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec01.html">10.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec02.html">10.2 Ableitung von elementaren Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec03.html">10.3 Faktor-, Summen- und Produktregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec04.html">10.4 Quotientenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec05.html">10.5 Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chap10_sec06.html">10.6 Ableitung der Umkehrfunktion</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chap11_sec00.html">11. Anwendung Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec01.html">11.1 Linearisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec02.html">11.2 Regel von Bernoulli-de L’Hospital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec03.html">11.3 Neigungswinkel / Schnittwinkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec04.html">11.4 Monotonie und Krümmung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec05.html">11.5 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chap11_sec06.html">11.6 Wendepunkte</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chap12_sec00.html">12. Integralrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec01.html">12.1 Stammfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec02.html">12.2 Bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec03.html">12.3 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec04.html">12.4 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec05.html">12.5 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chap12_sec06.html">12.6 Integralfunktionen und das uneigentliche Integral</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/gramschs/book_mathe01" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter08/chap08_sec03.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>8.3 Betrag, komplexe Konjugation und Division</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag-komplexer-zahlen">Betrag komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-konjugation">Komplexe Konjugation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division-komplexer-zahlen">Division komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="betrag-komplexe-konjugation-und-division">
+<h1>8.3 Betrag, komplexe Konjugation und Division<a class="headerlink" href="#betrag-komplexe-konjugation-und-division" title="Link to this heading">#</a></h1>
+<p>In dem vorherigen Kapitel haben wir die Addition, Subtraktion und Multiplikation
+von komplexen Zahlen kennengelernt. In diesem Kapitel werden wir uns mit der
+letzten – noch fehlenden – Grundrechenart beschäftigen, nämlich der
+<strong>Division</strong>. Dazu führen wir zuerst den <strong>Betrag</strong> einer komplexen Zahl ein und
+beschäftigen uns mit der <strong>komplexen Konjugation</strong>.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
+<div class="goals admonition">
+<p class="admonition-title">Lernziele</p>
+<ul>
+<li><p>Sie können den <strong>Betrag</strong> einer komplexen Zahl berechnen:</p>
+<div class="math notranslate nohighlight">
+\[|z|=\sqrt{\text{Re}(z)^2 + \text{Im}(z)^2}.\]</div>
+</li>
+<li><p>Sie kennen die <strong>Dreiecksungleichung</strong> für den Betrag komplexer Zahlen:</p>
+<div class="math notranslate nohighlight">
+\[|z_1 + z_2| \leq |z_1| + |z_2|.\]</div>
+</li>
+<li><p>Sie können die <strong>konjugiert komplexe Zahl</strong> bilden, also eine <strong>komplexe
+Konjugation</strong> durchführen.</p></li>
+<li><p>Sie können die folgenden Rechenregeln für den Betrag anwenden:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(|z_1 \cdot z_2| = |z_1| \cdot |z_2|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|z| = |\bar{z}|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|z| = \sqrt{z \cdot \bar{z}}\)</span></p></li>
+</ul>
+</li>
+<li><p>Sie können zwei komplexe Zahlen in Normalform <strong>dividieren</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="betrag-komplexer-zahlen">
+<h2>Betrag komplexer Zahlen<a class="headerlink" href="#betrag-komplexer-zahlen" title="Link to this heading">#</a></h2>
+<p>Im Gegensatz zu reellen Zahlen sind komplexe Zahlen nicht geordnet. Welche Zahl
+ist größer: <span class="math notranslate nohighlight">\(-1+3\mathrm{i}\)</span> oder <span class="math notranslate nohighlight">\(2-0.5\mathrm{i}\)</span>? Auf der Zahlengerade lassen
+sich die reellen Zahlen ordnen. <span class="math notranslate nohighlight">\(3\)</span> ist größer als <span class="math notranslate nohighlight">\(2.7\)</span> und liegt daher weiter
+rechts auf der Zahlengeraden. Die geometrische Interpretation der komplexen
+Zahlen als Punkte in der Gaußschen Zahlenebene zeigt aber, dass dieses Ordnen in
+der Gaußschen Zahlenebene nicht funktioniert. Die Zahl <span class="math notranslate nohighlight">\(2-0.5\mathrm{i}\)</span> liegt
+zwar weiter rechts als <span class="math notranslate nohighlight">\(-1+3\mathrm{i}\)</span>. Gleichzeitig liegt aber
+<span class="math notranslate nohighlight">\(-1+3\mathrm{i}\)</span> höher als <span class="math notranslate nohighlight">\(2-0.5\mathrm{i}\)</span>. Als Ersatz für eine Ordnung der
+komplexen Zahlen dient daher der sogenannte <strong>Betrag</strong> einer komplexen Zahl. Der
+Betrag einer komplexen Zahl ist ihr Abstand zum Koordinatenursprung, also zur
+Null <span class="math notranslate nohighlight">\(0+0\mathrm{i}\)</span>.</p>
+<p>Verwenden wir den Satz des Pythagoras, können wir den Betrag einer komplexen
+Zahl aus ihrem Realteil und Imaginärteil ausrechnen.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … der Betrag einer komplexen Zahl?</p>
+<p>Der Betrag einer komplexen Zahl <span class="math notranslate nohighlight">\(z = a + \mathrm{i}\)</span> mit Realteil <span class="math notranslate nohighlight">\(a\)</span> und
+Imaginärteil <span class="math notranslate nohighlight">\(b\)</span> ist</p>
+<div class="math notranslate nohighlight">
+\[|z| = \sqrt{a^2 + b^2}.\]</div>
+</div>
+<p>Für den Betrag zweier komplexer Zahlen gilt die sogenannte
+<strong>Dreiecksungleichung</strong>:</p>
+<div class="math notranslate nohighlight">
+\[|z_1 + z_2| \leq |z_1| + |z_2|.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Komplexe Zahlen - Betrag” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/09WI_DCFmI0?si=bJrb_PYPcQ3t9cQY" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="komplexe-konjugation">
+<h2>Komplexe Konjugation<a class="headerlink" href="#komplexe-konjugation" title="Link to this heading">#</a></h2>
+<p>Als nächstes betrachen wir den Prozess der komplexen Konjugation. Soll zu einer
+komplexen Zahl die sogenannte <strong>konjugiert komplexe Zahl</strong> berechnet werden,
+dann ist damit gemeint, dass das Vorzeichen des Imaginärteils getauscht wird.
+Anhand eines Beispiels betrachten wir nun die geometrische Interpretation der
+konjugiert komplexen Zahl in der Gaußschen Zahlenebene.</p>
+<p><strong>Beispiel:</strong> Wir betrachten die komplexe Zahl <span class="math notranslate nohighlight">\(z = 3 + 2\mathrm{i}\)</span>. Tauschen
+wir nun das Vorzeichen des Imaginärteils, ergibt sich daraus die konjugiert
+komplexe Zahl</p>
+<div class="math notranslate nohighlight">
+\[\bar{z} = 3 \textcolor{red}{-} 2\mathrm{i}.\]</div>
+<p>Dabei wird die konjugiert komplexe Zahl durch einen Strich gekennzeichnet. Als
+nächstes zeichnen wir <span class="math notranslate nohighlight">\(z\)</span> und <span class="math notranslate nohighlight">\(\bar{z}\)</span> in der Gaußschen Zahlenebene ein.</p>
+<p><a class="image43 reference internal" href="../_images/konjugiert_komplexe_zahl_light43.svg"><img alt="Komplexe Zahl und ihre konjugiert komplexe Zahl in der Gaußschen Zahlenebene" class="image43" src="../_images/konjugiert_komplexe_zahl_light43.svg" width="100%" /></a>
+<a class="image169 reference internal" href="../_images/konjugiert_komplexe_zahl_light169.svg"><img alt="Komplexe Zahl und ihre konjugiert komplexe Zahl in der Gaußschen Zahlenebene" class="image169" src="../_images/konjugiert_komplexe_zahl_light169.svg" width="100%" /></a></p>
+<p>Wir können den Prozess des »Vorzeichentauschens«, die sogenannte <strong>komplexe
+Konjugation</strong> geometrisch als eine Spiegelung an der Realteil-Achse
+interpretieren.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die konjugiert komplexe Zahl?</p>
+<p>Ist <span class="math notranslate nohighlight">\(z = a + b\mathrm{i}\)</span> eine komplexe Zahl, dann wird</p>
+<div class="math notranslate nohighlight">
+\[\bar{z} = a - b\mathrm{i}\]</div>
+<p>ihre konjugiert komplexe Zahl genannt. Sie entsteht durch das Tauschen des
+Vorzeichens des Imaginärteils.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Komplexe Zahlen - Konjugiert komplexe Zahl” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-XZcW-xa35I?si=CB-vYzuUPo-TWTCS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="division-komplexer-zahlen">
+<h2>Division komplexer Zahlen<a class="headerlink" href="#division-komplexer-zahlen" title="Link to this heading">#</a></h2>
+<p>Die Division zweier komplexer Zahlen erfordert einen Trick. Um den Trick zu
+erklären, starten wir mit einem Beispiel. Die beiden komplexen Zahlen
+<span class="math notranslate nohighlight">\(z_1 = 1-3\mathrm{i}\)</span> und <span class="math notranslate nohighlight">\(z_2 = 1+2\mathrm{i}\)</span> sollen dividiert werden, also</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{1-3\mathrm{i}}{1+2\mathrm{i}}\]</div>
+<p>berechnet werden. Wir nehmen den Nenner <span class="math notranslate nohighlight">\(1+2\mathrm{i}\)</span> und tauschen das
+Vorzeichen des Imaginärteils aus. Aus Plus machen wir Minus und aus Minus machen
+wir Plus und erhalten die folgende konjugiert komplexe Zahl:</p>
+<div class="math notranslate nohighlight">
+\[1+2\mathrm{i} \; \longrightarrow \; 1 \textcolor{red}{-}2\mathrm{i}.\]</div>
+<p>Als nächstes erweitern wir den Bruch mit dieser neuen Zahl, rechnen also</p>
+<div class="math notranslate nohighlight">
+\[\frac{1-3\mathrm{i}}{1+2\mathrm{i}} \cdot \frac{1
+\textcolor{red}{-}2\mathrm{i}}{1 \textcolor{red}{-}2\mathrm{i}}\]</div>
+<p>aus. Beim Ausmultiplizieren des Nenners können wir die <a class="reference external" href="https://de.wikipedia.org/wiki/Binomische_Formeln">3. binomische
+Formel</a> <span class="math notranslate nohighlight">\((a+b)\cdot (a-b) =
+a^2 -b^2\)</span> ausnutzen:</p>
+<div class="math notranslate nohighlight">
+\[\frac{(1-3\mathrm{i})}{(1+2\mathrm{i})} \cdot \frac{(1
+\textcolor{red}{-}2\mathrm{i})}{(1 \textcolor{red}{-}2\mathrm{i})} =
+\frac{1-2\mathrm{i}-3\mathrm{i}+6\mathrm{i}^2}{1^2 - 4\mathrm{i}^2}
+.\]</div>
+<p>Da ja <span class="math notranslate nohighlight">\(\mathrm{i}^2 = -1\)</span> gilt, vereinfachen sich die Terme zu</p>
+<div class="math notranslate nohighlight">
+\[\frac{1-2\mathrm{i}-3\mathrm{i}+6\mathrm{i}^2}{1^2 - 4\mathrm{i}^2}
+= \frac{-5 -5\mathrm{i}}{5}.\]</div>
+<p>Daher gilt also insgesamt</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{1-3\mathrm{i}}{1+2\mathrm{i}} = \frac{-5
+-5\mathrm{i}}{5} = -1 -\mathrm{i}.\]</div>
+<p>Um zwei komplexe Zahlen in Normalform zu dividieren, gehen wir also in drei
+Schritten vor:</p>
+<ol class="arabic simple">
+<li><p>Bei der komplexen Zahl im Nenner wird das Vorzeichen des Imaginärteils
+getauscht, also die konjugiert komplexe Zahl des Nenners gebildet.</p></li>
+<li><p>Danach wird der Bruch mit der kongugiert komplexen Zahl erweitert.</p></li>
+<li><p>Zuletzt werden alle Terme durch Ausmultiplizieren vereinfacht. Dabei werden
+die 3. binomische Formel und <span class="math notranslate nohighlight">\(\mathrm{i}^2=-1\)</span> ausgenutzt, bis das Ergebnis
+in Normalform dasteht.</p></li>
+</ol>
+<p>Der Vollständigkeit halber notieren wir noch die mathematische Formel zur
+Berechnung eines Quotienten von komplexen Zahlen im Allgemeinen. Wenn <span class="math notranslate nohighlight">\(z_1 =
+a_1 + b_1 \cdot \mathrm{i}\)</span> und <span class="math notranslate nohighlight">\(z_2 = a_2 + b_2 \cdot \mathrm{i}\)</span> komplexe Zahlen
+sind, dann ist ihr Quotient</p>
+<div class="math notranslate nohighlight">
+\[\frac{z_1}{z_2} = \frac{a_1 + b_1 \cdot \mathrm{i}}{a_2 + b_2 \cdot
+\mathrm{i}} = \frac{a_1a_2 + b_1 b_2}{a_2^2 + b_2^2} + \frac{a_2 b_1 - a_1
+b_2}{a_2^2 + b_2^2} \mathrm{i}.\]</div>
+<p>Es ist wenig sinnvoll, diese Formel auswendig zu lernen. Eine bessere Strategie
+ist, sich zu merken, dass mit der konjugiert komplexen Zahl erweitert wird. Auch
+die Division zweier komplexer Zahlen kann geometrisch in der Gaußschen
+Zahlenebene interpretiert werden. Probieren Sie dazu das folgende Applet aus.</p>
+<div class="seealso toggle admonition">
+<p class="admonition-title">Interaktiv: Division komplexer Zahlen von “Hart und Trocken”</p>
+<p>Starten Sie das</p>
+<p><a class="reference external" href="https://www.hartundtrocken.de/my-product/interaktiv-division-komplexer-zahlen/">Applet “Division komplexer
+Zahlen”</a></p>
+<p>von “Hart und Trocken”. Dort können Sie zwei komplexe Zahlen in der Gaußschen
+Zahlenebene wählen, indem Sie die beiden blauen Punkte bewegen. Der Quotient dieser
+beiden komplexen Zahlen wird orange dargestellt.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Komplexe Zahlen - Kehrwert einer komplexen Zahl” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rxq-4o1eFNA?si=yUlycavP-smHAGAP" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Komplexe Zahlen | Division” von Lernkompass</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J8btoGTJW-k?si=c057mP3tROAx6hHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Komplexe Mengen grafisch darstellen” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M4KewnSNyC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, wie komplexe Zahlen dividiert werden. Dazu
+wurden die Begriffe Betrag und komplexe Konjugation eingeführt. Tatsächlich ist
+es bei der Multiplikation und der Division häufig geschickter, von der
+Darstellung einer komplexen Zahl in Normalform zu der sogenannten
+trigonometrischen Form oder Exponentialform überzugehen. Letzteres wird uns auch
+das Potenzieren und Wurzelziehen ermöglichen. Daher behandeln wir im nächsten
+Kapitel zunächst die trigonometrische Form der komplexen Zahlen.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter08"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chap08_sec02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">8.2 Addition, Subtraktion und Multiplikation komplexer Zahlen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chap08_sec04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">8.4 Komplexe Zahlen in trigonometrischer Form</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betrag-komplexer-zahlen">Betrag komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komplexe-konjugation">Komplexe Konjugation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#division-komplexer-zahlen">Division komplexer Zahlen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simone Gramsch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
