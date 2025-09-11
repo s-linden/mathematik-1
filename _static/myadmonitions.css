@@ -56,3 +56,28 @@ div.admonition.goals {
         display: none; /* Hide tablet/laptop image */
     }
 }
+
+.kugelbahn-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.kugelbahn-wrapper iframe {
+    width: 100%;
+    height: 480px;
+    border: none;  /* Rahmen hier statt auf Canvas */
+    background: white;
+    border-radius: 10px;     /* Rahmen hier statt auf Wrapper */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Schatten hier */
+}
+
+/* Mobile Anpassung */
+@media (max-width: 600px) {
+    .kugelbahn-wrapper iframe {
+        height: 320px;  /* Etwas niedriger auf Mobile */
+    }
+}

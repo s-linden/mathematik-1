@@ -1,4 +1,4 @@
-# Videos zu Polynomen
+# 2.3 Polynome
 
 ```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
 :class: warning
@@ -9,6 +9,7 @@ In den ersten zwei Wochen wird diese Vorlesung klassisch gehalten. Bitte arbeite
 
 ```{admonition} Lernziele Polynome
 :class: goals
+* Sie wissen, was eine **Potenzfunktion** ist.
 * Sie wissen, was ein **Polynom** ist.
 * Sie wissen, was die **Steigung** und der **Achsenabschnitt** einer **linearen Funktion** ist.  
 * Sie können eine lineare Funktion als **Gerade** in ein Koordinatensystem zeichnen.

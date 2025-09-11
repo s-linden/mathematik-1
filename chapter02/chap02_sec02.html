@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Videos zu Eigenschaften von Funktionen &#8212; Mathematik 1 Maschinenbau</title>
+    <title>2.2 Eigenschaften von Funktionen &#8212; Mathematik 1 Maschinenbau</title>
   
   
   
@@ -34,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=fcc42dec" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css?v=6fbb18da" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -61,11 +61,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter02/chap02_sec02';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Videos zu Polynomen" href="chap02_sec03.html" />
+    <link rel="next" title="2.3 Polynome" href="chap02_sec03.html" />
     <link rel="prev" title="2.1 Funktionen - Grundlagen und Definitionen" href="chap02_sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,11 +185,11 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chap02_sec00.html">2. Funktionen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chap02_sec01.html">2.1 Funktionen - Grundlagen und Definitionen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Videos zu Eigenschaften von Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chap02_sec03.html">Videos zu Polynomen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chap02_sec04.html">Videos zu Exponential- und Logarithmusfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chap02_sec05.html">Videos zu Trigonometrische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chap02_sec06.html">Videos zu Beziehungen zwischen trigonometrischen Funktionen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2 Eigenschaften von Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02_sec03.html">2.3 Polynome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02_sec04.html">2.4 Exponential- und Logarithmusfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02_sec05.html">2.5 Trigonometrische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap02_sec06.html">2.6 Umkehrfunktion, Verkettung und abschnittsweise definierte Funktionen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -442,7 +444,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Videos zu Eigenschaften von Funktionen</h1>
+    <h1>2.2 Eigenschaften von Funktionen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -453,7 +455,13 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften">Eigenschaften</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-steigt-oder-fallt-die-bahn">Monotonie - Steigt oder fällt die Bahn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-wie-hoch-und-wie-tief-geht-es">Beschränktheit - Wie hoch und wie tief geht es?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrie-spiegelbahnen">Symmetrie - Spiegelbahnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodizitat-wiederholende-muster">Periodizität - Wiederholende Muster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kombination-von-eigenschaften">Kombination von Eigenschaften</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praktische-bedeutung-fur-das-bahndesign">Praktische Bedeutung für das Bahndesign</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -465,29 +473,140 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="videos-zu-eigenschaften-von-funktionen">
-<h1>Videos zu Eigenschaften von Funktionen<a class="headerlink" href="#videos-zu-eigenschaften-von-funktionen" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25</p>
-<p>In den ersten zwei Wochen wird diese Vorlesung klassisch gehalten. Bitte arbeiten Sie daher das in campUAS/Moodle verlinkte Vorlesungsskript durch und ergänzen Sie dieses bei Bedarf durch die unten verlinkten Videos. Ab Woche 3 wechseln wir dann zu eduScrum und diesem Vorlesungsskript.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="eigenschaften-von-funktionen">
+<h1>2.2 Eigenschaften von Funktionen<a class="headerlink" href="#eigenschaften-von-funktionen" title="Link to this heading">#</a></h1>
+<p>Nachdem wir im vorherigen Kapitel die Grundlagen von Funktionen anhand unserer
+einfachen geraden Kugelbahn kennengelernt haben, erweitern wir nun unser
+Kugelbahn-System. Wir bauen verschiedene Bahnformen und entdecken dabei wichtige
+Eigenschaften von Funktionen, die uns helfen, das Verhalten mathematischer
+Zusammenhänge zu verstehen und zu klassifizieren.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele Eigenschaften von Funktionen</p>
-<p>Sie kennen die wichtigsten Eigenschaften von mathematischen Funktionen wie beispielsweise</p>
+<p>Sie kennen die wichtigsten Eigenschaften von mathematischen Funktionen wie
+beispielsweise</p>
 <ul class="simple">
-<li><p>Nullstellen,</p></li>
-<li><p>Symmetrie (gerade oder ungerade),</p></li>
-<li><p>Monotonie, d.h. (streng) monoton wachsend/steigend oder (streng) monoton fallend,</p></li>
-<li><p>Periodizität und</p></li>
-<li><p>Beschränktheit.</p></li>
+<li><p><strong>Monotonie</strong>,</p></li>
+<li><p><strong>Symmetrie</strong>,</p></li>
+<li><p><strong>Periodizität</strong> und</p></li>
+<li><p><strong>Beschränktheit</strong>.</p></li>
 </ul>
-<p>Darüber hinaus können Sie bei einer gegebenen Funktion berechnen, welche der oben genannten Eigenschaften sie hat.</p>
 </div>
 </section>
-<section id="eigenschaften">
-<h2>Eigenschaften<a class="headerlink" href="#eigenschaften" title="Link to this heading">#</a></h2>
+<section id="monotonie-steigt-oder-fallt-die-bahn">
+<h2>Monotonie - Steigt oder fällt die Bahn?<a class="headerlink" href="#monotonie-steigt-oder-fallt-die-bahn" title="Link to this heading">#</a></h2>
+<p>Betrachten wir zunächst unsere ursprüngliche gerade Kugelbahn genauer. Die Kugel
+rollt von links nach rechts und ihre Höhe wird dabei kontinuierlich niedriger.
+Diese Eigenschaft nennen wir <strong>Monotonie</strong>.</p>
+<div class="kugelbahn-wrapper">
+<iframe src="../chap02/marble_track_simple.html"
+width="100%" height="500"
+frameborder="0"scrolling="no"
+title="Interaktive Kugelbahn">
+</iframe>
+</div><p>Je größer der Abstand zum Start ist, desto niedriger ist die Höhe der Kugel und
+das gilt sogar strikt. Wir formulieren diese Beobachtung mathematisch: Wenn
+<span class="math notranslate nohighlight">\(x_1\)</span> kleiner als <span class="math notranslate nohighlight">\(x_2\)</span> ist, dann ist die Höhe <span class="math notranslate nohighlight">\(h(x_1)\)</span> echt größer als die Höhe
+<span class="math notranslate nohighlight">\(h(x_2)\)</span>. Verallgemeinert auf alle Funktionen gilt:</p>
+<p>Eine Funktion <span class="math notranslate nohighlight">\(f\)</span> heißt <strong>streng monoton fallend</strong>, wenn ihre Funktionswerte mit
+wachsenden x-Wert strikt abnehmen:</p>
+<div class="math notranslate nohighlight">
+\[x_1 &lt; x_2 \quad \Rightarrow \quad f(x_1) \textcolor{red}{&gt;} f(x_2).\]</div>
+<p>Wir können uns aber auch vorstellen, ein Plateau einzubauen, wie in der
+folgenden Kugelbahn. Damit leichter erkennbar ist, wo das Plateau beginnt, wird
+die Kugel bei einem Plateau weiß gefärbt. Je steiler die Kugelbahn nach unten
+geht, desto dunkelblauer wird die Kugel eingefärbt. Das hat nichts mit der
+physikalischen Geschwindigkeit der Kugel zu tun, sondern zeigt die Eigenschaften
+der Schienen.</p>
+<div class="kugelbahn-wrapper">
+<iframe src="../chap02/marble_track_simple_with_plateau.html"
+width="100%" height="500"
+frameborder="0"scrolling="no"
+title="Interaktive Kugelbahn">
+</iframe>
+</div><div class="note admonition">
+<p class="admonition-title">Was ist … Monotonie?</p>
+<p>Eine Funktion heißt <strong>monoton steigend</strong> (oder monoton wachsend), wenn ihre
+Funktionswerte mit wachsendem x-Wert nicht abnehmen: <span class="math notranslate nohighlight">\(x_1 &lt; x_2 \Rightarrow
+f(x_1) \leq f(x_2)\)</span>.</p>
+<p>Eine Funktion heißt <strong>monoton fallend</strong> (oder monoton abnehmend), wenn ihre
+Funktionswerte mit wachsendem x-Wert nicht zunehmen: <span class="math notranslate nohighlight">\(x_1 &lt; x_2 \Rightarrow
+f(x_1) \geq f(x_2)\)</span>.</p>
+<p>Bei <strong>streng monoton steigend/fallend</strong> gilt das entsprechende
+Ungleichheitszeichen ohne Gleichheit.</p>
+</div>
+</section>
+<section id="beschranktheit-wie-hoch-und-wie-tief-geht-es">
+<h2>Beschränktheit - Wie hoch und wie tief geht es?<a class="headerlink" href="#beschranktheit-wie-hoch-und-wie-tief-geht-es" title="Link to this heading">#</a></h2>
+<p>Jede reale Kugelbahn hat physikalische Grenzen. Diese führen uns zum Konzept der
+<strong>Beschränktheit</strong>.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … Beschränktheit?</p>
+<p>Eine Funktion <span class="math notranslate nohighlight">\(f\)</span> heißt <strong>nach oben beschränkt</strong>, wenn es eine Zahl <span class="math notranslate nohighlight">\(M\)</span> gibt,
+sodass <span class="math notranslate nohighlight">\(f(x) \leq M\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span> aus der Definitionsmenge.</p>
+<p>Eine Funktion <span class="math notranslate nohighlight">\(f\)</span> heißt <strong>nach unten beschränkt</strong>, wenn es eine Zahl <span class="math notranslate nohighlight">\(m\)</span> gibt,
+sodass <span class="math notranslate nohighlight">\(f(x) \geq m\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span> aus der Definitionsmenge.</p>
+<p>Eine <strong>beschränkte</strong> Funktion ist sowohl nach oben als auch nach unten
+beschränkt.</p>
+</div>
+</section>
+<section id="symmetrie-spiegelbahnen">
+<h2>Symmetrie - Spiegelbahnen<a class="headerlink" href="#symmetrie-spiegelbahnen" title="Link to this heading">#</a></h2>
+<p>Erweitern wir unser Kugelbahn-System um symmetrische Konstruktionen. Symmetrie
+macht Bahnen oft besonders elegant und vorhersagbar.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … Symmetrie?</p>
+<p><strong>Achsensymmetrie (gerade Funktion):</strong> Eine Funktion ist achsensymmetrisch zur
+y-Achse, wenn <span class="math notranslate nohighlight">\(f(-x) = f(x)\)</span> gilt. Der Graph ist spiegelbar an der y-Achse.</p>
+<p><strong>Punktsymmetrie (ungerade Funktion):</strong> Eine Funktion ist punktsymmetrisch zum
+Ursprung, wenn <span class="math notranslate nohighlight">\(f(-x) = -f(x)\)</span> gilt. Der Graph ist spiegelbar am Ursprung.</p>
+</div>
+</section>
+<section id="periodizitat-wiederholende-muster">
+<h2>Periodizität - Wiederholende Muster<a class="headerlink" href="#periodizitat-wiederholende-muster" title="Link to this heading">#</a></h2>
+<p>Stellen Sie sich eine Kugelbahn vor, die über eine Reihe identischer Hügel
+führt. Diese wiederholende Struktur führt uns zur <strong>Periodizität</strong>.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … Periodizität?</p>
+<p>Eine Funktion <span class="math notranslate nohighlight">\(f\)</span> heißt <strong>periodisch</strong> mit der Periode <span class="math notranslate nohighlight">\(T &gt; 0\)</span>, wenn <span class="math notranslate nohighlight">\(f(x + T) =
+f(x)\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span> aus der Definitionsmenge gilt.</p>
+<p>Die kleinste positive Zahl <span class="math notranslate nohighlight">\(T\)</span> mit dieser Eigenschaft heißt <strong>Grundperiode</strong>.</p>
+</div>
+</section>
+<section id="kombination-von-eigenschaften">
+<h2>Kombination von Eigenschaften<a class="headerlink" href="#kombination-von-eigenschaften" title="Link to this heading">#</a></h2>
+<p>In der Realität können Kugelbahnen mehrere Eigenschaften gleichzeitig aufweisen:</p>
+<p><strong>Berg-und-Tal-Bahn:</strong> Eine Bahn <span class="math notranslate nohighlight">\(h(x) = -0.1x^2 + 3\cos(x) + 5\)</span> könnte:</p>
+<ul class="simple">
+<li><p>Beschränkt sein (zwischen Boden und Tunneldecke)</p></li>
+<li><p>Periodische Elemente enthalten (die Cosinus-Komponente)</p></li>
+<li><p>Einen übergeordneten Trend haben (die Parabel-Komponente)</p></li>
+</ul>
+<p><strong>Treppenbahn:</strong> Eine Bahn mit stufenweisen Absenkungen zeigt abschnittweise
+Monotonie und ist beschränkt.</p>
+</section>
+<section id="praktische-bedeutung-fur-das-bahndesign">
+<h2>Praktische Bedeutung für das Bahndesign<a class="headerlink" href="#praktische-bedeutung-fur-das-bahndesign" title="Link to this heading">#</a></h2>
+<p>Diese Eigenschaften helfen uns beim systematischen Design von Kugelbahnen:</p>
+<ol class="arabic simple">
+<li><p><strong>Monotonie:</strong> Bestimmt die grundsätzliche Energieentwicklung (Beschleunigung/Abbremsung)</p></li>
+<li><p><strong>Beschränktheit:</strong> Legt die Konstruktionsgrenzen fest</p></li>
+<li><p><strong>Symmetrie:</strong> Vereinfacht Planung und erhöht Stabilität</p></li>
+<li><p><strong>Periodizität:</strong> Ermöglicht modularen Aufbau und Vorhersagbarkeit</p></li>
+</ol>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Die Eigenschaften von Funktionen - Monotonie, Beschränktheit, Symmetrie und
+Periodizität - helfen uns, das Verhalten mathematischer Zusammenhänge zu
+verstehen und zu klassifizieren. Anhand unserer Kugelbahn-Beispiele wird
+deutlich, wie diese abstrakten Konzepte ganz konkrete praktische Bedeutung
+haben.</p>
+<p>In den folgenden Kapiteln werden wir diese Eigenschaften nutzen, um komplexere
+Funktionstypen zu verstehen und gezielt Kugelbahnen für spezifische
+Anforderungen zu entwerfen. Die mathematische Analyse von Funktionseigenschaften
+wird uns dabei helfen, optimale Lösungen zu finden.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Video</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0tsv-OfsZNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -547,7 +666,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Videos zu Polynomen</p>
+        <p class="prev-next-title">2.3 Polynome</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -569,7 +688,13 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenschaften">Eigenschaften</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monotonie-steigt-oder-fallt-die-bahn">Monotonie - Steigt oder fällt die Bahn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschranktheit-wie-hoch-und-wie-tief-geht-es">Beschränktheit - Wie hoch und wie tief geht es?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetrie-spiegelbahnen">Symmetrie - Spiegelbahnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodizitat-wiederholende-muster">Periodizität - Wiederholende Muster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kombination-von-eigenschaften">Kombination von Eigenschaften</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praktische-bedeutung-fur-das-bahndesign">Praktische Bedeutung für das Bahndesign</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
