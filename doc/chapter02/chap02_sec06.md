@@ -1,4 +1,4 @@
-# 2.6 Umkehrfunktion, Betragsfunktion und abschnittsweise definierte Funktionen
+# 2.6 Umkehrfunktion, Verkettung und abschnittsweise definierte Funktionen
 
 ```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
 :class: warning

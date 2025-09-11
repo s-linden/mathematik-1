@@ -13,7 +13,7 @@ Sie kennen die wichtigsten Eigenschaften von mathematischen Funktionen wie
 beispielsweise
 * **Symmetrie**,
 * **Monotonie**,
-* **Periode** und
+* **Periodizität** und
 * **Beschränktheit**.
 ```
 
