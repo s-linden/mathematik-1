@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Physikalische Kugelbahn (realistisch)</title>
+<style>
+  body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+  }
+
+  .kugelbahn-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .kugelbahn-canvas {
+    border: 2px solid #333;
+    background: #f8f9fa;
+    margin: 5px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: grab;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+  }
+
+  .kugelbahn-canvas:active { cursor: grabbing; }
+
+  .kugelbahn-controls { margin: 8px 0; }
+
+  .kugelbahn-button {
+    background: #005A94;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .kugelbahn-button:hover { background: #004080; }
+  .kugelbahn-button:disabled { background: #cccccc; cursor: not-allowed; }
+
+  .instructions { margin: 5px 0; color: #666; font-style: italic; font-size: 12px; }
+
+  @media (max-width: 600px) {
+    body { padding: 5px; }
+    .kugelbahn-button { padding: 8px 16px; font-size: 14px; margin: 0 5px; }
+  }
+  @media (max-width: 400px) {
+    .kugelbahn-button { padding: 6px 12px; font-size: 12px; }
+    .instructions { font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+  <div class="kugelbahn-container">
+    <canvas class="kugelbahn-canvas" width="800" height="500" role="img" aria-label="Kugelbahn Simulation"></canvas>
+    <div class="kugelbahn-controls">
+      <button class="kugelbahn-button kugelbahn-start">Starte Kugel</button>
+    </div>
+    <div class="instructions">Drag: Kugel anklicken und verschieben. Physikalisches Modell: Hangabtrieb + Rollmoment</div>
+  </div>
+
+<script>
+/*
+  PhysicsKugelbahn
+  - Kugel als rollende Kugel/Perle auf einer vorgegebenen Kurve y = f(x)
+  - Bewegung entlang x (Parameter) mit physikalischer Beschleunigung:
+      a_x = rollingFactor * ( -g * y'(x) ) / (1 + y'(x)^2 )  + frictionTerm
+    (Herleitung: Tangentialbeschleunigung a_t = -g * sin(theta), mit
+     sin(theta) = y' / sqrt(1+y'^2). Projektion auf x liefert obiges.)
+  - rollingFactor: 1 für Schlitt, 5/7 für feste Vollkugel (Translation + Rotation)
+  - Numerische Integration (semi-implizit Euler) zur Stabilität.
+*/
+
+class PhysicsKugelbahn {
+  constructor(canvasSelector, funcDef, opts = {}) {
+    this.canvas = document.querySelector(canvasSelector);
+    this.ctx = this.canvas.getContext('2d');
+
+    // responsive
+    this.setupResponsiveCanvas();
+
+    // Funktion & Einstellungen
+    this.funcDef = funcDef;
+    this.options = {
+      g: 9.81,                    // Erdbeschleunigung (cm/s^2 wenn Einheiten in cm)
+      rollingFactor: 5/7,         // für rollende Vollkugel; use 1 for sliding bead
+      friction: 0.08,             // viskose Dämpfung (1/s), sorgt für Abbremsen
+      ballRadius: 14,
+      timeScale: 1.0,             // ggf. verlangsamen/verdichten der Simulation
+      animationFPS: 60,
+      autoStart: false,
+      ...opts
+    };
+
+    // Zustand: x-Parameter (in Domain), Geschwindigkeit v = dx/dt
+    this.x = (this.funcDef.domain[0] + this.funcDef.domain[1]) / 10; // Start etwas links
+    this.v = 0; // dx/dt
+    this.isAnimating = false;
+    this.isDragging = false;
+
+    // Layout
+    this.updateLayout();
+    this.setupEventListeners();
+    this.setupDragAndDrop();
+    this.setupResizeHandler();
+    this.render(); // initial draw
+  }
+
+  // --- Responsive / Layout ---
+  setupResponsiveCanvas() {
+    const container = this.canvas.closest('.kugelbahn-container');
+    const containerWidth = container?.offsetWidth || 800;
+    const maxWidth = Math.min(containerWidth - 40, 800);
+    this.width = Math.max(320, maxWidth);
+    this.height = this.width <= 480 ? Math.round(this.width * 0.6) : Math.round(this.width * 0.5);
+    this.height = Math.max(200, Math.min(400, this.height));
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
+  }
+
+  updateLayout() {
+    this.margin = this.width <= 500 ? Math.max(60, this.width * 0.12) : Math.max(50, Math.min(70, this.width * 0.08));
+    this.plotWidth = this.width - 2 * this.margin;
+    this.plotHeight = this.height - 2 * this.margin;
+    this.ballRadius = this.options.ballRadius;
+  }
+
+  setupResizeHandler() {
+    let t;
+    window.addEventListener('resize', () => {
+      clearTimeout(t);
+      t = setTimeout(() => {
+        this.setupResponsiveCanvas();
+        this.updateLayout();
+        this.render();
+      }, 200);
+    });
+  }
+
+  // --- Math / Funktion (nutze analytische Ableitung falls vorhanden) ---
+  y(x) {
+    return this.funcDef.func(x);
+  }
+  dy(x) {
+    if (this.funcDef.derivative) return this.funcDef.derivative(x);
+    // zentrale Differenz
+    const h = (this.funcDef.domain[1] - this.funcDef.domain[0]) * 1e-4;
+    const x1 = Math.max(this.funcDef.domain[0], x - h);
+    const x2 = Math.min(this.funcDef.domain[1], x + h);
+    return (this.y(x2) - this.y(x1)) / (x2 - x1);
+  }
+
+  // Konvertierung Mathematik -> Canvas
+  mathToCanvas(x, y) {
+    const [xMin,xMax] = this.funcDef.domain;
+    const [yMin,yMax] = this.funcDef.range;
+    const cx = this.margin + (x - xMin) / (xMax - xMin) * this.plotWidth;
+    const cy = this.height - this.margin - (y - yMin) / (yMax - yMin) * this.plotHeight;
+    return [cx, cy];
+  }
+
+  canvasToMath(canvasX) {
+    const [xMin,xMax] = this.funcDef.domain;
+    const x = xMin + (canvasX - this.margin) / this.plotWidth * (xMax - xMin);
+    return Math.max(xMin, Math.min(xMax, x));
+  }
+
+  // --- Physik-Schritt (semi-implicit Euler) ---
+  physicsStep(dt) {
+    // dt in Sekunden; dt scaled by timeScale
+    const tScaled = dt * this.options.timeScale;
+
+    // aktuelle Ableitung y'
+    const yprime = this.dy(this.x);
+    // Tangentialbeschleunigung (projiziert auf x)
+    // a_x = rollingFactor * ( -g * y' ) / (1 + y'^2)
+    const ax_gravity = ( - this.options.g * yprime ) / (1 + yprime * yprime);
+    const ax = this.options.rollingFactor * ax_gravity;
+
+    // Reibung als viskose Dämpfung in dx/dt (proportional zur Geschwindigkeit)
+    const a_friction = - this.options.friction * this.v;
+
+    // Gesamtbeschleunigung in x
+    const a_total = ax + a_friction;
+
+    // semi-implicit Euler: v += a*dt ; x += v*dt
+    this.v += a_total * tScaled;
+    // optional very small floor to avoid numeric jitter
+    if (Math.abs(this.v) < 1e-8) this.v = 0;
+
+    this.x += this.v * tScaled;
+
+    // Begrenzung an Domain-Grenzen: Kugel bleibt stehen
+    const [xMin,xMax] = this.funcDef.domain;
+    if (this.x <= xMin) { this.x = xMin; this.v = 0; }
+    if (this.x >= xMax) { this.x = xMax; this.v = 0; }
+  }
+
+  // --- Animation Steuerung ---
+  startAnimation() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    const btn = this.canvas.closest('.kugelbahn-container').querySelector('.kugelbahn-start');
+    btn.disabled = true;
+    btn.textContent = 'Kugel läuft...';
+
+    this.lastTime = performance.now();
+    const step = (now) => {
+      if (!this.isAnimating) return;
+      const elapsed = (now - this.lastTime) / 1000; // s
+      // adaptives Substepping für Stabilität: max dt per physicsStep ~ 1/60s
+      let remaining = elapsed;
+      const maxStep = 1 / this.options.animationFPS;
+      while (remaining > 1e-9) {
+        const dt = Math.min(remaining, maxStep);
+        if (!this.isDragging) this.physicsStep(dt);
+        remaining -= dt;
+      }
+      this.lastTime = now;
+      this.render();
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  stopAnimation() {
+    this.isAnimating = false;
+    const btn = this.canvas.closest('.kugelbahn-container').querySelector('.kugelbahn-start');
+    btn.disabled = false;
+    btn.textContent = 'Starte Kugel';
+  }
+
+  reset() {
+    this.stopAnimation();
+    this.x = (this.funcDef.domain[0] + this.funcDef.domain[1]) / 10;
+    this.v = 0;
+    this.render();
+  }
+
+  // --- Event Handling (Button, Drag) ---
+  setupEventListeners() {
+    const btn = this.canvas.closest('.kugelbahn-container').querySelector('.kugelbahn-start');
+    btn.addEventListener('click', () => {
+      if (this.isAnimating) { this.stopAnimation(); }
+      else { // reset velocity so the effect is consistent when starting
+        // do not reset x automatically to allow experimentation; user can drag.
+        this.startAnimation();
+      }
+    });
+  }
+
+  setupDragAndDrop() {
+    const getPointer = (e) => {
+      if (e.touches && e.touches.length) return {x: e.touches[0].clientX, y: e.touches[0].clientY};
+      return {x: e.clientX, y: e.clientY};
+    };
+
+    const onStart = (e) => {
+      const p = getPointer(e);
+      const rect = this.canvas.getBoundingClientRect();
+      const cx = p.x - rect.left;
+      const cy = p.y - rect.top;
+      const [ballCx, ballCy] = this.mathToCanvas(this.x, this.y(this.x));
+      const dist = Math.hypot(cx - ballCx, cy - ballCy);
+      if (dist <= this.ballRadius + 8) {
+        this.isDragging = true;
+        // Stop animation while dragging
+        if (this.isAnimating) this.stopAnimation();
+        this.dragOffsetX = cx;
+        e.preventDefault();
+      }
+    };
+    const onMove = (e) => {
+      if (!this.isDragging) return;
+      const p = getPointer(e);
+      const rect = this.canvas.getBoundingClientRect();
+      const cx = p.x - rect.left;
+      // set position based on canvas x
+      this.x = this.canvasToMath(cx);
+      this.v = 0; // dragging sets v to 0
+      this.render();
+      e.preventDefault();
+    };
+    const onEnd = (e) => {
+      if (this.isDragging) {
+        this.isDragging = false;
+      }
+    };
+
+    // Mouse
+    this.canvas.addEventListener('mousedown', onStart);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onEnd);
+
+    // Touch
+    this.canvas.addEventListener('touchstart', onStart, {passive:false});
+    window.addEventListener('touchmove', onMove, {passive:false});
+    window.addEventListener('touchend', onEnd);
+  }
+
+  // --- Drawing ---
+  clear() {
+    this.ctx.fillStyle = '#f8f9fa';
+    this.ctx.fillRect(0,0,this.width,this.height);
+  }
+
+  drawGrid() {
+    this.ctx.strokeStyle = '#e0e0e0';
+    this.ctx.lineWidth = 1;
+    const [xMin,xMax] = this.funcDef.domain, [yMin,yMax] = this.funcDef.range;
+    for (let i=0;i<=10;i++){
+      const x = xMin + (xMax-xMin)*i/10;
+      const [cx1,] = this.mathToCanvas(x, yMin);
+      this.ctx.beginPath();
+      this.ctx.moveTo(cx1, this.margin);
+      this.ctx.lineTo(cx1, this.height - this.margin);
+      this.ctx.stroke();
+    }
+    for (let i=0;i<=8;i++){
+      const y = yMin + (yMax-yMin)*i/8;
+      const [,cy] = this.mathToCanvas(xMin,y);
+      this.ctx.beginPath();
+      this.ctx.moveTo(this.margin, cy);
+      this.ctx.lineTo(this.width - this.margin, cy);
+      this.ctx.stroke();
+    }
+  }
+
+  drawAxes() {
+    this.ctx.strokeStyle = '#333'; this.ctx.lineWidth = 2;
+    const [xMin,xMax] = this.funcDef.domain, [yMin,yMax] = this.funcDef.range;
+    // x-axis at y= yMin (lower border)
+    const [x0y, y0] = this.mathToCanvas(xMin, yMin);
+    this.ctx.beginPath(); this.ctx.moveTo(this.margin, y0); this.ctx.lineTo(this.width - this.margin, y0); this.ctx.stroke();
+    // y-axis at x = xMin (left border)
+    const [xAxis,] = this.mathToCanvas(xMin, yMin);
+    this.ctx.beginPath(); this.ctx.moveTo(xAxis, this.margin); this.ctx.lineTo(xAxis, this.height - this.margin); this.ctx.stroke();
+  }
+
+  drawFunction() {
+    this.ctx.strokeStyle = '#000'; this.ctx.lineWidth = 3;
+    this.ctx.beginPath();
+    const [xMin,xMax] = this.funcDef.domain;
+    const steps = Math.max(200, Math.round(this.plotWidth)); // adaptive
+    for (let i=0;i<=steps;i++) {
+      const x = xMin + (xMax-xMin) * i / steps;
+      const y = this.y(x);
+      const [cx, cy] = this.mathToCanvas(x,y);
+      if (i===0) this.ctx.moveTo(cx, cy); else this.ctx.lineTo(cx, cy);
+    }
+    this.ctx.stroke();
+  }
+
+  drawBall() {
+    const x = this.x;
+    const y = this.y(x);
+    const [bx, by] = this.mathToCanvas(x, y);
+
+    // shadow
+    this.ctx.fillStyle = 'rgba(0,0,0,0.25)';
+    this.ctx.beginPath();
+    this.ctx.ellipse(bx, by + this.ballRadius*0.9, this.ballRadius * 0.9, this.ballRadius*0.35, 0, 0, Math.PI*2);
+    this.ctx.fill();
+
+    // main sphere
+    this.ctx.fillStyle = '#d94e2b';
+    this.ctx.strokeStyle = '#222';
+    this.ctx.lineWidth = 2;
+    this.ctx.beginPath();
+    this.ctx.arc(bx, by, this.ballRadius, 0, Math.PI*2);
+    this.ctx.fill();
+    this.ctx.stroke();
+
+    // highlight
+    this.ctx.fillStyle = 'rgba(255,255,255,0.7)';
+    this.ctx.beginPath();
+    this.ctx.arc(bx - this.ballRadius*0.35, by - this.ballRadius*0.35, this.ballRadius*0.35, 0, Math.PI*2);
+    this.ctx.fill();
+
+    // velocity/energy text
+    this.ctx.fillStyle = '#000'; this.ctx.font = 'bold 14px Arial'; this.ctx.textAlign = 'center';
+    const vy = this.v; // dx/dt
+    // compute approximate tangential speed: v_t = |v| * sqrt(1 + y'^2)
+    const v_t = Math.abs(this.v) * Math.sqrt(1 + (this.dy(x)||0)**2);
+    const txt = `v_t ≈ ${v_t.toFixed(2)} m/s`;
+    this.ctx.fillText(txt, bx, by - this.ballRadius - 12);
+  }
+
+  render() {
+    this.clear();
+    this.drawGrid();
+    this.drawAxes();
+    this.drawFunction();
+    this.drawBall();
+  }
+}
+
+/* -------------------------
+   Beispiel-Funktion (Anwendung)
+   - Bereich und Maße sind interpretativ; physikalische Einheiten sind 'm' oder 'cm' je nach Verwendung.
+   ------------------------- */
+const exampleFunc = {
+  // Beispiel: sanfte Senke, dann Anstieg
+  func: (x) => {
+    // hier als Kombination aus Parabel und Sinus (skaliert), domain 0..24, range ~ 0..8
+    // Für Lehrzwecke: variieren Sie Parameter oder ersetzen Sie durch lineare/parabolische Funktionen.
+    return -0.03*(x-6)*(x-12) + 3 + 0.4 * Math.sin(0.5 * x);
+  },
+  derivative: null, // numerisch wenn null
+  domain: [0, 24],
+  range: [0, 8],
+  xLabel: 'Position x [m]',
+  yLabel: 'Höhe h(x) [m]'
+};
+
+// Initialisierung
+window.addEventListener('load', () => {
+  const sim = new PhysicsKugelbahn('.kugelbahn-canvas', exampleFunc, {
+    g: 9.81,           // in chosen length units per s^2 (here m/s^2)
+    rollingFactor: 5/7, // Vollkugel rollend
+    friction: 0.08,     // Dämpfung (experimentell)
+    timeScale: 1.0,
+    ballRadius: 12,
+    animationFPS: 120,
+    autoStart: false
+  });
+
+  // expose for console experimentation
+  window._kugelSim = sim;
+});
+</script>
+</body>
+</html>

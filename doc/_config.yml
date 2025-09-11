@@ -39,7 +39,7 @@ html:
 
 sphinx:
   config:
-    #html_extra_path: ['assets']
+    html_extra_path: ['assets']
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_show_copyright: false
     html_js_files: 

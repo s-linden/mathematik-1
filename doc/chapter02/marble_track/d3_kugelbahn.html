@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kugelbahn-Simulation mit D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        #chart {
+            border: 2px solid #333;
+            background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 60%, #90EE90 60%, #90EE90 100%);
+            margin: 20px auto;
+            display: block;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+        .function-display {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+        .grid line {
+            stroke: #e0e0e0;
+            stroke-width: 1;
+        }
+        .axis {
+            stroke: #333;
+            stroke-width: 2;
+        }
+        .axis text {
+            font-size: 12px;
+            fill: #333;
+        }
+        .function-path {
+            fill: none;
+            stroke: #2196F3;
+            stroke-width: 3;
+        }
+        .ball {
+            fill: #f44336;
+            stroke: #d32f2f;
+            stroke-width: 2;
+        }
+        .ball-shadow {
+            fill: rgba(0,0,0,0.3);
+        }
+        .axis-label {
+            font-size: 14px;
+            fill: #333;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kugelbahn-Simulation mit D3.js</h1>
+        <div class="function-display">Funktion: h(x) = -¼x + 6</div>
+        
+        <svg id="chart" width="800" height="400"></svg>
+        
+        <div class="controls">
+            <button id="startBtn">Start Animation</button>
+            <button id="resetBtn">Reset</button>
+            <button id="functionBtn">Andere Funktion</button>
+        </div>
+    </div>
+
+    <script>
+        class D3KugelbahnSimulation {
+            constructor() {
+                this.svg = d3.select("#chart");
+                this.width = 800;
+                this.height = 400;
+                this.margin = {top: 40, right: 40, bottom: 60, left: 60};
+                this.plotWidth = this.width - this.margin.left - this.margin.right;
+                this.plotHeight = this.height - this.margin.top - this.margin.bottom;
+                
+                this.functionIndex = 0;
+                this.isAnimating = false;
+                
+                // Function definitions
+                this.functions = [
+                    {
+                        name: "h(x) = -¼x + 6",
+                        func: (x) => -0.25 * x + 6,
+                        domain: [0, 24],
+                        range: [0, 6]
+                    },
+                    {
+                        name: "h(x) = -0.1x² + 4x + 2",
+                        func: (x) => -0.1 * x * x + 0.4 * x + 2,
+                        domain: [0, 20],
+                        range: [0, 8]
+                    },
+                    {
+                        name: "h(x) = 3sin(x/2) + 4",
+                        func: (x) => 3 * Math.sin(x / 2) + 4,
+                        domain: [0, 4 * Math.PI],
+                        range: [1, 7]
+                    }
+                ];
+                
+                this.currentFunction = this.functions[0];
+                this.setupScales();
+                this.setupSVG();
+                this.setupEventListeners();
+                this.draw();
+            }
+            
+            setupScales() {
+                this.xScale = d3.scaleLinear()
+                    .domain(this.currentFunction.domain)
+                    .range([0, this.plotWidth]);
+                    
+                this.yScale = d3.scaleLinear()
+                    .domain(this.currentFunction.range)
+                    .range([this.plotHeight, 0]);
+            }
+            
+            setupSVG() {
+                this.svg.selectAll("*").remove();
+                
+                this.g = this.svg.append("g")
+                    .attr("transform", `translate(${this.margin.left}, ${this.margin.top})`);
+                
+                // Add gradient background
+                const defs = this.svg.append("defs");
+                const gradient = defs.append("linearGradient")
+                    .attr("id", "background-gradient")
+                    .attr("x1", "0%")
+                    .attr("y1", "0%")
+                    .attr("x2", "0%")
+                    .attr("y2", "100%");
+                    
+                gradient.append("stop")
+                    .attr("offset", "0%")
+                    .attr("style", "stop-color:#87CEEB;stop-opacity:1");
+                    
+                gradient.append("stop")
+                    .attr("offset", "60%")
+                    .attr("style", "stop-color:#87CEEB;stop-opacity:1");
+                    
+                gradient.append("stop")
+                    .attr("offset", "60%")
+                    .attr("style", "stop-color:#90EE90;stop-opacity:1");
+                    
+                gradient.append("stop")
+                    .attr("offset", "100%")
+                    .attr("style", "stop-color:#90EE90;stop-opacity:1");
+            }
+            
+            draw() {
+                this.setupScales();
+                this.drawGrid();
+                this.drawAxes();
+                this.drawFunction();
+                this.drawBall();
+            }
+            
+            drawGrid() {
+                // X grid lines
+                this.g.selectAll(".grid-x").remove();
+                this.g.selectAll(".grid-x")
+                    .data(this.xScale.ticks(10))
+                    .enter()
+                    .append("line")
+                    .attr("class", "grid grid-x")
+                    .attr("x1", d => this.xScale(d))
+                    .attr("x2", d => this.xScale(d))
+                    .attr("y1", 0)
+                    .attr("y2", this.plotHeight);
+                
+                // Y grid lines
+                this.g.selectAll(".grid-y").remove();
+                this.g.selectAll(".grid-y")
+                    .data(this.yScale.ticks(8))
+                    .enter()
+                    .append("line")
+                    .attr("class", "grid grid-y")
+                    .attr("x1", 0)
+                    .attr("x2", this.plotWidth)
+                    .attr("y1", d => this.yScale(d))
+                    .attr("y2", d => this.yScale(d));
+            }
+            
+            drawAxes() {
+                // Remove existing axes
+                this.g.selectAll(".axis").remove();
+                this.g.selectAll(".axis-label").remove();
+                
+                // X axis
+                this.g.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", `translate(0, ${this.plotHeight})`)
+                    .call(d3.axisBottom(this.xScale));
+                
+                // Y axis
+                this.g.append("g")
+                    .attr("class", "axis")
+                    .call(d3.axisLeft(this.yScale));
+                
+                // Axis labels
+                this.g.append("text")
+                    .attr("class", "axis-label")
+                    .attr("x", this.plotWidth / 2)
+                    .attr("y", this.plotHeight + 45)
+                    .text("Position x (cm)");
+                
+                this.g.append("text")
+                    .attr("class", "axis-label")
+                    .attr("transform", "rotate(-90)")
+                    .attr("x", -this.plotHeight / 2)
+                    .attr("y", -40)
+                    .text("Höhe h(x) (cm)");
+            }
+            
+            drawFunction() {
+                // Remove existing path
+                this.g.selectAll(".function-path").remove();
+                
+                // Generate data points
+                const [xMin, xMax] = this.currentFunction.domain;
+                const data = [];
+                const steps = 200;
+                
+                for (let i = 0; i <= steps; i++) {
+                    const x = xMin + (xMax - xMin) * i / steps;
+                    const y = this.currentFunction.func(x);
+                    data.push({x, y});
+                }
+                
+                // Create line generator
+                const line = d3.line()
+                    .x(d => this.xScale(d.x))
+                    .y(d => this.yScale(d.y))
+                    .curve(d3.curveCardinal);
+                
+                // Draw path
+                this.g.append("path")
+                    .datum(data)
+                    .attr("class", "function-path")
+                    .attr("d", line);
+            }
+            
+            drawBall() {
+                // Remove existing ball elements
+                this.g.selectAll(".ball").remove();
+                this.g.selectAll(".ball-shadow").remove();
+                
+                // Initial position
+                const [xMin] = this.currentFunction.domain;
+                const yStart = this.currentFunction.func(xMin);
+                const startX = this.xScale(xMin);
+                const startY = this.yScale(yStart);
+                
+                // Ball shadow
+                this.ballShadow = this.g.append("ellipse")
+                    .attr("class", "ball-shadow")
+                    .attr("cx", startX)
+                    .attr("cy", startY + 20)
+                    .attr("rx", 6)
+                    .attr("ry", 2);
+                
+                // Ball
+                this.ball = this.g.append("circle")
+                    .attr("class", "ball")
+                    .attr("cx", startX)
+                    .attr("cy", startY)
+                    .attr("r", 8);
+            }
+            
+            startAnimation() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                document.getElementById('startBtn').disabled = true;
+                
+                const [xMin, xMax] = this.currentFunction.domain;
+                const duration = 3000; // 3 seconds
+                
+                // Animate ball along the path
+                this.ball
+                    .transition()
+                    .duration(duration)
+                    .ease(d3.easeLinear)
+                    .tween("position", () => {
+                        return (t) => {
+                            const x = xMin + (xMax - xMin) * t;
+                            const y = this.currentFunction.func(x);
+                            const ballX = this.xScale(x);
+                            const ballY = this.yScale(y);
+                            
+                            this.ball
+                                .attr("cx", ballX)
+                                .attr("cy", ballY);
+                                
+                            this.ballShadow
+                                .attr("cx", ballX)
+                                .attr("cy", ballY + 20);
+                        };
+                    })
+                    .on("end", () => {
+                        this.isAnimating = false;
+                        document.getElementById('startBtn').disabled = false;
+                    });
+            }
+            
+            reset() {
+                // Stop any running animation
+                this.ball.interrupt();
+                this.ballShadow.interrupt();
+                
+                this.isAnimating = false;
+                document.getElementById('startBtn').disabled = false;
+                
+                // Reset ball position
+                const [xMin] = this.currentFunction.domain;
+                const yStart = this.currentFunction.func(xMin);
+                const startX = this.xScale(xMin);
+                const startY = this.yScale(yStart);
+                
+                this.ball
+                    .attr("cx", startX)
+                    .attr("cy", startY);
+                    
+                this.ballShadow
+                    .attr("cx", startX)
+                    .attr("cy", startY + 20);
+            }
+            
+            switchFunction() {
+                this.reset();
+                this.functionIndex = (this.functionIndex + 1) % this.functions.length;
+                this.currentFunction = this.functions[this.functionIndex];
+                document.querySelector('.function-display').textContent = 
+                    `Funktion: ${this.currentFunction.name}`;
+                this.draw();
+            }
+            
+            setupEventListeners() {
+                document.getElementById('startBtn').addEventListener('click', () => this.startAnimation());
+                document.getElementById('resetBtn').addEventListener('click', () => this.reset());
+                document.getElementById('functionBtn').addEventListener('click', () => this.switchFunction());
+            }
+        }
+        
+        // Initialize simulation when page loads
+        window.addEventListener('load', () => {
+            new D3KugelbahnSimulation();
+        });
+    </script>
+</body>
+</html>

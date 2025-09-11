@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kugelbahn-Simulation Template</title>
+    <style>
+        .kugelbahn-container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .kugelbahn-canvas {
+            border: 2px solid #333;
+            background: #f8f9fa;
+            margin: 10px auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .kugelbahn-controls {
+            margin: 15px 0;
+        }
+        
+        .kugelbahn-button {
+            background: #005A94; /* itwm_blue */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .kugelbahn-button:hover {
+            background: #004080;
+        }
+        
+        .kugelbahn-button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="kugelbahn-container">
+        <!-- Canvas wird hier eingefügt -->
+        <canvas class="kugelbahn-canvas" width="720" height="480"></canvas>
+        
+        <div class="kugelbahn-controls">
+            <button class="kugelbahn-button kugelbahn-start">Starte Kugel</button>
+        </div>
+    </div>
+
+    <script>
+        class KugelbahnTemplate {
+            constructor(canvasSelector, functionDef, options = {}) {
+                // Canvas Setup
+                this.canvas = document.querySelector(canvasSelector);
+                this.ctx = this.canvas.getContext('2d');
+                this.width = this.canvas.width;
+                this.height = this.canvas.height;
+                
+                // Function Definition (anpassbar für jedes Beispiel)
+                this.functionDef = functionDef;
+                
+                // Options (anpassbar)
+                this.options = {
+                    backgroundColor: '#f8f9fa',
+                    gridColor: '#e0e0e0',
+                    axisColor: '#333333',
+                    functionColor: '#005A94', // itwm_blue
+                    ballColor: '#C00000',     // itwm_red
+                    ballSize: 8,
+                    animationSpeed: 0.006,
+                    autoStart: true,
+                    showGrid: true,
+                    axisThickness: 2,
+                    functionThickness: 3,
+                    ...options
+                };
+                
+                // Animation State
+                this.ballPosition = 0;
+                this.ballX = 0;
+                this.ballY = 0;
+                this.animationId = null;
+                this.isAnimating = false;
+                this.hasAutoStarted = false;
+                
+                // Coordinate System (ähnlich TikZ)
+                this.margin = 60;
+                this.plotWidth = this.width - 2 * this.margin;
+                this.plotHeight = this.height - 2 * this.margin;
+                
+                this.setupEventListeners();
+                this.setupIntersectionObserver();
+                this.draw();
+            }
+            
+            // Intersection Observer für Auto-Start
+            setupIntersectionObserver() {
+                if (!this.options.autoStart) return;
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.intersectionRatio >= 0.8 && !this.hasAutoStarted) {
+                            // Kurze Verzögerung für besseren Effekt
+                            setTimeout(() => {
+                                this.startAnimation();
+                                this.hasAutoStarted = true;
+                            }, 500);
+                        }
+                    });
+                }, {
+                    threshold: 0.8 // 80% sichtbar
+                });
+                
+                observer.observe(this.canvas);
+            }
+            
+            setupEventListeners() {
+                const container = this.canvas.closest('.kugelbahn-container');
+                const startBtn = container.querySelector('.kugelbahn-start');
+                
+                startBtn.addEventListener('click', () => {
+                    // Automatisch zurücksetzen vor dem Start
+                    this.reset();
+                    this.startAnimation();
+                });
+            }
+            
+            // Koordinaten-Transformation (ähnlich TikZ axis)
+            mathToCanvas(x, y) {
+                const [xMin, xMax] = this.functionDef.domain;
+                const [yMin, yMax] = this.functionDef.range;
+                
+                const canvasX = this.margin + (x - xMin) / (xMax - xMin) * this.plotWidth;
+                const canvasY = this.height - this.margin - (y - yMin) / (yMax - yMin) * this.plotHeight;
+                
+                return [canvasX, canvasY];
+            }
+            
+            draw() {
+                // Hintergrund
+                this.ctx.fillStyle = this.options.backgroundColor;
+                this.ctx.fillRect(0, 0, this.width, this.height);
+                
+                if (this.options.showGrid) {
+                    this.drawGrid();
+                }
+                this.drawAxes();
+                this.drawFunction();
+                this.drawBall();
+            }
+            
+            drawGrid() {
+                this.ctx.strokeStyle = this.options.gridColor;
+                this.ctx.lineWidth = 1;
+                
+                const [xMin, xMax] = this.functionDef.domain;
+                const [yMin, yMax] = this.functionDef.range;
+                
+                // Vertikale Gitterlinien
+                const xSteps = Math.max(5, Math.min(15, Math.floor((xMax - xMin) / 2)));
+                for (let i = 0; i <= xSteps; i++) {
+                    const x = xMin + (xMax - xMin) * i / xSteps;
+                    const [canvasX] = this.mathToCanvas(x, 0);
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(canvasX, this.margin);
+                    this.ctx.lineTo(canvasX, this.height - this.margin);
+                    this.ctx.stroke();
+                }
+                
+                // Horizontale Gitterlinien
+                const ySteps = Math.max(4, Math.min(10, Math.floor((yMax - yMin))));
+                for (let i = 0; i <= ySteps; i++) {
+                    const y = yMin + (yMax - yMin) * i / ySteps;
+                    const [, canvasY] = this.mathToCanvas(0, y);
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.margin, canvasY);
+                    this.ctx.lineTo(this.width - this.margin, canvasY);
+                    this.ctx.stroke();
+                }
+            }
+            
+            drawAxes() {
+                this.ctx.strokeStyle = this.options.axisColor;
+                this.ctx.lineWidth = this.options.axisThickness;
+                this.ctx.font = '14px Arial';
+                this.ctx.textAlign = 'center';
+                this.ctx.fillStyle = this.options.axisColor;
+                
+                const [xMin, xMax] = this.functionDef.domain;
+                const [yMin, yMax] = this.functionDef.range;
+                
+                // X-Achse (zentriert wie in TikZ)
+                const [, xAxisY] = this.mathToCanvas(0, yMin);
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.margin, xAxisY);
+                this.ctx.lineTo(this.width - this.margin, xAxisY);
+                this.ctx.stroke();
+                
+                // Y-Achse (zentriert wie in TikZ)
+                const [yAxisX] = this.mathToCanvas(xMin, 0);
+                this.ctx.beginPath();
+                this.ctx.moveTo(yAxisX, this.margin);
+                this.ctx.lineTo(yAxisX, this.height - this.margin);
+                this.ctx.stroke();
+                
+                // Achsenbeschriftung
+                this.ctx.fillText(this.functionDef.xLabel || 'x', this.width / 2, this.height - 15);
+                this.ctx.save();
+                this.ctx.translate(20, this.height / 2);
+                this.ctx.rotate(-Math.PI / 2);
+                this.ctx.fillText(this.functionDef.yLabel || 'y', 0, 0);
+                this.ctx.restore();
+                
+                // Skalierung (optional)
+                if (this.functionDef.showScale) {
+                    this.drawScale();
+                }
+            }
+            
+            drawScale() {
+                this.ctx.font = '12px Arial';
+                this.ctx.textAlign = 'center';
+                this.ctx.fillStyle = this.options.axisColor;
+                
+                const [xMin, xMax] = this.functionDef.domain;
+                const [yMin, yMax] = this.functionDef.range;
+                
+                // X-Achsen-Skalierung
+                const xTicks = 5;
+                for (let i = 0; i <= xTicks; i++) {
+                    const x = xMin + (xMax - xMin) * i / xTicks;
+                    const [canvasX, canvasY] = this.mathToCanvas(x, yMin);
+                    
+                    // Tick mark
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(canvasX, canvasY - 5);
+                    this.ctx.lineTo(canvasX, canvasY + 5);
+                    this.ctx.stroke();
+                    
+                    // Label
+                    this.ctx.fillText(Math.round(x * 10) / 10, canvasX, canvasY + 20);
+                }
+                
+                // Y-Achsen-Skalierung
+                this.ctx.textAlign = 'right';
+                const yTicks = 4;
+                for (let i = 0; i <= yTicks; i++) {
+                    const y = yMin + (yMax - yMin) * i / yTicks;
+                    const [canvasX, canvasY] = this.mathToCanvas(xMin, y);
+                    
+                    if (Math.abs(y) > 0.01) { // Nicht bei y=0
+                        // Tick mark
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(canvasX - 5, canvasY);
+                        this.ctx.lineTo(canvasX + 5, canvasY);
+                        this.ctx.stroke();
+                        
+                        // Label
+                        this.ctx.fillText(Math.round(y * 10) / 10, canvasX - 10, canvasY + 4);
+                    }
+                }
+            }
+            
+            drawFunction() {
+                this.ctx.strokeStyle = this.options.functionColor;
+                this.ctx.lineWidth = this.options.functionThickness;
+                this.ctx.beginPath();
+                
+                const [xMin, xMax] = this.functionDef.domain;
+                const steps = 300; // Hohe Auflösung für glatte Kurven
+                
+                for (let i = 0; i <= steps; i++) {
+                    const x = xMin + (xMax - xMin) * i / steps;
+                    const y = this.functionDef.func(x);
+                    const [canvasX, canvasY] = this.mathToCanvas(x, y);
+                    
+                    if (i === 0) {
+                        this.ctx.moveTo(canvasX, canvasY);
+                    } else {
+                        this.ctx.lineTo(canvasX, canvasY);
+                    }
+                }
+                this.ctx.stroke();
+            }
+            
+            drawBall() {
+                if (this.ballPosition === 0) {
+                    // Startposition
+                    const [xMin] = this.functionDef.domain;
+                    const y = this.functionDef.func(xMin);
+                    [this.ballX, this.ballY] = this.mathToCanvas(xMin, y);
+                }
+                
+                // Kugel (in itwm_red)
+                this.ctx.fillStyle = this.options.ballColor;
+                this.ctx.strokeStyle = '#800000';
+                this.ctx.lineWidth = 2;
+                this.ctx.beginPath();
+                this.ctx.arc(this.ballX, this.ballY, this.options.ballSize, 0, 2 * Math.PI);
+                this.ctx.fill();
+                this.ctx.stroke();
+                
+                // Kugel-Schatten
+                this.ctx.fillStyle = 'rgba(0,0,0,0.2)';
+                this.ctx.beginPath();
+                this.ctx.ellipse(this.ballX, this.ballY + 20, this.options.ballSize * 0.8, 3, 0, 0, 2 * Math.PI);
+                this.ctx.fill();
+            }
+            
+            startAnimation() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                const startBtn = this.canvas.closest('.kugelbahn-container').querySelector('.kugelbahn-start');
+                startBtn.disabled = true;
+                startBtn.textContent = 'Animation läuft...';
+                
+                const animate = () => {
+                    this.ballPosition += this.options.animationSpeed;
+                    
+                    if (this.ballPosition >= 1) {
+                        this.ballPosition = 1;
+                        this.isAnimating = false;
+                        startBtn.disabled = false;
+                        startBtn.textContent = 'Starte Kugel';
+                    }
+                    
+                    const [xMin, xMax] = this.functionDef.domain;
+                    const x = xMin + (xMax - xMin) * this.ballPosition;
+                    const y = this.functionDef.func(x);
+                    [this.ballX, this.ballY] = this.mathToCanvas(x, y);
+                    
+                    this.draw();
+                    
+                    if (this.isAnimating) {
+                        this.animationId = requestAnimationFrame(animate);
+                    }
+                };
+                
+                animate();
+            }
+            
+            reset() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+                this.isAnimating = false;
+                this.ballPosition = 0;
+                this.hasAutoStarted = false;
+                
+                const startBtn = this.canvas.closest('.kugelbahn-container').querySelector('.kugelbahn-start');
+                startBtn.disabled = false;
+                startBtn.textContent = 'Starte Kugel';
+                this.draw();
+            }
+        }
+        
+        // BEISPIEL-VERWENDUNG:
+        // Definieren Sie hier Ihre spezifische Funktion für jedes Kapitel
+        
+        const beispielFunktion = {
+            // Mathematische Funktion (genau wie in Ihrem TikZ-Code)
+            func: (x) => -0.25 * x + 6,
+            
+            // Definitionsbereich (entspricht domain in TikZ)
+            domain: [0, 24],
+            
+            // Wertebereich (entspricht ymin/ymax in TikZ)
+            range: [-1, 7],
+            
+            // Achsenbeschriftung
+            xLabel: 'Position x [cm]',
+            yLabel: 'Höhe h(x) [cm]',
+            
+            // Skalierung anzeigen?
+            showScale: true
+        };
+        
+        // Template initialisieren, wenn Seite geladen ist
+        window.addEventListener('load', () => {
+            new KugelbahnTemplate('.kugelbahn-canvas', beispielFunktion, {
+                autoStart: true,
+                animationSpeed: 0.008
+            });
+        });
+    </script>
+</body>
+</html>

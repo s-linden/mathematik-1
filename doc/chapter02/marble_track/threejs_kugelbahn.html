@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kugelbahn-Simulation mit Three.js (3D)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        #threejs-container {
+            width: 800px;
+            height: 500px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 70%, #90EE90 70%, #90EE90 100%);
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+        .function-display {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+        .info {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kugelbahn-Simulation mit Three.js (3D)</h1>
+        <div class="function-display">Funktion: h(x) = -¼x + 6</div>
+        
+        <div id="threejs-container"></div>
+        
+        <div class="controls">
+            <button id="startBtn">Start Animation</button>
+            <button id="resetBtn">Reset</button>
+            <button id="functionBtn">Andere Funktion</button>
+            <button id="cameraBtn">Kamera wechseln</button>
+        </div>
+        
+        <div class="info">
+            Verwenden Sie die Maus zum Drehen der Ansicht (falls aktiviert)
+        </div>
+    </div>
+
+    <script>
+        class ThreeJSKugelbahnSimulation {
+            constructor() {
+                this.container = document.getElementById('threejs-container');
+                this.width = 800;
+                this.height = 500;
+                
+                this.functionIndex = 0;
+                this.cameraIndex = 0;
+                this.isAnimating = false;
+                this.animationProgress = 0;
+                
+                // Function definitions
+                this.functions = [
+                    {
+                        name: "h(x) = -¼x + 6",
+                        func: (x) => -0.25 * x + 6,
+                        domain: [0, 24],
+                        range: [0, 6]
+                    },
+                    {
+                        name: "h(x) = -0.1x² + 4x + 2",
+                        func: (x) => -0.1 * x * x + 0.4 * x + 2,
+                        domain: [0, 20],
+                        range: [0, 8]
+                    },
+                    {
+                        name: "h(x) = 3sin(x/2) + 4",
+                        func: (x) => 3 * Math.sin(x / 2) + 4,
+                        domain: [0, 4 * Math.PI],
+                        range: [1, 7]
+                    }
+                ];
+                
+                this.currentFunction = this.functions[0];
+                
+                this.init();
+                this.setupEventListeners();
+                this.animate();
+            }
+            
+            init() {
+                // Scene
+                this.scene = new THREE.Scene();
+                this.scene.background = new THREE.Color(0x87CEEB);
+                
+                // Camera positions
+                this.cameraPositions = [
+                    { pos: new THREE.Vector3(15, 8, 20), look: new THREE.Vector3(10, 3, 0) },
+                    { pos: new THREE.Vector3(25, 15, 0), look: new THREE.Vector3(10, 3, 0) },
+                    { pos: new THREE.Vector3(0, 20, 15), look: new THREE.Vector3(10, 3, 0) }
+                ];
+                
+                // Camera
+                this.camera = new THREE.PerspectiveCamera(75, this.width / this.height, 0.1, 1000);
+                this.setCameraPosition(0);
+                
+                // Renderer
+                this.renderer = new THREE.WebGLRenderer({ antialias: true });
+                this.renderer.setSize(this.width, this.height);
+                this.renderer.shadowMap.enabled = true;
+                this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                this.container.appendChild(this.renderer.domElement);
+                
+                // Lights
+                this.setupLights();
+                
+                // Create initial track and ball
+                this.createTrack();
+                this.createBall();
+                this.createEnvironment();
+            }
+            
+            setupLights() {
+                // Ambient light
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+                this.scene.add(ambientLight);
+                
+                // Directional light (sun)
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                directionalLight.position.set(20, 20, 10);
+                directionalLight.castShadow = true;
+                directionalLight.shadow.mapSize.width = 2048;
+                directionalLight.shadow.mapSize.height = 2048;
+                directionalLight.shadow.camera.near = 0.5;
+                directionalLight.shadow.camera.far = 50;
+                directionalLight.shadow.camera.left = -20;
+                directionalLight.shadow.camera.right = 20;
+                directionalLight.shadow.camera.top = 20;
+                directionalLight.shadow.camera.bottom = -20;
+                this.scene.add(directionalLight);
+            }
+            
+            createTrack() {
+                // Remove existing track
+                if (this.trackGroup) {
+                    this.scene.remove(this.trackGroup);
+                }
+                
+                this.trackGroup = new THREE.Group();
+                
+                const [xMin, xMax] = this.currentFunction.domain;
+                const segments = 100;
+                
+                // Create track geometry
+                const trackPoints = [];
+                for (let i = 0; i <= segments; i++) {
+                    const x = xMin + (xMax - xMin) * i / segments;
+                    const y = this.currentFunction.func(x);
+                    trackPoints.push(new THREE.Vector3(x, y, 0));
+                }
+                
+                // Track curve
+                const curve = new THREE.CatmullRomCurve3(trackPoints);
+                
+                // Track tube geometry
+                const tubeGeometry = new THREE.TubeGeometry(curve, segments, 0.3, 8, false);
+                const trackMaterial = new THREE.MeshLambertMaterial({ 
+                    color: 0x8B4513,
+                    side: THREE.DoubleSide 
+                });
+                const trackMesh = new THREE.Mesh(tubeGeometry, trackMaterial);
+                trackMesh.castShadow = true;
+                trackMesh.receiveShadow = true;
+                this.trackGroup.add(trackMesh);
+                
+                // Track supports
+                for (let i = 0; i <= segments; i += 10) {
+                    const x = xMin + (xMax - xMin) * i / segments;
+                    const y = this.currentFunction.func(x);
+                    
+                    const supportGeometry = new THREE.CylinderGeometry(0.1, 0.15, y, 8);
+                    const supportMaterial = new THREE.MeshLambertMaterial({ color: 0x654321 });
+                    const support = new THREE.Mesh(supportGeometry, supportMaterial);
+                    support.position.set(x, y/2, 0);
+                    support.castShadow = true;
+                    support.receiveShadow = true;
+                    this.trackGroup.add(support);
+                }
+                
+                this.scene.add(this.trackGroup);
+                this.trackCurve = curve;
+            }
+            
+            createBall() {
+                // Remove existing ball
+                if (this.ball) {
+                    this.scene.remove(this.ball);
+                }
+                
+                const ballGeometry = new THREE.SphereGeometry(0.2, 16, 16);
+                const ballMaterial = new THREE.MeshLambertMaterial({ 
+                    color: 0xff4444,
+                    shininess: 100 
+                });
+                this.ball = new THREE.Mesh(ballGeometry, ballMaterial);
+                this.ball.castShadow = true;
+                
+                // Set initial position
+                const startPoint = this.trackCurve.getPoint(0);
+                this.ball.position.copy(startPoint);
+                this.ball.position.y += 0.2; // Slightly above track
+                
+                this.scene.add(this.ball);
+            }
+            
+            createEnvironment() {
+                // Ground plane
+                const groundGeometry = new THREE.PlaneGeometry(50, 20);
+                const groundMaterial = new THREE.MeshLambertMaterial({ color: 0x90EE90 });
+                const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+                ground.rotation.x = -Math.PI / 2;
+                ground.position.y = -1;
+                ground.receiveShadow = true;
+                this.scene.add(ground);
+                
+                // Background elements
+                for (let i = 0; i < 5; i++) {
+                    const treeGeometry = new THREE.ConeGeometry(0.5, 2, 8);
+                    const treeMaterial = new THREE.MeshLambertMaterial({ color: 0x228B22 });
+                    const tree = new THREE.Mesh(treeGeometry, treeMaterial);
+                    tree.position.set(
+                        Math.random() * 30 - 15,
+                        0,
+                        Math.random() * 10 - 15
+                    );
+                    tree.castShadow = true;
+                    this.scene.add(tree);
+                }
+            }
+            
+            setCameraPosition(index) {
+                const pos = this.cameraPositions[index];
+                this.camera.position.copy(pos.pos);
+                this.camera.lookAt(pos.look);
+            }
+            
+            startAnimation() {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                this.animationProgress = 0;
+                document.getElementById('startBtn').disabled = true;
+            }
+            
+            updateAnimation() {
+                if (!this.isAnimating) return;
+                
+                this.animationProgress += 0.008;
+                
+                if (this.animationProgress >= 1) {
+                    this.animationProgress = 1;
+                    this.isAnimating = false;
+                    document.getElementById('startBtn').disabled = false;
+                }
+                
+                // Update ball position along curve
+                const point = this.trackCurve.getPoint(this.animationProgress);
+                this.ball.position.copy(point);
+                this.ball.position.y += 0.2;
+                
+                // Rotate ball (rolling effect)
+                this.ball.rotation.z -= 0.1;
+            }
+            
+            reset() {
+                this.isAnimating = false;
+                this.animationProgress = 0;
+                document.getElementById('startBtn').disabled = false;
+                
+                if (this.trackCurve) {
+                    const startPoint = this.trackCurve.getPoint(0);
+                    this.ball.position.copy(startPoint);
+                    this.ball.position.y += 0.2;
+                    this.ball.rotation.set(0, 0, 0);
+                }
+            }
+            
+            switchFunction() {
+                this.reset();
+                this.functionIndex = (this.functionIndex + 1) % this.functions.length;
+                this.currentFunction = this.functions[this.functionIndex];
+                document.querySelector('.function-display').textContent = 
+                    `Funktion: ${this.currentFunction.name}`;
+                this.createTrack();
+                this.createBall();
+            }
+            
+            switchCamera() {
+                this.cameraIndex = (this.cameraIndex + 1) % this.cameraPositions.length;
+                this.setCameraPosition(this.cameraIndex);
+            }
+            
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                
+                this.updateAnimation();
+                this.renderer.render(this.scene, this.camera);
+            }
+            
+            setupEventListeners() {
+                document.getElementById('startBtn').addEventListener('click', () => this.startAnimation());
+                document.getElementById('resetBtn').addEventListener('click', () => this.reset());
+                document.getElementById('functionBtn').addEventListener('click', () => this.switchFunction());
+                document.getElementById('cameraBtn').addEventListener('click', () => this.switchCamera());
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    const containerRect = this.container.getBoundingClientRect();
+                    this.camera.aspect = containerRect.width / containerRect.height;
+                    this.camera.updateProjectionMatrix();
+                    this.renderer.setSize(containerRect.width, containerRect.height);
+                });
+            }
+        }
+        
+        // Initialize simulation when page loads
+        window.addEventListener('load', () => {
+            new ThreeJSKugelbahnSimulation();
+        });
+    </script>
+</body>
+</html>
