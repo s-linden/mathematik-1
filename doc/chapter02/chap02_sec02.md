@@ -1,4 +1,4 @@
-# Videos zu Eigenschaften von Funktionen
+# 2.2 Eigenschaften von Funktionen
 
 ```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
 :class: warning
@@ -9,14 +9,12 @@ In den ersten zwei Wochen wird diese Vorlesung klassisch gehalten. Bitte arbeite
 
 ```{admonition} Lernziele Eigenschaften von Funktionen
 :class: goals
-Sie kennen die wichtigsten Eigenschaften von mathematischen Funktionen wie beispielsweise
-* Nullstellen,
-* Symmetrie (gerade oder ungerade),
-* Monotonie, d.h. (streng) monoton wachsend/steigend oder (streng) monoton fallend,
-* Periodizität und
-* Beschränktheit.
-
-Darüber hinaus können Sie bei einer gegebenen Funktion berechnen, welche der oben genannten Eigenschaften sie hat.
+Sie kennen die wichtigsten Eigenschaften von mathematischen Funktionen wie
+beispielsweise
+* **Symmetrie**,
+* **Monotonie**,
+* **Periode** und
+* **Beschränktheit**.
 ```
 
 ## Eigenschaften

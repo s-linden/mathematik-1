@@ -1,4 +1,4 @@
-# Videos zu Exponential- und Logarithmusfunktionen
+# 2.4 Exponential- und Logarithmusfunktionen
 
 ```{admonition} Hinweise zur Vorlesung Mathematik 1 im WiSe 2024/25
 :class: warning
