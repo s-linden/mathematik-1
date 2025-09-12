@@ -1,7 +1,7 @@
 # 2.2 Eigenschaften von Funktionen
 
-Nachdem wir im vorherigen Kapitel die Grundlagen von Funktionen anhand unserer
-einfachen geraden Kugelbahn kennengelernt haben, erweitern wir nun unser
+Nachdem wir im vorherigen Kapitel die Grundlagen von Funktionen anhand einer
+einfachen geraden Kugelbahn kennengelernt haben, erweitern wir nun das
 Kugelbahn-System. Wir bauen verschiedene Bahnformen und entdecken dabei wichtige
 Eigenschaften von Funktionen, die uns helfen, das Verhalten mathematischer
 Zusammenhänge zu verstehen und zu klassifizieren.
@@ -35,21 +35,20 @@ title="Interaktive Kugelbahn">
 ```
 
 Je größer der Abstand zum Start ist, desto niedriger ist die Höhe der Kugel und
-das gilt sogar strikt. Wir formulieren diese Beobachtung mathematisch: Wenn
+das gilt sogar streng. Wir formulieren diese Beobachtung mathematisch: Wenn
 $x_1$ kleiner als $x_2$ ist, dann ist die Höhe $h(x_1)$ echt größer als die Höhe
 $h(x_2)$. Verallgemeinert auf alle Funktionen gilt:
 
 Eine Funktion $f$ heißt **streng monoton fallend**, wenn ihre Funktionswerte mit
-wachsenden x-Wert strikt abnehmen:
+wachsenden x-Werten streng abnehmen:
 
 $$x_1 < x_2 \quad \Rightarrow \quad f(x_1) \textcolor{red}{>} f(x_2).$$
 
 Wir können uns aber auch vorstellen, ein Plateau einzubauen, wie in der
 folgenden Kugelbahn. Damit leichter erkennbar ist, wo das Plateau beginnt, wird
-die Kugel bei einem Plateau weiß gefärbt. Je steiler die Kugelbahn nach unten
-geht, desto dunkelblauer wird die Kugel eingefärbt. Das hat nichts mit der
-physikalischen Geschwindigkeit der Kugel zu tun, sondern zeigt die Eigenschaften
-der Schienen.
+die Kugel bei einem Plateau weiß gefärbt. Je steiler die Kugelbahn ist, desto
+dunkler wird die Kugel eingefärbt. Das hat nichts mit der physikalischen
+Geschwindigkeit der Kugel zu tun, sondern zeigt die Eigenschaften der Schienen.
 
 ```{raw} html
 <div class="kugelbahn-wrapper">
@@ -61,18 +60,96 @@ title="Interaktive Kugelbahn">
 </div>
 ```
 
+Wenn wir die obige Kugelbahn als mathematische Funktion darstellen möchten,
+müssen wir drei Abschnitte unterscheiden:
+
+- Abschnitt 1: von 0 cm bis 8 cm gilt $\;h_1(x)=-0.25x+6$,
+- Abschnitt 2: von 8 cm bis 12 cm gilt $\;h_2(x)=4$,
+- Abschnitt 3: von 12 cm bis 24 cm gilt $\;h_3(x)=-\frac{1}{3}x+8$.
+
+Die Definitionsmenge $D=[0;24]$ wird in drei Teilintervalle
+
+$$I_1 = [0;8], \quad I_2 = (8; 12], \quad I_3 = (12; 24]$$
+
+unterteilt und für jeden Abschnitt gilt eine andere Funktionsgleichung. Die
+Intervalle sind dabei so gewählt, dass sie nicht überlappen. Die Position $x=8$
+beispielsweise gehört eindeutig zum ersten Intervall und nicht zum zweiten. Eine
+solche Funktion nennen wir **abschnittsweise definierte Funktion**. Insgesamt
+schreiben wir die Höhenfunktion $h$ folgendermaßen:
+
+$$h(x) = \begin{cases}
+-0.25x+6, \quad & x\in[0;8],\\
+4, \quad & x\in(8; 12],\\
+-\frac{1}{3}x+8, \quad & x\in(12; 24].
+\end{cases}$$
+
+Mehr zu abschnittsweise definierten Funktionen finden Sie im folgenden Video:
+
+```{dropdown} Video "abschnittsweise definierte Funktionen" von Mathematische Methoden
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/XGpoI5X5z5s?si=Afjv_VDPQwLUI_ln"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+Die Höhenfunktion zeigt folgendes Monotonieverhalten:
+
+- Abschnitt 1 (für das Intervall $I_1=[0; 8]$): streng monoton fallend, d.h.
+  $h(x_1)>h(x_2)$,
+- Abschnitt 2 (für das Intervall $I_2=(8; 12]$): konstant, d.h. $h(x_1)=h(x_2)$,
+- Abschnitt 3 (für das Intervall $I_3=(12; 24]$): streng monoton fallend, d.h.
+  $h(x_1)>h(x_2)$.
+
+Wenn wir den Begriff »streng« lockern, dann gilt für die gesamte Funktion $h$
+auf der kompletten Definitionsmenge $D=[0; 24]$ entweder $h(x_1) > h(x_2)$ oder
+$h(x_1)=h(x_2)$, wobei $x_1<x_2$ vorausgesetzt wird. Die Funktion ist
+abschnittsweise streng monoton fallend und insgesamt (auf $[0,24]$) **monoton
+fallend**.
+
+Für die Kugelbahn könnte es ein Förderband geben, das die Kugel zum Start-Block
+transportiert. Das wäre eine wachsende Funktion, da die Funktionswerte größer
+werden, je weiter wir uns nach rechts auf der $x$-Achse bewegen. Wir fassen
+zusammen:
+
 ```{admonition} Was ist ... Monotonie?
 :class: note
-Eine Funktion heißt **monoton steigend** (oder monoton wachsend), wenn ihre
-Funktionswerte mit wachsendem x-Wert nicht abnehmen: $x_1 < x_2 \Rightarrow
-f(x_1) \leq f(x_2)$.
+Sei $D\subset\mathbb{R}$ und $f$ eine reellwertige Funktion
+$f:D\rightarrow\mathbb{R}$. Die Funktion $f$ heißt auf einem Intervall $I\subset
+D$
+- **monoton wachsend**, falls für alle $x_1, x_2 \in I$ gilt:<br>
+Wenn $x_1 < x_2$, dann $f(x_1) \leq f(x_2)$.
+- **streng monoton wachsend**, falls für alle $x_1, x_2 \in I$ gilt:<br>
+Wenn $x_1 < x_2$, dann $f(x_1) < f(x_2)$.
+- **monoton fallend**, falls für alle $x_1, x_2 \in I$ gilt:<br>
+Wenn $x_1 < x_2$, dann $f(x_1) \geq f(x_2)$.
+- **streng monoton fallend**, falls für alle $x_1, x_2 \in I$ gilt:<br>
+Wenn $x_1 < x_2$, dann $f(x_1) > f(x_2)$.
+```
 
-Eine Funktion heißt **monoton fallend** (oder monoton abnehmend), wenn ihre
-Funktionswerte mit wachsendem x-Wert nicht zunehmen: $x_1 < x_2 \Rightarrow
-f(x_1) \geq f(x_2)$.
+Hinweis: In diesem Vorlesungsskript verwenden wir konsequent die Bezeichnungen
+wachsend/fallend. In anderen Quellen wird oft auch steigend/abnehmend gesagt.
 
-Bei **streng monoton steigend/fallend** gilt das entsprechende
-Ungleichheitszeichen ohne Gleichheit.
+Mehr Details zur Monotonie finden Sie in den folgenden Videos.
+
+```{dropdown} Video "Was ist Monotonie?" von studiVEMINT
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/QfDPvxHAz3k?si=krDjMMRx1o328vNU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+```{dropdown} Video "Monotonie" von HM Kompakt
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/FFfcZK_nCws?si=VPXEZSaDTb7Wdb3x"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+```{admonition} Weiteres Lernmaterial
+:class: seealso
+- [Monoton steigend und fallend von
+  Studyflix](https://studyflix.de/mathematik/was-ist-monotonie-7417)
+- [Monotonie von Serlo](https://de.serlo.org/mathe/1911/monotonie)
 ```
 
 ## Beschränktheit - Wie hoch und wie tief geht es?
