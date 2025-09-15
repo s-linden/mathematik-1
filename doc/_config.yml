@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Mathematik 1 Maschinenbau
-author: Simone Gramsch
+title: Mathematik 1 Mechatronik
+author: Sebastian Linden
 logo: pics/maths_background_small.png
 
 # Force re-execution of notebooks on each build.
@@ -22,6 +22,7 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/gramschs/book_mathe01  # Online location of your book
+  baseurl: "/mathematik-1"
   path_to_book: doc  # Optional path to your book, relative to the repository root
   branch: main # Which branch of the repository should be used when creating links (optional)
 
